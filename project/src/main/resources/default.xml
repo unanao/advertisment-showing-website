@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"       
+          "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="default" extends="struts-default" abstract="true">
+	
+		 <result-types>
+            <result-type name="json" class="org.apache.struts2.json.JSONResult"/>
+        </result-types>
+        
+        <interceptors>
+            <interceptor name="json" class="org.apache.struts2.json.JSONInterceptor"/>
+        </interceptors> 
+	
+	    <!-- 当没有对应action时，返回404页面 -->
+		<default-action-ref name="404" />
+
+		<default-class-ref class="com.bancai.web.IndexPageAction" />
+
+		<global-results>
+			<result name="login">/index.jsp</result>
+			<!-- 当数据验证错误时，struts2默认返回input结果，如果对应的action没有定义input，返回406页面 -->
+			<result name="input">/error/406.jsp</result>
+			<result name="error">/error/406.jsp</result>
+		</global-results>
+		
+		<global-exception-mappings>
+		    <exception-mapping result="error" exception="java.lang.Exception" /> 
+		</global-exception-mappings>
+
+		 <action name="">
+			<result>/</result>
+		</action>
+
+		<action name="404">
+			<result>/error/404.jsp</result>
+		</action>
+
+	</package>
+
+</struts>

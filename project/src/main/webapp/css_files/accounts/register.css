@@ -1,0 +1,32 @@
+.zhuti{
+	width: 100%; 
+	height: 520px; 
+	overflow: visible; 
+	border: 1px; 
+	border-style: solid;
+}
+
+.input_att{
+	width: 200px;
+}
+
+.reg_left_layout
+{
+	position:absolute;
+	left:35%;
+}
+
+.reg_label
+{
+    font-size : 14px;
+    line-height: 32px;
+    padding-right: 10px;
+}
+
+.reg_input_att{
+	width: 156px; 
+	height: 25px; 
+	text-align: center; 
+	font-family: 'Arial';
+	font-size: 13px;
+}

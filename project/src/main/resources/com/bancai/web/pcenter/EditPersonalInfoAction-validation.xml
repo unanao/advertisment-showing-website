@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE validators PUBLIC
+          "-//OpenSymphony Group//XWork Validator 1.0.2//EN" 
+          "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+<validators>
+	<field name="nickName">
+		<field-validator type="stringlength">
+			<param name="trim">true</param>
+			<param name="minLength">2</param>
+			<param name="maxLength">20</param>
+			<message>您昵称的长度需在 ${minLength} 和 ${maxLength} 之间!</message>
+		</field-validator>
+	</field>
+	
+	<field name="name">
+		<field-validator type="stringlength">
+			<param name="trim">true</param>
+			<param name="minLength">2</param>
+			<param name="maxLength">32</param>
+			<message>姓名的长度需在 ${minLength} 和 ${maxLength} 之间!</message>
+		</field-validator>
+	</field>
+
+	<field name="officePhone">
+		<field-validator type="regex">
+			<param name="trim">true</param>
+			<param name="expression"> <![CDATA[[0-9]{3,4}-[0-9]{5,8}]]> </param>
+			<message>请输入正确的固定电话格式! 如010-10086</message>
+		</field-validator>
+	</field>
+
+	<field name="mobile">
+		<field-validator type="regex">
+			<param name="trim">true</param>
+			<param name="expression"><![CDATA[[0-9]{4,14}]]>
+			</param>
+			<message>请输入正确的手机号码!</message>
+		</field-validator>
+	</field>
+
+	<field name="qq">
+		<field-validator type="regex">
+			<param name="trim">true</param>
+			<param name="expression"><![CDATA[[1-9][0-9]{4,}]]></param>
+        <message>您输入的必须是qq号码</message>
+        </field-validator> 
+	</field>
+
+</validators>

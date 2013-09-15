@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE validators PUBLIC
+          "-//OpenSymphony Group//XWork Validator 1.0.2//EN" 
+          "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+<validators>
+    <field name="productId">
+        <field-validator type="int">
+            <param name="min">-1</param>
+            <message>产品id只能为数字!</message>
+        </field-validator>
+    </field>
+	<field name="name">
+	   <field-validator type="requiredstring">
+            <message>产品名称不能为空</message>
+       </field-validator>
+	   <field-validator type="stringlength">
+            <param name="minLength">1</param>
+            <param name="maxLength">32</param>
+            <message>产品名称的长度需要在 ${minLength} 和 ${maxLength} 之间!</message>
+        </field-validator>
+	</field>
+    <field name="category">
+       <field-validator type="requiredstring">
+            <message>产品种类不能为空</message>
+       </field-validator>
+       <field-validator type="stringlength">
+            <param name="minLength">1</param>
+            <param name="maxLength">32</param>
+            <message>产品种类的长度需要在 ${minLength} 和 ${maxLength} 之间!</message>
+        </field-validator>
+    </field>
+    <field name="detail">
+       <field-validator type="requiredstring">
+            <message>产品种类不能为空</message>
+       </field-validator>
+       <field-validator type="stringlength">
+            <param name="minLength">1</param>
+            <param name="maxLength">32</param>
+            <message>产品种类的长度需要在 ${minLength} 和 ${maxLength} 之间!</message>
+        </field-validator>
+    </field>
+	<field name="introduction">
+		<field-validator type="stringlength">
+			<param name="maxLength">255</param>
+			<message>简介字数不能多于 ${maxLength} !</message>
+		</field-validator>
+	</field>
+  
+</validators>

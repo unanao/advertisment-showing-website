@@ -1,0 +1,117 @@
+<HTML><HEAD><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="imagetoolbar" content="no"><link href="Resources/axurerppage.css" type="text/css" rel="stylesheet"></HEAD><BODY>
+<script type="text/javascript">
+function InitializeSubmenu(submenucontainerid, tablecellroid, tablecellid, fname) { 
+var s = "";
+s = s + "function " + fname + "() { ";
+s = s + "document.getElementById(submenucontainerid).style.visibility='';";
+s = s + "BringToFront(submenucontainerid);";
+s = s + "}";
+if ((index = navigator.userAgent.indexOf("MSIE")) >= 0)
+s = s + "document.getElementById('" + tablecellid + "').attachEvent(\"onmouseover\", " + fname + ");";
+else
+s = s + "document.getElementById('" + tablecellid + "').addEventListener(\"mouseover\", " + fname + ", true);";
+s = s + "document.getElementById(tablecellroid).onclick = function() {";
+s = s + "if( document.createEvent ) {";
+s = s + "var evObj = document.createEvent('MouseEvents');";
+s = s + "evObj.initEvent( 'click', true, false );";
+s = s + "document.getElementById(tablecellid).dispatchEvent(evObj);";
+s = s + "} else if( document.createEventObject ) {";
+s = s + "document.getElementById(tablecellid).fireEvent('onclick');";
+s = s + "}";
+s = s + "}";
+eval(s);
+}
+</script>
+
+<DIV id=ou0 style="position:absolute; left:50px; top:-30px; width:801px; height:791px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:809px; height:799px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='background_files/u0.png',sizingMethod='scale');
+"><img style="width:809px; height:799px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="background_files/u0.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u0container style="position:absolute; left:50px; top:-30px; width:801px; height:791px;; overflow:visible;">
+
+<DIV id=u1 style="position:absolute; left:2px; top:387px; width:796px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u1_rtf>&nbsp;</DIV></DIV>
+</DIV>
+<IMG id=u0 src="Resources/transparent.gif" style="position:absolute; left:50px; top:-30px; width:800px; height:790px"  >
+
+<DIV id=u2 style="position:absolute; left:80px; top:49px; width:90px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u2_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">检索范围</span></DIV></DIV>
+<DIV id=u3container style="position:absolute; left:179px; top:54px; width:50px; height:17px; ; ; text-align: left " >
+<DIV id=u4 style="position:absolute; left:16px; top:0px; width:32px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u4_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">全部</span></DIV></DIV>
+</DIV>
+<DIV style="position:absolute; left:179px; top:54px; width:50px; height:17px; ; ; text-align: left " ><INPUT id=u3 style="position:absolute; left:-3px; top:-2px;" type=checkbox value=checkbox checked ></DIV>
+<DIV id=u5container style="position:absolute; left:377px; top:54px; width:83px; height:17px; ; ; text-align: left " >
+<DIV id=u6 style="position:absolute; left:16px; top:0px; width:65px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u6_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">内容检索</span></DIV></DIV>
+</DIV>
+<DIV style="position:absolute; left:377px; top:54px; width:83px; height:17px; ; ; text-align: left " ><INPUT id=u5 style="position:absolute; left:-3px; top:-2px;" type=checkbox value=checkbox  ></DIV>
+<DIV id=u7container style="position:absolute; left:274px; top:54px; width:86px; height:17px; ; ; text-align: left " >
+<DIV id=u8 style="position:absolute; left:16px; top:0px; width:68px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u8_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">用户检索</span></DIV></DIV>
+</DIV>
+<DIV style="position:absolute; left:274px; top:54px; width:86px; height:17px; ; ; text-align: left " ><INPUT id=u7 style="position:absolute; left:-3px; top:-2px;" type=checkbox value=checkbox  ></DIV>
+<INPUT id=u9  type=text value="岩江" style="position:absolute; left:180px; top:91px; width:175px; height:25px; ; background-color:#FFFFFF; text-align: left ; font-family:'Arial'; font-size: 13px; color:#000000; font-style:normal; font-weight:normal; text-decoration:none"   >
+
+<DIV id=u10 style="position:absolute; left:84px; top:95px; width:80px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u10_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">关键词</span></DIV></DIV>
+<DIV id=u11 style="position:absolute; left:80px; top:126px; width:150px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u11_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">高级搜索</span></DIV></DIV>
+<DIV id=u12 style="position:absolute; left:91px; top:154px; width:69px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u12_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">注册日期</span></DIV></DIV>
+<DIV id=u13 style="position:absolute; left:91px; top:188px; width:69px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u13_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">用户级别</span></DIV></DIV>
+<INPUT id=u14  type=text value="2011-01-01" style="position:absolute; left:165px; top:153px; width:85px; height:25px; ; background-color:#FFFFFF; text-align: left ; font-family:'Arial'; font-size: 13px; color:#000000; font-style:normal; font-weight:normal; text-decoration:none"   >
+
+<DIV id=u15 style="position:absolute; left:260px; top:156px; width:20px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u15_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">至</span></DIV></DIV>
+<INPUT id=u16  type=text value="2011-02-01" style="position:absolute; left:280px; top:153px; width:85px; height:25px; ; background-color:#FFFFFF; text-align: left ; font-family:'Arial'; font-size: 13px; color:#000000; font-style:normal; font-weight:normal; text-decoration:none"   >
+
+<SELECT id=u17  style="position:absolute; left:163px; top:187px; width:110px; height:22px; ; background-color:#FFFFFF; text-align: left ; font-family:'Arial'; font-size: 13px; color:#000000; font-style:normal; font-weight:normal; text-decoration:none" >
+<OPTION  value="ADMIN">ADMIN</OPTION>
+<OPTION  value="SVIP">SVIP</OPTION>
+<OPTION  value="VIP">VIP</OPTION>
+<OPTION  value="COMMON">COMMON</OPTION>
+</SELECT>
+
+<INPUT id=u18  type=submit value="显示结果" style="position:absolute; left:150px; top:237px; width:100px; height:25px; ; ; text-align: center ; font-family:'Arial'; font-size: 13px; color:#000000; font-style:normal; font-weight:normal; text-decoration:none" >
+
+<DIV id=ou19 style="position:absolute; left:85px; top:305px; width:406px; height:76px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:414px; height:84px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='background_files/u19.png',sizingMethod='scale');
+"><img style="width:414px; height:84px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="background_files/u19.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u19container style="position:absolute; left:85px; top:305px; width:406px; height:76px;; overflow:visible;">
+
+<DIV id=u20 style="position:absolute; left:2px; top:12px; width:401px; height:51px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u20_rtf><div style="text-align:center"><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">用户名：张岩江&nbsp; 密码：</span><span style=" font-family:'Arial'; color:#000000; font-size:13px;">xxxx</span><br><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">注册日期：2011-01-01 企业名称：</span><span style=" font-family:'Arial'; color:#000000; font-size:13px;">XXXXXXXXX</span><br><span style=" font-family:'\'cb\'ce\'cc\'e5'; font-size:13px;">注册资金：100万&nbsp; 所在地：费县大河庄&nbsp; 主要产品：</span><span style=" font-family:'Arial'; font-size:13px;">XXXXXXXX&nbsp; </span></div></DIV></DIV>
+</DIV>
+<IMG id=u19 src="Resources/transparent.gif" style="position:absolute; left:85px; top:305px; width:405px; height:75px"  >
+
+<DIV id=ou21 style="position:absolute; left:83px; top:395px; width:406px; height:76px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:414px; height:84px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='background_files/u19.png',sizingMethod='scale');
+"><img style="width:414px; height:84px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="background_files/u19.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u21container style="position:absolute; left:83px; top:395px; width:406px; height:76px;; overflow:visible;">
+
+<DIV id=u22 style="position:absolute; left:2px; top:12px; width:401px; height:51px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u22_rtf><div style="text-align:center"><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">用户名：张三丰&nbsp; 密码：</span><span style=" font-family:'Arial'; color:#000000; font-size:13px;">xxxx</span><br><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">注册日期：2011-01-01 企业名称：</span><span style=" font-family:'Arial'; color:#000000; font-size:13px;">XXXXXXXXX</span><br><span style=" font-family:'\'cb\'ce\'cc\'e5'; font-size:13px;">注册资金：100万&nbsp; 所在地：费县大河庄&nbsp; 主要产品：</span><span style=" font-family:'Arial'; font-size:13px;">XXXXXXXX&nbsp; </span></div></DIV></DIV>
+</DIV>
+<IMG id=u21 src="Resources/transparent.gif" style="position:absolute; left:83px; top:395px; width:405px; height:75px"  >
+
+<INPUT id=u23  type=submit value="删除" style="position:absolute; left:530px; top:330px; width:100px; height:35px; ; ; text-align: center ; font-family:'Arial'; font-size: 13px; color:#000000; font-style:normal; font-weight:normal; text-decoration:none" >
+
+<INPUT id=u24  type=submit value="删除" style="position:absolute; left:530px; top:415px; width:100px; height:35px; ; ; text-align: center ; font-family:'Arial'; font-size: 13px; color:#000000; font-style:normal; font-weight:normal; text-decoration:none" >
+<SCRIPT src="Resources/axurerp_pagescript.js"></SCRIPT>
+<SCRIPT src="background_files/axurerp_pagespecificscript.js"></SCRIPT></BODY></HTML>

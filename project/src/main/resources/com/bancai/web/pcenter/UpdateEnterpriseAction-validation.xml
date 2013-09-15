@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!DOCTYPE validators PUBLIC
+          "-//OpenSymphony Group//XWork Validator 1.0.2//EN" 
+          "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+<validators>
+	<field name="name">
+	    <field-validator type="requiredstring">
+	         <message>企业名称不能为空</message>
+	    </field-validator>
+		<field-validator type="stringlength">
+			<param name="minLength">1</param>
+			<param name="maxLength">32</param>
+			<message>企业名称的长度需要在 ${minLength} 和 ${maxLength} 之间!</message>
+		</field-validator>
+	</field>
+	
+    <field name="province">
+        <field-validator type="requiredstring">
+             <message>省份不能为空</message>
+        </field-validator>
+        <field-validator type="stringlength">
+            <param name="minLength">1</param>
+            <param name="maxLength">32</param>
+            <message>省份的长度需要在 ${minLength} 和 ${maxLength} 之间!</message>
+        </field-validator>
+    </field>
+      <field name="city">
+        <field-validator type="requiredstring">
+             <message>城市不能为空</message>
+        </field-validator>
+        <field-validator type="stringlength">
+            <param name="minLength">1</param>
+            <param name="maxLength">32</param>
+            <message>城市的长度需要在 ${minLength} 和 ${maxLength} 之间!</message>
+        </field-validator>
+    </field>
+    
+    <!--
+      省市必须填系，
+      县镇不是必填，
+      因为有的企业可能在市区
+     -->
+     
+	<field name="scale">
+		<field-validator type="regex">
+            <param name="expression"><![CDATA[[0-9]{0,}]]>
+            </param>
+            <message>请输入数字!</message>
+        </field-validator>
+	</field>
+	<field name="address">
+        <field-validator type="requiredstring">
+             <message>地址不能为空</message>
+        </field-validator>
+        <field-validator type="stringlength">
+            <param name="minLength">1</param>
+            <param name="maxLength">255</param>
+            <message>地址的长度需要在 ${minLength} 和 ${maxLength} 之间!</message>
+        </field-validator>
+    </field>
+	 <field name="introduction">
+	 	<field-validator type="requiredstring">
+	         <message>简介不能为空</message>
+	    </field-validator>
+    	
+        <field-validator type="stringlength">
+            <param name="maxLength">255</param>
+            <message>简介字数不能多于 ${maxLength} !</message>
+        </field-validator>
+    </field>
+	
+	<field name="contacter">
+        <field-validator type="requiredstring">
+             <message>联系人姓名不能为空</message>
+        </field-validator>
+        <field-validator type="stringlength">
+            <param name="minLength">1</param>
+            <param name="maxLength">32</param>
+            <message>联系人姓名的长度需要在 ${minLength} 和 ${maxLength} 之间!</message>
+        </field-validator>
+    </field>
+    <field name="number">
+        <field-validator type="regex">
+            <param name="expression"><![CDATA[[0-9]{4,14}]]>
+            </param>
+            <message>请输入正确的电话号码!</message>
+        </field-validator>
+    </field>
+</validators>

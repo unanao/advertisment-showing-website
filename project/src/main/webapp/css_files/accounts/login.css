@@ -1,0 +1,28 @@
+@CHARSET "UTF-8";
+.introduction_big
+{
+	color:blue;
+	font-size : 24px;
+}
+
+.introduct_small
+{
+	font-size : 16px;
+}
+
+.padding_left
+{
+	padding-left:10px;
+}
+
+.input_submit
+{
+	font-size:16px; 
+	font-weight:bold; 
+	color: white; 
+	
+	background-color:rgb(76,138,229);
+	width:97px; 
+	height:34px;  
+	vertical-align: middle;
+}

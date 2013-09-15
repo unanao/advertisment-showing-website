@@ -1,0 +1,51 @@
+.hsty{
+text-align: left ; 
+font-family:Arial; 
+color:#000000; 
+}
+
+.bt{
+width:80px;
+height:25px;
+font-size:18px;
+}
+
+.dlzc{ 
+font-size:13px;
+width:30px;
+height:20px;
+}
+
+
+.cat_more
+{
+position:absolute; 
+width:50px;
+height:20px;
+}
+
+
+.search
+{
+position:absolute;
+top:20px;
+color:#000000;
+font-size: 13px;
+height:20px;
+text-align: left ; 
+font-family:'Arial';
+word-wrap:break-word;
+}
+
+.qiye
+{
+position:absolute;
+text-align: center; 
+font-size:10px;
+}
+
+td
+{
+text-align:center;
+font-size:13px;
+}

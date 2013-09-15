@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"       
+          "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="pcenter" namespace="/pcenter" extends="default">
+		<action name="personalCenter">
+		      <result>/pcenter/pcenter.jsp</result>
+		</action>
+		
+		<!-- 修改密码 -->
+		<action name="changePersonalPassword" class="com.bancai.web.pcenter.ChangePasswordAction">
+			<result name="success"> /pcenter/change_passwd.jsp</result>
+			<result name="error"> /pcenter/change_passwd.jsp </result>
+			<result name="input"> /pcenter/change_passwd.jsp </result>
+		</action>
+		
+		<!-- 修改个人基本信息 -->
+		<action name="editPersonalInfo" class="com.bancai.web.pcenter.EditPersonalInfoAction">
+			<result name="success" type="redirectAction"> showPersonalInfo </result>
+			<result name="input"> /pcenter/change_basic.jsp </result>
+		</action>
+		
+		<action name="showPersonalInfo" class="com.bancai.web.pcenter.GetPersonalInfoAction">
+			<result name="success"> /pcenter/show_basic.jsp</result>
+			<result name="error"> /pcenter/show_basic.jsp </result>
+			<result name="input"> /pcenter/show_basic.jsp </result>
+		</action>
+		
+		<action name="getPersonalInfo" class="com.bancai.web.pcenter.GetPersonalInfoAction">
+			<result name="success" > /pcenter/change_basic.jsp </result>
+			<result name="error"> /pcenter/change_basic.jsp </result>
+			<result name="input"> /pcenter/change_basic.jsp </result>
+		</action>	
+    
+        <!-- product开始 -->
+           <action name="deleteProduct" class="com.bancai.web.pcenter.DeleteProductAction">  
+            <result name="success" type="redirectAction">listProducts</result>    
+            <result name="input">upload.jsp</result>  
+        </action>
+        <action name="saveProductPage" class="com.bancai.web.pcenter.SaveProductPageAction">  
+            <result name="success">/pcenter/new_product.jsp</result>  
+            <result name="input">upload.jsp</result>  
+        </action>
+        <action name="updateProductPage" class="com.bancai.web.pcenter.UpdateProductPageAction">  
+            <result name="success">modify_product.jsp</result>  
+            <result name="input">upload.jsp</result>  
+        </action>
+        <action name="updateProduct" class="com.bancai.web.pcenter.UpdateProductAction">  
+            <result name="success" type="redirectAction">listProducts</result>  
+            <result name="input"> /pcenter/modify_product.jsp </result>  
+        </action> 
+        <action name="listProducts" class="com.bancai.web.pcenter.ListProductsAction">  
+            <result name="input" type="redirectAction">
+                <param name="actionName">updateEnterprisePage</param>
+                <param name="message">must add enterprise information before add product</param>
+            </result>  
+            <result name="success">index_product.jsp</result>
+        </action>
+        <!-- product结束 -->
+        
+        <!-- product picture开始 -->
+        <action name="saveProductPicture" class="com.bancai.web.pcenter.SaveProductPictureAction">
+            <result type="json" name="success">
+                <param name="contentType">  text/html    </param>
+            </result>
+            <interceptor-ref name="fileUpload"> 
+               <param name="allowedTypes">
+                     image/bmp,image/png,image/gif,image/jpeg,image/jpg,
+                     image/pjpeg ,image/bmp, image/gif, image/x-png,
+                </param>
+                <param name="maximumSize">
+                    5242880
+                </param> 
+            </interceptor-ref> 
+            <interceptor-ref name="defaultStack"></interceptor-ref>  
+        </action> 
+          <action name="deleteProductPicture" class="com.bancai.web.pcenter.DeleteProductPictureAction">
+            <result type="json" name="success">
+                <param name="contentType">  text/html    </param>
+            </result>
+        </action>    
+        <action name="pubProductPicture" class="com.bancai.web.pcenter.PubProductPictureAction">
+            <result type="json" name="success">
+                <param name="contentType">  text/html    </param>
+            </result>
+        </action>
+        <!-- product picture结束 -->
+        
+        <!--  enterprise picture ： begin -->
+        <action name="saveEnterprisePicture" class="com.bancai.web.pcenter.SaveEnterprisePictureAction">
+            <result type="json" name="success">
+                <param name="contentType">  text/html    </param>
+            </result>
+            <interceptor-ref name="fileUpload"> 
+                <param name="allowedTypes">
+                     image/bmp,image/png,image/gif,image/jpeg,image/jpg,
+                     image/pjpeg ,image/bmp, image/gif, image/x-png,
+                </param>
+                <param name="maximumSize">
+                    5242880
+                </param> 
+            </interceptor-ref> 
+            <interceptor-ref name="defaultStack"></interceptor-ref>  
+        </action>  
+        <action name="pubEnterprisePicture" class="com.bancai.web.pcenter.PubEnterprisePictureAction">
+            <result type="json" name="success">
+                <param name="contentType">  text/html    </param>
+            </result>
+        </action> 
+        <action name="deleteEnterprisePicture" class="com.bancai.web.pcenter.DeleteEnterprisePictureAction">
+            <result type="json" name="success">
+                <param name="contentType">  text/html    </param>
+            </result>
+        </action> 
+        <!-- enterprise picture: end -->
+        
+        <!-- enterprise开始 -->
+         <action name="showEnterprise" class="com.bancai.web.pcenter.UpdateEnterprisePageAction">  
+            <result name="success">/pcenter/show_enterprise.jsp</result>  
+            <result name="input">/pcenter/show_enterprise.jsp</result>  
+        </action>
+        <action name="updateEnterprisePage" class="com.bancai.web.pcenter.UpdateEnterprisePageAction">  
+            <result name="success"> /pcenter/modify_enterprise.jsp</result>  
+            <result name="input"> /pcenter/show_enterprise.jsp </result>  
+        </action>
+        <action name="updateEnterprise" class="com.bancai.web.pcenter.UpdateEnterpriseAction">  
+            <result name="success" type="chain">showEnterprise</result>  
+            <result name="input">/pcenter/modify_enterprise.jsp</result>
+            <result name="error"> /pcenter/show_enterprise.jsp </result> 
+        </action>
+        <!-- enterprise结束 -->
+        
+        <!-- 用户套餐 -->
+        <action name="getPackagesByEnterprise" 
+        		class="com.bancai.web.pkg.GetPackageInfoAction">
+			<result name="success"> /pcenter/show_charge_info.jsp </result>
+			<result name="error"> show_charge_info.jsp </result>
+		</action> 
+		
+		<!-- 用户信息汇总，用户进入pcenter时显示的内容 -->
+		<action name="personalSummary" 
+				class="com.bancai.web.pcenter.PersonalSummaryAction">
+			<result name="success"> pindex.jsp </result>
+			<result name="error"> /error/403.jsp </result>
+			<result name="input"> /accounts/login.jsp </result>
+		</action> 
+        
+	</package>
+
+</struts>

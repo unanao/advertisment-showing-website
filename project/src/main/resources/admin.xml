@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"       
+          "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="admin" namespace="/admin" extends="default">
+		<!-- 通过email获取用户的信息 -->
+		<action name="admin_get_user" class="com.bancai.web.user.GetUserByNameAction">
+			<result name="success"> /admin/user_management.jsp </result>
+			<result name="input"> /admin/user_management.jsp </result>
+		</action>
+		
+		<!-- 用户管理 -->
+		<action name="admin_activate_user" 
+				class="com.bancai.web.admin.user.ActivateUserAction">
+			<result name="success"> /admin/user_management.jsp </result>
+			<result name="input"> /admin/user_management.jsp </result>
+		</action>
+		
+		<action name="admin_frozen_user" 
+				class="com.bancai.web.admin.user.FrozenUserAction">
+			<result name="success"> /admin/user_management.jsp </result>
+			<result name="input"> /admin/user_management.jsp </result>
+		</action>
+		
+		<action name="admin_delete_user" 
+				class="com.bancai.web.admin.user.DeleteUserAction">
+			<result name="success"> /admin/user_management.jsp </result>
+			<result name="input"> /admin/user_management.jsp </result>
+		</action>
+		
+		<!-- 用户购买套餐管理 -->
+		<action name="admin_get_purchase_package" 
+				class="com.bancai.web.pkg.GetPurchaseAndPackageByNameAction">
+			<result name="success"> /admin/assign_user_package.jsp </result>
+			<result name="error"> /admin/assign_user_package.jsp </result>
+		</action>
+		
+		<action name="admin_set_purchase" class="com.bancai.web.admin.pkg.AddBuyOrderAction">
+			<result name="success"> /admin/assign_user_package.jsp </result>
+			<result name="error"> /admin/assign_user_package.jsp </result>
+			<result name="input"> /admin/assign_user_package.jsp </result>
+		</action>
+		
+		<action name="admin_delete_purchase" 
+				class="com.bancai.web.admin.pkg.DeleteOrderAction">
+			<result name="success"> /admin/assign_user_package.jsp </result>
+			<result name="input"> /admin/assign_user_package.jsp </result>
+		</action>
+		
+		<!-- 套餐管理 --> 
+		<action name="admin_new_package" 
+				class="com.bancai.web.admin.pkg.NewPackageAction">
+			<result name="success"> /admin/new_package.jsp </result>
+			<result name="input"> /admin/new_package.jsp </result>
+		</action>
+		 
+		<action name="admin_get_all_packages" 
+				class="com.bancai.web.pkg.GetAllPackagesAction">
+			<result name="success"> /admin/package_management.jsp </result>
+			<result name="input"> /admin/package_management.jsp </result>
+		</action>
+		
+		<action name="admin_delete_package_by_name" 
+				class="com.bancai.web.admin.pkg.DeletePkgByNameAction">
+			<result name="success" type="redirectAction"> admin_get_all_packages </result>
+			<result name="input"> /admin/package_management.jsp </result>
+		</action>
+		
+		<action name="admin_get_package_by_name" 
+				class="com.bancai.web.pkg.GetPackageByNameAction">
+			<result name="success"> /admin/modify_package.jsp </result>
+			<result name="input"> /admin/modify_package.jsp </result>
+		</action>
+		
+		<action name="admin_update_package_by_name" 
+				class="com.bancai.web.admin.pkg.UpdatePackageAction">
+			<result name="success"> /admin/modify_package.jsp </result>
+			<result name="input"> /admin/modify_package.jsp </result>
+		</action>
+		
+		<!-- 用户统计信息 -->
+		<action name="admin_user_statistics" 
+				class="com.bancai.web.admin.user.UserStatisticsAction">
+			<result name="success"> /admin/user_statistics.jsp </result>
+			<result name="input"> /admin/user_statistics.jsp </result>
+		</action>
+		
+		<!-- 管理员管理 -->
+			<action name="admin_login" 
+				class="com.bancai.web.admin.administer.AdminLoginAction">
+			<result name="success"> /admin/index.jsp </result>
+			<result name="input"> /admin/login.jsp </result>
+		</action>
+	</package>
+</struts>

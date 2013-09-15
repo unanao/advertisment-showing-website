@@ -1,0 +1,135 @@
+
+body{
+	margin:auto;
+	width:72%;
+	min-width:737px;
+	/*
+min-height:400px;
+*/
+	font-family:"Times New Roman","serif";
+	border:1px solid black;
+}
+
+a {
+TEXT-DECORATION:none;
+border:0;
+margin:0;
+padding:0;
+}
+a:link {color: blue}	
+a:visited {color: red}
+a:hover {color: #000}
+a:active {color: #000}
+
+#navigate{
+	background-image:url("../images/background.gif");
+}
+
+#navigate_login{
+	width:30%;
+	float:right;
+	font-size:15px;
+	text-align:center;
+	/*border:solid 1px;*/
+}
+
+
+#navigate_menu{
+	padding-top:10px;
+	float:right;
+	width:80%;
+	text-align:center;
+	font-size:25px;
+	/*border:solid 1px;*/
+}
+
+#navigate_menu a{
+	padding-right:20px;
+}
+
+
+
+
+
+#footer{
+	width:100%;
+	text-align:center;
+	font-size:10px;
+}
+.common_main_body
+{
+	height: 520px; 
+	overflow: visible; 
+	border: 1px; 
+	border-style: solid;
+}
+
+
+.common_main_body_frame
+{
+	position: absolute; 
+	left: 14%; 
+	top: 91px; 
+	width:72%; 
+	height : 460px; 
+	border: 1px; 
+	border-style: solid;
+}
+
+.common_button
+{
+	width : 100px; 
+	height : 25px; 
+	text-align : center; 
+	font-family : 'Arial'; 
+	font-size : 13px;
+}
+
+#common_div_frame{
+	width:50%;
+	border: 1px; 
+	border-style: solid;
+	text-align:left;
+	padding:10px;
+}
+
+.common_prompt{
+	font-size:12px;
+}
+
+/*ͨ����������*/
+.common_font
+{
+	font-size : 18px;
+}
+
+/*��������*/
+.common_link
+{
+	color : blue;
+}
+
+/* ������ʾ��Ϣ*/
+.common_error
+{
+	font-size : 14px;
+	color:red;
+}
+
+.common_error ul 
+{
+   list-style-type: none;
+   display: inline;
+   margin: 0px;
+   padding: 3px;
+}
+
+.common_error ul li
+{
+   list-style-type: none;
+   display: inline;
+}
+
+h1,h2{
+	text-align:center;
+}

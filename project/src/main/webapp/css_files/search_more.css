@@ -1,0 +1,44 @@
+.search_layout 
+{ 
+   height: 60px; 
+   border: 1px; 
+   border-style: solid;
+}
+
+.hsty{
+text-align: left ; 
+font-family:Arial; 
+color:#000000; 
+}
+
+.bt{
+height:25px;
+font-size:18px;
+}
+
+.dlzc{ 
+font-size:13px;
+width:30px;
+height:20px;
+}
+
+
+.cat_more
+{
+position:absolute; 
+width:50px;
+height:20px;
+}
+
+.qiye
+{
+position:absolute;
+text-align: center; 
+font-size:10px;
+}
+
+td
+{
+text-align:center;
+font-size:15px;
+}

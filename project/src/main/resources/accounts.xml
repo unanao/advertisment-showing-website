@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"       
+          "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="accounts" namespace="/accounts" extends="default">
+
+		<!-- 登陆模块 
+			null 为点击“登陆”按钮完成登陆，没有传入参数
+		-->
+		<action name="login" class="com.bancai.web.accounts.LoginAction">
+			<result name="null" type="redirectAction"> ../ </result>
+			<result name="" type="redirectAction"> ../</result>
+			<result name="pcenter" type="redirectAction"> ../pcenter/pcenter.jsp </result>
+			<result name="input"> /accounts/login.jsp </result>
+			<result name="error"> /accounts/resendActivateEmail.jsp </result>
+			<result name="none"> /accounts/login.jsp </result>
+			<!-- 此处情形是用户在个人中心的情况下，在其他tab也退出，再在次页面点击个人中心某个选项 -->
+			<result name="pcenterLogin">/pcenter/personalSummary</result>
+		</action> 
+
+		<!-- 获取验证码 -->
+		<action name="verifyCodeImg" class="com.bancai.web.accounts.AuthImgAction">
+			<result name="success" type="httpheader" />
+		</action>
+
+		<!-- 注册 -->
+		<!-- 检查用户名是否存在 -->
+		<action name="username_check" class="com.bancai.web.accounts.UserNameCheckAction">
+			<result name="success" type="httpheader"/>
+		</action>
+		<action name="verify_code_check" class="com.bancai.web.accounts.VerifyCodeCheckAction">
+			<result name="success" type="httpheader"/>
+		</action>
+		<action name="register" class="com.bancai.web.accounts.RegisterAction">
+			<result name="success"> /accounts/activate.jsp </result>
+			<result name="input"> /accounts/register.jsp </result>
+			<result name="error"> /accounts/register.jsp </result>
+		</action>
+
+		<!-- 激活 -->
+		<action name="emailActivation" class="com.bancai.web.accounts.EmailActivationAction">
+			<result name="success"> /accounts/login.jsp </result>
+			<result name="input"> /accounts/activate.jsp </result>
+			<result name="error"> /accounts/register.jsp </result>
+			<result name="none"> /accounts/register.jsp </result>
+		</action>
+
+		<!-- 重新发送激活邮件 -->
+		<action name="resendActivateEmailAction"
+			class="com.bancai.web.accounts.ResendActivateEmailAction">
+			<result name="success"> /accounts/activate.jsp </result>
+			<result name="input"> /accounts/register.jsp </result>
+			<result name="error"> /accounts/register.jsp </result>
+			<result name="none"> /accounts/register.jsp </result>
+		</action>
+
+		<!-- 通过邮件找回密码验证 -->
+		<action name="verifyChangePassword"
+			class="com.bancai.web.accounts.VerifyChangePasswordAction">
+			<result name="success"> /accounts/changePassword.jsp </result>
+			<result name="input"> /accounts/register.jsp </result>
+			<result name="error"> /accounts/register.jsp </result>
+			<result name="none"> /accounts/register.jsp </result>
+		</action>
+
+		<!-- 修改密码 -->
+		<action name="changePassword" class="com.bancai.web.accounts.ChangePasswordAction">
+			<result name="success"> /accounts/login.jsp</result>
+			<result name="input"> /accounts/changePassword.jsp </result>
+			<result name="error"> /accounts/changePassword.jsp </result>
+			<result name="none"> /accounts/changePassword.jsp </result>
+		</action>
+
+		<!-- 找回密码 -->
+		<action name="forgetPassword" class="com.bancai.web.accounts.ForgetPasswordAction">
+			<result name="success"> /accounts/changePasswordEmail.jsp </result>
+			<result name="input"> /accounts/forgetPassword.jsp </result>
+			<result name="none"> /accounts/forgetPassword.jsp </result>
+			<result name="error"> /accounts/forgetPassword.jsp </result>
+			<result name="unactivated"> /accounts/resendActivateEmail.jsp </result>
+		</action>
+
+		<!-- 注销 -->
+		<action name="logout" class="com.bancai.web.accounts.LogoutAction">
+			<result name="success" type="redirectAction"> ../ </result>
+		</action> 
+ 
+	</package>
+</struts>

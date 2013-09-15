@@ -1,0 +1,12 @@
+@CHARSET "UTF-8";
+.right_align
+{
+	float: left;
+    padding-right: 10px;
+    text-align: right;
+    width: 150px;
+}
+
+#connact_info{
+	border:solid 1px;
+}

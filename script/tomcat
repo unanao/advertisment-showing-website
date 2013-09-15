@@ -1,0 +1,43 @@
+### BEGIN INIT INFO
+# Provides: php-fpm
+# Required-Start: $local_fs $remote_fs $network $syslog
+# Required-Stop: $all
+# Default-Start: 2 3 4 5
+# Default-Stop: 0 1 6
+# Short-Description: starts php-fpm
+# Description: starts php-fpm using start-stop-daemon
+### END INIT INFO
+
+# Tomcat auto-start
+# chkconfig: - 99 50
+# description: Auto-starts tomcat
+# processname: tomcat
+# pidfile: /var/run/tomcat.pid
+
+TOMCAT_ROOT=/home/webserver/tomcat
+
+export JAVA_HOME=/usr/lib/jvm/java-6-openjdk
+export CLASSPATH=$CLASSPATH:$JAVA_HOME/lib:$JAVA_HOME/jre/lib
+export PATH=$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$PATH
+
+CATALINA_BASE=$TOMCAT_ROOT
+CATALINA_HOME=$TOMCAT_ROOT
+#CATALINA_BASE=/home/bancai/tomcat
+#CATALINA_HOME=/home/bancai/tomcat
+
+export CATALINA_HOME CATALINA_BASE
+
+# tab  in front of sh, much space will case error
+case $1 in
+start)
+	sh $TOMCAT_ROOT/bin/startup.sh
+	;; 
+stop)
+	sh $TOMCAT_ROOT/bin/shutdown.sh
+	;; 
+restart)
+	sh $TOMCAT_ROOT/bin/shutdown.sh
+	sh $TOMCAT_ROOT/bin/startup.sh
+	;; 
+esac 
+exit 0

@@ -1,0 +1,8 @@
+.classpath  
+project/.classpath
+project/bin
+.project
+project/.project
+target/
+project/.settings
+project/src/main/webapp/picture/

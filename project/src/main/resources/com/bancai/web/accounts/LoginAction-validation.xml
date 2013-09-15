@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE validators PUBLIC
+          "-//OpenSymphony Group//XWork Validator 1.0.2//EN" 
+          "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+<validators> 
+	<field name="userName">
+		<field-validator type="requiredstring">
+			<message>用户名（电子邮件）不能为空.</message>
+		</field-validator>
+		<field-validator type="email">
+			<message>用户名是您的邮箱地址！</message>
+		</field-validator>
+	</field>
+	<field name="password">
+		<field-validator type="requiredstring">
+			<message>密码不能为空</message>
+		</field-validator>
+	</field> 
+</validators>

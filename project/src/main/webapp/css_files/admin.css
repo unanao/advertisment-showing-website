@@ -1,0 +1,111 @@
+BODY {
+	COLOR: #000; 
+	BACKGROUND-COLOR: #fff;
+	text-align:center;
+	FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif";
+}
+
+TABLE {
+	FONT-SIZE: 12px; 
+	LINE-HEIGHT: 150%; 
+	FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif";
+}
+
+
+#package_table, #unactive_list{
+	width:60%;
+	text-align:center;
+	border:1px groove blue;
+}
+
+#user_cnt_table, #user_package_list{
+	width:50%;
+	text-align:center;
+	border:1px groove blue;
+}
+
+
+#package_table td, #unactive_list td,#user_cnt_table td, #user_package_list td{
+	text-align:center; 
+	border:1px groove blue;
+}
+
+#unactive_username,#reset_pw{
+	width:30%;
+}
+
+#reset_panel, #user_package_panel{
+	width:72%;
+	height:500px;
+	position:absolute;
+	left:0%;
+	top:20%;
+}
+
+.zhuti{
+	width: 60%; 
+	font-size:18px;
+	FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif";
+}
+
+.input_att{
+	width: 200px;
+}
+
+.input_att_100{
+	width: 100px;
+}
+
+
+.label_att{
+	width: 200px;	
+}
+
+.label_att_100{
+	width: 100px;	
+}
+.reg_input_att{
+	height: 25px; 
+	text-align: center; 
+	font-family: 'Arial';
+	font-size: 13px;
+}
+
+
+
+INPUT {
+	FONT-SIZE: 12px; FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif"
+}
+SELECT {
+	FONT-SIZE: 12px; FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif"
+}
+TEXTAREA {
+	FONT-SIZE: 12px; FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif"
+}
+A:link {
+	COLOR: #036; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #036; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #f60; TEXT-DECORATION: underline
+}
+A.menuChild:link {
+	COLOR: #036; TEXT-DECORATION: none
+}
+A.menuChild:visited {
+	COLOR: #036; TEXT-DECORATION: none
+}
+A.menuChild:hover {
+	COLOR: #f60; TEXT-DECORATION: underline
+}
+A.menuParent:link {
+	COLOR: #000; TEXT-DECORATION: none
+}
+A.menuParent:visited {
+	COLOR: #000; TEXT-DECORATION: none
+}
+A.menuParent:hover {
+	COLOR: #f60; TEXT-DECORATION: none
+}

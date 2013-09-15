@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="struts_blank" version="2.4"
+	xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>58板材网</display-name>
+		
+	<filter>
+        <description>在特定的URL，检查用户是否登录，查看session["userId"]是否存在</description>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>com.bancai.web.accounts.LoginFilter</filter-class>
+        <init-param>
+            <description>权限不够时转向的路径</description>
+            <param-name>failPage</param-name>
+            <param-value>/accounts/login.jsp?retPage="pcenterLogin"</param-value>
+        </init-param>  
+         
+        <init-param>
+            <description>下面的uri列表不进行权限检查,多个URI用;分开如：/accounts/login;/accounts/login.jsp; </description>
+            <param-name>excludeURIs</param-name>
+            <param-value>
+                /user/service.jsp
+            </param-value>
+        </init-param>
+    </filter>
+    
+    <!-- /pcenter/开始 -->
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/pcenter/*</url-pattern>
+    </filter-mapping> 
+    <!-- /pcenter/结束 -->
+    
+    <!-- login cookie check : begin-->
+	<filter>
+		 <description>用户登录页面时，  查看cookie是否存在</description>
+        <filter-name>LoginCookieFilter</filter-name>
+        <filter-class>com.bancai.web.accounts.LoginCookieFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>LoginCookieFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- login cookie check : end-->
+
+	<!-- Struts2的配置 -->
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- Struts2的配置: end -->
+	
+	<!-- begin : admin-login-check -->
+	<filter>
+		<description>检查是否为管理员登录，查看session[admin-id]是否存在</description>
+        <filter-name>AdminFilter</filter-name>
+        <filter-class>com.bancai.web.admin.administer.AdminFilter</filter-class>
+        <init-param>
+            <description>权限不够时转向的路径</description>
+            <param-name>failPage</param-name>
+            <param-value>/admin/login.jsp</param-value>
+        </init-param>
+        
+        <init-param>
+            <description>下面的uri列表不进行权限检查,多个URI用;分开如：/accounts/login;/accounts/login.jsp; </description>
+            <param-name>excludeURIs</param-name>
+            <param-value>
+                /admin/login.jsp
+            </param-value>
+        </init-param>
+	</filter>
+	<filter-mapping>
+        <filter-name>AdminFilter</filter-name>
+        <url-pattern>/admin/*</url-pattern>
+    </filter-mapping> 
+    <!-- end : admin-login-check -->
+	
+	<servlet>
+		<description>服务器初始化的Servlet</description>
+		<servlet-name>ServerInitServlet</servlet-name>
+		<servlet-class>com.bancai.web.base.ServerInitServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	
+	<error-page>
+		<error-code>404</error-code>
+		<location>/error/404.jsp</location>
+	</error-page>
+	
+</web-app>

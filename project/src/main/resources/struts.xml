@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"       
+          "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <!-- 所允许上传文件的大小2M -->
+    <constant name="struts.multipart.maxSize" value="5242880"/>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.ui.templateDir" value="WEB-INF/template/" />
+    <!-- 开发阶段，设置为开发模式 -->
+    <constant name="struts.devMode" value="true" />
+    <!--拦截没有后缀的URL,如/ /hello /user/ -->
+    <constant name="struts.action.extension" value="," />
+    
+	<package name="struts2" extends="struts-default">
+		<action name="" class="com.bancai.web.IndexPageAction">
+			<result>/index.jsp</result>
+		</action>
+	</package>
+
+	<include file="root.xml"></include>
+	<include file="enterprise.xml"></include>
+	<include file="product.xml"></include>
+	<include file="accounts.xml"></include>
+	<include file="pcenter.xml"></include>
+	<include file="admin.xml"></include>
+	<include file="search.xml"></include>
+	<include file="default.xml"></include>
+</struts>

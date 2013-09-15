@@ -1,0 +1,1014 @@
+<HTML><HEAD><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="imagetoolbar" content="no"><link href="Resources/axurerppage.css" type="text/css" rel="stylesheet"></HEAD><BODY>
+<script type="text/javascript">
+function InitializeSubmenu(submenucontainerid, tablecellroid, tablecellid, fname) { 
+var s = "";
+s = s + "function " + fname + "() { ";
+s = s + "document.getElementById(submenucontainerid).style.visibility='';";
+s = s + "BringToFront(submenucontainerid);";
+s = s + "}";
+if ((index = navigator.userAgent.indexOf("MSIE")) >= 0)
+s = s + "document.getElementById('" + tablecellid + "').attachEvent(\"onmouseover\", " + fname + ");";
+else
+s = s + "document.getElementById('" + tablecellid + "').addEventListener(\"mouseover\", " + fname + ", true);";
+s = s + "document.getElementById(tablecellroid).onclick = function() {";
+s = s + "if( document.createEvent ) {";
+s = s + "var evObj = document.createEvent('MouseEvents');";
+s = s + "evObj.initEvent( 'click', true, false );";
+s = s + "document.getElementById(tablecellid).dispatchEvent(evObj);";
+s = s + "} else if( document.createEventObject ) {";
+s = s + "document.getElementById(tablecellid).fireEvent('onclick');";
+s = s + "}";
+s = s + "}";
+eval(s);
+}
+</script>
+
+<DIV id=ou0 style="position:absolute; left:10px; top:77px; width:891px; height:356px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:899px; height:364px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u0.png',sizingMethod='scale');
+"><img style="width:899px; height:364px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u0.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u0container style="position:absolute; left:10px; top:77px; width:891px; height:356px;; overflow:visible;">
+
+<DIV id=u1 style="position:absolute; left:2px; top:169.5px; width:886px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u1_rtf>&nbsp;</DIV></DIV>
+</DIV>
+<IMG id=u0 src="Resources/transparent.gif" style="position:absolute; left:10px; top:77px; width:890px; height:355px"  >
+
+<DIV id=ou2 style="position:absolute; left:510px; top:125px; width:261px; height:266px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:269px; height:274px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u2.png',sizingMethod='scale');
+"><img style="width:269px; height:274px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u2.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u2container style="position:absolute; left:510px; top:125px; width:261px; height:266px;; overflow:visible;">
+
+<DIV id=u3 style="position:absolute; left:2px; top:124.5px; width:256px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u3_rtf>&nbsp;</DIV></DIV>
+</DIV>
+<IMG id=u2 src="Resources/transparent.gif" style="position:absolute; left:510px; top:125px; width:260px; height:265px"  >
+
+<DIV id=u4 style="position:absolute; left:530px; top:140px; width:50px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u4_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:19px;">登录</span></DIV></DIV>
+<DIV id=u5 style="position:absolute; left:530px; top:170px; width:60px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u5_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">用户名：</span></DIV></DIV>
+<INPUT id=u6  type=text value="" style="position:absolute; left:530px; top:195px; width:175px; height:25px; ; background-color:#FFFFFF; text-align: left ; font-family:'Arial'; font-size: 13px; color:#000000; font-style:normal; font-weight:normal; text-decoration:none"   >
+
+<DIV id=u7 style="position:absolute; left:530px; top:251px; width:60px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u7_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">密码：</span></DIV></DIV>
+<INPUT id=u8  type=password value="" style="position:absolute; left:530px; top:276px; width:175px; height:25px; ; background-color:#FFFFFF; text-align: left ; font-family:'Arial'; font-size: 13px; color:#000000; font-style:normal; font-weight:normal; text-decoration:none"   >
+
+<INPUT id=u9  type=submit value="登录" style="position:absolute; left:530px; top:330px; width:60px; height:25px; ; ; text-align: center ; font-family:'Arial'; font-size: 13px; color:#000000; font-style:normal; font-weight:normal; text-decoration:none" >
+
+<DIV id=u10container style="position:absolute; left:603px; top:334px; width:100px; height:17px; ; ; text-align: left " >
+<DIV id=u11 style="position:absolute; left:16px; top:0px; width:82px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u11_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">保持登录状态</span></DIV></DIV>
+</DIV>
+<DIV style="position:absolute; left:603px; top:334px; width:100px; height:17px; ; ; text-align: left " ><INPUT id=u10 name="u10" style="position:absolute; left:-3px; top:-2px;" type=radio value=radio  ></DIV>
+<DIV id=ou12 style="position:absolute; left:35px; top:111px; width:406px; height:301px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:414px; height:309px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u12.png',sizingMethod='scale');
+"><img style="width:414px; height:309px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u12.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u12container style="position:absolute; left:35px; top:111px; width:406px; height:301px;; overflow:visible;">
+
+<DIV id=u13 style="position:absolute; left:2px; top:142px; width:401px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u13_rtf>&nbsp;</DIV></DIV>
+</DIV>
+<IMG id=u12 src="Resources/transparent.gif" style="position:absolute; left:35px; top:111px; width:405px; height:300px"  >
+
+<DIV id=u14 style="position:absolute; left:70px; top:144px; width:150px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u14_rtf><span style=" font-family:'??'; color:#000000; font-size:19px;">58</span><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:19px;">服务特色介绍</span></DIV></DIV>
+<DIV id=u15 style="position:absolute; left:782px; top:4px; width:100px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u15_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">第一次使用58？</span></DIV></DIV>
+<DIV id=ou16 style="position:absolute; left:10px; top:7px; width:891px; height:71px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:899px; height:79px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u16.png',sizingMethod='scale');
+"><img style="width:899px; height:79px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u16.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u16container style="position:absolute; left:10px; top:7px; width:891px; height:71px;; overflow:visible;">
+
+<DIV id=u17 style="position:absolute; left:2px; top:27px; width:886px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u17_rtf>&nbsp;</DIV></DIV>
+</DIV>
+<IMG id=u16 src="Resources/transparent.gif" style="position:absolute; left:10px; top:7px; width:890px; height:70px"  >
+
+<DIV id=u18 style="position:absolute; left:814px; top:10px; width:31px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u18_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">登陆</span></DIV></DIV>
+<DIV id=u19 style="position:absolute; left:458px; top:39px; width:40px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u19_rtf><span style=" font-family:'\'bb\'aa\'ce\'c4\'d0\'d0\'bf\'ac'; color:#000000; font-size:19px;">首页</span></DIV></DIV>
+<DIV id=u20 style="position:absolute; left:509px; top:38px; width:81px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u20_rtf><span style=" font-family:'\'bb\'aa\'ce\'c4\'d0\'d0\'bf\'ac'; color:#000000; font-size:19px;">分类导航</span></DIV></DIV>
+<DIV id=u21 style="position:absolute; left:696px; top:38px; width:84px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u21_rtf><span style=" font-family:'\'bb\'aa\'ce\'c4\'d0\'d0\'bf\'ac'; color:#000000; font-size:19px;">加盟申请</span></DIV></DIV>
+<DIV id=u22 style="position:absolute; left:784px; top:37px; width:81px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u22_rtf><span style=" font-family:'\'bb\'aa\'ce\'c4\'d0\'d0\'bf\'ac'; color:#000000; font-size:19px;">联系我们</span></DIV></DIV>
+<DIV id=u23 style="position:absolute; left:96px; top:30px; width:151px; height:27px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u23_rtf><span style=" font-family:'Arial'; color:#000000; font-size:24px;">58LOGO</span></DIV></DIV>
+<DIV id=u24 style="position:absolute; left:850px; top:10px; width:30px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u24_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">注册</span></DIV></DIV>
+<DIV id=u25 style="visibility:hidden; position:absolute; left:505px; top:57px; width:240px; height:411px;; overflow:hidden">
+<DIV id=pd0u25 style="position:absolute; left:0px; top:0px; width:1px; height:1px; visibility:hidden;">
+<span style="position:absolute; left:-3px; top:17px; width:115px; height:104px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u26.png',sizingMethod='scale');
+"><img style="width:115px; height:104px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u26.png" border="0" alt=""></span>
+
+<IMG id=u26 src="Resources/transparent.gif" style="position:absolute; left:0px; top:20px; width:106px; height:95px">
+
+<DIV id=u26container style="position:absolute; left:0px; top:20px; width:107px; height:96px;; overflow:visible">
+
+<DIV id=u27 style="position:absolute; left:3px; top:3px; width:105px; height:94px;">
+
+</DIV>
+
+<DIV id=u27container style="position:absolute; left:3px; top:3px; width:105px; height:94px; overflow:visible">
+
+<script type="text/javascript">
+    var textRolloverJsonu29 = {"fontWeight":"normal","textDecoration":"none"};
+</script>
+
+<DIV id=ru28 style="position:absolute; left:0px; top:0px; width:101px; height:30px;; overflow:visible; visibility:hidden;">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:38px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/ru28.png',sizingMethod='scale');
+"><img style="width:109px; height:38px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/ru28.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=ou28 style="position:absolute; left:0px; top:0px; width:101px; height:30px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:38px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u28.png',sizingMethod='scale');
+"><img style="width:109px; height:38px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u28.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u28container style="position:absolute; left:0px; top:0px; width:101px; height:30px;; overflow:visible;">
+
+<DIV id=u29 style="position:absolute; left:2px; top:2px; width:96px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u29_rtf><div style="text-align:center"><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:19px;"><b>地 区</b></span></div></DIV></DIV>
+</DIV>
+<IMG id=u28 src="Resources/transparent.gif" style="position:absolute; left:0px; top:0px; width:100px; height:29px" onmouseover="SwapOut('u28', 'u29', textRolloverJsonu29,true)" onmouseout="SwapBack('u28' , 'u29')" >
+
+<script type="text/javascript">
+    var textRolloverJsonu31 = {"fontWeight":"normal","textDecoration":"none"};
+</script>
+
+<DIV id=ru30 style="position:absolute; left:0px; top:29px; width:101px; height:30px;; overflow:visible; visibility:hidden;">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:38px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/ru28.png',sizingMethod='scale');
+"><img style="width:109px; height:38px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/ru28.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=ou30 style="position:absolute; left:0px; top:29px; width:101px; height:30px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:38px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u28.png',sizingMethod='scale');
+"><img style="width:109px; height:38px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u28.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u30container style="position:absolute; left:0px; top:29px; width:101px; height:30px;; overflow:visible;">
+
+<DIV id=u31 style="position:absolute; left:2px; top:2px; width:96px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u31_rtf><div style="text-align:center"><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:19px;"><b>产 品</b></span></div></DIV></DIV>
+</DIV>
+<IMG id=u30 src="Resources/transparent.gif" style="position:absolute; left:0px; top:29px; width:100px; height:29px" onmouseover="SwapOut('u30', 'u31', textRolloverJsonu31,true)" onmouseout="SwapBack('u30' , 'u31')" >
+
+<script type="text/javascript">
+    var textRolloverJsonu33 = {"fontWeight":"normal","textDecoration":"none"};
+</script>
+
+<DIV id=ru32 style="position:absolute; left:0px; top:58px; width:101px; height:32px;; overflow:visible; visibility:hidden;">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:40px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/ru32.png',sizingMethod='scale');
+"><img style="width:109px; height:40px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/ru32.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=ou32 style="position:absolute; left:0px; top:58px; width:101px; height:32px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:40px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u32.png',sizingMethod='scale');
+"><img style="width:109px; height:40px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u32.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u32container style="position:absolute; left:0px; top:58px; width:101px; height:32px;; overflow:visible;">
+
+<DIV id=u33 style="position:absolute; left:2px; top:2px; width:96px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u33_rtf><div style="text-align:center"><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:19px;"><b>排 名</b></span></div></DIV></DIV>
+</DIV>
+<IMG id=u32 src="Resources/transparent.gif" style="position:absolute; left:0px; top:58px; width:100px; height:31px" onmouseover="SwapOut('u32', 'u33', textRolloverJsonu33,true)" onmouseout="SwapBack('u32' , 'u33')" >
+
+</DIV>
+</DIV>
+<DIV id=sm0u26 style="position:absolute; left:0px; top:20px; width:106px; height:95px; visibility:hidden;">
+<IMG src="Resources/transparent.gif" style="position:absolute; left:-97px; top:-97px; width:406px; height:353px;" onmouseover="document.getElementById('sm0u26').style.visibility='hidden'; SwapBack('u28','u29');">
+
+<DIV style="position:absolute; left:3px; top:3px; width:1px; height:1px;">
+<IMG id=rou28 src="Resources/transparent.gif" style="position:absolute; left:0px; top:0px; width:100px; height:29px" onmouseover="SwapOut('u28','u29', textRolloverJsonu29, true)">
+
+</DIV>
+<span style="position:absolute; left:100px; top:0px; width:115px; height:162px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u34.png',sizingMethod='scale');
+"><img style="width:115px; height:162px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u34.png" border="0" alt=""></span>
+
+<IMG id=u34 src="Resources/transparent.gif" style="position:absolute; left:103px; top:3px; width:106px; height:153px">
+
+<DIV id=u34container style="position:absolute; left:103px; top:3px; width:107px; height:154px;; overflow:visible">
+
+<DIV id=u35 style="position:absolute; left:3px; top:3px; width:105px; height:152px;">
+
+</DIV>
+
+<DIV id=u35container style="position:absolute; left:3px; top:3px; width:105px; height:152px; overflow:visible">
+
+<script type="text/javascript">
+    var textRolloverJsonu37 = {"fontWeight":"normal","textDecoration":"none"};
+</script>
+
+<DIV id=ru36 style="position:absolute; left:0px; top:0px; width:101px; height:22px;; overflow:visible; visibility:hidden;">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/ru36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/ru36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=ou36 style="position:absolute; left:0px; top:0px; width:101px; height:22px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u36container style="position:absolute; left:0px; top:0px; width:101px; height:22px;; overflow:visible;">
+
+<DIV id=u37 style="position:absolute; left:2px; top:2px; width:96px; height:17px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u37_rtf><div style="text-align:center"><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">费&nbsp; 县</span></div></DIV></DIV>
+</DIV>
+<IMG id=u36 src="Resources/transparent.gif" style="position:absolute; left:0px; top:0px; width:100px; height:21px" onmouseover="SwapOut('u36', 'u37', textRolloverJsonu37,true)" onmouseout="SwapBack('u36' , 'u37')" >
+
+<script type="text/javascript">
+    var textRolloverJsonu39 = {"fontWeight":"normal","textDecoration":"none"};
+</script>
+
+<DIV id=ru38 style="position:absolute; left:0px; top:21px; width:101px; height:22px;; overflow:visible; visibility:hidden;">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/ru36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/ru36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=ou38 style="position:absolute; left:0px; top:21px; width:101px; height:22px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u38container style="position:absolute; left:0px; top:21px; width:101px; height:22px;; overflow:visible;">
+
+<DIV id=u39 style="position:absolute; left:2px; top:2px; width:96px; height:17px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u39_rtf><div style="text-align:center"><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">莒&nbsp; 南</span></div></DIV></DIV>
+</DIV>
+<IMG id=u38 src="Resources/transparent.gif" style="position:absolute; left:0px; top:21px; width:100px; height:21px" onmouseover="SwapOut('u38', 'u39', textRolloverJsonu39,true)" onmouseout="SwapBack('u38' , 'u39')" >
+
+<script type="text/javascript">
+    var textRolloverJsonu41 = {"fontWeight":"normal","textDecoration":"none"};
+</script>
+
+<DIV id=ru40 style="position:absolute; left:0px; top:42px; width:101px; height:22px;; overflow:visible; visibility:hidden;">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/ru36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/ru36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=ou40 style="position:absolute; left:0px; top:42px; width:101px; height:22px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u40container style="position:absolute; left:0px; top:42px; width:101px; height:22px;; overflow:visible;">
+
+<DIV id=u41 style="position:absolute; left:2px; top:2px; width:96px; height:17px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u41_rtf><div style="text-align:center"><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">沂&nbsp; 南</span></div></DIV></DIV>
+</DIV>
+<IMG id=u40 src="Resources/transparent.gif" style="position:absolute; left:0px; top:42px; width:100px; height:21px" onmouseover="SwapOut('u40', 'u41', textRolloverJsonu41,true)" onmouseout="SwapBack('u40' , 'u41')" >
+
+<script type="text/javascript">
+    var textRolloverJsonu43 = {"fontWeight":"normal","textDecoration":"none"};
+</script>
+
+<DIV id=ru42 style="position:absolute; left:0px; top:63px; width:101px; height:22px;; overflow:visible; visibility:hidden;">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/ru36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/ru36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=ou42 style="position:absolute; left:0px; top:63px; width:101px; height:22px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u42container style="position:absolute; left:0px; top:63px; width:101px; height:22px;; overflow:visible;">
+
+<DIV id=u43 style="position:absolute; left:2px; top:2px; width:96px; height:17px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u43_rtf><div style="text-align:center"><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">沂&nbsp; 水</span></div></DIV></DIV>
+</DIV>
+<IMG id=u42 src="Resources/transparent.gif" style="position:absolute; left:0px; top:63px; width:100px; height:21px" onmouseover="SwapOut('u42', 'u43', textRolloverJsonu43,true)" onmouseout="SwapBack('u42' , 'u43')" >
+
+<script type="text/javascript">
+    var textRolloverJsonu45 = {"fontWeight":"normal","textDecoration":"none"};
+</script>
+
+<DIV id=ru44 style="position:absolute; left:0px; top:84px; width:101px; height:22px;; overflow:visible; visibility:hidden;">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/ru36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/ru36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=ou44 style="position:absolute; left:0px; top:84px; width:101px; height:22px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u44container style="position:absolute; left:0px; top:84px; width:101px; height:22px;; overflow:visible;">
+
+<DIV id=u45 style="position:absolute; left:2px; top:2px; width:96px; height:17px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u45_rtf><div style="text-align:center"><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">罗 庄 区</span></div></DIV></DIV>
+</DIV>
+<IMG id=u44 src="Resources/transparent.gif" style="position:absolute; left:0px; top:84px; width:100px; height:21px" onmouseover="SwapOut('u44', 'u45', textRolloverJsonu45,true)" onmouseout="SwapBack('u44' , 'u45')" >
+
+<script type="text/javascript">
+    var textRolloverJsonu47 = {"fontWeight":"normal","textDecoration":"none"};
+</script>
+
+<DIV id=ru46 style="position:absolute; left:0px; top:105px; width:101px; height:22px;; overflow:visible; visibility:hidden;">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/ru36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/ru36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=ou46 style="position:absolute; left:0px; top:105px; width:101px; height:22px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u46container style="position:absolute; left:0px; top:105px; width:101px; height:22px;; overflow:visible;">
+
+<DIV id=u47 style="position:absolute; left:2px; top:2px; width:96px; height:17px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u47_rtf><div style="text-align:center"><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">河 东 区</span></div></DIV></DIV>
+</DIV>
+<IMG id=u46 src="Resources/transparent.gif" style="position:absolute; left:0px; top:105px; width:100px; height:21px" onmouseover="SwapOut('u46', 'u47', textRolloverJsonu47,true)" onmouseout="SwapBack('u46' , 'u47')" >
+
+<script type="text/javascript">
+    var textRolloverJsonu49 = {"fontWeight":"normal","textDecoration":"none"};
+</script>
+
+<DIV id=ru48 style="position:absolute; left:0px; top:126px; width:101px; height:22px;; overflow:visible; visibility:hidden;">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/ru36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/ru36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=ou48 style="position:absolute; left:0px; top:126px; width:101px; height:22px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u48container style="position:absolute; left:0px; top:126px; width:101px; height:22px;; overflow:visible;">
+
+<DIV id=u49 style="position:absolute; left:2px; top:2px; width:96px; height:17px; ; ; text-align: center ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u49_rtf><div style="text-align:center"><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">兰 山 区</span></div></DIV></DIV>
+</DIV>
+<IMG id=u48 src="Resources/transparent.gif" style="position:absolute; left:0px; top:126px; width:100px; height:21px" onmouseover="SwapOut('u48', 'u49', textRolloverJsonu49,true)" onmouseout="SwapBack('u48' , 'u49')" >
+
+</DIV>
+</DIV>
+</DIV>
+<script type="text/javascript">
+InitializeSubmenu('sm0u26', 'rou28', 'u28', 'u28ShowSubmenu');
+</script>
+
+<DIV id=sm1u26 style="position:absolute; left:0px; top:20px; width:106px; height:95px; visibility:hidden;">
+<IMG src="Resources/transparent.gif" style="position:absolute; left:-97px; top:-68px; width:406px; height:544px;" onmouseover="document.getElementById('sm1u26').style.visibility='hidden'; SwapBack('u30','u31');">
+
+<DIV style="position:absolute; left:3px; top:3px; width:1px; height:1px;">
+<IMG id=rou30 src="Resources/transparent.gif" style="position:absolute; left:0px; top:29px; width:100px; height:29px" onmouseover="SwapOut('u30','u31', textRolloverJsonu31, true)">
+
+</DIV>
+<span style="position:absolute; left:100px; top:29px; width:115px; height:353px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u50.png',sizingMethod='scale');
+"><img style="width:115px; height:353px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u50.png" border="0" alt=""></span>
+
+<IMG id=u50 src="Resources/transparent.gif" style="position:absolute; left:103px; top:32px; width:106px; height:344px">
+
+<DIV id=u50container style="position:absolute; left:103px; top:32px; width:107px; height:345px;; overflow:visible">
+
+<DIV id=u51 style="position:absolute; left:3px; top:3px; width:105px; height:343px;">
+
+</DIV>
+
+<DIV id=u51container style="position:absolute; left:3px; top:3px; width:105px; height:343px; overflow:visible">
+
+<script type="text/javascript">
+    var textRolloverJsonu53 = {"fontWeight":"normal","textDecoration":"none"};
+</script>
+
+<DIV id=ru52 style="position:absolute; left:0px; top:0px; width:101px; height:22px;; overflow:visible; visibility:hidden;">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/ru36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/ru36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=ou52 style="position:absolute; left:0px; top:0px; width:101px; height:22px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u52container style="position:absolute; left:0px; top:0px; width:101px; height:22px;; overflow:visible;">
+
+<DIV id=u53 style="position:absolute; left:2px; top:2px; width:96px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u53_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">旋切机</span></DIV></DIV>
+</DIV>
+<IMG id=u52 src="Resources/transparent.gif" style="position:absolute; left:0px; top:0px; width:100px; height:21px" onmouseover="SwapOut('u52', 'u53', textRolloverJsonu53,true)" onmouseout="SwapBack('u52' , 'u53')" >
+
+<script type="text/javascript">
+    var textRolloverJsonu55 = {"fontWeight":"normal","textDecoration":"none"};
+</script>
+
+<DIV id=ru54 style="position:absolute; left:0px; top:21px; width:101px; height:22px;; overflow:visible; visibility:hidden;">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/ru36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/ru36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=ou54 style="position:absolute; left:0px; top:21px; width:101px; height:22px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u54container style="position:absolute; left:0px; top:21px; width:101px; height:22px;; overflow:visible;">
+
+<DIV id=u55 style="position:absolute; left:2px; top:2px; width:96px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u55_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">剥皮机</span></DIV></DIV>
+</DIV>
+<IMG id=u54 src="Resources/transparent.gif" style="position:absolute; left:0px; top:21px; width:100px; height:21px" onmouseover="SwapOut('u54', 'u55', textRolloverJsonu55,true)" onmouseout="SwapBack('u54' , 'u55')" >
+
+<script type="text/javascript">
+    var textRolloverJsonu57 = {"fontWeight":"normal","textDecoration":"none"};
+</script>
+
+<DIV id=ru56 style="position:absolute; left:0px; top:42px; width:101px; height:22px;; overflow:visible; visibility:hidden;">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/ru36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/ru36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=ou56 style="position:absolute; left:0px; top:42px; width:101px; height:22px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u56container style="position:absolute; left:0px; top:42px; width:101px; height:22px;; overflow:visible;">
+
+<DIV id=u57 style="position:absolute; left:2px; top:2px; width:96px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u57_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">找圆机</span></DIV></DIV>
+</DIV>
+<IMG id=u56 src="Resources/transparent.gif" style="position:absolute; left:0px; top:42px; width:100px; height:21px" onmouseover="SwapOut('u56', 'u57', textRolloverJsonu57,true)" onmouseout="SwapBack('u56' , 'u57')" >
+
+<script type="text/javascript">
+    var textRolloverJsonu59 = {"fontWeight":"normal","textDecoration":"none"};
+</script>
+
+<DIV id=ru58 style="position:absolute; left:0px; top:63px; width:101px; height:22px;; overflow:visible; visibility:hidden;">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/ru36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/ru36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=ou58 style="position:absolute; left:0px; top:63px; width:101px; height:22px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u58container style="position:absolute; left:0px; top:63px; width:101px; height:22px;; overflow:visible;">
+
+<DIV id=u59 style="position:absolute; left:2px; top:2px; width:96px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u59_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">剪板机</span></DIV></DIV>
+</DIV>
+<IMG id=u58 src="Resources/transparent.gif" style="position:absolute; left:0px; top:63px; width:100px; height:21px" onmouseover="SwapOut('u58', 'u59', textRolloverJsonu59,true)" onmouseout="SwapBack('u58' , 'u59')" >
+
+<script type="text/javascript">
+    var textRolloverJsonu61 = {"fontWeight":"normal","textDecoration":"none"};
+</script>
+
+<DIV id=ru60 style="position:absolute; left:0px; top:84px; width:101px; height:24px;; overflow:visible; visibility:hidden;">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:32px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/ru60.png',sizingMethod='scale');
+"><img style="width:109px; height:32px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/ru60.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=ou60 style="position:absolute; left:0px; top:84px; width:101px; height:24px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:32px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u60.png',sizingMethod='scale');
+"><img style="width:109px; height:32px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u60.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u60container style="position:absolute; left:0px; top:84px; width:101px; height:24px;; overflow:visible;">
+
+<DIV id=u61 style="position:absolute; left:2px; top:2px; width:96px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u61_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">热压机</span></DIV></DIV>
+</DIV>
+<IMG id=u60 src="Resources/transparent.gif" style="position:absolute; left:0px; top:84px; width:100px; height:23px" onmouseover="SwapOut('u60', 'u61', textRolloverJsonu61,true)" onmouseout="SwapBack('u60' , 'u61')" >
+
+<script type="text/javascript">
+    var textRolloverJsonu63 = {"fontWeight":"normal","textDecoration":"none"};
+</script>
+
+<DIV id=ru62 style="position:absolute; left:0px; top:107px; width:101px; height:22px;; overflow:visible; visibility:hidden;">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/ru36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/ru36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=ou62 style="position:absolute; left:0px; top:107px; width:101px; height:22px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u62container style="position:absolute; left:0px; top:107px; width:101px; height:22px;; overflow:visible;">
+
+<DIV id=u63 style="position:absolute; left:2px; top:2px; width:96px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u63_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">实木机</span></DIV></DIV>
+</DIV>
+<IMG id=u62 src="Resources/transparent.gif" style="position:absolute; left:0px; top:107px; width:100px; height:21px" onmouseover="SwapOut('u62', 'u63', textRolloverJsonu63,true)" onmouseout="SwapBack('u62' , 'u63')" >
+
+<script type="text/javascript">
+    var textRolloverJsonu65 = {"fontWeight":"normal","textDecoration":"none"};
+</script>
+
+<DIV id=ru64 style="position:absolute; left:0px; top:128px; width:101px; height:22px;; overflow:visible; visibility:hidden;">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/ru36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/ru36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=ou64 style="position:absolute; left:0px; top:128px; width:101px; height:22px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u64container style="position:absolute; left:0px; top:128px; width:101px; height:22px;; overflow:visible;">
+
+<DIV id=u65 style="position:absolute; left:2px; top:2px; width:96px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u65_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">实木集成板</span></DIV></DIV>
+</DIV>
+<IMG id=u64 src="Resources/transparent.gif" style="position:absolute; left:0px; top:128px; width:100px; height:21px" onmouseover="SwapOut('u64', 'u65', textRolloverJsonu65,true)" onmouseout="SwapBack('u64' , 'u65')" >
+
+<script type="text/javascript">
+    var textRolloverJsonu67 = {"fontWeight":"normal","textDecoration":"none"};
+</script>
+
+<DIV id=ru66 style="position:absolute; left:0px; top:149px; width:101px; height:22px;; overflow:visible; visibility:hidden;">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/ru36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/ru36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=ou66 style="position:absolute; left:0px; top:149px; width:101px; height:22px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u66container style="position:absolute; left:0px; top:149px; width:101px; height:22px;; overflow:visible;">
+
+<DIV id=u67 style="position:absolute; left:2px; top:2px; width:96px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u67_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">胶合板</span></DIV></DIV>
+</DIV>
+<IMG id=u66 src="Resources/transparent.gif" style="position:absolute; left:0px; top:149px; width:100px; height:21px" onmouseover="SwapOut('u66', 'u67', textRolloverJsonu67,true)" onmouseout="SwapBack('u66' , 'u67')" >
+
+<script type="text/javascript">
+    var textRolloverJsonu69 = {"fontWeight":"normal","textDecoration":"none"};
+</script>
+
+<DIV id=ru68 style="position:absolute; left:0px; top:170px; width:101px; height:22px;; overflow:visible; visibility:hidden;">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/ru36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/ru36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=ou68 style="position:absolute; left:0px; top:170px; width:101px; height:22px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u68container style="position:absolute; left:0px; top:170px; width:101px; height:22px;; overflow:visible;">
+
+<DIV id=u69 style="position:absolute; left:2px; top:2px; width:96px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u69_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">装饰面板</span></DIV></DIV>
+</DIV>
+<IMG id=u68 src="Resources/transparent.gif" style="position:absolute; left:0px; top:170px; width:100px; height:21px" onmouseover="SwapOut('u68', 'u69', textRolloverJsonu69,true)" onmouseout="SwapBack('u68' , 'u69')" >
+
+<script type="text/javascript">
+    var textRolloverJsonu71 = {"fontWeight":"normal","textDecoration":"none"};
+</script>
+
+<DIV id=ru70 style="position:absolute; left:0px; top:191px; width:101px; height:22px;; overflow:visible; visibility:hidden;">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/ru36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/ru36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=ou70 style="position:absolute; left:0px; top:191px; width:101px; height:22px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u70container style="position:absolute; left:0px; top:191px; width:101px; height:22px;; overflow:visible;">
+
+<DIV id=u71 style="position:absolute; left:2px; top:2px; width:96px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u71_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">细木工板</span></DIV></DIV>
+</DIV>
+<IMG id=u70 src="Resources/transparent.gif" style="position:absolute; left:0px; top:191px; width:100px; height:21px" onmouseover="SwapOut('u70', 'u71', textRolloverJsonu71,true)" onmouseout="SwapBack('u70' , 'u71')" >
+
+<script type="text/javascript">
+    var textRolloverJsonu73 = {"fontWeight":"normal","textDecoration":"none"};
+</script>
+
+<DIV id=ru72 style="position:absolute; left:0px; top:212px; width:101px; height:22px;; overflow:visible; visibility:hidden;">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/ru36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/ru36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=ou72 style="position:absolute; left:0px; top:212px; width:101px; height:22px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u72container style="position:absolute; left:0px; top:212px; width:101px; height:22px;; overflow:visible;">
+
+<DIV id=u73 style="position:absolute; left:2px; top:2px; width:96px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u73_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">刨花板</span></DIV></DIV>
+</DIV>
+<IMG id=u72 src="Resources/transparent.gif" style="position:absolute; left:0px; top:212px; width:100px; height:21px" onmouseover="SwapOut('u72', 'u73', textRolloverJsonu73,true)" onmouseout="SwapBack('u72' , 'u73')" >
+
+<script type="text/javascript">
+    var textRolloverJsonu75 = {"fontWeight":"normal","textDecoration":"none"};
+</script>
+
+<DIV id=ru74 style="position:absolute; left:0px; top:233px; width:101px; height:22px;; overflow:visible; visibility:hidden;">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/ru36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/ru36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=ou74 style="position:absolute; left:0px; top:233px; width:101px; height:22px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u74container style="position:absolute; left:0px; top:233px; width:101px; height:22px;; overflow:visible;">
+
+<DIV id=u75 style="position:absolute; left:2px; top:2px; width:96px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u75_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">密度板</span></DIV></DIV>
+</DIV>
+<IMG id=u74 src="Resources/transparent.gif" style="position:absolute; left:0px; top:233px; width:100px; height:21px" onmouseover="SwapOut('u74', 'u75', textRolloverJsonu75,true)" onmouseout="SwapBack('u74' , 'u75')" >
+
+<script type="text/javascript">
+    var textRolloverJsonu77 = {"fontWeight":"normal","textDecoration":"none"};
+</script>
+
+<DIV id=ru76 style="position:absolute; left:0px; top:254px; width:101px; height:22px;; overflow:visible; visibility:hidden;">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/ru36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/ru36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=ou76 style="position:absolute; left:0px; top:254px; width:101px; height:22px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u76container style="position:absolute; left:0px; top:254px; width:101px; height:22px;; overflow:visible;">
+
+<DIV id=u77 style="position:absolute; left:2px; top:2px; width:96px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u77_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">防火板</span></DIV></DIV>
+</DIV>
+<IMG id=u76 src="Resources/transparent.gif" style="position:absolute; left:0px; top:254px; width:100px; height:21px" onmouseover="SwapOut('u76', 'u77', textRolloverJsonu77,true)" onmouseout="SwapBack('u76' , 'u77')" >
+
+<script type="text/javascript">
+    var textRolloverJsonu79 = {"fontWeight":"normal","textDecoration":"none"};
+</script>
+
+<DIV id=ru78 style="position:absolute; left:0px; top:275px; width:101px; height:22px;; overflow:visible; visibility:hidden;">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/ru36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/ru36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=ou78 style="position:absolute; left:0px; top:275px; width:101px; height:22px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u78container style="position:absolute; left:0px; top:275px; width:101px; height:22px;; overflow:visible;">
+
+<DIV id=u79 style="position:absolute; left:2px; top:2px; width:96px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u79_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">三聚氰胺板</span></DIV></DIV>
+</DIV>
+<IMG id=u78 src="Resources/transparent.gif" style="position:absolute; left:0px; top:275px; width:100px; height:21px" onmouseover="SwapOut('u78', 'u79', textRolloverJsonu79,true)" onmouseout="SwapBack('u78' , 'u79')" >
+
+<script type="text/javascript">
+    var textRolloverJsonu81 = {"fontWeight":"normal","textDecoration":"none"};
+</script>
+
+<DIV id=ru80 style="position:absolute; left:0px; top:296px; width:101px; height:22px;; overflow:visible; visibility:hidden;">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/ru36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/ru36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=ou80 style="position:absolute; left:0px; top:296px; width:101px; height:22px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u80container style="position:absolute; left:0px; top:296px; width:101px; height:22px;; overflow:visible;">
+
+<DIV id=u81 style="position:absolute; left:2px; top:2px; width:96px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u81_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">防潮板</span></DIV></DIV>
+</DIV>
+<IMG id=u80 src="Resources/transparent.gif" style="position:absolute; left:0px; top:296px; width:100px; height:21px" onmouseover="SwapOut('u80', 'u81', textRolloverJsonu81,true)" onmouseout="SwapBack('u80' , 'u81')" >
+
+<script type="text/javascript">
+    var textRolloverJsonu83 = {"fontWeight":"normal","textDecoration":"none"};
+</script>
+
+<DIV id=ru82 style="position:absolute; left:0px; top:317px; width:101px; height:22px;; overflow:visible; visibility:hidden;">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/ru36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/ru36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=ou82 style="position:absolute; left:0px; top:317px; width:101px; height:22px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u82container style="position:absolute; left:0px; top:317px; width:101px; height:22px;; overflow:visible;">
+
+<DIV id=u83 style="position:absolute; left:2px; top:2px; width:96px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u83_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">奥松板</span></DIV></DIV>
+</DIV>
+<IMG id=u82 src="Resources/transparent.gif" style="position:absolute; left:0px; top:317px; width:100px; height:21px" onmouseover="SwapOut('u82', 'u83', textRolloverJsonu83,true)" onmouseout="SwapBack('u82' , 'u83')" >
+
+</DIV>
+</DIV>
+</DIV>
+<script type="text/javascript">
+InitializeSubmenu('sm1u26', 'rou30', 'u30', 'u30ShowSubmenu');
+</script>
+
+<DIV id=sm2u26 style="position:absolute; left:0px; top:20px; width:106px; height:95px; visibility:hidden;">
+<IMG src="Resources/transparent.gif" style="position:absolute; left:-97px; top:-39px; width:406px; height:269px;" onmouseover="document.getElementById('sm2u26').style.visibility='hidden'; SwapBack('u32','u33');">
+
+<DIV style="position:absolute; left:3px; top:3px; width:1px; height:1px;">
+<IMG id=rou32 src="Resources/transparent.gif" style="position:absolute; left:0px; top:58px; width:100px; height:31px" onmouseover="SwapOut('u32','u33', textRolloverJsonu33, true)">
+
+</DIV>
+<span style="position:absolute; left:100px; top:58px; width:115px; height:78px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u84.png',sizingMethod='scale');
+"><img style="width:115px; height:78px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u84.png" border="0" alt=""></span>
+
+<IMG id=u84 src="Resources/transparent.gif" style="position:absolute; left:103px; top:61px; width:106px; height:69px">
+
+<DIV id=u84container style="position:absolute; left:103px; top:61px; width:107px; height:70px;; overflow:visible">
+
+<DIV id=u85 style="position:absolute; left:3px; top:3px; width:105px; height:68px;">
+
+</DIV>
+
+<DIV id=u85container style="position:absolute; left:3px; top:3px; width:105px; height:68px; overflow:visible">
+
+<script type="text/javascript">
+    var textRolloverJsonu87 = {"fontWeight":"normal","textDecoration":"none"};
+</script>
+
+<DIV id=ru86 style="position:absolute; left:0px; top:0px; width:101px; height:22px;; overflow:visible; visibility:hidden;">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/ru36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/ru36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=ou86 style="position:absolute; left:0px; top:0px; width:101px; height:22px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u86container style="position:absolute; left:0px; top:0px; width:101px; height:22px;; overflow:visible;">
+
+<DIV id=u87 style="position:absolute; left:2px; top:2px; width:96px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u87_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">收藏数</span></DIV></DIV>
+</DIV>
+<IMG id=u86 src="Resources/transparent.gif" style="position:absolute; left:0px; top:0px; width:100px; height:21px" onmouseover="SwapOut('u86', 'u87', textRolloverJsonu87,true)" onmouseout="SwapBack('u86' , 'u87')" >
+
+<script type="text/javascript">
+    var textRolloverJsonu89 = {"fontWeight":"normal","textDecoration":"none"};
+</script>
+
+<DIV id=ru88 style="position:absolute; left:0px; top:21px; width:101px; height:22px;; overflow:visible; visibility:hidden;">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/ru36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/ru36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=ou88 style="position:absolute; left:0px; top:21px; width:101px; height:22px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u88container style="position:absolute; left:0px; top:21px; width:101px; height:22px;; overflow:visible;">
+
+<DIV id=u89 style="position:absolute; left:2px; top:2px; width:96px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u89_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">企业规模</span></DIV></DIV>
+</DIV>
+<IMG id=u88 src="Resources/transparent.gif" style="position:absolute; left:0px; top:21px; width:100px; height:21px" onmouseover="SwapOut('u88', 'u89', textRolloverJsonu89,true)" onmouseout="SwapBack('u88' , 'u89')" >
+
+<script type="text/javascript">
+    var textRolloverJsonu91 = {"fontWeight":"normal","textDecoration":"none"};
+</script>
+
+<DIV id=ru90 style="position:absolute; left:0px; top:42px; width:101px; height:22px;; overflow:visible; visibility:hidden;">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/ru36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/ru36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=ou90 style="position:absolute; left:0px; top:42px; width:101px; height:22px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:109px; height:30px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='login_files/u36.png',sizingMethod='scale');
+"><img style="width:109px; height:30px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="login_files/u36.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u90container style="position:absolute; left:0px; top:42px; width:101px; height:22px;; overflow:visible;">
+
+<DIV id=u91 style="position:absolute; left:2px; top:2px; width:96px; height:17px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u91_rtf><span style=" font-family:'\'cb\'ce\'cc\'e5'; color:#000000; font-size:13px;">产品类别</span></DIV></DIV>
+</DIV>
+<IMG id=u90 src="Resources/transparent.gif" style="position:absolute; left:0px; top:42px; width:100px; height:21px" onmouseover="SwapOut('u90', 'u91', textRolloverJsonu91,true)" onmouseout="SwapBack('u90' , 'u91')" >
+
+</DIV>
+</DIV>
+</DIV>
+<script type="text/javascript">
+InitializeSubmenu('sm2u26', 'rou32', 'u32', 'u32ShowSubmenu');
+</script>
+
+</DIV>
+</DIV>
+<DIV id=u92 style="position:absolute; left:604px; top:38px; width:85px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left; word-wrap:break-word;" >
+<DIV id=u92_rtf><span style=" font-family:'\'bb\'aa\'ce\'c4\'d0\'d0\'bf\'ac'; color:#000000; font-size:19px;">个人中心</span></DIV></DIV><SCRIPT src="Resources/axurerp_pagescript.js"></SCRIPT>
+<SCRIPT src="login_files/axurerp_pagespecificscript.js"></SCRIPT></BODY></HTML>
