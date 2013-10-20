@@ -28,9 +28,8 @@
 		var myheight = mywidth * 3 / 4;
 		var advertise_width = (screen_width / 4) - 4; /* minus 4, solve:the space of photo is just not enough,that one lay to line 2*/
 		var advertise_height = advertise_width * 3 / 4;
-		<%--alert(advertise_width);--%>
+		alert(advertise_width);
 	</script>
-	
 	
     <div id="shortcut-2013">
       <div class="w">
@@ -215,7 +214,7 @@
 		      <img 
 		          class="advertise"
 		          onload="DrawImage(this,advertise_width,advertise_height)"
-		          src="E:\8.jpg"
+		          src="images/default.jpg"
 		          alt="for test"
 		          border="0">		  
 		  </a>
@@ -223,7 +222,7 @@
 		      <img 
 		          class="advertise"
 		          onload="DrawImage(this,advertise_width,advertise_height)"
-		          src="E:\8.jpg"
+		          src="images/default.jpg"
 		          alt="for test"
 		          border="0">		  
 		  </a>
@@ -231,7 +230,7 @@
 		      <img 
 		          class="advertise"
 		          onload="DrawImage(this,advertise_width,advertise_height)"
-		          src="E:/8.jpg"
+		          src="images/default.jpg"
 		          alt="for test"
 		          border="0">		  
 		  </a>		  
@@ -239,7 +238,7 @@
 		      <img 
 		          class="advertise"
 		          onload="DrawImage(this,advertise_width,advertise_height)"
-		          src="E:/8.jpg"
+		          src="images/default.jpg"
 		          alt="for test"
 		          border="0">		  
 		  </a>		  
