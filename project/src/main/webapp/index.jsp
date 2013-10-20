@@ -13,12 +13,25 @@
     </title>
     <meta name="keywords" content="板材、木材、机械、厂商、导购、图片">
     <meta name="description" content="国内最专业的板材行业产品、加工机械等销售批发信息服务网站">
+    <link rel="stylesheet" type="text/css" href="css_files/index_cat.css" />
     <link rel="stylesheet" type="text/css" href="css_files/base.css" media="all">
     <link rel="stylesheet" type="text/css" href="css_files/plist20130808.css" media="all">
     <script type="text/javascript" src="js/jquery/jquery.js">
+	<script type="text/javascript" src="js/image_auto_resize/autoresize_image.js"></script>
+	<script type="text/javascript" src="js/advitise_photos.js"></script>    
     </script>
   </head>
-  <body class="root61">
+  <body class="root61"  onresize="window.location.reload()">
+  	<script type="text/javascript">
+		var screen_width = document.body.clientWidth-2;
+		var mywidth = screen_width * 0.8 / 6;
+		var myheight = mywidth * 3 / 4;
+		var advertise_width = (screen_width / 4) - 4; /* minus 4, solve:the space of photo is just not enough,that one lay to line 2*/
+		var advertise_height = advertise_width * 3 / 4;
+		<%--alert(advertise_width);--%>
+	</script>
+	
+	
     <div id="shortcut-2013">
       <div class="w">
         <ul class="fl lh">
@@ -145,6 +158,98 @@
 <!--crumb end-->
 <div class="w main">
   <div class="right-extra">
+
+		<div id="banner">
+		  <div id="banner_bg">
+		  </div>
+		  <div id="banner_info">
+		    <table id="banner_info_name">
+		      <tr>
+		        <td>
+		        </td>
+		        <td>
+		        </td>
+		        <td>
+		        </td>
+		        <td>
+		        </td>
+		      </tr>
+		    </table>
+		  </div>
+		  <ul>
+		    <li class="on">
+		    1
+		  </li>
+		  <li>
+		  2
+		</li>
+		</ul>
+		<div id="banner_list">
+		  <%--默认显示四个产品 --%>
+<%--		  <s:iterator value="advertiseProducts" id="p">
+		    <a href="product/showProduct?productId=<s:property value="#p.Id"/>">
+		      <img 
+		          class="advertise"
+		          onload="DrawImage(this,advertise_width,advertise_height)"
+		          src="<s:property value="#p.icon"/>"
+		          alt="<s:property value="#p.name"/>"
+		          border="0">
+		
+		
+		    </a>
+		  </s:iterator>--%>
+		  <%--默认显示四个企业 --%>
+	<%--	  <s:iterator value="advertiseEnterprises" id="e">
+		    <a href="enterprise/showEnterprise?enterpriseId=<s:property value='#e.id'/>">
+		      <img 
+		          class="advertise"
+		          onload="DrawImage(this,advertise_width,advertise_height)"
+		          src="<s:property value="#e.logo"/>"
+		          alt="<s:property value="#e.name"/>"
+		          border="0">
+		
+		
+		    </a>
+		  </s:iterator>--%>
+		    <a href="#">
+		      <img 
+		          class="advertise"
+		          onload="DrawImage(this,advertise_width,advertise_height)"
+		          src="E:\8.jpg"
+		          alt="for test"
+		          border="0">		  
+		  </a>
+		  		    <a href="#">
+		      <img 
+		          class="advertise"
+		          onload="DrawImage(this,advertise_width,advertise_height)"
+		          src="E:\8.jpg"
+		          alt="for test"
+		          border="0">		  
+		  </a>
+		    <a href="#">
+		      <img 
+		          class="advertise"
+		          onload="DrawImage(this,advertise_width,advertise_height)"
+		          src="E:/8.jpg"
+		          alt="for test"
+		          border="0">		  
+		  </a>		  
+		    <a href="#">
+		      <img 
+		          class="advertise"
+		          onload="DrawImage(this,advertise_width,advertise_height)"
+		          src="E:/8.jpg"
+		          alt="for test"
+		          border="0">		  
+		  </a>		  
+		  
+		</div>
+		</div>
+		
+			
+
+ <%-- guanggaolan area 
     <div class="m" id="i-right">
       <div id="hotsale" clstag="thirdtype|keycount|thirdtype|hotsaleM" reco_id="3">
         <div class="mt">
@@ -286,6 +391,11 @@
 </div>
 </div>
 </div>
+
+
+ --%>
+ 
+ 
 <div class="m plist-n7a" id="plist" clstag="thirdtype|keycount|thirdtype|plist">
   <ul class="list-h">
     <li index="0"  sku="853231">
