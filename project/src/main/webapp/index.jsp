@@ -4,10 +4,9 @@
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <base 
-        href="<%= request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() %>/"
-    />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<base href="<%= request.getScheme() + "://" + request.getServerName() + ":" 
+			+ request.getServerPort() + request.getContextPath() %>/" />
     <title>
       58板材网
     </title>
@@ -197,7 +196,7 @@
 		
 		    </a>
 		  </s:iterator>
-		  默认显示四个企业 
+		  <%--默认显示四个企业--%> 
 		  <s:iterator value="advertiseEnterprises" id="e">
 		    <a href="enterprise/showEnterprise?enterpriseId=<s:property value='#e.id'/>">
 		      <img 
@@ -210,725 +209,209 @@
 		
 		    </a>
 		  </s:iterator>
-<%--		    <a href="#">
-		      <img 
-		          class="advertise"
-		          onload="DrawImage(this,advertise_width,advertise_height)"
-		          src="images/default.jpg"
-		          alt="for test"
-		          border="0">		  
-		  </a>
-		  		    <a href="#">
-		      <img 
-		          class="advertise"
-		          onload="DrawImage(this,advertise_width,advertise_height)"
-		          src="images/default.jpg"
-		          alt="for test"
-		          border="0">		  
-		  </a>
-		    <a href="#">
-		      <img 
-		          class="advertise"
-		          onload="DrawImage(this,advertise_width,advertise_height)"
-		          src="images/default.jpg"
-		          alt="for test"
-		          border="0">		  
-		  </a>		  
-		    <a href="#">
-		      <img 
-		          class="advertise"
-		          onload="DrawImage(this,advertise_width,advertise_height)"
-		          src="images/default.jpg"
-		          alt="for test"
-		          border="0">		  
-		  </a>		  --%>
 		  
 		</div>
 		</div>
-		
-			
-
- <%-- guanggaolan area 
-    <div class="m" id="i-right">
-      <div id="hotsale" clstag="thirdtype|keycount|thirdtype|hotsaleM" reco_id="3">
-        <div class="mt">
-          <h2>
-            热销推荐
-          </h2>
-        </div>
-        <!--热销商品-->
-
-        <div class="mc list-h" rfid="373">
-          <dl>
-            <dt>
-            <a href=".html" target="_blank">
-              <img alt="" src=".jpg" width="100" height="100">
-            </a>
-          </dt>
-          <dd>
-          <div class="p-name">
-            <a href=".html" target="_blank">
-              广告位xxxx厂xxx板材
-              <font color="#ff6600">
-                广告位xxxx厂xxx板材
-              </font>
-            </a>
-          </div>
-          <div class="p-price" sku="889805">
-            特价：
-            <strong>
-              ￥4299.00
-            </strong>
-          </div>
-          <div class="btns">
-            <a href="" target="_blank">
-              立即抢购
-            </a>
-          </div>
-        </dd>
-      </dl>
-      <dl>
-        <dt>
-        <a href=".html" target="_blank">
-          <img alt="" src=".jpg" width="100" height="100">
-        </a>
-      </dt>
-      <dd>
-      <div class="p-name">
-        <a href=".html" target="_blank">
-          广告位xxxx厂xxx板材
-          <font color="#ff6600">
-            广告位xxxx厂xxx板材
-          </font>
-        </a>
-      </div>
-      <div class="p-price" sku="901526">
-        特价：
-        <strong>
-          ￥4499.00
-        </strong>
-      </div>
-      <div class="btns">
-        <a href="" target="_blank">
-          立即抢购
-        </a>
-      </div>
-    </dd>
-  </dl>
-  <dl>
-    <dt>
-    <a href=".html" target="_blank">
-      <img alt="" src=".jpg" width="100" height="100">
-    </a>
-  </dt>
-  <dd>
-  <div class="p-name">
-    <a href=".html" target="_blank">
-      广告位xxxx厂xxx板材
-      <font color="#ff6600">
-        广告位xxxx厂xxx板材
-      </font>
-    </a>
-  </div>
-  <div class="p-price" sku="802240">
-    特价：
-    <strong>
-      ￥3599.00
-    </strong>
-  </div>
-  <div class="btns">
-    <a href="" target="_blank">
-      立即抢购
-    </a>
-  </div>
-</dd>
-</dl>
-</div>
-</div>
-<div id="market" clstag="thirdtype|keycount|thirdtype|market">
-  <div class="mt">
-    <h2>
-      促销活动
-    </h2>
-  </div>
-  <div class="mc">
-    <!--促销活动-->
-
-    <ul>
-      <li>
-      ·
-      <a href="http://www.jd.com/news.aspx?id=13158" target="_blank">
-        先科拉杆扩音器风靡今夏
-      </a>
-    </li>
-    <li>
-    ·
-    <a href="http://www.jd.com/news.aspx?id=13038" target="_blank">
-      AMD牵手京东迎来暑假促销季
-    </a>
-  </li>
-  <li>
-  ·
-  <a href="http://www.jd.com/news.aspx?id=12888" target="_blank">
-    联想扬天全金属超极本
-  </a>
-</li>
-<li>
-·
-<a href="http://www.jd.com/news.aspx?id=12876" target="_blank">
-  移动电源送彩票，千万大奖伺候！
-</a>
-</li>
-<li>
-·
-<a href="http://www.jd.com/news.aspx?id=12847" target="_blank">
-  惠普三重好礼过今夏
-</a>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-
-
- --%>
  
  
 <div class="m plist-n7a" id="plist" clstag="thirdtype|keycount|thirdtype|plist">
   <ul class="list-h">
-    <li index="0"  sku="853231">
-    <div class="p-img">
-      <a target="_blank" href=".html">
-        <img width="220" height="220" alt="" src=".jpg" data-img="1" title="">
-      </a>
-    </div>
-    <div class="p-name">
-      <a target="_blank" href=".html" title="">
-        <font style="color: #ff0000" class="adwords" name="853231">
-        </font>
-      </a>
-    </div>
-    <div class="extra">
-      <span class="evaluate">
-        <a target="_blank" href=".html">
-          已有4154人评价
+
+    <s:iterator value="displayProducts" id="product" status="status" begin="0" end="5">
+      <li>
+      <div class="p-img">
+        <a href="product/showProduct?productId=<s:property value="#product.Id"/>">
+          <img 
+              onload="DrawImage(this,20,20)"
+              src="<s:property value="#product.icon"/>"
+              border="0"
+              alt="images/default.jpg"
+          >
+
         </a>
-      </span>
-    </div>
-    <div class="btns">
-      <a id="coll853231" href="javascript:;" class="btn-coll">
-        关注
-      </a>
-      <a class="btn-compare btn-compare-s" id="comp_853231" skuid="853231">
-        <span>
-        </span>
-        对比
-      </a>
-    </div>
-    <div class="p-shopnum">
-    </div>
-  </li>
+      </div>
+      <div class="p-name">
+        <a target="_blank" href="product/showProduct?productId=<s:property value="#product.Id"/>"  title="">
+          <font style="color: #ff0000" class="adwords" name="853231">
+            <s:property value="#product.name"/>
+          </font>
+        </a>
+      </div>
+      <div class="extra">
+        已有4154人收藏
+      </div>
+    </li>
+  </s:iterator>
+  
+    <s:iterator value="displayProducts" id="product" status="status" begin="6" end="11">
+      <li>
+      <div class="p-img">
+        <a href="product/showProduct?productId=<s:property value="#product.Id"/>">
+          <img 
+              onload="DrawImage(this,20,20)"
+              src="<s:property value="#product.icon"/>"
+              border="0"
+              alt="images/default.jpg"
+          >
 
+        </a>
+      </div>
+      <div class="p-name">
+        <a target="_blank" href="product/showProduct?productId=<s:property value="#product.Id"/>"  title="">
+          <font style="color: #ff0000" class="adwords" name="853231">
+            <s:property value="#product.name"/>
+          </font>
+        </a>
+      </div>
+      <div class="extra">
+        已有4154人收藏
+      </div>
+    </li>
+  </s:iterator>
+    <s:iterator value="displayProducts" id="product" status="status" begin="12" end="17">
+      <li>
+      <div class="p-img">
+        <a href="product/showProduct?productId=<s:property value="#product.Id"/>">
+          <img 
+              onload="DrawImage(this,20,20)"
+              src="<s:property value="#product.icon"/>"
+              border="0"
+              alt="images/default.jpg"
+          >
 
-  <li index="0"  sku="853231">
-  <div class="p-img">
-    <a target="_blank" href=".html">
-      <img width="220" height="220" alt="" src=".jpg" data-img="1" title="">
-    </a>
-  </div>
-  <div class="p-name">
-    <a target="_blank" href=".html" title="">
-      <font style="color: #ff0000" class="adwords" name="853231">
-      </font>
-    </a>
-  </div>
-  <div class="extra">
-    <span class="evaluate">
-      <a target="_blank" href=".html">
-        已有4154人评价
-      </a>
-    </span>
-  </div>
-  <div class="btns">
-    <a id="coll853231" href="javascript:;" class="btn-coll">
-      关注
-    </a>
-    <a class="btn-compare btn-compare-s" id="comp_853231" skuid="853231">
-      <span>
-      </span>
-      对比
-    </a>
-  </div>
-  <div class="p-shopnum">
-  </div>
-</li>
+        </a>
+      </div>
+      <div class="p-name">
+        <a target="_blank" href="product/showProduct?productId=<s:property value="#product.Id"/>"  title="">
+          <font style="color: #ff0000" class="adwords" name="853231">
+            <s:property value="#product.name"/>
+          </font>
+        </a>
+      </div>
+      <div class="extra">
+        已有4154人收藏
+      </div>
+    </li>
+  </s:iterator>
+    <s:iterator value="displayProducts" id="product" status="status" begin="18" end="23">
+      <li>
+      <div class="p-img">
+        <a href="product/showProduct?productId=<s:property value="#product.Id"/>">
+          <img 
+              onload="DrawImage(this,20,20)"
+              src="<s:property value="#product.icon"/>"
+              border="0"
+              alt="images/default.jpg"
+          >
 
-<li index="0"  sku="853231">
-<div class="p-img">
-  <a target="_blank" href=".html">
-    <img width="220" height="220" alt="" src=".jpg" data-img="1" title="">
-  </a>
-</div>
-<div class="p-name">
-  <a target="_blank" href=".html" title="">
-    <font style="color: #ff0000" class="adwords" name="853231">
-    </font>
-  </a>
-</div>
-<div class="extra">
-  <span class="evaluate">
-    <a target="_blank" href=".html">
-      已有4154人评价
-    </a>
-  </span>
-</div>
-<div class="btns">
-  <a id="coll853231" href="javascript:;" class="btn-coll">
-    关注
-  </a>
-  <a class="btn-compare btn-compare-s" id="comp_853231" skuid="853231">
-    <span>
-    </span>
-    对比
-  </a>
-</div>
-<div class="p-shopnum">
-</div>
-</li>
+        </a>
+      </div>
+      <div class="p-name">
+        <a target="_blank" href="product/showProduct?productId=<s:property value="#product.Id"/>"  title="">
+          <font style="color: #ff0000" class="adwords" name="853231">
+            <s:property value="#product.name"/>
+          </font>
+        </a>
+      </div>
+      <div class="extra">
+        已有4154人收藏
+      </div>
+    </li>
+  </s:iterator>
+    <s:iterator value="displayProducts" id="product" status="status" begin="24" end="29">
+      <li>
+      <div class="p-img">
+        <a href="product/showProduct?productId=<s:property value="#product.Id"/>">
+          <img 
+              onload="DrawImage(this,20,20)"
+              src="<s:property value="#product.icon"/>"
+              border="0"
+              alt="images/default.jpg"
+          >
 
-<li index="0"  sku="853231">
-<div class="p-img">
-  <a target="_blank" href=".html">
-    <img width="220" height="220" alt="" src=".jpg" data-img="1" title="">
-  </a>
-</div>
-<div class="p-name">
-  <a target="_blank" href=".html" title="">
-    <font style="color: #ff0000" class="adwords" name="853231">
-    </font>
-  </a>
-</div>
-<div class="extra">
-  <span class="evaluate">
-    <a target="_blank" href=".html">
-      已有4154人评价
-    </a>
-  </span>
-</div>
-<div class="btns">
-  <a id="coll853231" href="javascript:;" class="btn-coll">
-    关注
-  </a>
-  <a class="btn-compare btn-compare-s" id="comp_853231" skuid="853231">
-    <span>
-    </span>
-    对比
-  </a>
-</div>
-<div class="p-shopnum">
-</div>
-</li>
+        </a>
+      </div>
+      <div class="p-name">
+        <a target="_blank" href="product/showProduct?productId=<s:property value="#product.Id"/>"  title="">
+          <font style="color: #ff0000" class="adwords" name="853231">
+            <s:property value="#product.name"/>
+          </font>
+        </a>
+      </div>
+      <div class="extra">
+        已有4154人收藏
+      </div>
+    </li>
+  </s:iterator>
+    <s:iterator value="displayProducts" id="product" status="status" begin="30" end="35">
+      <li>
+      <div class="p-img">
+        <a href="product/showProduct?productId=<s:property value="#product.Id"/>">
+          <img 
+              onload="DrawImage(this,20,20)"
+              src="<s:property value="#product.icon"/>"
+              border="0"
+              alt="images/default.jpg"
+          >
 
-<li index="0"  sku="853231">
-<div class="p-img">
-  <a target="_blank" href=".html">
-    <img width="220" height="220" alt="" src=".jpg" data-img="1" title="">
-  </a>
-</div>
-<div class="p-name">
-  <a target="_blank" href=".html" title="">
-    <font style="color: #ff0000" class="adwords" name="853231">
-    </font>
-  </a>
-</div>
-<div class="extra">
-  <span class="evaluate">
-    <a target="_blank" href=".html">
-      已有4154人评价
-    </a>
-  </span>
-</div>
-<div class="btns">
-  <a id="coll853231" href="javascript:;" class="btn-coll">
-    关注
-  </a>
-  <a class="btn-compare btn-compare-s" id="comp_853231" skuid="853231">
-    <span>
-    </span>
-    对比
-  </a>
-</div>
-<div class="p-shopnum">
-</div>
-</li>
+        </a>
+      </div>
+      <div class="p-name">
+        <a target="_blank" href="product/showProduct?productId=<s:property value="#product.Id"/>"  title="">
+          <font style="color: #ff0000" class="adwords" name="853231">
+            <s:property value="#product.name"/>
+          </font>
+        </a>
+      </div>
+      <div class="extra">
+        已有4154人收藏
+      </div>
+    </li>
+  </s:iterator>
+    <s:iterator value="displayProducts" id="product" status="status" begin="36" end="41">
+      <li>
+      <div class="p-img">
+        <a href="product/showProduct?productId=<s:property value="#product.Id"/>">
+          <img 
+              onload="DrawImage(this,20,20)"
+              src="<s:property value="#product.icon"/>"
+              border="0"
+              alt="images/default.jpg"
+          >
 
-<li index="0"  sku="853231">
-<div class="p-img">
-  <a target="_blank" href=".html">
-    <img width="220" height="220" alt="" src=".jpg" data-img="1" title="">
-  </a>
-</div>
-<div class="p-name">
-  <a target="_blank" href=".html" title="">
-    <font style="color: #ff0000" class="adwords" name="853231">
-    </font>
-  </a>
-</div>
-<div class="extra">
-  <span class="evaluate">
-    <a target="_blank" href=".html">
-      已有4154人评价
-    </a>
-  </span>
-</div>
-<div class="btns">
-  <a id="coll853231" href="javascript:;" class="btn-coll">
-    关注
-  </a>
-  <a class="btn-compare btn-compare-s" id="comp_853231" skuid="853231">
-    <span>
-    </span>
-    对比
-  </a>
-</div>
-<div class="p-shopnum">
-</div>
-</li>
+        </a>
+      </div>
+      <div class="p-name">
+        <a target="_blank" href="product/showProduct?productId=<s:property value="#product.Id"/>"  title="">
+          <font style="color: #ff0000" class="adwords" name="853231">
+            <s:property value="#product.name"/>
+          </font>
+        </a>
+      </div>
+      <div class="extra">
+        已有4154人收藏
+      </div>
+    </li>
+  </s:iterator>
 
-<li index="0"  sku="853231">
-<div class="p-img">
-  <a target="_blank" href=".html">
-    <img width="220" height="220" alt="" src=".jpg" data-img="1" title="">
-  </a>
-</div>
-<div class="p-name">
-  <a target="_blank" href=".html" title="">
-    <font style="color: #ff0000" class="adwords" name="853231">
-    </font>
-  </a>
-</div>
-<div class="extra">
-  <span class="evaluate">
-    <a target="_blank" href=".html">
-      已有4154人评价
-    </a>
-  </span>
-</div>
-<div class="btns">
-  <a id="coll853231" href="javascript:;" class="btn-coll">
-    关注
-  </a>
-  <a class="btn-compare btn-compare-s" id="comp_853231" skuid="853231">
-    <span>
-    </span>
-    对比
-  </a>
-</div>
-<div class="p-shopnum">
-</div>
-</li>
+  
+<%--
+	                <s:iterator value="displayProducts" id="product" status="status" begin="0" end="5">
+	                    <td>
+	                    	<a href="product/showProduct?productId=<s:property value="#product.Id"/>">
+	                          <img class="ent_product" onload="DrawImage(this,mywidth,myheight)"  src="<s:property value="#product.icon"/>" 
+	                          		border="0" alt="images/default.jpg"/>
+	                     	</a>
+	                     	<br>
+	                		<s:property value="#product.name"/><br>
+	                    </td>
+  	                </s:iterator>--%>
 
-<li index="0"  sku="853231">
-<div class="p-img">
-  <a target="_blank" href=".html">
-    <img width="220" height="220" alt="" src=".jpg" data-img="1" title="">
-  </a>
-</div>
-<div class="p-name">
-  <a target="_blank" href=".html" title="">
-    <font style="color: #ff0000" class="adwords" name="853231">
-    </font>
-  </a>
-</div>
-<div class="extra">
-  <span class="evaluate">
-    <a target="_blank" href=".html">
-      已有4154人评价
-    </a>
-  </span>
-</div>
-<div class="btns">
-  <a id="coll853231" href="javascript:;" class="btn-coll">
-    关注
-  </a>
-  <a class="btn-compare btn-compare-s" id="comp_853231" skuid="853231">
-    <span>
-    </span>
-    对比
-  </a>
-</div>
-<div class="p-shopnum">
-</div>
-</li>
-
-<li index="0"  sku="853231">
-<div class="p-img">
-  <a target="_blank" href=".html">
-    <img width="220" height="220" alt="" src=".jpg" data-img="1" title="">
-  </a>
-</div>
-<div class="p-name">
-  <a target="_blank" href=".html" title="">
-    <font style="color: #ff0000" class="adwords" name="853231">
-    </font>
-  </a>
-</div>
-<div class="extra">
-  <span class="evaluate">
-    <a target="_blank" href=".html">
-      已有4154人评价
-    </a>
-  </span>
-</div>
-<div class="btns">
-  <a id="coll853231" href="javascript:;" class="btn-coll">
-    关注
-  </a>
-  <a class="btn-compare btn-compare-s" id="comp_853231" skuid="853231">
-    <span>
-    </span>
-    对比
-  </a>
-</div>
-<div class="p-shopnum">
-</div>
-</li>
-
-<li index="0"  sku="853231">
-<div class="p-img">
-  <a target="_blank" href=".html">
-    <img width="220" height="220" alt="" src=".jpg" data-img="1" title="">
-  </a>
-</div>
-<div class="p-name">
-  <a target="_blank" href=".html" title="">
-    <font style="color: #ff0000" class="adwords" name="853231">
-    </font>
-  </a>
-</div>
-<div class="extra">
-  <span class="evaluate">
-    <a target="_blank" href=".html">
-      已有4154人评价
-    </a>
-  </span>
-</div>
-<div class="btns">
-  <a id="coll853231" href="javascript:;" class="btn-coll">
-    关注
-  </a>
-  <a class="btn-compare btn-compare-s" id="comp_853231" skuid="853231">
-    <span>
-    </span>
-    对比
-  </a>
-</div>
-<div class="p-shopnum">
-</div>
-</li>
-
-<li index="0"  sku="853231">
-<div class="p-img">
-  <a target="_blank" href=".html">
-    <img width="220" height="220" alt="" src=".jpg" data-img="1" title="">
-  </a>
-</div>
-<div class="p-name">
-  <a target="_blank" href=".html" title="">
-    <font style="color: #ff0000" class="adwords" name="853231">
-    </font>
-  </a>
-</div>
-<div class="extra">
-  <span class="evaluate">
-    <a target="_blank" href=".html">
-      已有4154人评价
-    </a>
-  </span>
-</div>
-<div class="btns">
-  <a id="coll853231" href="javascript:;" class="btn-coll">
-    关注
-  </a>
-  <a class="btn-compare btn-compare-s" id="comp_853231" skuid="853231">
-    <span>
-    </span>
-    对比
-  </a>
-</div>
-<div class="p-shopnum">
-</div>
-</li>
-
-<li index="0"  sku="853231">
-<div class="p-img">
-  <a target="_blank" href=".html">
-    <img width="220" height="220" alt="" src=".jpg" data-img="1" title="">
-  </a>
-</div>
-<div class="p-name">
-  <a target="_blank" href=".html" title="">
-    <font style="color: #ff0000" class="adwords" name="853231">
-    </font>
-  </a>
-</div>
-<div class="extra">
-  <span class="evaluate">
-    <a target="_blank" href=".html">
-      已有4154人评价
-    </a>
-  </span>
-</div>
-<div class="btns">
-  <a id="coll853231" href="javascript:;" class="btn-coll">
-    关注
-  </a>
-  <a class="btn-compare btn-compare-s" id="comp_853231" skuid="853231">
-    <span>
-    </span>
-    对比
-  </a>
-</div>
-<div class="p-shopnum">
-</div>
-</li>
-
-<li index="0"  sku="853231">
-<div class="p-img">
-  <a target="_blank" href=".html">
-    <img width="220" height="220" alt="" src=".jpg" data-img="1" title="">
-  </a>
-</div>
-<div class="p-name">
-  <a target="_blank" href=".html" title="">
-    <font style="color: #ff0000" class="adwords" name="853231">
-    </font>
-  </a>
-</div>
-<div class="extra">
-  <span class="evaluate">
-    <a target="_blank" href=".html">
-      已有4154人评价
-    </a>
-  </span>
-</div>
-<div class="btns">
-  <a id="coll853231" href="javascript:;" class="btn-coll">
-    关注
-  </a>
-  <a class="btn-compare btn-compare-s" id="comp_853231" skuid="853231">
-    <span>
-    </span>
-    对比
-  </a>
-</div>
-<div class="p-shopnum">
-</div>
-</li>
-
-<li index="0"  sku="853231">
-<div class="p-img">
-  <a target="_blank" href=".html">
-    <img width="220" height="220" alt="" src=".jpg" data-img="1" title="">
-  </a>
-</div>
-<div class="p-name">
-  <a target="_blank" href=".html" title="">
-    <font style="color: #ff0000" class="adwords" name="853231">
-    </font>
-  </a>
-</div>
-<div class="extra">
-  <span class="evaluate">
-    <a target="_blank" href=".html">
-      已有4154人评价
-    </a>
-  </span>
-</div>
-<div class="btns">
-  <a id="coll853231" href="javascript:;" class="btn-coll">
-    关注
-  </a>
-  <a class="btn-compare btn-compare-s" id="comp_853231" skuid="853231">
-    <span>
-    </span>
-    对比
-  </a>
-</div>
-<div class="p-shopnum">
-</div>
-</li>
-
-<li index="0"  sku="853231">
-<div class="p-img">
-  <a target="_blank" href=".html">
-    <img width="220" height="220" alt="" src=".jpg" data-img="1" title="">
-  </a>
-</div>
-<div class="p-name">
-  <a target="_blank" href=".html" title="">
-    <font style="color: #ff0000" class="adwords" name="853231">
-    </font>
-  </a>
-</div>
-<div class="extra">
-  <span class="evaluate">
-    <a target="_blank" href=".html">
-      已有4154人评价
-    </a>
-  </span>
-</div>
-<div class="btns">
-  <a id="coll853231" href="javascript:;" class="btn-coll">
-    关注
-  </a>
-  <a class="btn-compare btn-compare-s" id="comp_853231" skuid="853231">
-    <span>
-    </span>
-    对比
-  </a>
-</div>
-<div class="p-shopnum">
-</div>
-</li>
-
-<li index="0"  sku="853231">
-<div class="p-img">
-  <a target="_blank" href=".html">
-    <img width="220" height="220" alt="" src=".jpg" data-img="1" title="">
-  </a>
-</div>
-<div class="p-name">
-  <a target="_blank" href=".html" title="">
-    <font style="color: #ff0000" class="adwords" name="853231">
-    </font>
-  </a>
-</div>
-<div class="extra">
-  <span class="evaluate">
-    <a target="_blank" href=".html">
-      已有4154人评价
-    </a>
-  </span>
-</div>
-<div class="btns">
-  <a id="coll853231" href="javascript:;" class="btn-coll">
-    关注
-  </a>
-  <a class="btn-compare btn-compare-s" id="comp_853231" skuid="853231">
-    <span>
-    </span>
-    对比
-  </a>
-</div>
-<div class="p-shopnum">
-</div>
-</li>
 
 
 </ul>
 </div>
+
 <!-- photo list div end -->
 
 

@@ -13,39 +13,71 @@
 	<script type="text/javascript" src="js/advitise_photos.js"></script>
 </head>
 <body  onresize="window.location.reload()">	
-	<script type="text/javascript">
-		var screen_width = document.body.clientWidth-2;
-		var mywidth = screen_width * 0.8 / 6;
-		var myheight = mywidth * 3 / 4;
-		var advertise_width = (screen_width / 4) - 4; /* minus 4, solve:the space of photo is just not enough,that one lay to line 2*/
-		var advertise_height = advertise_width * 3 / 4;
+		<script type="text/javascript">
+	  var screen_width = document.body.clientWidth-2;
+	  var mywidth = screen_width * 0.8 / 6;
+	  var myheight = mywidth * 3 / 4;
+	  var advertise_width = (screen_width / 4) - 4; /* minus 4, solve:the space of photo is just not enough,that one lay to line 2*/
+	  var advertise_height = advertise_width * 3 / 4;
 	</script>
 	
 	<%@ include file="includefiles/navigate.jsp" %>
-		<div id="banner">  
-		    <div id="banner_bg"></div>  
-		    <div id="banner_info">
-		    	<table id="banner_info_name">
-		    		<tr>
-		    			<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-		    		</tr>
-		    	</table>
-		    </div> 
-		    <ul>
-		        <li class="on">1</li>
-		        <li>2</li>
-		    </ul>
-		   <div id="banner_list">
-		 	 <%--默认显示四个产品 --%>
-<s:iterator value="advertiseProducts" id="p"><a href="product/showProduct?productId=<s:property value="#p.Id"/>"><img class="advertise" onload="DrawImage(this,advertise_width,advertise_height)" src="<s:property value="#p.icon"/>"  
-alt="<s:property value="#p.name"/>" border="0"></a></s:iterator>		   
-		        <%--默认显示四个企业 --%>
-<s:iterator value="advertiseEnterprises" id="e"><a href="enterprise/showEnterprise?enterpriseId=<s:property value='#e.id'/>"><img class="advertise" onload="DrawImage(this,advertise_width,advertise_height)" src="<s:property value="#e.logo"/>" 
-alt="<s:property value="#e.name"/>" border="0"></a></s:iterator></div>
-		</div>		
+	<div id="banner">
+	  <div id="banner_bg">
+	  </div>
+	  <div id="banner_info">
+	    <table id="banner_info_name">
+	      <tr>
+	        <td>
+	        </td>
+	        <td>
+	        </td>
+	        <td>
+	        </td>
+	        <td>
+	        </td>
+	      </tr>
+	    </table>
+	  </div>
+	  <ul>
+	    <li class="on">
+	    1
+	  </li>
+	  <li>
+	  2
+	</li>
+	</ul>
+	<div id="banner_list">
+	  <%--默认显示四个产品--%> 
+	  <s:iterator value="advertiseProducts" id="p">
+	    <a href="product/showProduct?productId=<s:property value="#p.Id"/>">
+	      <img 
+	          class="advertise"
+	          onload="DrawImage(this,advertise_width,advertise_height)"
+	          src="<s:property value="#p.icon"/>"
+	          alt="<s:property value="#p.name"/>"
+	          border="0">
+	
+	
+	    </a>
+	  </s:iterator>
+	  <%--默认显示四个企业 --%>
+	  <s:iterator value="advertiseEnterprises" id="e">
+	    <a href="enterprise/showEnterprise?enterpriseId=<s:property value='#e.id'/>">
+	      <img 
+	          class="advertise"
+	          onload="DrawImage(this,advertise_width,advertise_height)"
+	          src="<s:property value="#e.logo"/>"
+	          alt="<s:property value="#e.name"/>"
+	          border="0">
+	
+	
+	    </a>
+	  </s:iterator>
+	</div>
+	</div>
+	
+
 		
 		<%-- 搜索输入框 --%>
 		<s:form action="search/search_get_result" style="margin:0;">
