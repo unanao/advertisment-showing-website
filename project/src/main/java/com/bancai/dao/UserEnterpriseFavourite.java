@@ -1,5 +1,7 @@
 package com.bancai.dao;
 
+import java.sql.Timestamp;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,7 +25,7 @@ public class UserEnterpriseFavourite implements java.io.Serializable {
 	private Integer id;
 	private Integer user;
 	private Integer enterprise;
-	private String time;
+	private Timestamp time;
 	private String reserved;
 
 	// Constructors
@@ -34,7 +36,7 @@ public class UserEnterpriseFavourite implements java.io.Serializable {
 
 	/** full constructor */
 	public UserEnterpriseFavourite(Integer user, Integer enterprise,
-			String time, String reserved) {
+			Timestamp time, String reserved) {
 		this.user = user;
 		this.enterprise = enterprise;
 		this.time = time;
@@ -71,12 +73,12 @@ public class UserEnterpriseFavourite implements java.io.Serializable {
 		this.enterprise = enterprise;
 	}
 
-	@Column(name = "time")
-	public String getTime() {
+	@Column(name = "time",nullable = false)
+	public Timestamp getTime() {
 		return this.time;
 	}
 
-	public void setTime(String time) {
+	public void setTime(Timestamp time) {
 		this.time = time;
 	}
 

@@ -221,9 +221,9 @@ CREATE TABLE IF NOT EXISTS `product` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '业务无关主键',
   `name` varchar(255) NOT NULL,
   `enterprise` int(11) DEFAULT NULL COMMENT '外键',
-  `favourite` int(11) DEFAULT NULL COMMENT '收藏次数',
-  `hits` int(11) DEFAULT NULL COMMENT '点击次数',
-  `score` int(11) DEFAULT NULL COMMENT '评分',
+  `favourite` int(11) DEFAULT  0 COMMENT '收藏次数',
+  `hits` int(11) DEFAULT  0 COMMENT '点击次数',
+  `score` int(11) DEFAULT  0  COMMENT '评分',
   `introduction` varchar(255) DEFAULT NULL COMMENT '该产品简介',
   `icon` varchar(255) DEFAULT NULL COMMENT '资源图片',
   `reserved` varchar(255) DEFAULT NULL COMMENT '预留字段，以备后用',
@@ -319,7 +319,7 @@ CREATE TABLE IF NOT EXISTS `user_enterprise_favourite` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user` int(11) DEFAULT NULL COMMENT '外键，指向user表',
   `enterprise` int(11) DEFAULT NULL COMMENT '外键，指向企业表',
-  `time` varchar(255) DEFAULT NULL COMMENT '收藏时间',
+  `time` timestamp  NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '收藏时间',
   `reserved` varchar(255) DEFAULT NULL COMMENT '预留字段',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户收藏企业表' AUTO_INCREMENT=1 ;
@@ -334,7 +334,7 @@ CREATE TABLE IF NOT EXISTS `user_product_favourite` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user` int(11) DEFAULT NULL COMMENT '外键，指向user表',
   `product` int(11) DEFAULT NULL COMMENT '外键，指向产品表',
-  `time` varchar(255) DEFAULT NULL COMMENT '收藏时间',
+  `time` timestamp  NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '收藏时间',
   `reserved` varchar(255) DEFAULT NULL COMMENT '预留字段',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户收藏产品表' AUTO_INCREMENT=1 ;
