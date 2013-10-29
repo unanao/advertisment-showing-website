@@ -197,12 +197,43 @@ public abstract class AbstractDAO<T> {
        	 	EntityManagerHelper.beginTransaction();
        	 	
 			Query query = em.createQuery(deleteStr);
-			query.setParameter("column1", value1);
-			query.setParameter("column2", value2);
+			query.setParameter("value1", value1);
+			query.setParameter("value2", value2);
 			
 			query.executeUpdate();
 			
 			EntityManagerHelper.commit();
+		} 
+		catch (RuntimeException re) 
+		{
+			log(deleteStr + value1 + value2, Level.SEVERE, re);
+			EntityManagerHelper.rollback();
+			
+			throw re;
+		}
+	}
+	/**
+     * 根据表中列的名字删除表中的记录
+     * @param column 列名
+     * @param value  列的值
+     */
+    public void deleteBy2ColumnNoTransaction(String column1, Object value1, 
+    							  String column2, Object value2)
+	{
+		String deleteStr = "DELETE FROM " + getClassName() + " table where table."
+		         + column1 + "=:value1" + " AND table." + column2  + "=:value2";
+		EntityManager em = EntityManagerHelper.getEntityManager();
+
+       
+		log(deleteStr + value1 + value2, Level.INFO, null);
+		try 
+        {	 
+       	 	
+			Query query = em.createQuery(deleteStr);
+			query.setParameter("value1", value1);
+			query.setParameter("value2", value2);
+			
+			query.executeUpdate();
 		} 
 		catch (RuntimeException re) 
 		{
