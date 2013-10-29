@@ -28,7 +28,7 @@
 		var myheight = mywidth * 3 / 4;
 		var advertise_width = (screen_width / 4) - 4; /* minus 4, solve:the space of photo is just not enough,that one lay to line 2*/
 		var advertise_height = advertise_width * 3 / 4;
-		alert(advertise_width);
+		<%--alert(advertise_width);--%>
 	</script>
 	
     <div id="shortcut-2013">
@@ -185,7 +185,7 @@
 		</ul>
 		<div id="banner_list">
 		  <%--默认显示四个产品 --%>
-<%--		  <s:iterator value="advertiseProducts" id="p">
+		  <s:iterator value="advertiseProducts" id="p">
 		    <a href="product/showProduct?productId=<s:property value="#p.Id"/>">
 		      <img 
 		          class="advertise"
@@ -196,9 +196,9 @@
 		
 		
 		    </a>
-		  </s:iterator>--%>
-		  <%--默认显示四个企业 --%>
-	<%--	  <s:iterator value="advertiseEnterprises" id="e">
+		  </s:iterator>
+		  默认显示四个企业 
+		  <s:iterator value="advertiseEnterprises" id="e">
 		    <a href="enterprise/showEnterprise?enterpriseId=<s:property value='#e.id'/>">
 		      <img 
 		          class="advertise"
@@ -209,8 +209,8 @@
 		
 		
 		    </a>
-		  </s:iterator>--%>
-		    <a href="#">
+		  </s:iterator>
+<%--		    <a href="#">
 		      <img 
 		          class="advertise"
 		          onload="DrawImage(this,advertise_width,advertise_height)"
@@ -241,7 +241,7 @@
 		          src="images/default.jpg"
 		          alt="for test"
 		          border="0">		  
-		  </a>		  
+		  </a>		  --%>
 		  
 		</div>
 		</div>
