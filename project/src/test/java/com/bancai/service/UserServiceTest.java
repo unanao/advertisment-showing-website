@@ -26,12 +26,12 @@ public class UserServiceTest extends TestCase implements AccountsContants{
 	}
 	*/
 	
-	/*
+	
 	public void testAddUser() {
-		UserService userService = new UserService();
+		/*UserService userService = new UserService();
 		
-		userService.addAccount("jianjiaosun@126.com", "abc_321");
+		userService.addAccount("jianjiaosun@126.com", "abc_321");*/
 	}
-	*/
+	
 	
 }

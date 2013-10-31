@@ -9,6 +9,8 @@ import com.bancai.service.AdvertiseEnterpriseService;
 import com.bancai.service.AdvertiseProductService;
 import com.bancai.service.DisplayEnterpriseService;
 import com.bancai.service.DisplayProductService;
+import com.bancai.service.UserProductFavouriteService;
+import com.bancai.utils.Pager;
 import com.bancai.web.base.BaseAction;
 
 public class IndexPageAction extends BaseAction{
@@ -24,6 +26,7 @@ public class IndexPageAction extends BaseAction{
 	private List<Enterprise> advertiseEnterprises; 
 	private List<Product> displayProducts; 
 	private List<Enterprise> displayEnterprises;
+	private List<Product> productRankList;
 	public String execute(){
 		advertiseProducts = new AdvertiseProductService().getProducts(BancaiConstants.ADVERTISE_PRODUCT_SIZE);
 		changeProductPicture(advertiseProducts);
@@ -36,6 +39,11 @@ public class IndexPageAction extends BaseAction{
 		
 		displayEnterprises = new DisplayEnterpriseService().getEnterprises(BancaiConstants.ENTERPRISE_AREA, BancaiConstants.DISPLAY_ENTERPRISE_SIZE);
 		changeEnterprisePicture(displayEnterprises);
+		
+		Pager pager = new Pager();
+		pager.setPageNow(1);
+		pager.setPageSize(BancaiConstants.DEFAULT_FAVOURITE_PRODUCT_RANK_SIZE);
+		productRankList = new UserProductFavouriteService().getProductRankList(pager);
 		return SUCCESS;
 	}
 	public List<Product> getDisplayProducts(){
@@ -49,6 +57,9 @@ public class IndexPageAction extends BaseAction{
 	}
 	public List<Enterprise> getAdvertiseEnterprises() {
 		return advertiseEnterprises;
+	}
+	public List<Product> getProductRankList() {
+		return productRankList;
 	}
 	
 }

@@ -15,10 +15,9 @@
     <link rel="stylesheet" type="text/css" href="css_files/index_cat.css" />
     <link rel="stylesheet" type="text/css" href="css_files/base.css" media="all">
     <link rel="stylesheet" type="text/css" href="css_files/plist20130808.css" media="all">
-    <script type="text/javascript" src="js/jquery/jquery.js">
+    <script type="text/javascript" src="js/jquery/jquery.js"></script>
 	<script type="text/javascript" src="js/image_auto_resize/autoresize_image.js"></script>
 	<script type="text/javascript" src="js/advitise_photos.js"></script>    
-    </script>
   </head>
   <body class="root61"  onresize="window.location.reload()">
   	<script type="text/javascript">
@@ -238,7 +237,7 @@
         </a>
       </div>
       <div class="extra">
-        已有4154人收藏
+        已有<s:property value="#product.hits"/>人收藏
       </div>
     </li>
   </s:iterator>
@@ -264,7 +263,7 @@
         </a>
       </div>
       <div class="extra">
-        已有4154人收藏
+       已有<s:property value="#product.hits"/>人收藏
       </div>
     </li>
   </s:iterator>
@@ -289,7 +288,7 @@
         </a>
       </div>
       <div class="extra">
-        已有4154人收藏
+       已有<s:property value="#product.hits"/>人收藏
       </div>
     </li>
   </s:iterator>
@@ -314,7 +313,7 @@
         </a>
       </div>
       <div class="extra">
-        已有4154人收藏
+       已有<s:property value="#product.hits"/>人收藏
       </div>
     </li>
   </s:iterator>
@@ -339,7 +338,7 @@
         </a>
       </div>
       <div class="extra">
-        已有4154人收藏
+       已有<s:property value="#product.hits"/>人收藏
       </div>
     </li>
   </s:iterator>
@@ -364,7 +363,7 @@
         </a>
       </div>
       <div class="extra">
-        已有4154人收藏
+       已有<s:property value="#product.hits"/>人收藏
       </div>
     </li>
   </s:iterator>
@@ -389,7 +388,7 @@
         </a>
       </div>
       <div class="extra">
-        已有4154人收藏
+       已有<s:property value="#product.hits"/>人收藏
       </div>
     </li>
   </s:iterator>
@@ -463,36 +462,17 @@
           板材
         </h3>
         <ul>
-          <li>
-          <a href="./.htm">
-            胶合板
-          </a>
-        </li>
-        <li>
-        <a href="http://list.jd.com/670-671-6864.html">
-          实木板
-        </a>
-      </li>
-      <li>
-      <a href="http://list.jd.com/670-671-1105.html">
-        细木工板
-      </a>
-    </li>
-    <li>
-    <a href="http://list.jd.com/670-671-2694.html">
-      刨花板
-    </a>
-  </li>
-  <li>
-  <a href="http://list.jd.com/670-671-5146.html">
-    纤维板
-  </a>
-</li>
-<li>
-<a href="http://list.jd.com/670-671-673.html">
-  集成板
-</a>
-</li>
+   <%
+    String[] categoriesWood = new String[]{"实木板","细木工板","刨花板","纤维板","装饰面板","集成材","防火板","石膏板","PVC板","铝扣板","铝塑板","其他"};
+    for(String category:categoriesWood){
+        out.println(
+                   "<li>"+
+                           "<a target='_blank' href='product/listMoreProducts?category="+category+ "'>"   +
+                                   category +
+                           "</a>" +
+                   "</li>");
+    }
+    %>
 </ul>
 </div>
 <div class="item">
@@ -500,73 +480,18 @@
     <b>
     </b>
     机械
-  </h3>
-  <ul>
-    <li>
-    <a href="http://list.jd.com/670-677-678.html">
-      热压机
-    </a>
-  </li>
-  <li>
-  <a href="http://list.jd.com/670-677-681.html">
-    冷压机
-  </a>
-</li>
-<li>
-<a href="http://list.jd.com/670-677-679.html">
-  锯边机
-</a>
-</li>
-<li>
-<a href="http://list.jd.com/670-677-683.html">
-  涂胶机
-</a>
-</li>
-<li>
-<a href="http://list.jd.com/670-677-680.html">
-  锅炉机
-</a>
-</li>
-<li>
-<a href="http://list.jd.com/670-677-687.html">
-  木材干燥设备
-</a>
-</li>
-<li>
-<a href="http://list.jd.com/670-677-691.html">
-  粉碎设备
-</a>
-</li>
-<li>
-<a href="http://list.jd.com/670-677-688.html">
-  预压机
-</a>
-</li>
-<li>
-<a href="http://list.jd.com/670-677-684.html">
-  液压升降机
-</a>
-</li>
-<li>
-<a href="http://list.jd.com/670-677-682.html">
-  锯机
-</a>
-</li>
-<li>
-<a href="http://list.jd.com/670-677-5008.html">
-  喷漆设备
-</a>
-</li>
-<li>
-<a href="http://list.jd.com/670-677-5009.html">
-  原木接长机
-</a>
-</li>
-<li>
-<a href="http://list.jd.com/670-677-5009.html">
-  变曲木压机
-</a>
-</li>
+  </h3><ul>
+   <%
+    String[] categoriesTool = new String[]{"旋切机","热压机","预压机","锅炉","涂胶机","锯边机","其他"};
+    for(String category:categoriesTool){
+    	out.println(
+    			   "<li>"+
+    					   "<a target='_blank' href='product/listMoreProducts?category="+category+ "'>"   +
+    							   category +
+    	                   "</a>" +
+    	           "</li>");
+    }
+   %>
 </ul>
 </div>
 </div>
@@ -595,56 +520,42 @@
   <div id="weekRank" class="m rank" clstag="thirdtype|keycount|thirdtype|mrank">
     <div class="mt">
       <h2>
-        一周关注排行榜
+        收藏总排行榜
       </h2>
     </div>
     <div class="mc">
       <ul class="tabcon">
-        <li class="fore fore1">
+      <s:iterator value="productRankList" id="product" status="status">
+              <li class="fore fore1">
         <span>
-          1
-        </span>
+        <s:property value="#status.index+1"/>
+      </span>
         <div class="p-img">
           <a target="_blank" href="http://item.jd.com/853231.html">
-            <img alt="" width="50" height="50">
-          </a>
-        </div>
-        <div class="p-name">
-          <a target="_blank" href="http://item.jd.com/853231.html">
-            关注1
-          </a>
-        </div>
-        <div class="p-price">
-          <strong>
-            ￥4999.00
-          </strong>
-        </div>
-      </li>
-      <li class="fore2">
-      <span>
-        2
-      </span>
-      <div class="p-img" style="display:none;">
-        <a target="_blank" href="http://item.jd.com/889798.html">
-          <img 
-              alt="ThinkPad E430C(33651D1) 14英寸笔记本电脑 （i5-2520M 4G 500G 1G独显 Linux）"
-              src="./笔记本 【行情 价格 评价 正品行货】-京东商城_files/rBEQWFFrYvAIAAAAAAIuDxftK-IAAEHVAIXOZ0AAi4n826(3).jpg"
+                     <img 
+              alt='<s:property value="#product.name"/>'
+              src='<s:property value="#product.icon"/>'
               width="50"
               height="50">
 
         </a>
-      </div>
-      <div class="p-name">
-        <a target="_blank" href="http://item.jd.com/889798.html">
-          ThinkPad E430C(33651D1) 14英寸笔记本电脑 （i5-2520M 4G 500G 1G独显 Linux）
-        </a>
-      </div>
-      <div class="p-price" sku="889798" style="display:none;">
-        <strong>
-          ￥3849.00
-        </strong>
-      </div>
-    </li>
+        </div>
+        <div class="p-name">
+          <a target="_blank" href="http://item.jd.com/853231.html">
+            收藏<s:property value="#product.favourite"/>
+          </a>
+        </div>
+        <div class="p-price">
+          <strong>
+            <s:property value="#product.name"/>
+          </strong>
+        </div>
+      </li>
+     
+      
+  </s:iterator>
+
+     
 
   </ul>
 </div>

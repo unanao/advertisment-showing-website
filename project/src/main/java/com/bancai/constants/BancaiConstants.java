@@ -22,12 +22,13 @@ public final class BancaiConstants {
 	static String tmp; //store string for array for log
 	public final static int DEFAULT_PICTURE_MAX_NUMBER;//默认上传图片最大数
 	public final static int DEFAULT_PRODUCT_HINTS;//默认产品点击数
-	public final static int PRODUCT_DEFAULT_SCORE;//默认点评得分
+	public final static int DEFAULT_PRODUCT_SCORE;//默认点评得分
 	public final static int DEFAULT_PRODUCT_FAVOURITES;//默认收藏数
 	public final static int COMPRESS_TARGET_WIDTH;//图片压缩后宽度
 	public final static int COMPRESS_TARGET_HEIGHT;//图片压缩后长度
 	public final static String WATERMARK_TEXT;//水印内容
 	public static final String CATEGORY_CASCADE_DEFAULT;//产品级联默认的显示
+	public static final int DEFAULT_FAVOURITE_PRODUCT_RANK_SIZE;//排行版显示数目
 	static {
 		final Logger logger = Logger.getLogger("Bancai configuration");
 		logger.info("++++++++++++Bancai configuration information++++++++++++");
@@ -64,8 +65,8 @@ public final class BancaiConstants {
 			logger.info("DEFAULT_NAME: " + DEFAULT_NAME); 
 			DEFAULT_PICTURE_MAX_NUMBER= Integer.valueOf(properties.getProperty("DEFAULT_PICTURE_MAX_NUMBER"));
 			logger.info("DEFAULT_PICTURE_MAX_NUMBER: " + DEFAULT_PICTURE_MAX_NUMBER); 
-			PRODUCT_DEFAULT_SCORE = Integer.valueOf(properties.getProperty("PRODUCT_DEFAULT_SCORE"));
-			logger.info("PRODUCT_DEFAULT_SCORE: " + PRODUCT_DEFAULT_SCORE); 
+			DEFAULT_PRODUCT_SCORE = Integer.valueOf(properties.getProperty("DEFAULT_PRODUCT_SCORE"));
+			logger.info("DEFAULT_PRODUCT_SCORE: " + DEFAULT_PRODUCT_SCORE); 
 			DEFAULT_PRODUCT_HINTS= Integer.valueOf(properties.getProperty("DEFAULT_PRODUCT_HINTS"));
 			logger.info("DEFAULT_PRODUCT_HINTS: " + DEFAULT_PRODUCT_HINTS);
 			DEFAULT_PRODUCT_FAVOURITES= Integer.valueOf(properties.getProperty("DEFAULT_PRODUCT_FAVOURITES"));
@@ -78,6 +79,9 @@ public final class BancaiConstants {
 			logger.info("WATERMARK_TEXT: " + WATERMARK_TEXT);
 			CATEGORY_CASCADE_DEFAULT = properties.getProperty("CATEGORY_CASCADE_DEFAULT");
 			logger.info("CATEGORY_CASCADE_DEFAULT: " + CATEGORY_CASCADE_DEFAULT);
+			DEFAULT_FAVOURITE_PRODUCT_RANK_SIZE = Integer.valueOf(
+														properties.getProperty("DEFAULT_FAVOURITE_PRODUCT_RANK_SIZE"));
+			logger.info("DEFAULT_FAVOURITE_PRODUCT_RANK_SIZE: " + DEFAULT_FAVOURITE_PRODUCT_RANK_SIZE);
 		} catch (IOException e) {
 			logger.fatal("Failed to init bancai configuration", e);
 			throw new RuntimeException("Failed to init bancai configuration", e);

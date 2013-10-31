@@ -22,14 +22,20 @@ public class CommonService {
 
 	
 	public static List<Product> createEmptyProducts(int size) {
-		List<Product> Products = new ArrayList<Product>();
+		List<Product> products = new ArrayList<Product>();
 		for (int i = 0; i < size; i++) {
-			Product Product = new Product();
-			Product.setId(Integer.valueOf(BancaiConstants.DEFAULT_ID));
-			Product.setName(BancaiConstants.DEFAULT_NAME);
-			Product.setIcon(BancaiConstants.PRODUCT_DEFAULT_PATH);
-			Products.add(Product);
+			Product p = new Product();
+			p.setId(Integer.valueOf(BancaiConstants.DEFAULT_ID));
+			p.setName(BancaiConstants.DEFAULT_NAME);
+			p.setEnterprise(BancaiConstants.DEFAULT_ID);
+			p.setDetail("");
+			p.setFavourite(BancaiConstants.DEFAULT_PRODUCT_FAVOURITES);
+			p.setHits(BancaiConstants.DEFAULT_PRODUCT_HINTS);
+			p.setIcon(BancaiConstants.PRODUCT_DEFAULT_PATH);
+			p.setIntroduction("");
+			p.setScore(BancaiConstants.DEFAULT_PRODUCT_SCORE);
+			products.add(p);
 		}
-		return Products;
+		return products;
 	}
 }

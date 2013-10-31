@@ -11,7 +11,7 @@ import com.bancai.service.EnterpriseService;
 import com.bancai.service.ProductPictureService;
 import com.bancai.service.ProductService;
 import com.bancai.web.base.BaseAction;
-
+ 
 public class ShowProductAction extends BaseAction{
 
 	/**
@@ -30,6 +30,7 @@ public class ShowProductAction extends BaseAction{
 		product = service.getProduct(productId);
 		List<Product> products = new ArrayList<Product>();
 		products.add(product);
+System.out.println(product.getFavourite());
 		changeProductPicture(products);
 		enterprise = new EnterpriseService().getEnterprise(product.getEnterprise());
 		List<Enterprise> enterprises = new ArrayList<Enterprise>();

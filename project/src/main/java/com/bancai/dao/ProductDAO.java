@@ -46,12 +46,11 @@ public class ProductDAO extends AbstractDAO<Product> {
 	public List<Product> getRankList(String condition,Pager p){
     	EntityManager em = EntityManagerHelper.getEntityManager();
 
-		log("get product rank list order by " + " condition" , Level.INFO, null);
+		log("get product rank list order by " +  condition, Level.INFO, null);
 
 		try {
-			final String queryStr = "SELECT p FROM Product p order by :condition desc";
+			final String queryStr = "SELECT p FROM Product p order by " + condition +" desc";
 			Query query = em.createQuery(queryStr);
-			query.setParameter("condition", condition);
 			query.setFirstResult(p.getStart());
 			query.setMaxResults(p.getPageSize());
 			return query.getResultList();

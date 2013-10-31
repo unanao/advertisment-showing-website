@@ -6,7 +6,7 @@ import com.bancai.dao.Product;
 import com.bancai.service.ProductService;
 import com.bancai.utils.Pager;
 import com.bancai.web.base.BaseAction;
-
+ 
 public class ListMoreProductsAction extends BaseAction{
 
 	/**
