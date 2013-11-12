@@ -42,12 +42,14 @@
         <li class="fore1" id="loginbar">
         您好，欢迎来到58板材！
         <span>
-          <a href="javascript:login();">
-            [登录]
-          </a>
-          <a href="javascript:regist();" class="link-regist">
-            [免费注册]
-          </a>
+            <%-- 用户登陆了现实用户名和退出，用户没有登陆显示登陆和注册 --%>
+            <% String loginName = (String)session.getAttribute("SESSION_LOGIN_NAME");
+            if (null == loginName)
+            { %>
+            <a href="accounts/login.jsp">登陆</a>|<a href="accounts/register.jsp">免费注册</a>
+            <% } else { %>
+            <a href="pcenter/pcenter.jsp"><%= loginName %></a>|<a href="accounts/logout">退出</a>
+            <% } %>
         </span>
       </li>
     </ul>
@@ -63,7 +65,7 @@
       <a href="http://www.58bancai.com/" hidefocus="true">
         <b>
         </b>
-        <img src="./58bancai_files/logo.png" width="180" height="90" alt="58板材">
+        <img src="images/logo.png" width="180" height="90" alt="58板材">
       </a>
     </div>
     <!--logo end-->
@@ -105,27 +107,29 @@
     <div id="nav-2013">
       <ul id="navitems-2013">
         <li class="fore1" id="nav-home">
-        <a href="http://www.jd.com/">
+        <a href=".">
           首页
         </a>
       </li>
       <li class="fore2" id="nav-fashion">
-      <a href="http://fashion.jd.com/">
-        我的58板材
-      </a>
+       <% if (null == loginName){ %>
+       <a href="accounts/login.jsp?retPage=pcenter">我的58板材 </a>
+       <% } else { %>
+       <a href="pcenter/pcenter.jsp">我的58板材</a>
+       <% } %>
     </li>
     <li class="fore3" id="nav-chaoshi">
-    <a href="http://channel.jd.com/chaoshi.html">
+    <a href="aboutus/user_manual.jsp">
       帮助手册
     </a>
   </li>
   <li class="fore4" id="nav-tuan">
-  <a href="http://tuan.jd.com/" target="_blank">
+  <a href=".">
     网站促销
   </a>
 </li>
 <li class="fore5" id="nav-auction">
-<a href="http://auction.jd.com/">
+<a href="aboutus/contactus.jsp">
   联系我们
 </a>
 </li>
@@ -213,7 +217,7 @@
 		</div>
  
  
-<div class="m plist-n7a" id="plist" clstag="thirdtype|keycount|thirdtype|plist">
+<div class="m" id="plist" clstag="thirdtype|keycount|thirdtype|plist">
   <ul class="list-h">
 
     <s:iterator value="displayProducts" id="product" status="status" begin="0" end="5">
@@ -221,7 +225,7 @@
       <div class="p-img">
         <a href="product/showProduct?productId=<s:property value="#product.Id"/>">
           <img 
-              onload="DrawImage(this,20,20)"
+              onload="DrawImage(this,230,160)"
               src="<s:property value="#product.icon"/>"
               border="0"
               alt="images/default.jpg"
@@ -247,7 +251,7 @@
       <div class="p-img">
         <a href="product/showProduct?productId=<s:property value="#product.Id"/>">
           <img 
-              onload="DrawImage(this,20,20)"
+              onload="DrawImage(this,230,160)"
               src="<s:property value="#product.icon"/>"
               border="0"
               alt="images/default.jpg"
@@ -272,7 +276,7 @@
       <div class="p-img">
         <a href="product/showProduct?productId=<s:property value="#product.Id"/>">
           <img 
-              onload="DrawImage(this,20,20)"
+              onload="DrawImage(this,230,160)"
               src="<s:property value="#product.icon"/>"
               border="0"
               alt="images/default.jpg"
@@ -297,7 +301,7 @@
       <div class="p-img">
         <a href="product/showProduct?productId=<s:property value="#product.Id"/>">
           <img 
-              onload="DrawImage(this,20,20)"
+              onload="DrawImage(this,230,160)"
               src="<s:property value="#product.icon"/>"
               border="0"
               alt="images/default.jpg"
@@ -322,7 +326,7 @@
       <div class="p-img">
         <a href="product/showProduct?productId=<s:property value="#product.Id"/>">
           <img 
-              onload="DrawImage(this,20,20)"
+              onload="DrawImage(this,230,160)"
               src="<s:property value="#product.icon"/>"
               border="0"
               alt="images/default.jpg"
@@ -347,7 +351,7 @@
       <div class="p-img">
         <a href="product/showProduct?productId=<s:property value="#product.Id"/>">
           <img 
-              onload="DrawImage(this,20,20)"
+              onload="DrawImage(this,230,160)"
               src="<s:property value="#product.icon"/>"
               border="0"
               alt="images/default.jpg"
@@ -372,7 +376,7 @@
       <div class="p-img">
         <a href="product/showProduct?productId=<s:property value="#product.Id"/>">
           <img 
-              onload="DrawImage(this,20,20)"
+              onload="DrawImage(this,230,160)"
               src="<s:property value="#product.icon"/>"
               border="0"
               alt="images/default.jpg"

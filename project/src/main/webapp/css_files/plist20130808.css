@@ -2309,7 +2309,7 @@ a.st1,a.st2,a.st3 {
 }
 /*plist-n7a*/
 #plist.plist-n7a .p-img {
-	height: 220px;
+	/*height: 220px;*/
 }
 /*scroll*/
 .p-scroll-btn,.product-follow a s {
@@ -2510,7 +2510,7 @@ a.st1,a.st2,a.st3 {
 }
 
 #plist.plist-n8 .list-h li .p-img {
-	height: 282px;
+/*	height: 282px;*/
 }
 
 #plist.plist-n8 .btn-coll:hover {
