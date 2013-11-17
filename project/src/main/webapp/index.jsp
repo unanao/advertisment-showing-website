@@ -580,7 +580,7 @@
           <b>
           </b>
           <strong>
-            购物指南
+            常见问题
           </strong>
         </dt>
         <dd>
@@ -621,7 +621,7 @@
       <b>
       </b>
       <strong>
-        配送方式
+        板材知识
       </strong>
     </dt>
     <dd>
