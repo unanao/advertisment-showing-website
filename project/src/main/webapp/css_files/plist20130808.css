@@ -5,12 +5,12 @@
 
 .left {
 	float: left;
-	width: 210px;
+	width: 17%;
 }
 
 .right-extra {
 	float: right;
-	width: 770px;
+	width: 80%;
 }
 
 .mt h1,.mt h2 {

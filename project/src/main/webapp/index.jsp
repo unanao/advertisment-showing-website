@@ -59,7 +59,6 @@
 </div>
 <!--shortcut end-->
 
-<div id="o-header-2013">
   <div class="w" id="header-2013">
     <div id="logo-2013" class="ld">
       <a href="http://www.58bancai.com/" hidefocus="true">
