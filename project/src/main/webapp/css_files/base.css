@@ -1,8 +1,14 @@
-html,body,div,span,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,address,big,cite,code,del,em,font,img,ins,small,strong,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend
+body{
+	margin:0 auto;
+	width:90%;
+}
+
+html,div,span,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,address,big,cite,code,del,em,font,img,ins,small,strong,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend
 	{
 	margin: 0;
 	padding: 0;
 }
+
 
 ol,ul {
 	list-style: none;
@@ -285,12 +291,12 @@ button::-moz-focus-inner,input[type="reset"]::-moz-focus-inner,input[type="butto
 }
 
 .root61 #logo {
-	width: 350px;
+	width: 29%;
 }
 
 #search-2013 {
 	float: left;
-	width: 330px;
+	width: 27%;
 	padding: 4px 86px 0 0;
 }
 
@@ -303,7 +309,7 @@ button::-moz-focus-inner,input[type="reset"]::-moz-focus-inner,input[type="butto
 
 #search-2013 .i-search {
 	z-index: 11;
-	width: 304px;
+	width: 25%;
 	height: 30px;
 	margin-bottom: 3px;
 	border: 3px solid #E4393C;
@@ -315,7 +321,7 @@ button::-moz-focus-inner,input[type="reset"]::-moz-focus-inner,input[type="butto
 }
 
 #search-2013 .text {
-	width: 216px;
+	width: 18%;
 	height: 20px;
 	padding: 5px;
 	background-position: 0 -360px;
@@ -328,7 +334,7 @@ button::-moz-focus-inner,input[type="reset"]::-moz-focus-inner,input[type="butto
 }
 
 #search-2013 .button {
-	width: 78px;
+	width: 15%;
 	background: #E4393C;
 	font-size: 14px;
 	font-weight: bold;
@@ -340,7 +346,7 @@ button::-moz-focus-inner,input[type="reset"]::-moz-focus-inner,input[type="butto
 	position: absolute;
 	top: 32px;
 	left: -3px;
-	width: 308px;
+	width: 25.5%;
 	border: 1px solid #E4393C;
 	background: #fff;
 	-moz-box-shadow: 0 0 5px #999;
@@ -372,7 +378,7 @@ button::-moz-focus-inner,input[type="reset"]::-moz-focus-inner,input[type="butto
 
 #shelper .search-item {
 	float: left;
-	width: 190px;
+	width: 15.7%;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	overflow: hidden;
@@ -895,7 +901,7 @@ a:active {
 }
 
 .root61 .w {
-	width: 90%;
+	width: 100%;
 }
 
 .lh {

@@ -19,7 +19,7 @@
 	<script type="text/javascript" src="js/image_auto_resize/autoresize_image.js"></script>
 	<script type="text/javascript" src="js/advitise_photos.js"></script>    
   </head>
-  <body class="root61"  onresize="window.location.reload()">
+  <body class="root61">
   	<script type="text/javascript">
 		var screen_width = document.body.clientWidth-2;
 		var mywidth = screen_width * 0.8 / 6;
@@ -74,10 +74,10 @@
         </ul>
         <div class="form">
           <input type="text" class="text" accesskey="s" id="key" autocomplete="off" style="color: rgb(153, 153, 153);">
-          <input type="button" value="搜索" class="button" onclick="searchlzf(key&#39;);">
+          <input type="button" value="搜索" class="button" onclick="search/search_get_result">
         </div>
       </div>
-      <div id="hotwords">
+  <%--    <div id="hotwords">
         <strong>
           热门搜索：
         </strong>
@@ -96,7 +96,7 @@
         <a href="" target="_blank">
           找圆机
         </a>
-      </div>
+      </div>  热门关键词，留待扩展 --%>
     </div>
     <!--search end-->
 
