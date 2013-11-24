@@ -24,7 +24,7 @@
 		var screen_width = document.body.clientWidth-2;
 		var mywidth = screen_width * 0.8 / 6;
 		var myheight = mywidth * 3 / 4;
-		var advertise_width = (screen_width / 4) - 4; /* minus 4, solve:the space of photo is just not enough,that one lay to line 2*/
+		var advertise_width = (screen_width * 0.8 / 4) - 1; /* minus 4, solve:the space of photo is just not enough,that one lay to line 2*/
 		var advertise_height = advertise_width * 3 / 4;
 		<%--alert(advertise_width);--%>
 	</script>
@@ -68,35 +68,13 @@
       </a>
     </div>
     <!--logo end-->
-    <div id="search-2013">
+    <div id="search-2013" >
       <div class="i-search ld">
-        <ul id="shelper" class="hide">
-        </ul>
         <div class="form">
           <input type="text" class="text" accesskey="s" id="key" autocomplete="off" style="color: rgb(153, 153, 153);">
           <input type="button" value="搜索" class="button" onclick="search/search_get_result">
         </div>
       </div>
-  <%--    <div id="hotwords">
-        <strong>
-          热门搜索：
-        </strong>
-        <a href="" target="_blank">
-          胶合板
-        </a>
-        <a href="" target="_blank">
-          实木板
-        </a>
-        <a href="" target="_blank">
-          细木工板
-        </a>
-        <a href="" target="_blank">
-          刨花板
-        </a>
-        <a href="" target="_blank">
-          找圆机
-        </a>
-      </div>  热门关键词，留待扩展 --%>
     </div>
     <!--search end-->
 
