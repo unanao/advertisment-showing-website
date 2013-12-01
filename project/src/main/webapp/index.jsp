@@ -21,12 +21,14 @@
   </head>
   <body class="root61">
   	<script type="text/javascript">
-		var screen_width = document.body.clientWidth-2;
-		var mywidth = screen_width * 0.8 / 6;
+		var screen_width = document.body.clientWidth-16; /*15 is the scrollbar width*0.9*/
+		var mywidth = screen_width * 0.83 / 6;
 		var myheight = mywidth * 3 / 4;
-		var advertise_width = (screen_width * 0.8 / 4) - 1; /* minus 4, solve:the space of photo is just not enough,that one lay to line 2*/
+		var advertise_width = (screen_width * 0.83 / 4); /* minus 4, solve:the space of photo is just not enough,that one lay to line 2*/
 		var advertise_height = advertise_width * 3 / 4;
-		<%--alert(advertise_width);--%>
+		/*alert(window.screen.width);*/
+		/*alert(advertise_width);
+		alert(screen_width);*/
 	</script>
 	
     <div id="shortcut-2013">
@@ -62,8 +64,6 @@
   <div class="w" id="header-2013">
     <div id="logo-2013" class="ld">
       <a href="http://www.58bancai.com/" hidefocus="true">
-        <b>
-        </b>
         <img src="images/logo.png" width="180" height="90" alt="58板材">
       </a>
     </div>
@@ -164,32 +164,20 @@
 		</ul>
 		<div id="banner_list">
 		  <%--默认显示四个产品 --%>
-		  <s:iterator value="advertiseProducts" id="p">
-		    <a href="product/showProduct?productId=<s:property value="#p.Id"/>">
-		      <img 
+		  <s:iterator value="advertiseProducts" id="p"><a href="product/showProduct?productId=<s:property value="#p.Id"/>"><img 
 		          class="advertise"
 		          onload="DrawImage(this,advertise_width,advertise_height)"
 		          src="<s:property value="#p.icon"/>"
 		          alt="<s:property value="#p.name"/>"
-		          border="0">
-		
-		
-		    </a>
-		  </s:iterator>
+		          border="0" margin="0"></a></s:iterator>
 		  <%--默认显示四个企业--%> 
-		  <s:iterator value="advertiseEnterprises" id="e">
-		    <a href="enterprise/showEnterprise?enterpriseId=<s:property value='#e.id'/>">
-		      <img 
+		  <s:iterator value="advertiseEnterprises" id="e"><a href="enterprise/showEnterprise?enterpriseId=<s:property value='#e.id'/>"><img 
 		          class="advertise"
 		          onload="DrawImage(this,advertise_width,advertise_height)"
 		          src="<s:property value="#e.logo"/>"
 		          alt="<s:property value="#e.name"/>"
-		          border="0">
-		
-		
-		    </a>
-		  </s:iterator>
-		  
+		          border="0"></a></s:iterator>
+		  <%-- 上述代码严格按照上述格式写，iterator a img标签间不能出现任何的空格或者换行，否则图片间会产生间隙 --%>
 		</div>
 		</div>
  

@@ -1,16 +1,14 @@
-body{
-	margin:0 auto;
-	width:90%;
-	min-width:1210px;
-}
-
-html,div,span,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,address,big,cite,code,del,em,font,img,ins,small,strong,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend
+html,body,div,span,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,address,big,cite,code,del,em,font,img,ins,small,strong,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend
 	{
 	margin: 0;
 	padding: 0;
 }
 
-
+body{
+	margin:0 auto;
+	width:90%;
+	min-width:1210px;
+}
 
 td
 {
@@ -386,23 +384,11 @@ button::-moz-focus-inner,input[type="reset"]::-moz-focus-inner,input[type="butto
 
 #logo-2013 {
 	float: left;
-	width: 330px;
+	width: 35%;
+	left:10px;
+	top:-15px;
 }
 
-#logo-2013 a:link b,#logo-2013 a:visited b {
-	top: 12px;
-	left: 168px;
-	width: 100px;
-	height: 38px;
-	cursor: pointer;
-}
-
-#logo-2013 a:hover b,#logo-2013 a:active b {
-	display: none;
-	background:
-		url(http://misc.360buyimg.com/lib/skin/2013/i/20130330A_1.png) #fff
-		no-repeat 0 -312px;
-}
 
 .root61 #logo {
 	width: 29%;
@@ -410,7 +396,6 @@ button::-moz-focus-inner,input[type="reset"]::-moz-focus-inner,input[type="butto
 
 #search-2013 {
 	float: left;
-	padding: 4px 86px 0 0;
 }
 
 #search-2013 input {
@@ -445,24 +430,24 @@ button::-moz-focus-inner,input[type="reset"]::-moz-focus-inner,input[type="butto
 }
 
 #search-2013 .button {
-	width: 78px;
+	width: 12%;
 	background: #E4393C;
 	font-size: 14px;
 	font-weight: bold;
 	color: #fff;
+	float:right;
 }
 
 .root61 #search-2013 {
-	width: 510px;
-	padding-right: 126px;
+	width: 40%;
 }
 
 .root61 #search-2013 .i-search {
-	width: 494px;
+	width: 100%%;
 }
 
 .root61 #search-2013 .text {
-	width: 406px;
+	width: 85%;
 }
 
 

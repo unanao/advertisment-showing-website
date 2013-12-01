@@ -10,7 +10,7 @@
 
 .right-extra {
 	float: right;
-	width: 80%;
+	width: 82%;
 }
 
 .mt h1,.mt h2 {
@@ -2680,7 +2680,8 @@ a.st1,a.st2,a.st3 {
 }
 /*root61*/
 .root61 .right-extra {
-	width: 990px;
+ /*	width: 990px;*/
+ 	width: 83%;
 }
 
 .root61 #i-search {
