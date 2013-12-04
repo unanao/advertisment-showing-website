@@ -29,6 +29,7 @@
 		/*alert(window.screen.width);*/
 		/*alert(advertise_width);
 		alert(screen_width);*/
+		alert(document.body.clientWidth);
 	</script>
 	
     <div id="shortcut-2013">
