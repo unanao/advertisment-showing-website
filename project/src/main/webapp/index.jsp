@@ -36,9 +36,8 @@
       <div class="w">
         <ul class="fl lh">
           <li class="fore1 ld">
-          <a href="javascript:addToFavorite()" rel="nofollow">
-            收藏58板材
-          </a>
+            <a href="javascript:HomepageFavorite.Homepage()"  >设为首页</a>
+<a href="javascript:HomepageFavorite.Favorite(window.location.href, document.title)"  >加入收藏</a>
         </li>
       </ul>
       <ul class="fr lh">
@@ -549,4 +548,43 @@
 </div>
 <!-- footer end -->
 </body>
+<script>
+
+    var HomepageFavorite = {
+        //设为首页
+        Homepage : function() {
+            if (document.all) {
+                document.body.style.behavior = 'url(#default#homepage)';
+                document.body.setHomePage(window.location.href);
+            } else if (window.sidebar) {
+                if (window.netscape) {
+                    try {
+                        netscape.security.PrivilegeManager
+                                .enablePrivilege("UniversalXPConnect");
+                    } catch (e) {
+                        alert("该操作被浏览器拒绝，如果想启用该功能，请在地址栏内输入 about:config,然后将项 signed.applets.codebase_principal_support 值该为true");
+                    }
+                }
+                var prefs = Components.classes['@mozilla.org/preferences-service;1']
+                        .getService(Components.interfaces.nsIPrefBranch);
+                prefs.setCharPref('browser.startup.homepage',
+                        window.location.href);
+            } else{
+                alert("对不起您的浏览器不支持此操作!请使用菜单栏设为首页");
+            }
+        },
+        //加入收藏
+        Favorite : function Favorite(sURL, sTitle) {
+            try {
+                window.external.addFavorite(sURL, sTitle);
+            } catch (e) {
+                try {
+                    window.sidebar.addPanel(sTitle, sURL, "");
+                } catch (e) {
+                    alert("对不起您的浏览器不支持此操作!请使用Ctrl+D收藏本站");
+                }
+            }
+        }
+    }
+</script>
 </html>
