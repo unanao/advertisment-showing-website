@@ -23,7 +23,8 @@
 }
 
 .list-h li,.list-h dl {
-	float: left;
+	/*float: left;*/
+	float: right;
 }
 
 .p-name {
@@ -1160,7 +1161,7 @@ a:hover,a:active {
 /*plist*/
 #plist {
 	margin-bottom: 0;
-	border:solid 1px red;
+	/*border:solid 1px red;*/
 }
 
 #plist .list-h {
@@ -1176,15 +1177,15 @@ a:hover,a:active {
 
 #plist li {
 	width: 200px;
-	padding: 0 5px 10px;
-	_padding: 0 12px 10px;
+	padding: 0 0.5% 5px;
+	_padding: 0 0.5% 5px;
 	text-align: left;
 	font-family: arial, \5b8b\4f53;
 }
 
 #plist .p-img {
 	position: relative;
-	height: 160px;
+	/*height: 160px;*/
 	border: 1px solid #fff;
 	transition: border 0.3s ease-in 0s;
 	text-align: center;
@@ -2733,7 +2734,7 @@ a.st1,a.st2,a.st3 {
 }
 
 .root61 #plist li {
-	width: 221px;
+	width: 15.5%;
 }
 
 .root61 #co-product li {

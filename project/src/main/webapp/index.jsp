@@ -22,7 +22,7 @@
   <body class="root61">
   	<script type="text/javascript">
 		var screen_width = document.body.clientWidth-18; /* 15 is the scrollbar width */
-		var mywidth = screen_width * 0.83 / 6;
+		var mywidth = screen_width * 0.83 * 0.15;
 		var myheight = mywidth * 3 / 4;
 		var advertise_width = (screen_width * 0.83 / 4); /* minus 4, solve:the space of photo is just not enough,that one lay to line 2*/
 		var advertise_height = advertise_width * 3 / 4;
