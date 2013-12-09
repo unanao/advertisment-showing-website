@@ -236,6 +236,7 @@
       </div>
       <div class="extra">
        已有<s:property value="#product.hits"/>人收藏
+        <a class=btn-coll>我要收藏</a>
       </div>
     </li>
   </s:iterator>
@@ -261,6 +262,7 @@
       </div>
       <div class="extra">
        已有<s:property value="#product.hits"/>人收藏
+        <a class=btn-coll>我要收藏</a>       
       </div>
     </li>
   </s:iterator>
@@ -286,6 +288,7 @@
       </div>
       <div class="extra">
        已有<s:property value="#product.hits"/>人收藏
+        <a class=btn-coll>我要收藏</a>       
       </div>
     </li>
   </s:iterator>
@@ -311,6 +314,7 @@
       </div>
       <div class="extra">
        已有<s:property value="#product.hits"/>人收藏
+        <a class=btn-coll>我要收藏</a>       
       </div>
     </li>
   </s:iterator>
@@ -336,6 +340,7 @@
       </div>
       <div class="extra">
        已有<s:property value="#product.hits"/>人收藏
+        <a class=btn-coll>我要收藏</a>       
       </div>
     </li>
   </s:iterator>
@@ -361,6 +366,7 @@
       </div>
       <div class="extra">
        已有<s:property value="#product.hits"/>人收藏
+        <a class=btn-coll>我要收藏</a>       
       </div>
     </li>
   </s:iterator>
