@@ -21,7 +21,7 @@
   </head>
   <body class="root61">
   	<script type="text/javascript">
-		var screen_width = document.body.clientWidth-16; /*15 is the scrollbar width*0.9*/
+		var screen_width = document.body.clientWidth-18; /* 15 is the scrollbar width */
 		var mywidth = screen_width * 0.83 / 6;
 		var myheight = mywidth * 3 / 4;
 		var advertise_width = (screen_width * 0.83 / 4); /* minus 4, solve:the space of photo is just not enough,that one lay to line 2*/
@@ -184,7 +184,7 @@
 		</div>
  
  
-<div class="m" id="plist" clstag="thirdtype|keycount|thirdtype|plist">
+<div class="m" id="plist">
   <ul class="list-h">
 
     <s:iterator value="displayProducts" id="product" status="status" begin="0" end="5">
@@ -192,7 +192,7 @@
       <div class="p-img">
         <a href="product/showProduct?productId=<s:property value="#product.Id"/>">
           <img 
-              onload="DrawImage(this,230,160)"
+              onload="DrawImage(this,mywidth,myheight)"
               src="<s:property value="#product.icon"/>"
               border="0"
               alt="images/default.jpg"
@@ -202,13 +202,14 @@
       </div>
       <div class="p-name">
         <a target="_blank" href="product/showProduct?productId=<s:property value="#product.Id"/>"  title="">
-          <font style="color: #ff0000" class="adwords" name="853231">
+          <font style="color: #ff0000" class="adwords">
             <s:property value="#product.name"/>
           </font>
         </a>
       </div>
       <div class="extra">
         已有<s:property value="#product.hits"/>人收藏
+        <a class=btn-coll>我要收藏</a>
       </div>
     </li>
   </s:iterator>
@@ -218,7 +219,7 @@
       <div class="p-img">
         <a href="product/showProduct?productId=<s:property value="#product.Id"/>">
           <img 
-              onload="DrawImage(this,230,160)"
+              onload="DrawImage(this,mywidth,myheight)"
               src="<s:property value="#product.icon"/>"
               border="0"
               alt="images/default.jpg"
@@ -228,7 +229,7 @@
       </div>
       <div class="p-name">
         <a target="_blank" href="product/showProduct?productId=<s:property value="#product.Id"/>"  title="">
-          <font style="color: #ff0000" class="adwords" name="853231">
+          <font style="color: #ff0000" class="adwords">
             <s:property value="#product.name"/>
           </font>
         </a>
@@ -243,7 +244,7 @@
       <div class="p-img">
         <a href="product/showProduct?productId=<s:property value="#product.Id"/>">
           <img 
-              onload="DrawImage(this,230,160)"
+              onload="DrawImage(this,mywidth,myheight)"
               src="<s:property value="#product.icon"/>"
               border="0"
               alt="images/default.jpg"
@@ -253,7 +254,7 @@
       </div>
       <div class="p-name">
         <a target="_blank" href="product/showProduct?productId=<s:property value="#product.Id"/>"  title="">
-          <font style="color: #ff0000" class="adwords" name="853231">
+          <font style="color: #ff0000" class="adwords">
             <s:property value="#product.name"/>
           </font>
         </a>
@@ -268,7 +269,7 @@
       <div class="p-img">
         <a href="product/showProduct?productId=<s:property value="#product.Id"/>">
           <img 
-              onload="DrawImage(this,230,160)"
+              onload="DrawImage(this,mywidth,myheight)"
               src="<s:property value="#product.icon"/>"
               border="0"
               alt="images/default.jpg"
@@ -278,7 +279,7 @@
       </div>
       <div class="p-name">
         <a target="_blank" href="product/showProduct?productId=<s:property value="#product.Id"/>"  title="">
-          <font style="color: #ff0000" class="adwords" name="853231">
+          <font style="color: #ff0000" class="adwords">
             <s:property value="#product.name"/>
           </font>
         </a>
@@ -293,7 +294,7 @@
       <div class="p-img">
         <a href="product/showProduct?productId=<s:property value="#product.Id"/>">
           <img 
-              onload="DrawImage(this,230,160)"
+              onload="DrawImage(this,mywidth,myheight)"
               src="<s:property value="#product.icon"/>"
               border="0"
               alt="images/default.jpg"
@@ -303,7 +304,7 @@
       </div>
       <div class="p-name">
         <a target="_blank" href="product/showProduct?productId=<s:property value="#product.Id"/>"  title="">
-          <font style="color: #ff0000" class="adwords" name="853231">
+          <font style="color: #ff0000" class="adwords">
             <s:property value="#product.name"/>
           </font>
         </a>
@@ -318,7 +319,7 @@
       <div class="p-img">
         <a href="product/showProduct?productId=<s:property value="#product.Id"/>">
           <img 
-              onload="DrawImage(this,230,160)"
+              onload="DrawImage(this,mywidth,myheight)"
               src="<s:property value="#product.icon"/>"
               border="0"
               alt="images/default.jpg"
@@ -328,7 +329,7 @@
       </div>
       <div class="p-name">
         <a target="_blank" href="product/showProduct?productId=<s:property value="#product.Id"/>"  title="">
-          <font style="color: #ff0000" class="adwords" name="853231">
+          <font style="color: #ff0000" class="adwords">
             <s:property value="#product.name"/>
           </font>
         </a>
@@ -343,7 +344,7 @@
       <div class="p-img">
         <a href="product/showProduct?productId=<s:property value="#product.Id"/>">
           <img 
-              onload="DrawImage(this,230,160)"
+              onload="DrawImage(this,mywidth,myheight)"
               src="<s:property value="#product.icon"/>"
               border="0"
               alt="images/default.jpg"
@@ -353,7 +354,7 @@
       </div>
       <div class="p-name">
         <a target="_blank" href="product/showProduct?productId=<s:property value="#product.Id"/>"  title="">
-          <font style="color: #ff0000" class="adwords" name="853231">
+          <font style="color: #ff0000" class="adwords">
             <s:property value="#product.name"/>
           </font>
         </a>
@@ -547,6 +548,10 @@
   </div>
 </div>
 <!-- footer end -->
+<script type="text/javascript">
+		alert(document.body.clientWidth);
+</script>
+
 </body>
 <script>
 

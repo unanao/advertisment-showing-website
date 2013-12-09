@@ -27,8 +27,9 @@
 }
 
 .p-name {
-	height: 3em;
+	height: 2em;
 	word-wrap: break-word;
+	text-align:center;
 }
 
 .p-price strong,.p-market strong {
@@ -1159,6 +1160,7 @@ a:hover,a:active {
 /*plist*/
 #plist {
 	margin-bottom: 0;
+	border:solid 1px red;
 }
 
 #plist .list-h {
@@ -1173,8 +1175,8 @@ a:hover,a:active {
 }
 
 #plist li {
-	width: 230px;
-	padding: 0 13px 10px;
+	width: 200px;
+	padding: 0 5px 10px;
 	_padding: 0 12px 10px;
 	text-align: left;
 	font-family: arial, \5b8b\4f53;
@@ -1212,9 +1214,9 @@ a:hover,a:active {
 }
 
 #plist .extra {
-	padding: 2px 0;
-	height: 16px;
-	line-height: 16px;
+	padding: 0px 0;
+	font-size:8px;
+	text-align:center;
 	overflow: hidden;
 	color: #005aa0;
 }
@@ -1270,7 +1272,7 @@ a:hover,a:active {
 
 #plist .btn-none,#plist .btn-buy,#plist .btn-coll,#plist .btn-compare,#plist .notice-store,#plist .btn-panic-buying
 	{
-	float: left;
+/*	float: left;*/
 	height: 19px;
 	padding: 0px 9px;
 	border: 1px solid #ddd;
