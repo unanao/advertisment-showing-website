@@ -29,7 +29,7 @@
 		/*alert(window.screen.width);*/
 		/*alert(advertise_width);
 		alert(screen_width);*/
-		alert(document.body.clientWidth);
+		/*alert(document.body.clientWidth);*/
 	</script>
 	
     <div id="shortcut-2013">
@@ -119,6 +119,7 @@
   (function(){if(pageConfig.navId){var object=document.getElementById("nav-"+pageConfig.navId);if(object)object.className+=" curr";}})();
 </script>
 <!-- header end -->
+<%-- 
 <div class="w">
   <div class="breadcrumb">
     <strong>
@@ -135,6 +136,7 @@
 
   </div>
 </div>
+ --%>
 <!--crumb end-->
 <div class="w main">
   <div class="right-extra">
@@ -392,35 +394,6 @@
 <!-- photo list div end -->
 
 
-<div class="m clearfix">
-  <div class="pagin fr">
-    <span class="prev-disabled">
-      上一页
-      <b>
-      </b>
-    </span>
-    <a href="" class="current">
-      1
-    </a>
-    <a href="">
-      2
-    </a>
-    <span class="text">
-      …
-    </span>
-    <a href="l">
-      25
-    </a>
-    <a href="" class="next">
-      下一页
-      <b>
-      </b>
-    </a>
-  </div>
-</div>
-<div reco_id="2" class="shop-choice hide" id="shop-choice">
-</div>
-
 </div>
 <!--right-extra end-->
 
@@ -555,7 +528,7 @@
 </div>
 <!-- footer end -->
 <script type="text/javascript">
-		alert(document.body.clientWidth);
+		/* alert(document.body.clientWidth); */
 </script>
 
 </body>
