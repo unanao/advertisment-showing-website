@@ -5,18 +5,47 @@
 
 <html>
 	<head>
-		<meta http-equiv=Content-Type content=texthtml; charset=utf-8 >
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<base href="<%= request.getScheme() + "://" + request.getServerName() + ":" 
+				+ request.getServerPort() + request.getContextPath() %>/" />
+		<link rel="stylesheet" type="text/css" href="css_files/bootstrap.css" />		
 		<link rel="stylesheet" type="text/css" href="../css_files/personal.css" />
 	</head>
 	<body>
-		<DIV id=u211 class="leftbt" style="position:absolute; left:0%; top:10%;"><b>用户信息</b></DIV>
-		<DIV id=u212 class="leftsub"  style="position:absolute; left:0%; top:16%; "><a href="change_passwd.jsp"  target=contentpage>修改密码</a></DIV>
-		<DIV id=u213 class="leftsub" style="position:absolute; left:0%; top:20%; "><a href="showPersonalInfo"  target=contentpage>管理基本信息</a></DIV>
-		<DIV id=u214 class="leftbt"  style="position:absolute; left:0%; top:26%; "><b>我的企业信息</b></DIV>
-		<DIV id=u215 class="leftsub" style="position:absolute; left:0%; top:32%; "><a href="showEnterprise"  target=contentpage>管理企业信息</a></DIV>
-		<DIV id=u216 class="leftsub" style="position:absolute; left:0%; top:36%; "><a href="listProducts" target=contentpage>管理产品信息</a></DIV>
-		<DIV id=u217 class="leftbt"  style="position:absolute; left:0%; top:42%; "><b>账户信息</b></DIV>
-		<DIV id=u218 class="leftsub" style="position:absolute; left:0%; top:48%; "><a href="getPackagesByEnterprise" target=contentpage>账户充值信息</a></DIV>
-		<DIV id=u219 class="leftsub" style="position:absolute; left:0%; top:52%; "><a href="do_charge.jsp" target=contentpage>账户充值服务</a></DIV>
+			<ul class="nav nav-list">
+				<li class="nav-header">
+					用户信息
+				</li>
+				<li class="active">
+					<a href="#">修改密码</a>
+				</li>
+				<li>
+					<a href="#">修改基本信息</a>
+				</li>
+				<li class="nav-header">
+					企业信息
+				</li>
+				<li>
+					<a href="#">管理企业信息</a>
+				</li>
+				<li>
+					<a href="#">管理产品信息</a>
+				</li>
+				<li class="nav-header">
+					账户信息
+				</li>
+				<li>
+					<a href="#">当前套餐信息</a>
+				</li>
+				<li>
+					<a href="#">购买套餐</a>
+				</li>
+				<li class="divider">
+				</li>
+				<li>
+					<a href="#">帮助</a>
+				</li>
+			</ul>
+		<script src="js/bootstrap.js"></script>			
 	</body>
 </html>
