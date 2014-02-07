@@ -1,0 +1,19 @@
+body{
+	padding:5% 0 10% 10%;
+}
+
+h5{
+	margin:0;
+}
+
+.thumbnails > li {
+  float: left;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.thumbnail .caption {
+  padding: 0px;
+  color: #555555;
+	text-align:center;
+}
