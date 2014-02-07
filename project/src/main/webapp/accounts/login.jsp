@@ -13,7 +13,13 @@
 	<script type="text/javascript" src='js/accounts/login.js'></script>
 </head>
 <body>
-	<%@ include file="../includefiles/navigate.jsp" %>
+    <div class="w" id="header-2013">
+      <div id="logo-2013" class="ld">
+        <a href="http://www.58bancai.com/" hidefocus="true">
+          <img src="images/logo.png" width="180" height="90" alt="58板材">
+        </a>
+      </div>
+    </div>
 	<%@ include file="_login.jsp" %>
 </body>
 </html>

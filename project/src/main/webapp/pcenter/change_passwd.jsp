@@ -3,71 +3,67 @@
 <%@ taglib prefix="s" uri="/struts-tags"%>
 
 <html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	
-	<base href="<%= request.getScheme() + "://" + request.getServerName() + ":" 
-			+ request.getServerPort() + request.getContextPath() %>/" />
-	
-	<link rel="stylesheet" type="text/css" href="css_files/common.css" />
-	<link rel="stylesheet" type="text/css" href="css_files/form.css" />
-	<link rel="stylesheet" type="text/css" href="css_files/personal.css" />
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <base 
+        href="<%= request.getScheme() + "://" + request.getServerName() + ":" 
+        + request.getServerPort() + request.getContextPath() %>/"    />
+    <link rel="stylesheet" type="text/css" href="css_files/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css_files/pcenter_common.css" />
+  </head>
+  <body>
 
-	<script type="text/javascript" src="js/jquery/jquery.js"></script>
-	<script type="text/javascript" src="js/pcenter/change_passwd.js"></script>
-</head>
-<body style="overflow:scroll;overflow-y:hidden;overflow-x:hidden">
-	<s:form action="changePersonalPassword">
-	<div style="position: absolute; left: 0%; top: 0%; width: 100%; height: 100%;">
-		
-		<DIV class="rightbt" style="position: absolute; left: 0%; top: 15%;">
-			
-		
-		<h3 id="pcenter_title" align="center">修改密码</h3>
-		
-		<!-- 输出系统的Action Error提示 -->
-		<p>
-		<div class="common_error">
-			<s:actionerror />
-		</div>
-		</p>
-		
+    <form class="form-horizontal">
+      <div class="control-group">
 		<p>
 		<span id="eoldPassword" class="common_error">
 			<s:fielderror> <s:param> oldPassword </s:param> </s:fielderror>
 		</span>
-		</p>
-		<p>
-			<label class="form_label"> 原密码 </label>
-			<input id="oldPassword" name="oldPassword" class="form_input" type="password">
-		</p>
-		
-		
+		</p>      
+        <label class="control-label" contenteditable="true" for="inputOldPassword">
+          原密码
+        </label>
+
+        <div class="controls">
+          <input id="inputOldPassword" placeholder="Old Password" type="password">
+        </div>
+      </div>
+
+      <div class="control-group">
 		<span id="enewPassword" class="common_error">
 			<s:fielderror> <s:param> newPassword </s:param> </s:fielderror>
-		</span>
-		<p>
-			<label class="form_label">	新密码</label>
-			<input id="newPassword" name = "newPassword" class="form_input" type="password">
-		</p>
+		</span>         
+        <label class="control-label" contenteditable="true" for="inputNewPassword">
+          新密码
+        </label>
 
-		
+        <div class="controls">
+          <input id="inputNewPassword" placeholder="New Password" type="password">
+        </div>
+      </div>
+
+      <div class="control-group">
 		<span id="epasswordConfirm" class="common_error">
 			<s:fielderror> <s:param> passwordConfirm </s:param> </s:fielderror>
 		</span>
-		<p>
-			<label class="form_label">	重复新密码</label>
-			<input id="passwordConfirm" name="passwordConfirm" class="form_input" type="password">
-		</p>
-		<p>
-			<input id="submit" class="rightbutton" type="submit" value="确定"
-					style="position: absolute; left: 35%;;"> 
-			
-			<input class="rightbutton" type="reset" value="取消"
-					style="position: absolute; left: 55%;">
-		</p>
-		</DIV>
-	</div>
-	</s:form>
-</body>
+        <label class="control-label" contenteditable="true" for="ConfirmNewPassword">
+          确认密码
+        </label>
+
+        <div class="controls">
+          <input id="ConfirmNewPassword" placeholder="New Password" type="password">
+        </div>
+      </div>
+      <div class="control-group">
+        <div class="controls">
+          <button class="btn" contenteditable="true" type="submit">
+            确认
+          </button>
+          <button class="btn" contenteditable="true" type="reset">
+            取消
+          </button>
+        </div>
+      </div>
+    </form>
+  </body>
 </html>

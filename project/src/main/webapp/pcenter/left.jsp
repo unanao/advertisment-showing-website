@@ -17,33 +17,33 @@
 					用户信息
 				</li>
 				<li class="active">
-					<a href="#">修改密码</a>
+					<a href="pcenter/change_passwd.jsp"  target=contentpage>修改密码</a>
 				</li>
 				<li>
-					<a href="#">修改基本信息</a>
+					<a href="pcenter/showPersonalInfo" target=contentpage>修改基本信息</a>
 				</li>
 				<li class="nav-header">
 					企业信息
 				</li>
 				<li>
-					<a href="#">管理企业信息</a>
+					<a href="pcenter/showEnterprise" target=contentpage>管理企业信息</a>
 				</li>
 				<li>
-					<a href="#">管理产品信息</a>
+					<a href="pcenter/listProducts"  target=contentpage>管理产品信息</a>
 				</li>
 				<li class="nav-header">
 					账户信息
 				</li>
 				<li>
-					<a href="#">当前套餐信息</a>
+					<a href="pcenter/getPackagesByEnterprise" target=contentpage>当前套餐信息</a>
 				</li>
 				<li>
-					<a href="#">购买套餐</a>
+					<a href="pcenter/do_charge.jsp"  target=contentpage>购买套餐</a>
 				</li>
 				<li class="divider">
 				</li>
 				<li>
-					<a href="#">帮助</a>
+					<a href="pcenter/p_help.jsp" target=contentpage>帮助</a>
 				</li>
 			</ul>
 		<script src="js/bootstrap.js"></script>			

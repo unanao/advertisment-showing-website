@@ -27,3 +27,13 @@
 	height:34px;  
 	vertical-align: middle;
 }
+
+li{ 
+display: list-item;
+margin:30px;
+} 
+
+.introduction_head{
+	text-align:left;
+	margin:20px 0 35px 10px;
+}

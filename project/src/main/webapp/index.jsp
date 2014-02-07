@@ -12,14 +12,14 @@
     </title>
     <meta name="keywords" content="板材、木材、机械、厂商、导购、图片">
     <meta name="description" content="国内最专业的板材行业产品、加工机械等销售批发信息服务网站">
-    <link rel="stylesheet" type="text/css" href="css_files/index_cat.css" />
-    <link rel="stylesheet" type="text/css" href="css_files/base.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css_files/common.css" />
+    <link rel="stylesheet" type="text/css" href="css_files/index.css" media="all">
     <link rel="stylesheet" type="text/css" href="css_files/plist20130808.css" media="all">
     <script type="text/javascript" src="js/jquery/jquery.js"></script>
 	<script type="text/javascript" src="js/image_auto_resize/autoresize_image.js"></script>
 	<script type="text/javascript" src="js/advitise_photos.js"></script>    
   </head>
-  <body class="root61">
+  <body class="root">
   	<script type="text/javascript">
 		var screen_width = document.body.clientWidth-18; /* 15 is the scrollbar width */
 		var mywidth = screen_width * 0.83 * 0.15;
@@ -33,7 +33,7 @@
 	</script>
 	
     <div id="shortcut-2013">
-      <div class="w">
+      <div>
         <ul class="fl lh">
           <li class="fore1 ld">
             <a href="javascript:HomepageFavorite.Homepage()"  >设为首页</a>

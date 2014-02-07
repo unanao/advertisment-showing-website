@@ -1,10 +1,13 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="s" uri="/struts-tags"%>
-<div id="ou0" style="position:relative; width:100%; height: 460px; border: 1px; border-style: solid;">
+<hr>
+<div id="ou0" style="position:relative; width:100%; height: 460px; border:0px; border-style: solid;">
         <div style="position:relative; left: 1%; top: 20px; width:50%; height: 300px;">
-            <div style="position: absolute; left: 20px; top: 20px; font-size: 20px;">
+            <div>
+            	<h1 class="introduction_head">
                 58板材特色服务介绍
+                </h1>
                 <ul>
                     <li>
                         <label class="introduction_big">专注板材服务</label> 
