@@ -10,16 +10,13 @@
 			+ request.getServerPort() + request.getContextPath() %>/" />
 	<link rel="stylesheet" type="text/css" href="css_files/personal.css" />
 	<link rel="stylesheet" type="text/css" href="css_files/common.css" />
+	<link rel="stylesheet" type="text/css" href="css_files/pcenter_common.css" />
 </head>
 <body>
 		<div
 			style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;">
-
-			<DIV class="rightbt" style="position: absolute; left: 0; top: 15%;">
-				<b>基本信息</b>
-			</DIV>		
 			
-			<table id="basic_table" style="position: absolute; left: 23%; top: 23%; width:50%;">																																										
+			<table id="basic_table" style="position: absolute; left: 23%; top: 13%; width:50%;">																																										
 				<tr>
 					<th>昵称</th>																																																																																																																										
 					<td><s:property value="user.nickname"/></td>
@@ -51,11 +48,11 @@
 			</table>
 	
 			<INPUT id=u28 class="rightbutton" type=submit value="修改" 
-				style="position: absolute; left: 35%; top: 65%;"
+				style="position: absolute; left: 35%; top: 45%;"
 				onclick="location.href='pcenter/getPersonalInfo'">
 				
 			<INPUT id=u29 class="rightbutton" type=submit value="取消"
-				style="position: absolute; left: 55%; top: 65%;">
+				style="position: absolute; left: 55%; top: 45%;">
 		</div>
 
 </body>

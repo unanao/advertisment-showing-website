@@ -21,7 +21,6 @@
 
 	<div style="position:absolute; left:20%; top:10%; width:80%; height:90%;">
 		<table width="80%">
-		   <caption><b>查看企业信息</b></caption>
 		   <tr>
 		       <td><b>企业名称</b></td>
 		       <td><s:property  value="enterprise.name"/></td>

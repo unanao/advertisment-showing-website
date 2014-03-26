@@ -18,10 +18,8 @@
 
 <body>
 	<s:form action="editPersonalInfo">
-	<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; border: 1px solid;">
+	<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;">
 		<div style="position: absolute; left: 35%; top: 10%;">
-			
-			<h3 align="center"> 修改基本信息 </h3>
 			
 			<!-- 输出系统的Action Error提示 -->
 			<p>

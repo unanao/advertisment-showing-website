@@ -6,18 +6,24 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<base href="<%= request.getScheme() + "://" + request.getServerName() + ":" 
 			+ request.getServerPort() + request.getContextPath() %>/" />
-	<link rel="stylesheet" type="text/css" href="css_files/personal.css" />
+		<link rel="stylesheet" type="text/css" href="css_files/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css_files/common.css" />	
+		<link rel="stylesheet" type="text/css" href="css_files/pcenter_common.css" />		
 </head>
 <body>
-	<div style="position:absolute; left:0%; top:0%; width:100%; height:100%;">
-		<DIV  class="rightbt" style="position:absolute; left:0%; top:10%;"><b>管理产品信息</b></DIV>
-		<button id=u97  type=button value="new_product" class="rightbutton" 
-		style="position:absolute; left: 65%; top:20%;"  onclick="location.href='pcenter/saveProductPage'">
-			发布新产品
-		</button>
-			<table id="product_table" style="position:absolute; left:25%; top:30%;">
+	<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span12">
+		<div class="blank"></div>
+	<p>
+		<a  class="btn-small fr" style="margin-right:100px" value="new_product" onclick="location.href='pcenter/saveProductPage'">
+			发布新产品》
+		</a>
+	</p>			
+			<table class="table"  id="product_table">
+				<tbody>			
 			<s:iterator value="products" id="product">
-				<tr>
+				<tr class="info">
 					<td><s:property value="#product.name"/> </td>
 					<td><a href="product/showProduct?productId=<s:property value="#product.id" />"  
                             target="_blank">
@@ -27,8 +33,12 @@
 					<td><a href="pcenter/deleteProduct?productId=<s:property value='#product.id'/>">删除</a></td>
                     
 				</tr>
-			</s:iterator>
+			</s:iterator>				
+				</tbody>
 			</table>
+		</div>
 	</div>
+</div>
+	
 </body>
 </html>

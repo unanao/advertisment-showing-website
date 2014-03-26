@@ -10,10 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="css_files/personal.css" />
 </head>
 <body>
-			<DIV class="rightbt" style="position: absolute; left: 0; top: 15%;">
-				<b>账户充值</b>
-			</DIV>
-			<DIV style="position:relative; top:200px;" >
+			<DIV  >
 				抱歉，目前在线充值功能正在开发中！可通过联系管理员进行线下充值，管理员QQ群：47552873
 			</DIV>
 </body>

@@ -12,7 +12,8 @@
     <link rel="stylesheet" type="text/css" href="css_files/pcenter_common.css" />
   </head>
   <body>
-
+	<div class="blank">
+	</div>
     <form class="form-horizontal">
       <div class="control-group">
 		<p>

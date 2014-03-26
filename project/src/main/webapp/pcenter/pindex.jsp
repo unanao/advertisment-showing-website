@@ -11,13 +11,13 @@
     />
     	<link rel="stylesheet" type="text/css" href="css_files/bootstrap.css" />
     	<link rel="stylesheet" type="text/css" href="css_files/pcenter_common.css" />
-		<script type="text/javascript" src='js/image_auto_resize/autoresize_image.js'></script>			 
+		<script type="text/javascript" src='js/image_auto_resize/autoresize_image.js'></script>
   </head>
   <body>
     <div class="container-fluid">
       <div class="row-fluid">
         <div class="span12">
-          <div class="page-header">
+          <div class="page-header pcheader">
             <h4>
               欢迎您，xxxx
             </h4>
@@ -26,11 +26,11 @@
             您目前拥有以下套餐：您目前使用的为免费套餐服务。
           </p>
           <p>
-            <a class="btn" href="#">
+            <a class="btn-small" href="#">
               更多套餐信息 »
             </a>
           </p>
-          <span class="label badge-info">
+          <span class="label badge-info margin5 font16 padding58">
             企业信息
           </span>
           <ul class="thumbnails">
@@ -41,19 +41,11 @@
                 <h5>
                   冯诺尔曼结构
                 </h5>
-                <p>
-                  <a class="btn btn-primary" href="#">
-                    浏览
-                  </a>
-                  <a class="btn" href="#">
-                    分享
-                  </a>
-                </p>
               </div>
             </div>
           </li>
         </ul>
-        <span class="label badge-info">
+        <span class="label badge-info margin5 font16 padding58">
           产品信息
         </span>
         <ul class="thumbnails">
@@ -64,14 +56,6 @@
               <h5>
                 冯诺尔曼结构
               </h5>            
-              <p>
-                <a class="btn btn-primary" href="#">
-                  浏览
-                </a>
-                <a class="btn" href="#">
-                  分享
-                </a>
-              </p>
             </div>
           </div>
         </li>
@@ -82,14 +66,6 @@
             <h5>
               哈佛结构
             </h5>
-            <p>
-              <a class="btn btn-primary" href="#">
-                浏览
-              </a>
-              <a class="btn" href="#">
-                分享
-              </a>
-            </p>
           </div>
         </div>
       </li>
@@ -100,14 +76,6 @@
           <h5>
             改进型哈佛结构
           </h5>
-          <p>
-            <a class="btn btn-primary" href="#">
-              浏览
-            </a>
-            <a class="btn" href="#">
-              分享
-            </a>
-          </p>
         </div>
       </div>
     </li>

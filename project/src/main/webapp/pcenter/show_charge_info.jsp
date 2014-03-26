@@ -14,14 +14,8 @@
 	<div
 		style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;">
 
-		<DIV class="rightbt" style="position: absolute; left: 0; top: 15%;">
-			<b>账户信息</b>
-		</DIV>
-
-		<DIV id=u22_rtf class="rightcontent"
-			style="position: absolute; left: 15%; top: 25%;">您拥有套餐：</DIV>
-		<div id="scrollDiv"
-			style="position: absolute; left: 10%; top: 30%; width: 80%; overflow: auto; cursor: default; display: inline; position: absolute; text-align: center;">
+		<DIV id=u22_rtf class="rightcontent">您拥有套餐：</DIV>
+		<div id="scrollDiv">
 			<table id='accountTable' width=100%; cellpadding='0' cellspacing='0'
 				style='table-layout: auto' bordercolor='lightgrey'>
 				<tr class="FixedTitleRow">
