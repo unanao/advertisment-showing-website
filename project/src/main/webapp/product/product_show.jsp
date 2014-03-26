@@ -8,35 +8,20 @@
 				+ request.getServerPort() + request.getContextPath() %>/" />		
 		<link rel="stylesheet" type="text/css" href="css_files/all_show_cat.css" />
 		<link rel="stylesheet" type="text/css" href="css_files/common.css" />
-		<link rel="stylesheet" type="text/css" href="css_files/jquery.jqzoom.css" />
+		<link rel="stylesheet" type="text/css" href="css_files/plist20130808.css" />	
 		<script type="text/javascript" src="js/photo_autosize.js"></script>
 		<script type="text/javascript" src="js/jquery/jquery.js"></script>
 		<script src="js/jquery/jquery-1.6.js" type="text/javascript"></script>
-		<script src="js/jquery.jqzoom-core.js" type="text/javascript"></script>
 		<script type="text/javascript" src='js/image_auto_resize/autoresize_image.js'></script>	
 		<script type="text/javascript" src="js/photo_switch_show.js"></script>	
 	</head>
-	<body style="height:700px;">	
+	<body>	
 		<%@ include file="../includefiles/navigate.jsp" %>	
-		<h3 id="pcenter_title" align="center">产品展示</h3>
-        <div id="show_photo">
-           <div id="div_img_main">
+        <div class="right-extra">
+           <div id=div_img_main class="fl">
             	<%-- 待优化，style="height:100%;"，优化方式：用js代码动态调节 --%>
-                <img id="img_main" onload="DrawImage(this,300,225)" src="<s:property value="product.icon"/>" alt="gua">
-			</div>
-            <div id=img_list>
-                <ul class="tb-thumb">
-                    <s:iterator id="p" value="productPictures">
-                        <li class="tb-selected">
-                            <div class="tb-pic">
-                                <IMG id=u126 src="<s:property value="#p.path"/>" onload="DrawImage(this,50,50)" 
-								onmouseover="change_photo_show(this)"      alt="挂掉啦！">
-                            </div>
-                        </li>
-                    </s:iterator>
-                </ul>
-            </div>
-		</div>
+                <img id="img_main"  onload="DrawImage(this,300,225)" src="<s:property value="product.icon"/>" alt="gua">
+           </div>
 		<div id="show_info">						
 		<table id="E_Inf_Table" style="position:relative; ">																																										
 			<tr>																																																																																																																								
@@ -62,18 +47,22 @@
 				</td>
 			</tr>
 		</table>				
-		</div>		
-		<div id="blank_space"></div>
-				
+		</div>	
+		<div id=img_list>
+                <ul class="tb-thumb cl">
+                    <s:iterator id="p" value="productPictures">
+                        <li class="tb-selected">
+                            <div class="tb-pic">
+                                <IMG id=u126 src="<s:property value="#p.path"/>" onload="DrawImage(this,50,50)" 
+								onmouseover="change_photo_show(this)"      alt="挂掉啦！">
+                            </div>
+                        </li>
+                    </s:iterator>
+                </ul>
+		</div>
+
+	</div>
+	<!--right-extra end-->
+	<%@include file="../includefiles/left.jsp"%>	
 	</body>
-		<script type="text/javascript">
-		$(document).ready(function() {
-			$('.jqzoom').jqzoom({
-		            zoomType: 'standard',
-		            lens:true,
-		            preloadImages: false,
-		            alwaysOn:false
-		        });
-		});		
-		</script>
 </html>
