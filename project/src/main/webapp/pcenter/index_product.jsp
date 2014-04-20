@@ -12,7 +12,7 @@
 			<table class="table"  id="product_table">
 				<tbody>			
 			<s:iterator value="products" id="product">
-				<tr class="info">
+				<tr >
 					<td><s:property value="#product.name"/> </td>
 					<td><a href="product/showProduct?productId=<s:property value="#product.id" />"  
                             target="_blank">

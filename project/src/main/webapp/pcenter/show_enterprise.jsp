@@ -3,7 +3,7 @@
 <%@ taglib prefix="s" uri="/struts-tags"%>
 
 	<div>
-		<table width="80%">
+		<table class="table" width="80%">
 		   <tr>
 		       <td><b>企业名称</b></td>
 		       <td><s:property  value="enterprise.name"/></td>
@@ -64,8 +64,8 @@
 		</table>
 	
 		<p class="show_corp_button" >
-            <input type="submit" value="修改" 
+            <input class="btn" type="submit" value="修改" 
             		onclick="location.href='pcenter/updateEnterprisePage'">
-            <input type="reset" value="取消">
+            <input class="btn" type="reset" value="取消">
        </p>
 	</div>
