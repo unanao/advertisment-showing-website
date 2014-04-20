@@ -2,16 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="s" uri="/struts-tags"%>
 
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <base 
-        href="<%= request.getScheme() + "://" + request.getServerName() + ":" 
-        + request.getServerPort() + request.getContextPath() %>/"    />
-    <link rel="stylesheet" type="text/css" href="css_files/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="css_files/pcenter_common.css" />
-  </head>
-  <body>
+
 	<div class="blank">
 	</div>
     <form class="form-horizontal">
@@ -66,5 +57,4 @@
         </div>
       </div>
     </form>
-  </body>
-</html>
+

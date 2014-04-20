@@ -2,24 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="s" uri="/struts-tags"%>
 
-<html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	
-	<%-- private css --%>
-	<link rel="stylesheet" type="text/css" href="css/show_enterprise.css" />
-	
-	<base href="<%= request.getScheme() + "://" + request.getServerName() + ":" 
-			+ request.getServerPort() + request.getContextPath() %>/" />	
-    
-    <link rel="stylesheet" type="text/css" href="css_files/personal.css" />  
-    
-	<script type="text/javascript" src="js/jquery/jquery.js"></script>
-	<script type="text/javascript" src='js/image_auto_resize/autoresize_image.js'></script>
-</head>
-<body>
-
-	<div style="position:absolute; left:20%; top:10%; width:80%; height:90%;">
+	<div>
 		<table width="80%">
 		   <tr>
 		       <td><b>企业名称</b></td>
@@ -86,5 +69,3 @@
             <input type="reset" value="取消">
        </p>
 	</div>
-</body>
-</html>

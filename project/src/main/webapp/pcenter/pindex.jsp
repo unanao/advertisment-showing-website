@@ -1,19 +1,7 @@
-﻿
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="s" uri="/struts-tags"%>
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <base 
-        href="<%= request.getScheme() + "://" + request.getServerName() + ":" +
-         request.getServerPort() + request.getContextPath() %>/"
-    />
-    	<link rel="stylesheet" type="text/css" href="css_files/bootstrap.css" />
-    	<link rel="stylesheet" type="text/css" href="css_files/pcenter_common.css" />
-		<script type="text/javascript" src='js/image_auto_resize/autoresize_image.js'></script>
-  </head>
-  <body>
+
     <div class="container-fluid">
       <div class="row-fluid">
         <div class="span12">
@@ -83,7 +71,3 @@
 </div>
 </div>
 </div>
-<script src="js/bootstrap.js">
-</script>
-</body>
-</html>

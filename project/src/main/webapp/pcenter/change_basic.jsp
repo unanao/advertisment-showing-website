@@ -2,24 +2,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="s" uri="/struts-tags"%>
 
-<html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<base href="<%= request.getScheme() + "://" + request.getServerName() + ":" 
-			+ request.getServerPort() + request.getContextPath() %>/" />
-			
-	<link rel="stylesheet" type="text/css" href="css_files/common.css" />
-	<link rel="stylesheet" type="text/css" href="css_files/from.css" />
-	
-
-	<script type="text/javascript" src="js/jquery/jquery.js"></script>
-	<script type="text/javascript" src="js/pcenter/change_basic_validation.js"></script>
-</head>
-
-<body>
 	<s:form action="editPersonalInfo">
-	<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;">
-		<div style="position: absolute; left: 35%; top: 10%;">
+	<div >
+		<div>
 			
 			<!-- 输出系统的Action Error提示 -->
 			<p>
@@ -113,5 +98,3 @@
 		</div>
 	</div>
 	</s:form>
-</body>
-</html>

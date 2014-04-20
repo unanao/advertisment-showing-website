@@ -1,30 +1,41 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="s" uri="/struts-tags"%>
-
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<base href="<%= request.getScheme() + "://" + request.getServerName() + ":" 
-				+ request.getServerPort() + request.getContextPath() %>/" />
-		<link rel="stylesheet" type="text/css" href="css_files/bootstrap.css" />
-		<link rel="stylesheet" type="text/css" href="css_files/common.css" />
-		<link rel="stylesheet" type="text/css" href="css_files/personal.css" />
+				+ request.getServerPort() + request.getContextPath() %>/" />		
+    	<link rel="stylesheet" type="text/css" href="css_files/bootstrap.css" />		
+   		<link rel="stylesheet" type="text/css" href="css_files/plist20130808.css" media="all">
+   		<link rel="stylesheet" type="text/css" href="css_files/from.css" />
+		<link rel="stylesheet" type="text/css" href="css_files/common.css" /> 
+		<link rel="stylesheet" type="text/css" href="css_files/pcenter_common.css" />
+				  		
+		<script type="text/javascript" src="js/jquery/jquery.js"></script>
+		<%-- 下面的js为功能性，根据需要添加--%>
+		<script type="text/javascript" src='js/image_auto_resize/autoresize_image.js'></script>	
+		<script type="text/javascript" src="js/pcenter_navigator_switch.js"></script>	
+		<script type="text/javascript" src="js/pcenter/change_basic_validation.js"></script>
 	</head>
-	<body>	
-		<%@ include file="../includefiles/navigate.jsp" %>
-		<div style="position:relative; width:20%;  border-right:0; float:left; margin-right:-2px;">
-			<iframe width="100%" height="550px" frameborder=0 scrolling=no src="pcenter/left.jsp"></iframe>
+	<body>
+		<!--navigator start-->		
+		<%@ include file="../includefiles/navigate.jsp" %>	
+		<!--navigator end-->
+		
+        <div id="pcenter_right" class="right-extra">
+			<%@ include file="pindex.jsp" %>	
 		</div>
-		<%--右侧是主页面内容  --%>
-		<div style="position:relative;width:80%;float:left;margin-left:-2px;">
-			<iframe name="contentpage" width="100%" height="550px" frameborder=0 scrolling=auto src="pcenter/personalSummary">
-			</iframe>
-		</div>
-		<script src="js/bootstrap.js"></script>
+		<!--right-extra end-->
+		
+		<div class="left">	
+			<%@include file="left.jsp"%>
+		</div>	
+		<!-- left-navigator end -->
+		
+		<script src="js/bootstrap.js">
+		</script>
 	</body>
 </html>
 
- 
-
- 

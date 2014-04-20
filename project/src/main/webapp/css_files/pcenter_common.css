@@ -1,5 +1,5 @@
 body{
-			margin:0;
+			margin:0 auto;
 			border:0;	
 	padding:0% 0 0% 10%;
 	 font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -9,6 +9,11 @@ h5{
 	margin:0;
 }
 
+/*navigator style start*/
+#nav-list a{
+	cursor: pointer;
+}
+/*navigator style end*/
 .pcheader{
   padding-bottom: 0px;
   margin: 10px 0 10px;

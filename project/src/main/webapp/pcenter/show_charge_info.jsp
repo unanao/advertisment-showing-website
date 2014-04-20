@@ -12,7 +12,7 @@
 </head>
 <body>
 	<div
-		style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;">
+		style=" width: 100%; height: 100%;">
 
 		<DIV id=u22_rtf class="rightcontent">您拥有套餐：</DIV>
 		<div id="scrollDiv">

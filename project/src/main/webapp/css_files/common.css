@@ -6,13 +6,12 @@ html,body,span,iframe,h1,h2,h3,h4,h5,h6,blockquote,pre,a,address,big,cite,code,d
 }
 
 body{
-	margin:0 auto;
 	font: 12px/150% Arial, Verdana, "\5b8b\4f53";
 	color: #666;
 	font-family:"Times New Roman","serif";
-	/*border:1px solid black;*/
 	width:80%;
 	min-width:990px;	
+	margin:0 auto;	
 }
 
 
@@ -26,6 +25,11 @@ h1,h2{
 
 ol,ul {
 	list-style: none;
+}
+
+.left {
+	float: left;
+	width: 17%;
 }
 
 .fl {

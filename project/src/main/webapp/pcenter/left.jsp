@@ -8,42 +8,40 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<base href="<%= request.getScheme() + "://" + request.getServerName() + ":" 
 				+ request.getServerPort() + request.getContextPath() %>/" />
-		<link rel="stylesheet" type="text/css" href="css_files/bootstrap.css" />		
-		<link rel="stylesheet" type="text/css" href="../css_files/personal.css" />
 	</head>
 	<body>
-			<ul class="nav nav-list">
-				<li class="nav-header">
+			<ul id="nav-list" class="nav nav-list">
+				<li id="pnav_userinfo" class="nav-header">
 					用户信息
 				</li>
-				<li class="active">
-					<a href="pcenter/change_passwd.jsp"  target=contentpage>修改密码</a>
+				<li id="pnav_change_pw">
+					<a>修改密码</a>
 				</li>
-				<li>
-					<a href="pcenter/showPersonalInfo" target=contentpage>修改基本信息</a>
+				<li id="pnav_change_basic">
+					<a>修改基本信息</a>
 				</li>
 				<li class="nav-header">
 					企业信息
 				</li>
-				<li>
-					<a href="pcenter/showEnterprise" target=contentpage>管理企业信息</a>
+				<li id="pnav_manage_enterprise">
+					<a>管理企业信息</a>
 				</li>
-				<li>
-					<a href="pcenter/listProducts"  target=contentpage>管理产品信息</a>
+				<li id="pnav_manage_product">
+					<a>管理产品信息</a>
 				</li>
 				<li class="nav-header">
 					账户信息
 				</li>
-				<li>
-					<a href="pcenter/getPackagesByEnterprise" target=contentpage>当前套餐信息</a>
+				<li id="pnav_current_service">
+					<a>当前套餐信息</a>
 				</li>
-				<li>
-					<a href="pcenter/do_charge.jsp"  target=contentpage>购买套餐</a>
+				<li id="pnav_buy_service">
+					<a>购买套餐</a>
 				</li>
 				<li class="divider">
 				</li>
-				<li>
-					<a href="pcenter/p_help.jsp" target=contentpage>帮助</a>
+				<li id="pnav_help_info">
+					<a>帮助</a>
 				</li>
 			</ul>
 		<script src="js/bootstrap.js"></script>			

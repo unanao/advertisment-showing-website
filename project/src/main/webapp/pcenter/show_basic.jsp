@@ -3,20 +3,9 @@
 <%@ taglib prefix="s" uri="/struts-tags"%>
 
 
-<html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<base href="<%= request.getScheme() + "://" + request.getServerName() + ":" 
-			+ request.getServerPort() + request.getContextPath() %>/" />
-	<link rel="stylesheet" type="text/css" href="css_files/personal.css" />
-	<link rel="stylesheet" type="text/css" href="css_files/common.css" />
-	<link rel="stylesheet" type="text/css" href="css_files/pcenter_common.css" />
-</head>
-<body>
-		<div
-			style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;">
-			
-			<table id="basic_table" style="position: absolute; left: 23%; top: 13%; width:50%;">																																										
+		<div  class="span12">
+			<table id="basic_table" class="table">	
+			<tbody>																																						
 				<tr>
 					<th>昵称</th>																																																																																																																										
 					<td><s:property value="user.nickname"/></td>
@@ -45,15 +34,11 @@
 					<th></th>
 					<td></td>
 				</tr>
+				</tbody>			
 			</table>
 	
-			<INPUT id=u28 class="rightbutton" type=submit value="修改" 
-				style="position: absolute; left: 35%; top: 45%;"
-				onclick="location.href='pcenter/getPersonalInfo'">
+			<INPUT id=u28 class="btn" contenteditable="true" type="submit"
+			 value="修改" onclick="location.href='pcenter/getPersonalInfo'">
 				
-			<INPUT id=u29 class="rightbutton" type=submit value="取消"
-				style="position: absolute; left: 55%; top: 45%;">
+			<INPUT id=u29 class="btn" contenteditable="true" type=submit value="取消">
 		</div>
-
-</body>
-</html>
