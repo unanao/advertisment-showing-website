@@ -3,18 +3,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
 
-<html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<base href="<%= request.getScheme() + "://" + request.getServerName() + ":" 
-			+ request.getServerPort() + request.getContextPath() %>/" />
-    <link rel="stylesheet" type="text/css" href="css_files/personal.css" />
-	<link rel="stylesheet" type="text/css" href="css_files/form.css?=v1.0" />
-	
-</head>
-<body>
+
    <form action="pcenter/updateProduct" method="post" enctype="multipart/form-data">
 		<%@ include file="product_operation_include.jsp" %>
    </form>
-</body>
-</html>	

@@ -18,7 +18,7 @@
                             target="_blank">
                                    查看
                         </a></td>
-					<td><a href="pcenter/updateProductPage?productId=<s:property value='#product.id'/>">编辑</a></td>
+					<td><a onclick="$('#pcenter_right').load('pcenter/updateProductPage?productId=<s:property value='#product.id'/>');">编辑</a></td>
 					<td><a href="pcenter/deleteProduct?productId=<s:property value='#product.id'/>">删除</a></td>
                     
 				</tr>
@@ -26,3 +26,5 @@
 				</tbody>
 			</table>
 		</div>
+
+		

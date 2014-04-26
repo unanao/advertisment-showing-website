@@ -9,11 +9,16 @@ h5{
 	margin:0;
 }
 
+table a{
+	cursor: pointer;
+}
+
 /*navigator style start*/
 #nav-list a{
 	cursor: pointer;
 }
 /*navigator style end*/
+
 .pcheader{
   padding-bottom: 0px;
   margin: 10px 0 10px;
