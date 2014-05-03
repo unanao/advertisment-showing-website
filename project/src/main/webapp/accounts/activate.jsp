@@ -11,21 +11,23 @@
 </head>
 <body>
 		<%@ include file="../includefiles/navigate.jsp" %>	
-	<div id="ou0" class="zhuti" style="position: absolute; left:14%; top: 91px;">
-		<div style="position: absolute; left: 10%; top: 5%;">
-			<h4>请激活您的账号：</h4>
-		</div>
-		
-		<div id="common_div_frame" style="position: absolute; left: 20%; top: 20%;">
-				<p class="common_font">您的账号为：
+	<div id="ou0" style="text-align:center;">
+		<div style="padding:50px;">
+			<h2>请激活您的账号：</h2>
+			<br>
+			<div id="common_div_frame" style="">
+				<h3>您的账号为：
 					<s:property value="#session.SESSION_EMAIL" />
-				</p>
-				<p class="common_font">
+				</h3>
+				<br>
+				<h4>
 					请登录您的邮箱，找到我们给您发的验证邮件，点击邮件中的链接，即可完成注册
-				</p>
+				</h4>
+			</div>
 		</div>
-
-		<div id="help_div" style="position: absolute; left:30%; top:50%;">
+		<hr>
+		<div id="help_div" style="position:relative; left:30%; text-align:left;">
+			<p>如果您没有收到邮件：</p>	
 			<p>看看Email地址有没有写错</p> 
 			<p>看看是否在垃圾邮件或广告邮件里</p> 
 			<p>稍等几分钟再看看</p>

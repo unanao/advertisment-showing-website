@@ -318,4 +318,29 @@ a:active {color: #000}
 	background: #A40000;
 }
 
+/* photo local preview style of pcenter and all show page start*/
+#logo,#icon
+{
+	position:relative;
+	left:5%;
+	width:60px; 
+	height:45px; 
+}
+
+.thumb{
+width:100%;
+height:12%;
+}
+
+.thumb .thumb_pic{
+	width:60px; 
+	height:45px; 
+	border:1px solid red;
+	/*display:block;*/
+	/*overflow:hidden;*/
+}
+
+#thumb_list li{float:left;margin-right:2px;list-style:none;}
+#thumb_list li a{font-size:12px;}
+/* photo local preview style of pcenter and all show page end */
 

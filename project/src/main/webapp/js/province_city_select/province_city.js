@@ -1,12 +1,15 @@
 var Utils = {};
 Utils.addEvent = function(el, type, func) {
-	if (document.addEventListener) {
-		el.addEventListener(type, func, false);
-	} else if (document.attachEvent) {
-		el.attachEvent('on' + type, func);
-	}
+    if (document.addEventListener) {
+        el.addEventListener(type, func, false);
+    } else if (document.attachEvent) {
+        el.attachEvent('on' + type, func);
+    }
 };
-Utils.addEvent(window, 'load', function(){
+
+/*2014-05-03 commented by lzf*/
+/* pcenter改造成AJAX后，加载此页面不会再触发window或document的load或ready事件*/
+/*Utils.addEvent(document, 'ready', function() {*/
 
     var region1 = document.getElementById("province");
     var region2 = document.getElementById("city");
@@ -18,12 +21,10 @@ Utils.addEvent(window, 'load', function(){
     region3.options[0] = new Option("请选择", "请选择");
     region3.style.display = "none";
     var province = $("#hiddenprovince").val();
-    
+
     if ("" == province) {
         $("#province").val("请选择");
-        
-    }
-    else {
+    } else {
         $("#province").val(province);
         var region1_obj = arrCity[region1.selectedIndex];
         var region2_arr = region1_obj.sub;
@@ -34,8 +35,8 @@ Utils.addEvent(window, 'load', function(){
             region2.options[i] = new Option(region2_arr[i].name, region2_arr[i].name);
         }
     }
-    
-    Utils.addEvent(region1, 'change', function(){
+
+    Utils.addEvent(region1, 'change', function() {
         var region1_obj = arrCity[region1.selectedIndex];
         var region2_arr = region1_obj.sub;
         region2.options.length = 0;
@@ -45,12 +46,11 @@ Utils.addEvent(window, 'load', function(){
             region2.options[i] = new Option(region2_arr[i].name, region2_arr[i].name);
         }
     });
-    
+
     var city = $("#hiddencity").val();
     if ("" == city) {
         $("#city").val("请选择");
-    }
-    else {
+    } else {
         $("#city").val(city);
         var region1_obj = arrCity[region1.selectedIndex];
         var region2_obj = region1_obj.sub[region2.selectedIndex];
@@ -61,12 +61,11 @@ Utils.addEvent(window, 'load', function(){
             for (var i = 0; i < region3_arr.length; i++) {
                 region3.options[i] = new Option(region3_arr[i].name, region3_arr[i].name);
             }
-        }
-        else {
+        } else {
             region3.style.display = "none";
         }
     }
-    Utils.addEvent(region2, 'change', function(){
+    Utils.addEvent(region2, 'change', function() {
         var region1_obj = arrCity[region1.selectedIndex];
         var region2_obj = region1_obj.sub[region2.selectedIndex];
         var region3_arr = region2_obj.sub;
@@ -76,17 +75,15 @@ Utils.addEvent(window, 'load', function(){
             for (var i = 0; i < region3_arr.length; i++) {
                 region3.options[i] = new Option(region3_arr[i].name, region3_arr[i].name);
             }
-        }
-        else {
+        } else {
             region3.style.display = "none";
         }
     });
-    
+
     var county = $("#hiddencounty").val();
     if ("" == county) {
         $("#county").val(county);
-    }
-    else {
+    } else {
         $("#county").val(county);
     }
-});
+/*});*/

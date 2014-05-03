@@ -56,3 +56,14 @@ table a{
 .btn-small{
 	cursor:pointer;
 }
+
+/* 管理企业信息show_enterprise.jsp start */
+#thumb{
+	margin-left:20%;
+}
+
+#bottom_button_div
+{
+	margin-left:20%;
+}
+/* 管理企业信息show_enterprise.jsp end */

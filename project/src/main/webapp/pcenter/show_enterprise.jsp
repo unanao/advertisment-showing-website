@@ -10,7 +10,6 @@
 	</s:if>
 	
     <form  action="pcenter/updateEnterprise" method="post" enctype="multipart/form-data"> 
-       	 <h3 id="pcenter_title" align="center">管理企业信息</h3>
        	 
        	<!-- 企业名称 -->
        	<p>
@@ -26,7 +25,7 @@
         
         <p>
        		<label class="form_label">所在地</label>
-        	<%-- 省市级联 -- 布局通过.province_city控制  --%>
+        	<%-- 省市级联 布局通过.province_city控制  --%>
         	<%@ include file="../js/province_city_select/province_city_select.jsp" %>
         	
         	<input type="hidden" value="<s:property value="enterprise.province"/>" id="hiddenprovince" />
@@ -121,8 +120,8 @@
 				  </script>
 			  </s:iterator>		
         <%--上传多张图片结束--%>
-        
-        <div id="bottom_button_div">
+        <br>
+        <div id="bottom_button_div" style="clear:both;">
         	<INPUT id="submit" type="submit" value="提交" />
         	<INPUT id="cannel" type="reset" value="取消" onclick="deal_new_picture()" />
 		</div>

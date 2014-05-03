@@ -24,7 +24,8 @@
 		<%-- 下面的js文件待整合，目前应用于企业信息修改页面 --%>
     <script type="text/javascript" src="js/ajaxfileupload.js"></script>
     <script type="text/javascript" src="js/local_preview.js"></script>
-    <script type="text/javascript" src="js/pcenter/modify_enterprise_validation.js"></script>		
+    <script type="text/javascript" src="js/pcenter/modify_enterprise_validation.js"></script>	
+
 	</head>
 	<body>
 		<!--navigator start-->		
