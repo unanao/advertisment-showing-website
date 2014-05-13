@@ -10,7 +10,6 @@
 	<script type="text/javascript" src="js/ajaxfileupload.js"></script>
     <script type="text/javascript" src="js/local_preview.js?v=1.4"></script> 
 	<script type="text/javascript" src='js/image_auto_resize/autoresize_image.js'></script>
-	<h3 align="center">产品信息</h3>
 	<s:fielderror> <s:param> productId </s:param> </s:fielderror> 
 	<!-- 输出系统的Action Error提示 -->
 	<p>	   
@@ -80,7 +79,8 @@
                 deal_return_picture("<s:property value='key'/>","<s:property value='value.path'/>","productId",'pcenter/pubProductPicture','pcenter/deleteProductPicture','icon');
             </script>
            </s:iterator>		
-        <%--上传多张图片结束--%>       
+        <%--上传多张图片结束--%>  
+        <div style="clear:both;"></div>     
         <div id="bottom_button_div">
         	<INPUT id="submit" type="submit" value="提交" />
         	<INPUT id="cannel" type="reset" value="取消" onclick="deal_new_picture()" />
