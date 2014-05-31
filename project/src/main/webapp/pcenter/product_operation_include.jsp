@@ -82,6 +82,6 @@
         <%--上传多张图片结束--%>  
         <div style="clear:both;"></div>     
         <div id="bottom_button_div">
-        	<INPUT id="submit" type="submit" value="提交" />
-        	<INPUT id="cannel" type="reset" value="取消" onclick="deal_new_picture()" />
+        	<button id="submit" class="btn" type="submit" value="提交">提交</button>
+        	<button id="cannel" class="btn" type="reset" value="取消" onclick="deal_new_picture()">取消</button>
 		</div>

@@ -13,6 +13,7 @@ table a{
 	cursor: pointer;
 }
 
+
 /*navigator style start*/
 #nav-list a{
 	cursor: pointer;
@@ -57,6 +58,20 @@ table a{
 	cursor:pointer;
 }
 
+#submit{
+	margin-left:25%;
+}
+
+#cancel{
+	margin-left:10%;
+}
+
+/* 修改基本信息 start */
+#female, #secret{
+	margin-left:30px;
+}
+/* 修改基本信息 end */
+
 /* 管理企业信息show_enterprise.jsp start */
 #thumb{
 	margin-left:20%;
@@ -64,6 +79,5 @@ table a{
 
 #bottom_button_div
 {
-	margin-left:20%;
 }
 /* 管理企业信息show_enterprise.jsp end */

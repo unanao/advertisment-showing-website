@@ -121,8 +121,8 @@
 			  </s:iterator>		
         <%--上传多张图片结束--%>
         <br>
-        <div id="bottom_button_div" style="clear:both;">
-        	<INPUT id="submit" type="submit" value="提交" />
-        	<INPUT id="cannel" type="reset" value="取消" onclick="deal_new_picture()" />
+        <div style="clear:both;">
+        	<button id="submit" type="submit" class="btn" value="提交">提交</button>
+        	<button id="cannel" type="reset" class="btn" value="取消" onclick="deal_new_picture()">取消</button>
 		</div>
     </form>

@@ -45,20 +45,19 @@
 				<s:else>
 					<INPUT id="gender" type=radio value="male" name="gender">
 				</s:else>
-				<label for="gender">男</label>
+				男
 				<!-- 女 -->
 				<s:if test="'female' == user.gender">
-					<INPUT id="female" type=radio value="female" name="gender" 
-							checked='true'>
+					<INPUT id="female"  type=radio value="female"
+					 name="gender" 	checked='true'>
 				</s:if>
 				<s:else>
 					<INPUT id="female" type="radio" value="female" name="gender">
 				</s:else>
-				<label for="female">女</label>
-			
+				女
 				<!-- 默认采用 --“保密” -->
 				<INPUT id="secret" type="radio" value="secret" name="gender" checked="true">
-				<label for="secret">保密</label>
+				保密
 		</p>
 	
 			<!-- 办公电话 -->
@@ -90,10 +89,8 @@
 			</p>
 			
 			<p>
-				<INPUT id="submit" type="submit" value="确定" 
-						style="position: absolute; left: 15%;"> 
-				<INPUT id="cancel" type="reset" value="取消" 
-						style="position: absolute; left: 55%;">
+				<button id="submit" type="submit" class="btn" value="确定">确定</button>
+				<button id="cancel" type="reset" class="btn" value="取消">取消</button>
 		   	</p>
 		</div>
 	</div>

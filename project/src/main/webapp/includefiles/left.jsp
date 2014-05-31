@@ -1,3 +1,4 @@
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <div class="left">
   <div class="m" id="sortlist" clstag="thirdtype|keycount|thirdtype|sortlist">
