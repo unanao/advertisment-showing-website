@@ -6,7 +6,9 @@ Utils.addEvent = function(el, type, func) {
 		el.attachEvent('on' + type, func);
 	}
 };
-Utils.addEvent(window, 'load', function(){
+/*2014-06-02 commented by lzf*/
+/* 原因同省市级联， pcenter改造成AJAX后，加载此页面不会再触发window或document的load或ready事件*/
+/* Utils.addEvent(window, 'load', function(){ */
 
     var category = document.getElementById("category");
     var detail = document.getElementById("detail");
@@ -56,4 +58,4 @@ Utils.addEvent(window, 'load', function(){
     }else {
         $("#detail").val(detailValue);
     }
-});
+/* }); */

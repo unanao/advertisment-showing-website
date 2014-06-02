@@ -89,8 +89,8 @@
 			</p>
 			
 			<p>
-				<button id="submit" type="submit" class="btn" value="确定">确定</button>
-				<button id="cancel" type="reset" class="btn" value="取消">取消</button>
+				<input id="submit" type="submit" class="btn" value="确定" />
+				<input id="cancel" type="reset" class="btn" value="取消" />
 		   	</p>
 		</div>
 	</div>
