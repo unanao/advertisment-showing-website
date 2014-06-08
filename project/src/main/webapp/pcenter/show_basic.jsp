@@ -29,7 +29,7 @@
 				<span id="ename" class="common_error">
 					<s:fielderror> <s:param> name </s:param> </s:fielderror>
 				</span>
-			</p>
+			</p> 
 	
 			<!-- 性别 ： 单选框 
 				FIXME:  判断是什么性别的代码写的不好 

@@ -23,17 +23,29 @@ ul#thumblist{display:block;}
 ul#thumblist li{float:left;margin-right:2px;list-style:none;}
 ul#thumblist li a{display:block;border:1px solid #CCC;}
 ul#thumblist li a.zoomThumbActive{
-    border:1px solid red;
+    border:1px solid #DBEAFF;
 }
 
 #show_info{
-	float:right;
+	float:left;
 }
 
+/* 产品展示、企业展示通用样式 */
 #div_img_main{
-	width:310px;
-	border:solid 3px #7b8cee;
+	width:300px;
+	height:225px;
+	background-color:#F9F9F9;
+	border-radius:5px;
+	border:solid 3px #DBEAFF;
+	/*border:solid 3px #EEF5FF;*/
 }
+.briefinformation{
+	padding-top:30px;
+	text-align:left;
+	font-size:16px;
+}
+/* 产品展示、企业展示通用样式end */
+
 .fl{
 float:left;
 }
@@ -61,18 +73,20 @@ clear:right;
 #E_Inf_Table{
 	width:100%;
 	text-align:center;
-	border:1px groove blue;
+	font-size:20px;
+	margin-top:20px;
+}
+
+#E_Inf_Table tr{
+	height:40px; 
 }
 
 #E_Inf_Table td{
-	text-align:center; 
-	border:1px groove blue;
+	text-align:left; 
 }
 
 #E_Inf_Table th{
 	text-align:center;
-	width:40%; 
-	border:1px groove blue;
 }
 
 .ref_content{
@@ -81,8 +95,6 @@ clear:right;
 	font-size:13px;
 	text-decoration:underline;
 }
-
-
 
 
 .tb-gallery{
@@ -101,6 +113,7 @@ border:solid 1px;
 .tb-thumb .tb-pic{width:50px; height:50px;border:1px solid #edeeee;display:block;overflow:hidden;}
 .tb-thumb .tb-selected .tb-pic{border-color:#e00001;}
 .tb-thumb li{padding:3px 1px 1px 3px; opacity:0.5;_filter:alpha(opacity=50);}
+.tb-thumb .tb-pic{border-radius:5px;}
 
 
 
@@ -119,11 +132,9 @@ font-size:22px;
 }
 
 
-.show_info{
-width:20%; 
+.show_info,#show_info{
+width:60%; 
 height:30%;
-border:solid 1px;
-font-size:15px;
 text-align:left; 
 }
 
