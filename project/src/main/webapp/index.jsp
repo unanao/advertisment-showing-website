@@ -523,7 +523,7 @@
 <div class="w">
   <div id="footer-2013">
   <span class="clr">
-</span>
+	</span>
   		<%@ include file="includefiles/footer.jsp" %>
   </div>
 </div>
