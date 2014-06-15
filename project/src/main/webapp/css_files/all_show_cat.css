@@ -46,23 +46,8 @@ ul#thumblist li a.zoomThumbActive{
 }
 /* 产品展示、企业展示通用样式end */
 
-.fl{
-float:left;
-}
-.fr{
-float:right;
-}
 
-.clear{
-clear:both;
-}
-.cl{
-clear:left;
-}
-.cr{
-clear:right;
-}
-
+/* 待确认清理s */
 .clr {
 	display: block;
 	overflow: hidden;
@@ -71,12 +56,17 @@ clear:right;
 	line-height: 0;
 	font-size: 0;
 }
+/* 待确认清理e */
 
 #img_list{
    width:310px;
 /*
 	border:solid 2px grey;	
 */
+}
+
+#show_info a:link, #show_info a:visited {
+	color: #666;
 }
 
 #E_Inf_Table{
@@ -149,11 +139,8 @@ text-align:left;
 
 .product_list_block{
 	padding-top:20px;
-clear:both;
-width:100%; 
 text-align:left;  
 font-size:18px;
-margin:10%;
 }
 /*
 .product_brief{
@@ -166,8 +153,9 @@ margin:10%;
 }
 */
 
+/* 企业显示页面特有样式start */
 #product_list_table{
 	margin:20px;
 	width:80%;
 }
-
+/* 企业显示页面特有样式end */

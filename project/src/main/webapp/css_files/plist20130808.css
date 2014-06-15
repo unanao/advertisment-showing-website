@@ -8,10 +8,6 @@
 	width: 17%;
 }
 
-.right-extra {
-	float: right;
-	width: 82%;
-}
 
 .mt h1,.mt h2 {
 	font-family: \5fae\8f6f\96c5\9ed1;
@@ -103,79 +99,7 @@ a:hover,a:active {
 	font-family: verdana;
 	color: #E4393C;
 }
-/*sortlist*/
-#sortlist {
-	border: 1px solid #ddd;
-	border-top: 2px solid #999;
-}
 
-#sortlist .mt {
-	display: none;
-	height: 24px;
-	padding: 3px 8px;
-	line-height: 24px;
-}
-
-#sortlist h2 {
-	color: #fff;
-}
-
-#sortlist .mc {
-	width: 100%;
-	margin-top: -1px;
-	background: #FFF;
-}
-
-#sortlist h3 {
-	height: 30px;
-	background-color: #F7F7F7;
-	padding: 0 7px 0 10px;
-	border-top: 1px solid #ddd;
-	cursor: pointer;
-	font: normal 14px/30px \5fae\8f6f\96c5\9ed1;
-}
-
-#sortlist .fore h3 {
-	border: none;
-}
-
-#sortlist b {
-	float: left;
-	width: 16px;
-	height: 16px;
-	margin: 7px 8px 0 0;
-	background: url(i/20130603A.png) no-repeat -20px 0;
-	overflow: hidden;
-	cursor: pointer;
-}
-
-#sortlist ul {
-	overflow: hidden;
-	display: none;
-	padding: 6px 0;
-	border-top: 1px solid #ddd;
-	zoom: 1;
-}
-
-#sortlist li {
-	width: 159px;
-	height: 18px;
-	padding: 3px 15px 3px 35px;
-	overflow: hidden;
-}
-
-#sortlist .curr a {
-	font-weight: bold;
-	color: #E4393C;
-}
-
-#sortlist .current b {
-	background: url(i/20130603A.png) no-repeat -37px 0;
-}
-
-#sortlist .current ul {
-	display: block;
-}
 /*limitbuy*/
 .limitbuy {
 	border: 1px solid #ddd;

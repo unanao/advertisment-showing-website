@@ -68,9 +68,7 @@
   <div id="ad_left" reco_id="6" class="m m0 hide">
   </div>
   <!--搜索广告推荐-->
-  <div id="finalbuy" class="hide m m0">
-  </div>
-  <!--关注手机最终购买-->
+
   <div id="weekRank" class="m rank" clstag="thirdtype|keycount|thirdtype|mrank">
     <div class="mt">
       <h2>
@@ -80,40 +78,35 @@
     <div class="mc">
       <ul class="tabcon">
       <s:iterator value="productRankList" id="product" status="status">
-              <li class="fore fore1">
-        <span>
+         <li class="fore fore1">
+        	<span>
         <s:property value="#status.index+1"/>
-      </span>
-        <div class="p-img">
-          <a target="_blank" href="http://item.jd.com/853231.html">
-                     <img 
-              alt='<s:property value="#product.name"/>'
-              src='<s:property value="#product.icon"/>'
-              width="50"
-              height="50">
+      		</span>
+        	<div class="p-img">
+          		<a target="_blank" href="http://item.jd.com/853231.html">
+                     <img
+                        alt='<s:property value="#product.name"/>'         
+                        src='<s:property value="#product.icon"/>'    
+                        width="50"       
+                        height="50">
 
-        </a>
-        </div>
-        <div class="p-name">
-          <a target="_blank" href="http://item.jd.com/853231.html">
-            收藏<s:property value="#product.favourite"/>
-          </a>
-        </div>
-        <div class="p-price">
-          <strong>
-            <s:property value="#product.name"/>
-          </strong>
-        </div>
-      </li>
-     
-      
+        		</a>
+        	</div>
+        	<div class="p-name">
+          		<a target="_blank" href="http://item.jd.com/853231.html">
+            		收藏<s:property value="#product.favourite"/>
+          		</a>
+        	</div>
+        	<div class="p-price">
+          		<strong>
+            		<s:property value="#product.name"/>
+          		</strong>
+        	</div>
+      	 </li>
   </s:iterator>
-
-     
-
-  </ul>
-</div>
-</div>
+  	  </ul>
+	</div>
+  </div>
 <!--rank end-->
 </div>
 <!--left end-->

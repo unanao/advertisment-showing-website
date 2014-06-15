@@ -14,7 +14,13 @@ body{
 	margin:0 auto;	
 }
 
+h1 {
+	font: 20px "microsoft yahei", "\5b8b\4f53";
+}
 
+h2,h3 {
+	font-size: 14px;
+}
 
 hr{
  width:100%;
@@ -40,6 +46,16 @@ ol,ul {
 .fr {
 	float: right;
 }
+.clear{
+clear:both;
+}
+.cl{
+clear:left;
+}
+
+.cr{
+clear:right;
+}
 
 .lh {
 	overflow: hidden;
@@ -50,6 +66,205 @@ ol,ul {
 	position: relative;
 	zoom: 1;
 }
+.right-extra {
+	float: right;
+	width: 82%;
+}
+
+/* left.jsp 导航栏使用样式start */
+
+.mt h1,.mt h2 {
+	font-family: \5fae\8f6f\96c5\9ed1;
+	font-weight: normal;
+}
+a:link,a:visited {
+	color: #666;
+}
+/*sortlist*/
+#sortlist {
+	border: 1px solid #ddd;
+	border-top: 2px solid #999;
+}
+
+#sortlist .mt {
+	display: none;
+	height: 24px;
+	padding: 3px 8px;
+	line-height: 24px;
+}
+
+#sortlist h2 {
+	color: #fff;
+}
+
+#sortlist .mc {
+	width: 100%;
+	margin-top: -1px;
+	background: #FFF;
+}
+
+#sortlist h3 {
+	height: 30px;
+	background-color: #F7F7F7;
+	padding: 0 7px 0 10px;
+	border-top: 1px solid #ddd;
+	cursor: pointer;
+	font: normal 14px/30px \5fae\8f6f\96c5\9ed1;
+}
+
+#sortlist .fore h3 {
+	border: none;
+}
+
+#sortlist b {
+	float: left;
+	width: 16px;
+	height: 16px;
+	margin: 7px 8px 0 0;
+	background: url(i/20130603A.png) no-repeat -20px 0;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+#sortlist ul {
+	overflow: hidden;
+	display: none;
+	padding: 6px 0;
+	border-top: 1px solid #ddd;
+	zoom: 1;
+}
+
+#sortlist li {
+	width: 159px;
+	height: 18px;
+	padding: 3px 15px 3px 35px;
+	overflow: hidden;
+}
+
+#sortlist .curr a {
+	font-weight: bold;
+	color: #E4393C;
+}
+
+#sortlist .current b {
+	background: url(i/20130603A.png) no-repeat -37px 0;
+}
+
+#sortlist .current ul {
+	display: block;
+}
+
+
+
+#sortlist a:link, #sortlist a:visited, #item a:link, #item a:visited {
+	color: #666;
+}
+.m,.mt,.mc,.mb,.sm,.smt,.smc,.smb {
+	overflow: hidden;
+	zoom: 1;
+}
+
+.m,.sm {
+	margin-bottom: 10px;
+}
+
+.mt,.smt {
+	cursor: default;
+}
+
+.mt h2,.smt h3 {
+	font-family: "microsoft yahei";
+}
+
+.m .mt .extra a:link,.m .mt .extra a:visited,.sm .smt .extra a:link,.sm .smt .extra a:visited
+	{
+	color: #005EA7;
+}
+
+.pagin .text,.pagin .current {
+	border: none;
+	padding: 4px 11px;
+}
+.pagin .current,.pagin .current:link,.pagin .current:visited {
+	color: #f60;
+	font-weight: bold;
+}
+
+.rank {
+	border: 1px solid #ddd;
+}
+
+.rank .mt {
+	height: 31px;
+	padding-left: 8px;
+	background: #f7f7f7;
+	line-height: 31px;
+}
+
+.rank .mc {
+	padding: 0 10px;
+}
+
+.rank .tabcon li {
+	float: left;
+	width: 177px;
+	padding: 6px 5px;
+	border-top: 1px dotted #ccc;
+	overflow: hidden;
+	height: 22px;
+	line-height: 22px;
+}
+
+.rank .tabcon span {
+	float: left;
+	width: 16px;
+	height: 16px;
+	border: 1px solid #cdcdcd;
+	border-radius: 10px;
+	margin: 2px 3px 0 0;
+	text-align: center;
+	font: normal 12px/16px arial;
+	color: #cdcdcd;
+}
+
+.rank .tabcon .p-name {
+	float: left;
+	width: 156px;
+	height: 22px;
+	overflow: hidden;
+}
+
+.rank .tabcon .fore {
+	padding: 10px 5px 10px;
+	height: 56px;
+	border-top: 0;
+}
+
+.rank .tabcon .fore .p-img {
+	float: left;
+	margin-right: 5px;
+}
+
+.rank .tabcon .fore .p-name {
+	width: 100px;
+	height: 3em;
+	line-height: 1.5em;
+}
+
+.rank .tabcon .fore .p-price {
+	float: left;
+	height: 18px;
+	margin-top: 2px;
+	line-height: 18px;
+}
+
+.rank .tabcon .fore1 span,.rank .tabcon .fore2 span,.rank .tabcon .fore3 span
+	{
+	border: 1px solid #E4393C;
+	color: #E4393C;
+}
+
+/* left.jsp 导航栏使用样式end */
 
 /* 基本边距  */
 .mg10{

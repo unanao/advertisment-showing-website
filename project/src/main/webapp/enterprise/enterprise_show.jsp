@@ -6,69 +6,103 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<base href="<%= request.getScheme() + "://" + request.getServerName() + ":" 
 				+ request.getServerPort() + request.getContextPath() %>/" />
+    	<link rel="stylesheet" type="text/css" href="css_files/bootstrap.css" />							
 		<link rel="stylesheet" type="text/css" href="css_files/all_show_cat.css" />
-		<link rel="stylesheet" type="text/css" href="css_files/common.css" />
-		<link rel="stylesheet" type="text/css" href="css_files/jquery.jqzoom.css" />
-		<script type="text/javascript" src="js/photo_autosize.js"></script>
+		<link rel="stylesheet" type="text/css" href="css_files/common.css" />	
+		<link rel="stylesheet" type="text/css" href="css_files/pcenter_common.css" />	
 		<script type="text/javascript" src="js/jquery/jquery.js"></script>
-		<script src="js/jquery/jquery-1.6.js" type="text/javascript"></script>
-		<script src="js/jquery.jqzoom-core.js" type="text/javascript"></script>
 		<script type="text/javascript" src='js/image_auto_resize/autoresize_image.js'></script>		
 		<script type="text/javascript" src="js/photo_switch_show.js"></script>	
 	</head>	
 	<body>
-		<%@ include file="../includefiles/navigate.jsp" %>		
-      	 <h3 id="pcenter_title" align="center">企业展示</h3>
-			<div id="show_photo">
-				<div id="div_img_main">
-    			<!--	 <a href="<s:property value="enterprise.logo"/>" class="jqzoom" rel='gal1'  title="放大镜"> -->
-						<img id="img_main" onload="DrawImage(this,300,225)"  src="<s:property value="enterprise.logo"/>"	 alt="gua">
-				</div>
-				 <div id="img_list">
-					<ul  class="tb-thumb">
-					
-					<s:iterator id="p" value="enterprisePictures">            
-                        <li class="tb-selected">
-                            <div class="tb-pic">
-                                <IMG id=u126 src="<s:property value="#p.path"/>" onload="DrawImage(this,50,50)" 
-								onmouseover="change_photo_show(this)" alt="挂掉啦！" >
-                            </div>
-                        </li>
+	  <%@ include file="../includefiles/navigate.jsp" %>
+	  <div class="right-extra">
+	    <%-- 大图和缩略图列表start --%>
+	    <div class="fl">
+	      <div id=div_img_main>
+	        <%-- 待优化，style="height:100%;"，优化方式：用js代码动态调节 --%>
+	        <img id="img_main"  onload="DrawImage(this,300,225)" 
+	        src="<s:property value="enterprise.logo"/>" alt="gua">
+	      </div>
+	      <div id=img_list>
+	        <ul class="tb-thumb">
+					<s:iterator id="p" value="enterprisePictures">       
+	            <li class="tb-selected">
+	            <div class="tb-pic">
+	              <IMG src="<s:property value="#p.path"/>"
+	                  onload="DrawImage(this,50,50)"
+	                  onmouseover="change_photo_show(this)"	
+	                   alt="挂掉啦！">
+	
+	            </div>
+	          </li>
                     </s:iterator>   
-					</ul>
-				</div>	
-			</div>			
-			<div id="show_info">
-				<table id="E_Inf_Table" style="position:relative; ">																																									
-					<tr>																																																																																																																								
-						<th>企业名称：</th>
-						<%--请后台提供企业名称--%>
-						<td><s:property value="enterprise.name"/></td>
-					</tr>
-					<tr>																																																																																																																								
-						<th>企业地址：</th>
-						<%--请后台提供企业地址--%>
-						<td><s:property value="enterprise.address"/></td>
-					</tr>
-					<tr>																																																																																																																								
-						<th>企业规模：</th>
-						<%--请后台提供企业规模--%>
-						<td><s:property value="enterprise.scale"/></td>
-					</tr>
-					<tr>																																																																																																																								
-						<th>企业简介：</th>
-						<td>	
-											<s:property value="enterprise.introduction"/>					
-
-						</td>
-					</tr>
-				</table>
-			</div>
-
-
-				
-			<div id="blank_space"></div>
-				
+	      </ul>
+	    </div>
+	  </div>
+	  <%-- 大图和缩略图列表end --%>
+	
+	  <%-- 文字信息列表start --%>
+	  <div id="show_info">
+	    <table id="E_Inf_Table" style="position:relative; ">
+			<tr>																																																																																																																								
+				<th  width="150px">企业名称：</th>
+				<%--请后台提供企业名称--%>
+				<td><s:property value="enterprise.name"/></td>
+			</tr>
+			<tr>																																																																																																																								
+				<th>企业地址：</th>
+				<%--请后台提供企业地址--%>
+				<td><s:property value="enterprise.address"/></td>
+			</tr>
+			<tr>																																																																																																																								
+				<th>企业规模：</th>
+				<%--请后台提供企业规模--%>
+				<td><s:property value="enterprise.scale"/></td>
+			</tr>	      
+	      <tr>
+	        <th>
+	          联系人：
+	        </th>
+	        <%--请后台提供联系人--%>
+	        <td>
+	          <a 
+	              href="enterprise/showEnterprise?enterpriseId=<s:property value='enterprise.id'/>"
+	              style="text-decoration:underline;">
+	
+	            <s:property value="enterprise.name"/>
+	          </a>
+	        </td>
+	      </tr>
+	      <tr>
+	        <th>
+	          联系电话：
+	        </th>
+	        <%--请后台提供电话--%>
+	        <td>
+	          <a 
+	              href="enterprise/showEnterprise?enterpriseId=<s:property value='enterprise.id'/>"
+	              style="text-decoration:underline;">
+	
+	            <s:property value="enterprise.name"/>
+	          </a>
+	        </td>
+	      </tr>
+	    </table>
+	  </div>
+	  <%-- 文字信息列表end --%>	  
+	  
+	  <%-- 产品详情start --%>
+	  <div class="span12 briefinformation">
+	    <div class="tabbable">
+	        <a class="nav nav-tabs" data-toggle="tab">
+	          企业详情
+	        </a>
+	    <div class="tab-content mg10">
+	        <p>
+	          <s:property value="enterprise.introduction"/>	
+	        </p>
+	        
 			<div class="product_list_block">
 				    产品列表：
 					<table id="product_list_table" >
@@ -87,16 +121,18 @@
 						</s:iterator>
 					</table>
 			</div>
+	    </div>
+	  </div>
+	</div>
+	</div>
+	<!--right-extra end-->
+	<%@include file="../includefiles/left.jsp"%>
+	
+
+    	<span class="clr">
+	    </span>
+	    <%@ include file="../includefiles/footer.jsp" %>	
+	<!-- footer end -->
 	</body>
-			<script type="text/javascript">
-		$(document).ready(function() {
-			$('.jqzoom').jqzoom({
-		            zoomType: 'standard',
-		            lens:true,
-		            preloadImages: false,
-		            alwaysOn:false
-		        });
-			
-		});		
-		</script>
+	
 </html>
