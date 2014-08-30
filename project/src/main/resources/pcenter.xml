@@ -17,14 +17,16 @@
 		
 		<!-- 修改个人基本信息 -->
 		<action name="editPersonalInfo" class="com.bancai.web.pcenter.EditPersonalInfoAction">
-			<result name="success" type="redirectAction"> showPersonalInfo </result>
-			<result name="input"> /pcenter/change_basic.jsp </result>
+	<!-- 	<result name="success" type="redirectAction"> showPersonalInfo </result>
+			<result name="input"> /pcenter/change_basic.jsp </result>  -->	
+			<result name="success" type="httpheader"></result>
 		</action>
 		
 		<action name="showPersonalInfo" class="com.bancai.web.pcenter.GetPersonalInfoAction">
-			<result name="success"> /pcenter/show_basic.jsp</result>
+<!--  		<result name="success"> /pcenter/show_basic.jsp</result>
 			<result name="error"> /pcenter/show_basic.jsp </result>
-			<result name="input"> /pcenter/show_basic.jsp </result>
+			<result name="input"> /pcenter/show_basic.jsp </result>  -->	
+			<result name="success" type="json"></result>
 		</action>
 		
 		<action name="getPersonalInfo" class="com.bancai.web.pcenter.GetPersonalInfoAction">

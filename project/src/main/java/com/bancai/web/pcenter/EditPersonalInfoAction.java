@@ -39,11 +39,11 @@ public class EditPersonalInfoAction extends ActionSupport implements
 			addActionError("您没有登陆");
 			return INPUT;
 		}
-			
-		user = userService.getUserByUserId(userId);
 		
 		try {
 			personalCenter.editPersonalInfo(userId, nickName, name, gender, qq, mobile, officePhone );
+			
+			user = userService.getUserByUserId(userId);
 			
 			return SUCCESS;
 		} catch (Exception ex) {

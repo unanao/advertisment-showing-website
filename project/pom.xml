@@ -8,7 +8,7 @@
 	<name>bancai</name>
 
 	<properties>
-		<struts2.version>2.1.8.1</struts2.version>
+		<struts2.version>2.3.16.3</struts2.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<netbeans.hint.deploy.server>Tomcat</netbeans.hint.deploy.server>
 	</properties>
