@@ -6,7 +6,7 @@
 <base href="<%= request.getScheme() + "://" + request.getServerName() + ":" 
 				+ request.getServerPort() + request.getContextPath() %>/" />
 
-<form method="post" onsubmit=" setBasicInfo()">
+<form method="post" onsubmit="displayBasicInfo()">
 	<div>
 		<div>
 
@@ -111,8 +111,10 @@
    jQuery - 设置内容和属性 http://www.w3school.com.cn/jquery/jquery_dom_set.asp
    post  : http://www.w3school.com.cn/jquery/ajax_post.asp
 */
+
+
 	function displayBasicInfo() {
-		$.getJSON("pcenter/editPersonalInfo", function(data) {
+		$.getJSON("pcenter/showPersonalInfo", function(data) {
 	        $("#nickName").val(data.user.nickname);
 			$("#name").val(data.user.name);
 			$("#gender").val(data.user.gender);
@@ -121,7 +123,6 @@
 			$("#qq").val(data.user.qq);
 	    });
 	}
-
 
 	function setBasicInfo() {
 		var nickName = $("#nickName").val();
@@ -140,8 +141,7 @@
 			qq : qq,
 		}, function(data) {
 			displayBasicInfo();
-		}, "json");
-	
+		});
 	}
 </script>
 
