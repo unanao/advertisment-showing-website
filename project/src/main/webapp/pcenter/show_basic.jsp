@@ -6,7 +6,7 @@
 <base href="<%= request.getScheme() + "://" + request.getServerName() + ":" 
 				+ request.getServerPort() + request.getContextPath() %>/" />
 
-<form method="post" onsubmit="displayBasicInfo()">
+<form  method="post" onsubmit="displayBasicInfo()">
 	<div>
 		<div>
 
@@ -114,13 +114,17 @@
 
 
 	function displayBasicInfo() {
-		$.getJSON("pcenter/showPersonalInfo", function(data) {
+		$.ajaxSetup({  
+		    async : false  
+		}); 
+		
+		$.getJSON("pcenter/getPersonalInfo", function(data) {
 	        $("#nickName").val(data.user.nickname);
 			$("#name").val(data.user.name);
 			$("#gender").val(data.user.gender);
 			$("#officePhone").val(data.officePhone.number);
 			$("#mobile").val(data.mobile.number);
-			$("#qq").val(data.user.qq);
+			$("#qq").val(data.user.qq); 
 	    });
 	}
 
