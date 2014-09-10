@@ -6,7 +6,7 @@
 <base href="<%= request.getScheme() + "://" + request.getServerName() + ":" 
 				+ request.getServerPort() + request.getContextPath() %>/" />
 
-<form  method="post" onsubmit="displayBasicInfo()">
+<form>
 	<div>
 		<div>
 
@@ -98,7 +98,7 @@
 			</p>
 
 			<p>
-				<input id="submit" type="button" class="btn" value="确定" onclick="displayBasicInfo();"/> 
+				<input id="submit" type="button" class="btn" value="确定" onclick="displayBasicInfo()"/> 
 				<input id="cancel" type="reset" class="btn" value="取消" />
 			</p>
 		</div>
