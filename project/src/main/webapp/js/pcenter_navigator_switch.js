@@ -17,7 +17,7 @@ $(document).ready(function(){
 		lastobj.removeClass("active");
 		$(this).addClass("active");
 		lastobj=$(this);
-		$('#pcenter_right').load('pcenter/showPersonalInfo');
+		$('#pcenter_right').load('pcenter/basic_info.jsp');
 	});	
 	$('#pnav_manage_enterprise').click(function(){
 		lastobj.removeClass("active");

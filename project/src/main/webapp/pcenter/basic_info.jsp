@@ -98,7 +98,7 @@
 			</p>
 
 			<p>
-				<input id="submit" type="button" class="btn" value="确定" onclick="displayBasicInfo()"/> 
+				<input id="submit" type="button" class="btn" value="确定" onclick="setBasicInfo()"/> 
 				<input id="cancel" type="reset" class="btn" value="取消" />
 			</p>
 		</div>
@@ -106,47 +106,6 @@
 </form>
 
 <script type="text/javascript" src="js/jquery/jquery.js"></script>
-<script type="text/javascript">
-/*
-   jQuery - 设置内容和属性 http://www.w3school.com.cn/jquery/jquery_dom_set.asp
-   post  : http://www.w3school.com.cn/jquery/ajax_post.asp
-*/
-
-
-	function displayBasicInfo() {
-		$.ajaxSetup({  
-		    async : false  
-		}); 
-		
-		$.getJSON("pcenter/getPersonalInfo", function(data) {
-	        $("#nickName").val(data.user.nickname);
-			$("#name").val(data.user.name);
-			$("#gender").val(data.user.gender);
-			$("#officePhone").val(data.officePhone.number);
-			$("#mobile").val(data.mobile.number);
-			$("#qq").val(data.user.qq); 
-	    });
-	}
-
-	function setBasicInfo() {
-		var nickName = $("#nickName").val();
-		var name = $("#name").val();
-		var gender = $("#gender").val();
-		var officePhone = $("#officePhone").val();
-		var mobile = $("#mobile").val();
-		var qq = $("#qq").val();
-
-		$.post("pcenter/editPersonalInfo", {
-			nickName : nickName,
-			name : name,
-			gender : gender,
-			officePhone : officePhone,
-			mobile : mobile,
-			qq : qq,
-		}, function(data) {
-			displayBasicInfo();
-		});
-	}
-</script>
+<script type="text/javascript" src="js/pcenter/basic_info.js"></script>
 
 
