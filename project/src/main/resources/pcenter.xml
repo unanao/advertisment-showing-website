@@ -18,12 +18,6 @@
 			<result name="success" type="httpheader"></result>
 		</action>
 		
-		<action name="showPersonalInfo" class="com.bancai.web.pcenter.GetPersonalInfoAction">
-			<result name="success" > /pcenter/show_basic.jsp </result>
-			<result name="error"> /pcenter/show_basic.jsp </result>
-			<result name="input"> /pcenter/show_basic.jsp </result>
-		</action>
-		
 		<action name="getPersonalInfo" class="com.bancai.web.pcenter.GetPersonalInfoAction">
 			<result name="success" type="json"></result>
 		</action>	
