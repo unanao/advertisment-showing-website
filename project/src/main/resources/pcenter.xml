@@ -10,9 +10,7 @@
 		
 		<!-- 修改密码 -->
 		<action name="changePersonalPassword" class="com.bancai.web.pcenter.ChangePasswordAction">
-			<result name="success"> /pcenter/change_passwd.jsp</result>
-			<result name="error"> /pcenter/change_passwd.jsp </result>
-			<result name="input"> /pcenter/change_passwd.jsp </result>
+			<result name="success" type="json"></result>
 		</action>
 		
 		<!-- 修改个人基本信息 -->

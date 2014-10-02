@@ -1,3 +1,17 @@
+function changePassword() {
+	var oldPassword = $("#oldPassword").val();
+	var newPassword = $("#newPassword").val();
+	var passwordConfirm = $("#passwordConfirm").val();
+
+	$.post("pcenter/changePersonalPassword", {
+		oldPassword : oldPassword,
+		newPassword : newPassword,
+		passwordConfirm : passwordConfirm,
+	}, function(data) {
+		alert("密码修改成功"); 
+	});
+}
+
 $(function() {
 	var oldPassword = false;
 	var newPassword = false;
@@ -49,5 +63,4 @@ $(function() {
 		
 		return newPassword && passwordConfirm && oldPassword;
 	});
-	
 });
