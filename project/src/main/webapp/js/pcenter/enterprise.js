@@ -1,6 +1,31 @@
+/* init for page loading*/
 $(function() {
+	dispalyEnterprise();
+	
+	return enterpriseCheck();
+});
+
+function dispalyEnterprise() {
+	$.ajaxSetup({  
+	    async : false  
+	}); 
+	
+	$.getJSON("pcenter/showEnterprise", function(data) {
+		$("#name").val(data.enterprise.name);
+		$("#province").val(data.enterprise.province);
+		$("#city").val(data.enterprise.city);
+		$("#county").val(data.enterprise.county);
+		$("#address").val(data.enterprise.address);
+		$("#scale").val(data.enterprise.scale);
+		$("#contacter").val(data.phone.contacter);
+		$("#number").val(data.phone.number);
+		$("#introduction").val(data.enterprise.introduction);
+    });
+}
+
+function enterpriseCheck() {
 	var name = false;
-	var address = false;
+	var address = false; 
 	var scale = false;
 	var contacter = false;
 	var number = false;
@@ -140,4 +165,4 @@ $(function() {
 		
 		return name && contacter && number && scale && introduction && address;
 	});
-});
+}

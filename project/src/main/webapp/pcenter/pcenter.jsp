@@ -8,10 +8,10 @@
 		<base href="<%= request.getScheme() + "://" + request.getServerName() + ":" 
 				+ request.getServerPort() + request.getContextPath() %>/" />		
     	<link rel="stylesheet" type="text/css" href="css_files/bootstrap.css" />		
-   		<link rel="stylesheet" type="text/css" href="css_files/plist20130808.css" media="all">
+   		<link rel="stylesheet" type="text/css" href="css_files/pcenter/plist.css" media="all">
    		<link rel="stylesheet" type="text/css" href="css_files/from.css" />
 		<link rel="stylesheet" type="text/css" href="css_files/common.css" /> 
-		<link rel="stylesheet" type="text/css" href="css_files/pcenter_common.css" />
+		<link rel="stylesheet" type="text/css" href="css_files/pcenter/pcenter_common.css" />
 		<%-- 下面的CSS文件待整合，目前应用于企业信息修改页面 --%>
 	<link rel="stylesheet" type="text/css" href="css_files/form.css" />
 	<link rel="stylesheet" type="text/css" href="css_files/pcenter/modify_enterprise.css" />		
@@ -19,12 +19,10 @@
 		<script type="text/javascript" src="js/jquery/jquery.js"></script>
 		<%-- 下面的js为功能性，根据需要添加--%>
 		<script type="text/javascript" src='js/image_auto_resize/autoresize_image.js'></script>	
-		<script type="text/javascript" src="js/pcenter_navigator_switch.js"></script>	
-		<script type="text/javascript" src="js/pcenter/change_basic_validation.js"></script>
+		<script type="text/javascript" src="js/pcenter/pcenter_navigator_switch.js"></script>
 		<%-- 下面的js文件待整合，目前应用于企业信息修改页面 --%>
     <script type="text/javascript" src="js/ajaxfileupload.js"></script>
     <script type="text/javascript" src="js/local_preview.js"></script>
-    <script type="text/javascript" src="js/pcenter/modify_enterprise_validation.js"></script>	
 
 	</head>
 	<body>

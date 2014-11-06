@@ -44,7 +44,7 @@
                 <param name="actionName">updateEnterprisePage</param>
                 <param name="message">must add enterprise information before add product</param>
             </result>  
-            <result name="success">index_product.jsp</result>
+            <result name="success">product_list.jsp</result>
         </action>
         <!-- product结束 -->
         
@@ -106,8 +106,7 @@
         
         <!-- enterprise开始 -->
          <action name="showEnterprise" class="com.bancai.web.pcenter.UpdateEnterprisePageAction">  
-            <result name="success">/pcenter/show_enterprise.jsp</result>  
-            <result name="input">/pcenter/show_enterprise.jsp</result>  
+         	<result name="success" type="json"></result>
         </action>
         <action name="updateEnterprisePage" class="com.bancai.web.pcenter.UpdateEnterprisePageAction">  
             <result name="success"> /pcenter/modify_enterprise.jsp</result>  

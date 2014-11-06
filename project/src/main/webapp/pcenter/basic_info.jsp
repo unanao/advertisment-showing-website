@@ -3,8 +3,9 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
 
-<base href="<%= request.getScheme() + "://" + request.getServerName() + ":" 
-				+ request.getServerPort() + request.getContextPath() %>/" />
+<base
+	href="<%=request.getScheme() + "://" + request.getServerName()
+					+ ":" + request.getServerPort() + request.getContextPath()%>/" />
 
 <form>
 	<div>
@@ -17,9 +18,9 @@
 
 			<!-- 昵称 -->
 			<p>
-				<label class="form_label"> 昵称 </label> <INPUT id="nickName"
-					name="nickName" class="form_input" type="text"
-					value='<s:property value="user.nickname"/>'> <span
+				<label class="form_label"> 昵称 </label> 
+				<INPUT id="nickName" name="nickName" class="form_input" type="text"> 
+				<span
 					id="enickName" class="common_error"> <s:fielderror>
 						<s:param> nickName </s:param>
 					</s:fielderror>
@@ -28,9 +29,9 @@
 
 			<!-- 姓名 -->
 			<p>
-				<label class="form_label"> 姓名 </label> <INPUT id="name" name="name"
-					value='<s:property value="user.name"/>' class="form_input"
-					type="text"> <span id="ename" class="common_error">
+				<label class="form_label"> 姓名 </label> 
+				<INPUT id="name" name="name" class="form_input" type="text"> 
+				<span id="ename" class="common_error">
 					<s:fielderror>
 						<s:param> name </s:param>
 					</s:fielderror>
@@ -68,9 +69,9 @@
 
 			<!-- 办公电话 -->
 			<p>
-				<label class="form_label"> 固话 </label> <INPUT id="officePhone"
-					name="officePhone" class="form_input" type="text"
-					value='<s:property value="officePhone.number"/>'> <span
+				<label class="form_label"> 固话 </label> 
+				<INPUT id="officePhone" name="officePhone" class="form_input" type="text"> 
+				<span
 					id="eofficePhone" class="common_error"> <s:fielderror>
 						<s:param> officePhone </s:param>
 					</s:fielderror>
@@ -78,9 +79,9 @@
 			</p>
 
 			<p>
-				<label class="form_label"> 手机 </label> <INPUT id="mobile"
-					name="mobile" class="form_input"
-					value='<s:property value="mobile.number"/>' type="text"> <span
+				<label class="form_label"> 手机 </label> 
+				<INPUT id="mobile" name="mobile" class="form_input" type="text"> 
+				<span
 					id="emobile" class="common_error"> <s:fielderror>
 						<s:param> mobile </s:param>
 					</s:fielderror>
@@ -88,9 +89,9 @@
 			</p>
 
 			<p>
-				<label class="form_label"> QQ</label> <INPUT id="qq" name="qq"
-					class="form_input" type="text"
-					value='<s:property value="user.qq"/>'> <span id="eqq"
+				<label class="form_label"> QQ</label> 
+				<INPUT id="qq" name="qq" class="form_input" type="text"> 
+				<span id="eqq"
 					class="common_error"> <s:fielderror>
 						<s:param> qq </s:param>
 					</s:fielderror>
@@ -98,14 +99,13 @@
 			</p>
 
 			<p>
-				<input id="submit" type="button" class="btn" value="确定" onclick="setBasicInfo()"/> 
+				<input id="submit" type="button" class="btn" value="确定" onclick="setBasicInfo()" /> 
 				<input id="cancel" type="reset" class="btn" value="取消" />
 			</p>
 		</div>
 	</div>
 </form>
 
-<script type="text/javascript" src="js/jquery/jquery.js"></script>
 <script type="text/javascript" src="js/pcenter/basic_info.js"></script>
 
 
