@@ -166,7 +166,7 @@ function basic_info_check() {
 	$("#mobile").blur(checkMobile);
 	$("#qq").blur(checkQQ);
 	
-	$("#submit").click(function() {
+	$("#submit").click(function() {SyntaxError
 		checkNickName();
 		checkName();
 		checkOfficePhone();
