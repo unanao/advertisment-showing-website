@@ -4,9 +4,7 @@
 <base href="<%= request.getScheme() + "://" + request.getServerName() + ":" 
 				+ request.getServerPort() + request.getContextPath() %>/" />		
 				
-    <link rel="stylesheet" type="text/css" href="css_files/personal.css" />
 	<link rel="stylesheet" type="text/css" href="css_files/form.css?=v1.0" />
-	<script type="text/javascript" src="js/jquery/jquery.js"></script>
 	<script type="text/javascript" src="js/product_select/product_category.js"></script>
 	<script type="text/javascript" src="js/product_select/product_select.js?v=1.9"></script>
 	<script type="text/javascript" src="js/ajaxfileupload.js"></script>
@@ -65,9 +63,6 @@
          <p>
          	<label class="form_label">封面</label>
          	 <div id="icon"></div>
-         	 <!-- 
-			     <img id="icon" src="<s:property value='product.icon'/>"/>
-			 -->
          </p>
 
 		<p>         
