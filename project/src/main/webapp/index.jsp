@@ -189,38 +189,6 @@
  
 <div class="m" id="plist">
   <ul class="list-h">
-  
-  <!-- --------------------------------------------------------------------------------------------------------------- -->
-  <script language="javascript">
-   <s:iterator value="displayProducts" id="product" status="status" begin="0" end="5">
-      <li>
-      <div class="p-img">
-        <a href="product/showProduct?productId=<s:property value="#product.Id"/>">
-          <img 
-              onload="DrawImage(this,mywidth,myheight)"
-              src="<s:property value="#product.icon"/>"
-              border="0"
-              alt="images/default.jpg"
-          >
-
-        </a>
-      </div>
-      <div class="p-name">
-        <a target="_blank" href="product/showProduct?productId=<s:property value="#product.Id"/>"  title="">
-          <font style="color: #ff0000" class="adwords">
-            <s:property value="#product.name"/>
-          </font>
-        </a>
-      </div>
-      <div class="extra">
-        已有<s:property value="#product.hits"/>人收藏
-        <a class=btn-coll>我要收藏</a>
-      </div>
-    </li>
-  </s:iterator>
-  </script>
-  
-  <!-- --------------------------------------------------------------- -->
 
     <s:iterator value="displayProducts" id="product" status="status" begin="0" end="5">
       <li>
