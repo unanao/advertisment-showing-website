@@ -6,7 +6,7 @@
 		<div class="blank"></div>
 	<p>
 		<a  class="btn-small fr" style="margin-right:100px" value="new_product" 
-			onclick="$('#pcenter_right').load('pcenter/saveProductPage');">
+			onclick="$('#pcenter_right').load('pcenter/product.jsp');">
 			发布新产品》
 		</a>
 	</p>			
