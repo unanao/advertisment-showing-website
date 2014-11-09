@@ -6,14 +6,15 @@
 <base
 	href="<%=request.getScheme() + "://" + request.getServerName()
 					+ ":" + request.getServerPort() + request.getContextPath()%>/" />
-
- <script type="text/javascript" src="js/jquery/jquery.js"></script>
- 
+  	<script type="text/javascript" src="js/jquery/jquery.js"></script>
+    <!-- Should load enterprise.js firstly, otherwise will not get the data -->
+    <script type="text/javascript" src="js/pcenter/enterprise.js"></script>	
+ 		
 	<s:if test="(null != message) && (!message.isEmpty())">
 		填写产品信息前，需要先填写企业信息		
 	</s:if>
 	
-    <form  action="pcenter/updateEnterprise" method="post" enctype="multipart/form-data"> 
+    <form> 
        	 
        	<!-- 企业名称 -->
        	<p>
@@ -35,7 +36,7 @@
         	<input id="city"  type="hidden" id="hiddencity" />
         	<input id="county" type="hidden"  id="hiddencounty" />
 		</p>
-			
+ 
 		<!-- 详细地址 -->
 		<p>
 			<span id="eaddress" class="common_error error_postion"> 
@@ -95,7 +96,10 @@
          <%--上传多张图片开始--%>
          <p>
          	<label class="form_label">封面</label>
+         	<div id="logo"></div>
+         	<!--  
  	    	<img id="logo"  src="<s:property value='enterprise.logo'/>"/>
+ 	    	-->
          </p>
 		<p>         
 	        <label class="form_label">上传照片</label>
@@ -113,18 +117,19 @@
 	                    <%--此处由javascript控制动态显示图片缩略图--%>		
 	                </ul>
 	        </div>
+	        
+	        <div id="images"></div>
+	        <!-- 
 			  <s:iterator value="enterprisePictureMap" id="id" status="st">
 				  <script type="text/javascript" >
 				      deal_return_picture("<s:property value='key'/>","<s:property value='value.path'/>","enterpriseId",'pcenter/pubEnterprisePicture','pcenter/deleteEnterprisePicture','logo');
 				  </script>
-			  </s:iterator>		
+			  </s:iterator>	
+			   -->	
         <%--上传多张图片结束--%>
         <br>
         <div style="clear:both;">
-        	<button id="submit" type="submit" class="btn" value="提交" onclick="setEnterprise()">提交</button>
-        	<button id="cannel" type="reset" class="btn" value="取消" onclick="deal_new_picture()">取消</button>
+        	<button id="submit" type="button" class="btn" value="提交" onclick="setEnterprise()">提交</button>
+        	<button id="cannel" type="button" class="btn" value="取消" onclick="deal_new_picture()">取消</button>
 		</div>
     </form>
-    
- <script type="text/javascript" src="js/jquery/jquery.js"></script>
-<script type="text/javascript" src="js/pcenter/enterprise.js"></script>	

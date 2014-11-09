@@ -20,7 +20,41 @@ function dispalyEnterprise() {
 		$("#contacter").val(data.phone.contacter);
 		$("#number").val(data.phone.number);
 		$("#introduction").val(data.enterprise.introduction);
+		$("<img/>").attr("src", data.enterprise.logo).appendTo("#logo");
+		
+		/* example: http://www.w3school.com.cn/jquery/ajax_getjson.asp */
+		 $.each(data.items, function(i,item){
+			    deal_return_picture(data.enterprisePictureMap.key, data.enterprisePictureMap.path, 
+                 "enterpriseId", 'pcenter/pubEnterprisePicture', 'pcenter/deleteEnterprisePicture', 'logo');
+		 });
     });
+}
+
+function setEnterprise() {
+		var name = $("#name").val();
+		var province = $("#province").val();
+		var city = $("#city").val();
+		var conty = $("#county").val();
+		var address = $("#address").val();
+		var scale = $("#scale").val();
+		var contacter = $("#contacter").val();
+		var number = $("#number").val();
+		var introduction = $("#introduction").val();
+
+		$.post("pcenter/updateEnterprise", {
+			name : name,
+			province : province,
+			city : city,
+			conty : conty,
+			address : address,
+			scale : scale,
+			contacter:contacter,
+			number:number,
+			introduction:introduction,
+		}, function(data) {
+			alert("资料修改成功"); 
+			introduction();
+		});
 }
 
 function enterpriseCheck() {
