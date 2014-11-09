@@ -118,7 +118,7 @@
 	                </ul>
 	        </div>
 	        
-	        <div id="images"></div>
+	        <div id="logo"></div>
 	        <!-- 
 			  <s:iterator value="enterprisePictureMap" id="id" status="st">
 				  <script type="text/javascript" >

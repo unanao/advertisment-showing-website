@@ -1,4 +1,53 @@
+/* init for page loading*/
 $(function() {
+	displayProduct();
+	
+	return productCheck();
+});
+
+function displayProduct() {
+	$.ajaxSetup({  
+	    async : false
+	}); 
+	
+	var productId = $("#id_hidden").val();
+	
+	$.getJSON("product/showProduct", {productId: productId},  function(data) {
+		$("id_hidden").val(data.product.id);
+		$("#name").val(data.product.name);
+		$("#category").val(data.eproduct.category);
+		$("#detail").val(data.product.detail);
+		$("#introduction").val(data.product.introduction);
+		
+		$("<img/>").attr("src", data.product.icon).appendTo("#icon");
+		
+		/* example: http://www.w3school.com.cn/jquery/ajax_getjson.asp */
+		 $.each(data.items, function(i,item){   
+			    deal_return_picture(data.productPictureMap.key, data.productPictureMap.path, 
+			    		"productId", 'pcenter/pubProductPicture','pcenter/deleteProductPicture','icon');
+		 });
+    });
+}
+
+function setProduct() {
+	var productId = $("id_hidden").val();
+	var name = $("#name").val();
+	var category = $("#category").val();
+	var detail = $("#detail").val();
+	var introduction = $("#introduction").val();
+
+	$.post("pcenter/updateProduct", {
+		productId:productId,
+		name : name,
+		category:category,
+		detail:detail,
+		introduction:introduction,
+	}, function(data) {
+		alert("资料修改成功"); 
+	});
+}
+
+function productCheck() {
 	var name = false;
 	var introduction = false;
 	var category = false;
@@ -68,4 +117,4 @@ $(function() {
 		checkCategory();
 		return name && introduction && category;
 	});
-});
+}

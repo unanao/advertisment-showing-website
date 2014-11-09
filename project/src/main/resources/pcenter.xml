@@ -32,7 +32,7 @@
             <result name="input">upload.jsp</result>  
         </action>
         <action name="updateProductPage" class="com.bancai.web.pcenter.UpdateProductPageAction">  
-            <result name="success">modify_product.jsp</result>  
+            <result name="success">product.jsp</result>  
             <result name="input">upload.jsp</result>  
         </action>
         <action name="updateProduct" class="com.bancai.web.pcenter.UpdateProductAction">  
