@@ -8,7 +8,7 @@
 		<base href="<%= request.getScheme() + "://" + request.getServerName() + ":" 
 				+ request.getServerPort() + request.getContextPath() %>/" />		
     	<link rel="stylesheet" type="text/css" href="css_files/bootstrap.css" />		
-   		<link rel="stylesheet" type="text/css" href="css_files/pcenter/plist.css" media="all">
+   		<link rel="stylesheet" type="text/css" href="css_files/plist.css" media="all">
 		<link rel="stylesheet" type="text/css" href="css_files/common.css" /> 
 		<link rel="stylesheet" type="text/css" href="css_files/pcenter/pcenter_common.css" />
 		<%-- 下面的CSS文件待整合，目前应用于企业信息修改页面 --%>
