@@ -122,8 +122,8 @@
         <!-- 用户套餐 -->
         <action name="getPackagesByEnterprise" 
         		class="com.bancai.web.pkg.GetPackageInfoAction">
-			<result name="success"> /pcenter/show_charge_info.jsp </result>
-			<result name="error"> show_charge_info.jsp </result>
+			<result name="success"> /pcenter/charge_info.jsp </result>
+			<result name="error"> charge_info.jsp </result>
 		</action> 
 		
 		<!-- 用户信息汇总，用户进入pcenter时显示的内容 -->

@@ -41,7 +41,7 @@ $(document).ready(function(){
 	    lastobj.removeClass("active");
 		$(this).addClass("active");	
 		lastobj=$(this);
-		$('#pcenter_right').load('pcenter/do_charge.jsp');
+		$('#pcenter_right').load('pcenter/charge.jsp');
 	});
 	$('#pnav_help_info').click(function(){
 	    lastobj.removeClass("active");
