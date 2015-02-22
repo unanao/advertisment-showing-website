@@ -12,15 +12,17 @@ function dispalyEnterprise() {
 	
 	$.getJSON("pcenter/showEnterprise", function(data) {
 		$("#name").val(data.enterprise.name);
-		$("#province").val(data.enterprise.province);
-		$("#city").val(data.enterprise.city);
-		$("#county").val(data.enterprise.county);
+		loadProvinceCity(data.enterprise.province, data.enterprise.city, data.enterprise.county, "山东", "临沂");
+//		$("#province").val(data.enterprise.province);
+//		$("#city").val(data.enterprise.city);
+//		$("#county").val(data.enterprise.county);
 		$("#address").val(data.enterprise.address);
 		$("#scale").val(data.enterprise.scale);
 		$("#contacter").val(data.phone.contacter);
 		$("#number").val(data.phone.number);
 		$("#introduction").val(data.enterprise.introduction);
 		$("<img/>").attr("src", data.enterprise.logo).appendTo("#logo");
+		
 		
 		/* example: http://www.w3school.com.cn/jquery/ajax_getjson.asp */
 		 $.each(data.items, function(i,item){
@@ -34,7 +36,7 @@ function setEnterprise() {
 		var name = $("#name").val();
 		var province = $("#province").val();
 		var city = $("#city").val();
-		var conty = $("#county").val();
+		var county = $("#county").val();
 		var address = $("#address").val();
 		var scale = $("#scale").val();
 		var contacter = $("#contacter").val();
@@ -45,7 +47,7 @@ function setEnterprise() {
 			name : name,
 			province : province,
 			city : city,
-			conty : conty,
+			county : county,
 			address : address,
 			scale : scale,
 			contacter:contacter,

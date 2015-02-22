@@ -7,6 +7,8 @@
 	href="<%=request.getScheme() + "://" + request.getServerName()
 					+ ":" + request.getServerPort() + request.getContextPath()%>/" />
   	<script type="text/javascript" src="js/jquery/jquery.js"></script>
+  	<script  src="js/province_city_select/search_sitedata_bas.js"></script>
+	<script  src="js/province_city_select/province_city.js"></script>	
     <!-- Should load enterprise.js firstly, otherwise will not get the data -->
     <script type="text/javascript" src="js/pcenter/enterprise.js"></script>	
  		
@@ -29,12 +31,11 @@
         
         <p>
        		<label class="form_label">所在地</label>
-        	<%-- 省市级联 布局通过.province_city控制  --%>
-        	<%@ include file="../js/province_city_select/province_city_select.jsp" %>
-        	
-        	<input id="province" type="hidden" id="hiddenprovince" />
-        	<input id="city"  type="hidden" id="hiddencity" />
-        	<input id="county" type="hidden"  id="hiddencounty" />
+       		<div class="province_city">
+   			<select id="province" class="search_select" name="province"></select>
+			<select id="city" class="search_select" name="city"></select>
+			<select id="county" class="search_select" name="county"></select>
+			</div>
 		</p>
  
 		<!-- 详细地址 -->
@@ -130,6 +131,6 @@
         <br>
         <div style="clear:both;">
         	<button id="submit" type="button" class="btn" value="提交" onclick="setEnterprise()">提交</button>
-        	<button id="cannel" type="button" class="btn" value="取消" onclick="deal_new_picture()">取消</button>
+        	<button id="cancel" type="button" class="btn" value="取消" onclick="deal_new_picture()">取消</button>
 		</div>
     </form>
