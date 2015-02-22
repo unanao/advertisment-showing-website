@@ -11,7 +11,7 @@
 		<action name="login" class="com.bancai.web.accounts.LoginAction">
 			<result name="null" type="redirectAction"> ../ </result>
 			<result name="" type="redirectAction"> ../</result>
-			<result name="pcenter" type="redirectAction"> ../pcenter/pcenter.jsp </result>
+			<result name="pcenter" > /pcenter/pcenter.jsp </result>
 			<result name="input"> /accounts/login.jsp </result>
 			<result name="error"> /accounts/resendActivateEmail.jsp </result>
 			<result name="none"> /accounts/login.jsp </result>
