@@ -38,33 +38,13 @@
 				</span>
 			</p>
 
-			<!-- 性别 ： 单选框 
-				FIXME:  判断是什么性别的代码写的不好 
-			-->
+			<!-- 性别 ： 单选框  -->
 			<p>
 				<span class="form_label"> 性别 </span>
 
-				<!-- 男 -->
-				<s:if test="'male' == user.gender">
-					<INPUT id="gender" type=radio value="male" name="gender"
-						checked="true">
-				</s:if>
-				<s:else>
-					<INPUT id="gender" type=radio value="male" name="gender">
-				</s:else>
-				男
-				<!-- 女 -->
-				<s:if test="'female' == user.gender">
-					<INPUT id="female" type=radio value="female" name="gender"
-						checked='true'>
-				</s:if>
-				<s:else>
-					<INPUT id="female" type="radio" value="female" name="gender">
-				</s:else>
-				女
-				<!-- 默认采用 --“保密” -->
-				<INPUT id="secret" type="radio" value="secret" name="gender"
-					checked="true"> 保密
+				<INPUT id="male" type=radio value="male" name="gender">男
+				<INPUT id="female" type="radio" value="female" name="gender">女
+				<INPUT id="secret" type="radio" value="secret" name="gender" checked="true"> 保密
 			</p>
 
 			<!-- 办公电话 -->

@@ -17,7 +17,14 @@ function displayBasicInfo() {
 	$.getJSON("pcenter/getPersonalInfo", function(data) {
         $("#nickName").val(data.user.nickname);
 		$("#name").val(data.user.name);
-		$("#gender").val(data.user.gender);
+		
+		var gender =data.user.gender;
+		$("input[name='gender']").each(function() {
+			if ($(this).val() == gender) {
+				$(this).attr("checked",  true);
+			}
+		});
+		
 		$("#officePhone").val(data.officePhone.number);
 		$("#mobile").val(data.mobile.number);
 		$("#qq").val(data.user.qq); 
@@ -27,7 +34,9 @@ function displayBasicInfo() {
 function setBasicInfo() {
 	var nickName = $("#nickName").val();
 	var name = $("#name").val();
-	var gender = $("#gender").val();
+//	var gender = $("#gender").val();
+	var gender = $("input[name='gender']:checked").val();
+	alert(gender);
 	var officePhone = $("#officePhone").val();
 	var mobile = $("#mobile").val();
 	var qq = $("#qq").val();
