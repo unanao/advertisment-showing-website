@@ -14,7 +14,7 @@
     <meta name="description" content="国内最专业的板材行业产品、加工机械等销售批发信息服务网站">
     <link rel="stylesheet" type="text/css" href="css_files/common.css" />
     <link rel="stylesheet" type="text/css" href="css_files/index.css" media="all">
-    <link rel="stylesheet" type="text/css" href="css_files/plist20130808.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css_files/plist.css" media="all">
     <script type="text/javascript" src="js/jquery/jquery.js"></script>
 	<script type="text/javascript" src="js/image_auto_resize/autoresize_image.js"></script>
 	<script type="text/javascript" src="js/advitise_photos.js"></script>    

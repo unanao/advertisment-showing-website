@@ -1,15 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
-    <link rel="stylesheet" type="text/css" href="css_files/personal.css" />
+<base href="<%= request.getScheme() + "://" + request.getServerName() + ":" 
+				+ request.getServerPort() + request.getContextPath() %>/" />		
+				
 	<link rel="stylesheet" type="text/css" href="css_files/form.css?=v1.0" />
-	<script type="text/javascript" src="js/jquery/jquery.js"></script>
 	<script type="text/javascript" src="js/product_select/product_category.js"></script>
 	<script type="text/javascript" src="js/product_select/product_select.js?v=1.9"></script>
-	<script type="text/javascript" src="js/pcenter/modify_product_validation.js?v=1.0"></script>
 	<script type="text/javascript" src="js/ajaxfileupload.js"></script>
     <script type="text/javascript" src="js/local_preview.js?v=1.4"></script> 
 	<script type="text/javascript" src='js/image_auto_resize/autoresize_image.js'></script>
+	
+	<script type="text/javascript" src="js/pcenter/product.js"></script>
+	
 	<s:fielderror> <s:param> productId </s:param> </s:fielderror> 
 	<!-- 输出系统的Action Error提示 -->
 	<p>	   
@@ -20,6 +23,10 @@
 		<s:fielderror> <s:param> name </s:param> </s:fielderror> 
 	</span>
 	</p>
+	
+	<!-- Record product id -->
+	 <input id="id_hidden" name="id_hidden" class="form_input" type="hidden"  value="-1" />
+	 
 	<p>
 		<label class="form_label">产品名称</label>
        	<input id="name" name="name" class="form_input" type="text" 
@@ -55,7 +62,7 @@
          <%--上传多张图片开始--%>
          <p>
          	<label class="form_label">封面</label>
-			     <img id="icon" src="<s:property value='product.icon'/>"/>
+         	 <div id="icon"></div>
          </p>
 
 		<p>         
@@ -82,6 +89,6 @@
         <%--上传多张图片结束--%>  
         <div style="clear:both;"></div>     
         <div id="bottom_button_div">
-        	<button id="submit" class="btn" type="submit" value="提交">提交</button>
-        	<button id="cannel" class="btn" type="reset" value="取消" onclick="deal_new_picture()">取消</button>
+        	<button id="submit" class="btn" type="button" value="提交"  onclick="setProduct()">提交</button>
+        	<button id="cannel" class="btn" type="button" value="取消" onclick="deal_new_picture()">取消</button>
 		</div>

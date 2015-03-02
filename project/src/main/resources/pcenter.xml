@@ -27,14 +27,17 @@
             <result name="success" type="redirectAction">listProducts</result>    
             <result name="input">upload.jsp</result>  
         </action>
+        <!--  BUGFIX: useless?
         <action name="saveProductPage" class="com.bancai.web.pcenter.SaveProductPageAction">  
             <result name="success">/pcenter/new_product.jsp</result>  
             <result name="input">upload.jsp</result>  
         </action>
+        -->
         <action name="updateProductPage" class="com.bancai.web.pcenter.UpdateProductPageAction">  
-            <result name="success">modify_product.jsp</result>  
+            <result name="success">product.jsp</result>  
             <result name="input">upload.jsp</result>  
         </action>
+  
         <action name="updateProduct" class="com.bancai.web.pcenter.UpdateProductAction">  
             <result name="success" type="redirectAction">listProducts</result>  
             <result name="input"> /pcenter/modify_product.jsp </result>  
@@ -44,7 +47,7 @@
                 <param name="actionName">updateEnterprisePage</param>
                 <param name="message">must add enterprise information before add product</param>
             </result>  
-            <result name="success">index_product.jsp</result>
+            <result name="success">product_list.jsp</result>
         </action>
         <!-- product结束 -->
         
@@ -106,25 +109,24 @@
         
         <!-- enterprise开始 -->
          <action name="showEnterprise" class="com.bancai.web.pcenter.UpdateEnterprisePageAction">  
-            <result name="success">/pcenter/show_enterprise.jsp</result>  
-            <result name="input">/pcenter/show_enterprise.jsp</result>  
+         	<result name="success" type="json"></result>
         </action>
+        <!-- 
         <action name="updateEnterprisePage" class="com.bancai.web.pcenter.UpdateEnterprisePageAction">  
             <result name="success"> /pcenter/modify_enterprise.jsp</result>  
             <result name="input"> /pcenter/show_enterprise.jsp </result>  
         </action>
+         -->
         <action name="updateEnterprise" class="com.bancai.web.pcenter.UpdateEnterpriseAction">  
-            <result name="success" type="chain">showEnterprise</result>  
-            <result name="input">/pcenter/modify_enterprise.jsp</result>
-            <result name="error"> /pcenter/show_enterprise.jsp </result> 
+           <result name="success" type="json"></result>
         </action>
         <!-- enterprise结束 -->
         
         <!-- 用户套餐 -->
         <action name="getPackagesByEnterprise" 
         		class="com.bancai.web.pkg.GetPackageInfoAction">
-			<result name="success"> /pcenter/show_charge_info.jsp </result>
-			<result name="error"> show_charge_info.jsp </result>
+			<result name="success"> /pcenter/charge_info.jsp </result>
+			<result name="error"> charge_info.jsp </result>
 		</action> 
 		
 		<!-- 用户信息汇总，用户进入pcenter时显示的内容 -->
