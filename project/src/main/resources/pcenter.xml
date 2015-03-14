@@ -43,11 +43,7 @@
             <result name="input"> /pcenter/modify_product.jsp </result>  
         </action> 
         <action name="listProducts" class="com.bancai.web.pcenter.ListProductsAction">  
-            <result name="input" type="redirectAction">
-                <param name="actionName">updateEnterprisePage</param>
-                <param name="message">must add enterprise information before add product</param>
-            </result>  
-            <result name="success">product_list.jsp</result>
+             <result name="success" type="json"></result>
         </action>
         <!-- product结束 -->
         

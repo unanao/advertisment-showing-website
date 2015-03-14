@@ -1,3 +1,8 @@
+$(document).delegate('#u198', 'change', function() {
+	deal_new_picture('enterpriseId','pcenter/saveEnterprisePicture',
+        'pcenter/pubEnterprisePicture','pcenter/deleteEnterprisePicture','logo',this);
+});
+
 /* init for page loading*/
 $(function() {
 	dispalyEnterprise();
