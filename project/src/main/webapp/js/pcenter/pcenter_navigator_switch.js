@@ -29,7 +29,7 @@ $(document).ready(function(){
 	    lastobj.removeClass("active");
 		$(this).addClass("active");	
 		lastobj=$(this);		    
-		$('#pcenter_right').load('pcenter/listProducts');
+		$('#pcenter_right').load('pcenter/product_list.jsp');
 	});
 	$('#pnav_current_service').click(function(){
 	    lastobj.removeClass("active");
