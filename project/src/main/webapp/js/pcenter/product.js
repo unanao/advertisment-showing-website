@@ -30,12 +30,11 @@ function displayProduct() {
 }
 
 function setProduct() {
-	var productId = $("id_hidden").val();
+	var productId = $("#id_hidden").val();
 	var name = $("#name").val();
 	var category = $("#category").val();
 	var detail = $("#detail").val();
 	var introduction = $("#introduction").val();
-
 	$.post("pcenter/updateProduct", {
 		productId:productId,
 		name : name,
