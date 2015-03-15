@@ -109,7 +109,9 @@
          </p>
 		<p>         
 	        <label class="form_label">上传照片</label>
-	        <INPUT id=u198  type="file" name="file" value="浏览"/>
+	        <INPUT id=u198  type="file" name="file" value="浏览" 
+	        	onchange="deal_new_picture('enterpriseId','pcenter/saveEnterprisePicture',
+	        	'pcenter/pubEnterprisePicture','pcenter/deleteEnterprisePicture','logo', this)"/>
 	        <input id="fileId" name="id" type="hidden" value="-1"/>
 	        <input id="enterpriseId" name="enterpriseId" type="hidden" value="<s:property value='enterpriseId'/>"/>
 	        <span style="font-size:10px;">最多可传5张图片</span>
