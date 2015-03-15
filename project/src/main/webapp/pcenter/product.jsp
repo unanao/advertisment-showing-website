@@ -25,7 +25,7 @@
 	</p>
 	
 	<!-- Record product id -->
-	 <input id="id_hidden" name="id_hidden" class="form_input" type="hidden"  value="-1" />
+	 <input id="id_hidden" name="id_hidden" class="form_input" type="hidden"  value="<s:property value='productId'/>" />
 	 
 	<p>
 		<label class="form_label">产品名称</label>

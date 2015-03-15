@@ -11,6 +11,12 @@
     <!-- Should load enterprise.js firstly, otherwise will not get the data -->
     <script type="text/javascript" src="js/pcenter/enterprise.js"></script>	
  		
+ 	<script type="text/javascript" src='js/image_auto_resize/autoresize_image.js'></script>	
+	<script type="text/javascript" src="js/pcenter/pcenter_navigator_switch.js"></script>
+		<%-- 下面的js文件待整合，目前应用于企业信息修改页面 --%>
+    <script type="text/javascript" src="js/ajaxfileupload.js"></script>
+    <script type="text/javascript" src="js/local_preview.js"></script>
+ 		
 	<s:if test="(null != message) && (!message.isEmpty())">
 		填写产品信息前，需要先填写企业信息		
 	</s:if>
@@ -103,9 +109,7 @@
          </p>
 		<p>         
 	        <label class="form_label">上传照片</label>
-	        <INPUT id=u198  type="file" name="file" value="浏览"  
-	            onchange="deal_new_picture('enterpriseId','pcenter/saveEnterprisePicture',
-	            'pcenter/pubEnterprisePicture','pcenter/deleteEnterprisePicture','logo',this)" />
+	        <INPUT id=u198  type="file" name="file" value="浏览"/>
 	        <input id="fileId" name="id" type="hidden" value="-1"/>
 	        <input id="enterpriseId" name="enterpriseId" type="hidden" value="<s:property value='enterpriseId'/>"/>
 	        <span style="font-size:10px;">最多可传5张图片</span>
