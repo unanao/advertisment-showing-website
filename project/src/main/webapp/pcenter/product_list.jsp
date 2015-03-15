@@ -9,15 +9,15 @@
 <script type="text/javascript" src="js/pcenter/product_list.js"></script>
 
 <div class="span12">
-<div class="blank"></div>
-<p>
+	<div class="blank"></div>
+	<p>
 		<a  class="btn-small fr" style="margin-right:100px" value="new_product" 
 			onclick="$('#pcenter_right').load('pcenter/product.jsp');">
 			发布新产品》
 		</a>
-</p>	
+	</p>	
 
-<table class="table" id="product_table">
+	<table class="table" id="product_table">
             <tbody>  
                 <tr id="template">  
                    <td id = "name"></td>  
@@ -26,26 +26,8 @@
                    <td id = "delete"></td>          
                  </tr>  
              </tbody>  
-</table>
+	</table>
 
-<!--  
-			<table class="table"  id="product_table">
-				<tbody>			
-			<s:iterator value="products" id="product">
-				<tr >
-					<td><s:property value="#product.name"/> </td>
-					<td><a href="product/showProduct?productId=<s:property value="#product.id" />"  
-                            target="_blank">
-                                   查看
-                        </a></td>
-					<td><a onclick="$('#pcenter_right').load('pcenter/updateProductPage?productId=<s:property value='#product.id'/>');">编辑</a></td>
-					<td><a href="pcenter/deleteProduct?productId=<s:property value='#product.id'/>">删除</a></td>
-                    
-				</tr>
-			</s:iterator>				
-				</tbody>
-			</table>
-			-->
 </div>
 
 		
