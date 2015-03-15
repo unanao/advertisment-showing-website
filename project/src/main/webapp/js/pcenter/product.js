@@ -22,8 +22,8 @@ function displayProduct() {
 		$("<img/>").attr("src", data.product.icon).appendTo("#icon");
 		
 		/* example: http://www.w3school.com.cn/jquery/ajax_getjson.asp */
-		 $.each(data.items, function(i,item){   
-			    deal_return_picture(data.productPictureMap.key, data.productPictureMap.path, 
+		 $.each(data.productPictureMap, function(i, item){   
+			    deal_return_picture(item.key, item.path, 
 			    		"productId", 'pcenter/pubProductPicture','pcenter/deleteProductPicture','icon');
 		 });
     });
