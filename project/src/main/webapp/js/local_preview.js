@@ -32,7 +32,7 @@ function checkFile(fileInput) {
 	var idx = imgName.lastIndexOf(".");
 	if (idx != -1) {
 		var ext = imgName.substr(idx + 1).toLowerCase();
-		if (!ext.match(PIC_ALLOWED_TYPE_REGEX)) {
+		if (!PIC_ALLOWED_TYPE_REGEX.match(ext)) {
 			alert("只能上传.jpg  .jpeg  .gif .png  .bmp类型的文件!");
 			return false;
 		}
@@ -180,7 +180,6 @@ function selected_photo_thumb(num,file_url,typeId,pub_url,del_url,targetId) {
 		var temp = document.createElement("ul");
 		temp.innerHTML = html;
 		document.getElementById("thumb_list").appendChild(temp.firstChild);
-
 		document.getElementById(id_name).src = file_url;
 }
 function publish(id_num, typeId, pub_url, targetId) {

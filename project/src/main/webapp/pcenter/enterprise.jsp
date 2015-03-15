@@ -6,7 +6,6 @@
 <base
 	href="<%=request.getScheme() + "://" + request.getServerName()
 					+ ":" + request.getServerPort() + request.getContextPath()%>/" />
-  	<script type="text/javascript" src="js/jquery/jquery.js"></script>
   	<script  src="js/province_city_select/search_sitedata_bas.js"></script>
 	<script  src="js/province_city_select/province_city.js"></script>	
     <!-- Should load enterprise.js firstly, otherwise will not get the data -->
@@ -104,13 +103,15 @@
          <p>
          	<label class="form_label">封面</label>
          	<div id="logo"></div>
-         	<!--  
+         
  	    	<img id="logo"  src="<s:property value='enterprise.logo'/>"/>
- 	    	-->
+ 	   
          </p>
 		<p>         
 	        <label class="form_label">上传照片</label>
-	        <INPUT id=u198  type="file" name="file" value="浏览"/>
+	        <INPUT id=u198  type="file" name="file" value="浏览" 
+	        	onchange="deal_new_picture('enterpriseId','pcenter/saveEnterprisePicture',
+	        	'pcenter/pubEnterprisePicture','pcenter/deleteEnterprisePicture','logo', this)"/>
 	        <input id="fileId" name="id" type="hidden" value="-1"/>
 	        <input id="enterpriseId" name="enterpriseId" type="hidden" value="<s:property value='enterpriseId'/>"/>
 	        <span style="font-size:10px;">最多可传5张图片</span>
@@ -124,13 +125,13 @@
 	        </div>
 	        
 	        <div id="logo"></div>
-	        <!-- 
+	      
 			  <s:iterator value="enterprisePictureMap" id="id" status="st">
 				  <script type="text/javascript" >
 				      deal_return_picture("<s:property value='key'/>","<s:property value='value.path'/>","enterpriseId",'pcenter/pubEnterprisePicture','pcenter/deleteEnterprisePicture','logo');
 				  </script>
 			  </s:iterator>	
-			   -->	
+			
         <%--上传多张图片结束--%>
         <br>
         <div style="clear:both;">
