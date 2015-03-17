@@ -1,4 +1,7 @@
 function addCity() {
+	var province = document.getElementById("province");
+	var city = document.getElementById("city");
+	var county = document.getElementById("county");
 	var selected = province.selectedIndex;
 	var province_obj = arrCity[selected];
     
@@ -14,10 +17,14 @@ function addCity() {
 }
 
 function addCounty() {
-	 var province_obj = arrCity[province.selectedIndex];
-     var city_obj = province_obj.sub[city.selectedIndex];
-     var county_arr = city_obj.sub;
-     if (city_obj.type == 0) {
+	var province = document.getElementById("province");
+	var city = document.getElementById("city");
+	var county = document.getElementById("county");
+	var province_obj = arrCity[province.selectedIndex];
+	var city_obj = province_obj.sub[city.selectedIndex];
+	var county_arr = city_obj.sub;
+    
+    if (city_obj.type == 0) {
    //      county.options.length = 0;
          county.style.display = "inline";
          for (var i = 0; i < county_arr.length; i++) {
@@ -85,48 +92,6 @@ function loadProvinceCity(province_val_1, city_val_1, county_val_1, hiddlenprovi
 	    	 $("#county").val(county_val);
 	     }
 	}
-
-	/*
-	province.options[0] = new Option("请选择", "请选择");
-	city.options[0] = new Option("请选择", "请选择");
-	county.style.display = "none";
-	
-	province_val = $("#province").val();
-	if (("" == province_val) || ("undefined" == typeof province_val)) {
-		var hiddlenprovince_val = $("#hiddenprovince").val();
-		if (("" != hiddlenprovince_val || ("undefined" == typeof hiddlenprovince_val))) {
-		    $("#province").val("请选择");
-		} 
-		else {
-			 $("#province").val(hiddlenprovince_val);
-		}
-	}
-	province_val = $("#province").val();
-	if (("" != province_val) && ("undefined" != typeof province_val) && ("请选择" != province_val)) {
-		    addCity();
-	}
-	
-	city_val = $("#city").val();
-	if ((""  ==  city_val)  ||  ("undefined" ==  typeof city_val)  ||  ("请选择" == city_val)) {
-		var hiddencity_val = $("#hiddencity").val();
-		if ("" == hiddencity_val || ("undefined" == typeof hiddencity_val)) {
-		    $("#city").val("请选择");
-		} else {
-		    $("#city").val(hiddencity_val);
-		}
-	}
-	city_val = $("#city").val();
-	if (("" != city_val) && ("undefined" != typeof city_val) && ("请选择" != city_val)) {
-		addCounty();
-	}
-	
-	var county_val = $("#hiddencounty").val();
-	if ("" == county) {
-	    $("#county").val("请选择");
-	} else {
-	    $("#county").val(county_val);
-	}
-	*/
 }
 
 /*
