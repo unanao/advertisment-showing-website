@@ -67,8 +67,13 @@
 
 		<p>         
 	        <label class="form_label">上传照片</label>
+	        
+	        <!--  这部分 javascript 在 product.js 中处理， 请使用ajax完成， 不然没有办法保证， 修改后直接可见。
+	      		     完成后， 请将此处代码删除。
 	        <INPUT id=u198  type="file" name="file" value="浏览"   onchange="deal_new_picture('productId','pcenter/saveProductPicture',
 	            'pcenter/pubProductPicture','pcenter/deleteProductPicture','icon',this)" /> 
+	          -->
+	            
 	        <input id="fileId" name="id" type="hidden" value="-1"/>
 	        <input id="enterpriseId" name="enterpriseId" type="hidden" value="<s:property value='enterpriseId'/>"/>
 			<input id="productId" name="productId" type="hidden"	value="<s:property value='productId'/>"/> 
@@ -81,11 +86,16 @@
 	                    <%--此处由javascript控制动态显示图片缩略图--%>		
 	                </ul>
 	        </div>
+	        
+	        <!--   这部分 javascript 在 product.js 中处理， 请使用ajax完成， 不然没有办法保证， 修改后直接可见。
+	      		     完成后， 请将此处代码删除。
 			  <s:iterator value="productPictureMap" id="id" status="st">
             <script type="text/javascript" >
                 deal_return_picture("<s:property value='key'/>","<s:property value='value.path'/>","productId",'pcenter/pubProductPicture','pcenter/deleteProductPicture','icon');
             </script>
-           </s:iterator>		
+           </s:iterator>	
+           -->
+           	
         <%--上传多张图片结束--%>  
         <div style="clear:both;"></div>     
         <div id="bottom_button_div">
