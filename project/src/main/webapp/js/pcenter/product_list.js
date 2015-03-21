@@ -4,7 +4,7 @@ $(function() {
 });
 
 function loadModifyProduct(productId) {
-	$('#pcenter_right').load("pcenter/updateProductPage?productId=" + productId);
+	$('#pcenter_right').load("pcenter/product.jsp?productId=" + productId);
 }
 
 function listProduct() {

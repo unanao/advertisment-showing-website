@@ -5,13 +5,15 @@
 				+ request.getServerPort() + request.getContextPath() %>/" />		
 				
 	<link rel="stylesheet" type="text/css" href="css_files/form.css?=v1.0" />
+	
+	<script type="text/javascript" src="js/jquery/jquery.js"></script>
+		
 	<script type="text/javascript" src="js/product_select/product_category.js"></script>
-	<script type="text/javascript" src="js/product_select/product_select.js?v=1.9"></script>
+	<script type="text/javascript" src="js/product_select/product_select.js"></script>
+	<script type="text/javascript" src="js/pcenter/product.js"></script>
 	<script type="text/javascript" src="js/ajaxfileupload.js"></script>
     <script type="text/javascript" src="js/local_preview.js?v=1.4"></script> 
 	<script type="text/javascript" src='js/image_auto_resize/autoresize_image.js'></script>
-	
-	<script type="text/javascript" src="js/pcenter/product.js"></script>
 	
 	<s:fielderror> <s:param> productId </s:param> </s:fielderror> 
 	<!-- 输出系统的Action Error提示 -->
@@ -23,14 +25,10 @@
 		<s:fielderror> <s:param> name </s:param> </s:fielderror> 
 	</span>
 	</p>
-	
-	<!-- Record product id -->
-	 <input id="id_hidden" name="id_hidden" class="form_input" type="hidden"  value="<s:property value='productId'/>" />
 	 
 	<p>
 		<label class="form_label">产品名称</label>
-       	<input id="name" name="name" class="form_input" type="text" 
-       			value='<s:property value="product.name"/>' />
+       	<input id="name" name="name" class="form_input" type="text"/>
 	</p>
 	
 	<p>
@@ -38,10 +36,7 @@
               <s:fielderror> <s:param> category </s:param> </s:fielderror> 
           </span>
     </p>
-        <input id="hiddencategory" name="hiddencategory" class="form_input" type="hidden" 
-                value='<s:property value="product.category"/>' />
-        <input id="hiddendetail" name="hiddendetail" class="form_input" type="hidden" 
-                value='<s:property value="product.detail"/>' />
+
 	<p>
        	<label class="form_label">类别</label>
        	  <select id="category" name="category"></select>
@@ -55,7 +50,7 @@
 		</p>
 		<p>
            <label class="form_label">描述</label>
-           <textarea id="introduction" class="form_textarea" name="introduction"><s:property value='product.introduction'/></textarea>
+           <textarea id="introduction" class="form_textarea" name="introduction"></textarea>
 		</p>
 	
 
@@ -68,15 +63,18 @@
 		<p>         
 	        <label class="form_label">上传照片</label>
 	        
-	        <!--  这部分 javascript 在 product.js 中处理， 请使用ajax完成， 不然没有办法保证， 修改后直接可见。
+	        <!--  这部分只需要保留inpunt。
+	                 javascript 在 product.js 中处理， 请使用ajax完成， 不然没有办法保证， 修改后直接可见。
 	      		     完成后， 请将此处代码删除。
 	        <INPUT id=u198  type="file" name="file" value="浏览"   onchange="deal_new_picture('productId','pcenter/saveProductPicture',
 	            'pcenter/pubProductPicture','pcenter/deleteProductPicture','icon',this)" /> 
 	          -->
-	            
+	          <INPUT id=u198  type="file" name="file" value="浏览" /> 
+	              
 	        <input id="fileId" name="id" type="hidden" value="-1"/>
-	        <input id="enterpriseId" name="enterpriseId" type="hidden" value="<s:property value='enterpriseId'/>"/>
-			<input id="productId" name="productId" type="hidden"	value="<s:property value='productId'/>"/> 
+	        
+	        <input id="enterpriseId" name="enterpriseId" type="hidden" />
+			<input id="productId" name="productId" type="hidden"/>
 
 	        <span style="font-size:10px;">最多可传5张图片</span>
         </p>

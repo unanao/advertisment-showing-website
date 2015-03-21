@@ -5,20 +5,30 @@ $(function() {
 	return productCheck();
 });
 
+function getUrlParam(name) {  
+    //构造一个含有目标参数的正则表达式对象  
+    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");  
+    //匹配目标参数  
+    var r = window.location.search.substr(1).match(reg);  
+    //返回参数值  
+    if (r != null)
+    	return unescape(r[2]);
+    
+    return null;  
+}  
+
 function displayProduct() {
 	$.ajaxSetup({  
 	    async : false
 	}); 
 	
-	var productId = $("#id_hidden").val();
+	var productId = getUrlParam("productId");
 	
-	$.getJSON("product/showProduct", {productId: productId},  function(data) {
-		$("id_hidden").val(data.product.id);
+	$.getJSON("product/showProductAjax", {productId: productId},  function(data) {
+		$("#productId").val(productId);
 		$("#name").val(data.product.name);
-		$("#category").val(data.eproduct.category);
-		$("#detail").val(data.product.detail);
+		loadProductCategoryDetail(data.product.category, data.product.detail, null, null);
 		$("#introduction").val(data.product.introduction);
-		
 		$("<img/>").attr("src", data.product.icon).appendTo("#icon");
 		
 		/* example: http://www.w3school.com.cn/jquery/ajax_getjson.asp */

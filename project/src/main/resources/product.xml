@@ -9,6 +9,11 @@
             <result name="success">/product/product_show.jsp</result>  
             <result name="input" type="redirectAction"> ../aboutus/contactus.jsp </result> 
         </action>
+        
+        <action name="showProductAjax" class="com.bancai.web.product.ShowProductAction">  
+        	<result name="success" type="json"></result>
+        </action>
+        
          <action name="listMoreProducts" class="com.bancai.web.product.ListMoreProductsAction">  
             <result name="success">more.jsp</result>  
             <result name="input">upload.jsp</result>  
