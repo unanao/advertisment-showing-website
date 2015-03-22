@@ -19,12 +19,12 @@
 	<script type="text/javascript" src="library/jquery/jquery-migrate.js"></script> 
 		
 		
-		<%-- 下面的js为功能性，根据需要添加--%>
-		<script type="text/javascript" src='js/image_auto_resize/autoresize_image.js'></script>	
-		<script type="text/javascript" src="js/pcenter/pcenter_navigator_switch.js"></script>
-		<%-- 下面的js文件待整合，目前应用于企业信息修改页面 --%>
-    <script type="text/javascript" src="js/ajaxfileupload.js"></script>
-    <script type="text/javascript" src="js/local_preview.js"></script>
+	<%-- 下面的js为功能性，根据需要添加--%>
+	<script type="text/javascript" src='js/image_auto_resize/autoresize_image.js'></script>	
+	<script type="text/javascript" src="js/pcenter/pcenter_navigator_switch.js"></script>
+	
+	<script type="text/javascript" src="js/ajaxfileupload.js"></script>
+    <script type="text/javascript" src="js/local_preview.js"></script> 
 
 	</head>
 	<body>

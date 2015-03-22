@@ -15,9 +15,6 @@
  		
  	<script type="text/javascript" src='js/image_auto_resize/autoresize_image.js'></script>	
 	<script type="text/javascript" src="js/pcenter/pcenter_navigator_switch.js"></script>
-		<%-- 下面的js文件待整合，目前应用于企业信息修改页面 --%>
-    <script type="text/javascript" src="js/ajaxfileupload.js"></script>
-    <script type="text/javascript" src="js/local_preview.js"></script>
  		
 	<s:if test="(null != message) && (!message.isEmpty())">
 		填写产品信息前，需要先填写企业信息		
