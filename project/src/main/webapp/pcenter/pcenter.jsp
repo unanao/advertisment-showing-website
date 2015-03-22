@@ -15,8 +15,9 @@
 	<link rel="stylesheet" type="text/css" href="css_files/form.css" />
 	<link rel="stylesheet" type="text/css" href="css_files/pcenter/modify_enterprise.css" />		
 				  		
-		<script type="text/javascript" src="js/jquery/jquery.js"></script>
-		<script src="http://code.jquery.com/jquery-migrate-1.1.1.js"></script> 
+	<script type="text/javascript" src="library/jquery/jquery.js"></script>  
+	<script type="text/javascript" src="library/jquery/jquery-migrate.js"></script> 
+		
 		
 		<%-- 下面的js为功能性，根据需要添加--%>
 		<script type="text/javascript" src='js/image_auto_resize/autoresize_image.js'></script>	
