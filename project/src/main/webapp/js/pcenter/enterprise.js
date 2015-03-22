@@ -16,11 +16,9 @@ function dispalyEnterprise() {
 	}); 
 	
 	$.getJSON("pcenter/showEnterprise", function(data) {
+		$('#enterpriseId').val(data.enterpriseId)
 		$("#name").val(data.enterprise.name);
 		loadProvinceCity(data.enterprise.province, data.enterprise.city, data.enterprise.county, "山东", "临沂");
-//		$("#province").val(data.enterprise.province);
-//		$("#city").val(data.enterprise.city);
-//		$("#county").val(data.enterprise.county);
 		$("#address").val(data.enterprise.address);
 		$("#scale").val(data.enterprise.scale);
 		$("#contacter").val(data.phone.contacter);
@@ -38,6 +36,8 @@ function dispalyEnterprise() {
 }
 
 function setEnterprise() {
+		var enterpriseId = $('#enterpriseId').val();
+		
 		var name = $("#name").val();
 		var province = $("#province").val();
 		var city = $("#city").val();

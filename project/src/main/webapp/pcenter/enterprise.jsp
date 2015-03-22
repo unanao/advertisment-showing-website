@@ -6,6 +6,8 @@
 <base
 	href="<%=request.getScheme() + "://" + request.getServerName()
 					+ ":" + request.getServerPort() + request.getContextPath()%>/" />
+
+	<script type="text/javascript" src="js/jquery/jquery.js"></script>
   	<script  src="js/province_city_select/search_sitedata_bas.js"></script>
 	<script  src="js/province_city_select/province_city.js"></script>	
     <!-- Should load enterprise.js firstly, otherwise will not get the data -->
@@ -22,6 +24,8 @@
 	</s:if>
 	
     <form> 
+       	<!--  Record enterprise ID --> 
+       	<input id="enterpriseId" name="enterpriseId" type="hidden" value="<s:property value='enterpriseId'/>"/>
        	 
        	<!-- 企业名称 -->
        	<p>
@@ -113,10 +117,10 @@
 	        	onchange="deal_new_picture('enterpriseId','pcenter/saveEnterprisePicture',
 	        	'pcenter/pubEnterprisePicture','pcenter/deleteEnterprisePicture','logo', this)"/>
 	        -->	
-	         <INPUT id=u198  type="file" name="file" value="浏览"/>
+	         <INPUT id="u198"  type="file" name="file" value="浏览"/>
 	         
 	        <input id="fileId" name="id" type="hidden" value="-1"/>
-	        <input id="enterpriseId" name="enterpriseId" type="hidden" value="<s:property value='enterpriseId'/>"/>
+
 	        <span style="font-size:10px;">最多可传5张图片</span>
         </p>
  
