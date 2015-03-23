@@ -54,6 +54,5 @@
 	</div>
 </form>
 
-<script type="text/javascript" src="js/jquery/jquery.js"></script>
 <script type="text/javascript" src="js/pcenter/change_passwd.js"></script>
 

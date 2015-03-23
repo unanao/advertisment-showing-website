@@ -15,7 +15,8 @@
     <link rel="stylesheet" type="text/css" href="css_files/common.css" />
     <link rel="stylesheet" type="text/css" href="css_files/index.css" media="all">
     <link rel="stylesheet" type="text/css" href="css_files/plist.css" media="all">
-    <script type="text/javascript" src="js/jquery/jquery.js"></script>
+    
+    <script type="text/javascript" src="library/jquery/jquery.js"></script>
 	<script type="text/javascript" src="js/image_auto_resize/autoresize_image.js"></script>
 	<script type="text/javascript" src="js/advitise_photos.js"></script>    
   </head>
