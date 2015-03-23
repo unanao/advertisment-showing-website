@@ -5,9 +5,7 @@
 				+ request.getServerPort() + request.getContextPath() %>/" />		
 				
 	<link rel="stylesheet" type="text/css" href="css_files/form.css" />
-	<!--  
-	<script type="text/javascript" src="library/jquery/jquery.js"></script>  	
-	-->	
+
 	<script type="text/javascript" src="js/product_select/product_category.js"></script>
 	<script type="text/javascript" src="js/product_select/product_select.js"></script>
 	<script type="text/javascript" src="js/pcenter/product.js"></script>
