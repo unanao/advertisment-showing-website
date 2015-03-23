@@ -4,16 +4,11 @@
 <base href="<%= request.getScheme() + "://" + request.getServerName() + ":" 
 				+ request.getServerPort() + request.getContextPath() %>/" />		
 				
-	<link rel="stylesheet" type="text/css" href="css_files/form.css?=v1.0" />
-	
-	<script type="text/javascript" src="js/jquery/jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="css_files/form.css" />
 		
 	<script type="text/javascript" src="js/product_select/product_category.js"></script>
 	<script type="text/javascript" src="js/product_select/product_select.js"></script>
 	<script type="text/javascript" src="js/pcenter/product.js"></script>
-	<script type="text/javascript" src="js/ajaxfileupload.js"></script>
-    <script type="text/javascript" src="js/local_preview.js?v=1.4"></script> 
-	<script type="text/javascript" src='js/image_auto_resize/autoresize_image.js'></script>
 	
 	<s:fielderror> <s:param> productId </s:param> </s:fielderror> 
 	<!-- 输出系统的Action Error提示 -->
