@@ -41,7 +41,7 @@
 		</div>	
 		<!-- left-navigator end -->
 		
-		<script src="js/bootstrap.js">
+		<script src="library/bootstrap/bootstrap.js">
 		</script>
 	</body>
 </html>
