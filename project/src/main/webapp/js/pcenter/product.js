@@ -1,7 +1,5 @@
 /* init for page loading*/
 $(function() {
-	displayProduct();
-	
 	return productCheck();
 });
 

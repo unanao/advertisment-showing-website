@@ -6,6 +6,7 @@ var MAX_PIC_SIZE = 5 * 1024 * 1024;//5MB
 var PIC_ALLOWED_TYPE_REGEX = "jpg|jpeg|gif|png|bmp";
 
 function browser_detect() {
+/*
 	if ($.browser.msie)
 		return "IE" + $.browser.version.toString();
 	if ($.browser.mozilla)
@@ -16,7 +17,7 @@ function browser_detect() {
 		return "Opera";
 	if ($.browser.chrome)
 		return "Chrome";
-
+*/
 	return "other";
 }
 

@@ -5,7 +5,6 @@
 	href="<%=request.getScheme() + "://" + request.getServerName()
 					+ ":" + request.getServerPort() + request.getContextPath()%>/" />
 
-<script type="text/javascript" src="js/jquery/jquery.js"></script>
 <script type="text/javascript" src="js/pcenter/product_list.js"></script>
 
 <div class="span12">
