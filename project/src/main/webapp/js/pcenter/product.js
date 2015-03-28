@@ -15,12 +15,14 @@ function getUrlParam(name) {
     return null;  
 }  
 
-function displayProduct() {
+function displayProduct(productId) {
 	$.ajaxSetup({  
 	    async : false
 	}); 
-	
-	var productId = getUrlParam("productId");
+
+	if (null == productId) {
+		return ;
+	}
 	
 	$.getJSON("product/showProductAjax", {productId: productId},  function(data) {
 		$("#productId").val(productId);
@@ -50,6 +52,7 @@ function setProduct() {
 		detail:detail,
 		introduction:introduction,
 	}, function(data) {
+		displayProduct(productId);
 		alert("资料修改成功"); 
 	});
 }

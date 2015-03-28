@@ -4,8 +4,9 @@
 <base
 	href="<%=request.getScheme() + "://" + request.getServerName()
 					+ ":" + request.getServerPort() + request.getContextPath()%>/" />
-
+				
 <script type="text/javascript" src="js/pcenter/product_list.js"></script>
+<script type="text/javascript" src="js/pcenter/product.js"></script>
 
 <div class="span12">
 	<div class="blank"></div>
