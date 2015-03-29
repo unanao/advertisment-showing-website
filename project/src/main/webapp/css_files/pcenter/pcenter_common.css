@@ -20,6 +20,11 @@ table a{
 }
 /*navigator style end*/
 
+/*province,city  style start*/
+#province.search_select,#city.search_select,#county.search_select{
+	width:20%;
+}
+/*province,city  style end*/
 .pcheader{
   padding-bottom: 0px;
   margin: 10px 0 10px;
