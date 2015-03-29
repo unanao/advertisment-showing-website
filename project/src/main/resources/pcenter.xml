@@ -32,19 +32,19 @@
             <result name="success">/pcenter/new_product.jsp</result>  
             <result name="input">upload.jsp</result>  
         </action>
-        -->
+       
         <action name="updateProductPage" class="com.bancai.web.pcenter.UpdateProductPageAction">  
             <result name="success">product.jsp</result>  
             <result name="input">upload.jsp</result>  
         </action>
-  
-        <action name="updateProduct" class="com.bancai.web.pcenter.UpdateProductAction">  
-            <result name="success" type="redirectAction">listProducts</result>  
-            <result name="input"> /pcenter/modify_product.jsp </result>  
-        </action> 
-        <action name="listProducts" class="com.bancai.web.pcenter.ListProductsAction">  
-             <result name="success" type="json"></result>
-        </action>
+   -->
+   
+	<action name="updateProduct" class="com.bancai.web.pcenter.UpdateProductAction">  
+		<result name="success" type="json"></result>
+	</action> 
+	<action name="listProducts" class="com.bancai.web.pcenter.ListProductsAction">  
+		<result name="success" type="json"></result>
+	</action>
         <!-- product结束 -->
         
         <!-- product picture开始 -->
