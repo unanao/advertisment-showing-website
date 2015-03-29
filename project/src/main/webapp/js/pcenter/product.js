@@ -1,5 +1,7 @@
 /* init for page loading*/
 $(function() {
+	loadProductCategoryDetail("请选择", "请选择", null, null);
+	
 	return productCheck();
 });
 

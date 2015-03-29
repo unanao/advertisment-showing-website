@@ -24,9 +24,7 @@ function addDetail(detailVal) {
         	detail.options[i] = new Option(detail_arr[i].name, detail_arr[i].name);
         }
         
-        if ((""  !=  detailVal)  &&  ("undefined" !=  typeof detailVal) && (null != detailVal)) {
-        	 $("#detail").val(detailVal);
-   	     }
+        $("#detail").val(detailVal);
 	}
 }
 
