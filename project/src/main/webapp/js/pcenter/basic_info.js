@@ -36,7 +36,7 @@ function setBasicInfo() {
 	var name = $("#name").val();
 //	var gender = $("#gender").val();
 	var gender = $("input[name='gender']:checked").val();
-	alert(gender);
+//	alert(gender);
 	var officePhone = $("#officePhone").val();
 	var mobile = $("#mobile").val();
 	var qq = $("#qq").val();

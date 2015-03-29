@@ -6,6 +6,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<base href="<%= request.getScheme() + "://" + request.getServerName() + ":" 
 				+ request.getServerPort() + request.getContextPath() %>/" />
+				
     	<link rel="stylesheet" type="text/css" href="library/bootstrap/css/bootstrap.css" />							
 		<link rel="stylesheet" type="text/css" href="css_files/all_show_cat.css" />
 		<link rel="stylesheet" type="text/css" href="css_files/common.css" />	
