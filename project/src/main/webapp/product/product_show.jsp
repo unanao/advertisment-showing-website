@@ -13,6 +13,7 @@
 		<script type="text/javascript" src="library/jquery/jquery.js"></script>
 		<script type="text/javascript" src='js/image_auto_resize/autoresize_image.js'></script>	
 		<script type="text/javascript" src="js/photo_switch_show.js"></script>	
+		<script type="text/javascript" src="js/product/product_show.js"></script>
 	</head>
 	<body>
 	  <%@ include file="../includefiles/navigate.jsp" %>
@@ -73,27 +74,15 @@
 	          联系人：
 	        </th>
 	        <%--请后台提供联系人--%>
-	        <td>
-	          <a 
-	              href="enterprise/showEnterprise?enterpriseId=<s:property value='enterprise.id'/>"
-	              style="text-decoration:underline;">
-	
-	            <s:property value="enterprise.name"/>
-	          </a>
-	        </td>
+	        	<td id="contacter"></td>
 	      </tr>
 	      <tr>
 	        <th>
 	          联系电话：
 	        </th>
 	        <%--请后台提供电话--%>
-	        <td>
-	          <a 
-	              href="enterprise/showEnterprise?enterpriseId=<s:property value='enterprise.id'/>"
-	              style="text-decoration:underline;">
-	
-	            <s:property value="enterprise.name"/>
-	          </a>
+	        <td >
+	          	<div id="number"> </div>
 	        </td>
 	      </tr>
 	      <tr>
