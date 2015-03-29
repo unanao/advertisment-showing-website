@@ -5,6 +5,8 @@ $(function() {
 
 function loadModifyProduct(productId) {
 	$('#pcenter_right').load("pcenter/product.jsp?productId=" + productId);
+	
+	displayProduct(productId);
 }
 
 function listProduct() {

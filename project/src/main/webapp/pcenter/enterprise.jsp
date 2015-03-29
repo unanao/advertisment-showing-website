@@ -11,7 +11,7 @@
 	<script  src="js/province_city_select/province_city.js"></script>	
     <!-- Should load enterprise.js firstly, otherwise will not get the data -->
     <script type="text/javascript" src="js/pcenter/enterprise.js"></script>	
- 
+    
 	<s:if test="(null != message) && (!message.isEmpty())">
 		填写产品信息前，需要先填写企业信息		
 	</s:if>

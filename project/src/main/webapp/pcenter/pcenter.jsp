@@ -7,7 +7,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<base href="<%= request.getScheme() + "://" + request.getServerName() + ":" 
 				+ request.getServerPort() + request.getContextPath() %>/" />		
-    	<link rel="stylesheet" type="text/css" href="css_files/bootstrap.css" />		
+    	<link rel="stylesheet" type="text/css" href="library/bootstrap/css/bootstrap.css" />		
    		<link rel="stylesheet" type="text/css" href="css_files/plist.css" media="all">
 		<link rel="stylesheet" type="text/css" href="css_files/common.css" /> 
 		<link rel="stylesheet" type="text/css" href="css_files/pcenter/pcenter_common.css" />
@@ -41,7 +41,7 @@
 		</div>	
 		<!-- left-navigator end -->
 		
-		<script src="js/bootstrap.js">
+		<script src="library/bootstrap/js/bootstrap.js">
 		</script>
 	</body>
 </html>

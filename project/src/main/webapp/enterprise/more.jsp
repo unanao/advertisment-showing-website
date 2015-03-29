@@ -9,7 +9,7 @@
 			+ request.getServerPort() + request.getContextPath() %>/" />
 	<link rel="stylesheet" type="text/css" href="css_files/search_more.css" />
 	<link rel="stylesheet" type="text/css" href="css_files/common.css">
-	<script type='text/javascript' src='js/jquery/jquery.js'></script>
+	<script type='text/javascript' src='library/jquery/jquery.js'></script>
 </head>
 <body>
 	<%@ include file="/includefiles/navigate.jsp" %>

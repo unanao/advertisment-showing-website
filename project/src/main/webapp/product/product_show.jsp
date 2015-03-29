@@ -6,11 +6,11 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<base href="<%= request.getScheme() + "://" + request.getServerName() + ":" 
 				+ request.getServerPort() + request.getContextPath() %>/" />
-    	<link rel="stylesheet" type="text/css" href="css_files/bootstrap.css" />							
+    	<link rel="stylesheet" type="text/css" href="library/bootstrap/css/bootstrap.css" />							
 		<link rel="stylesheet" type="text/css" href="css_files/all_show_cat.css" />
 		<link rel="stylesheet" type="text/css" href="css_files/common.css" />	
 		<link rel="stylesheet" type="text/css" href="css_files/pcenter_common.css" />			
-		<script type="text/javascript" src="js/jquery/jquery.js"></script>
+		<script type="text/javascript" src="library/jquery/jquery.js"></script>
 		<script type="text/javascript" src='js/image_auto_resize/autoresize_image.js'></script>	
 		<script type="text/javascript" src="js/photo_switch_show.js"></script>	
 	</head>

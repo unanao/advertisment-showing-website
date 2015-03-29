@@ -44,6 +44,6 @@
 					<a>帮助</a>
 				</li>
 			</ul>
-		<script src="js/bootstrap.js"></script>			
+		<script src="library/bootstrap/js/bootstrap.js"></script>
 	</body>
 </html>

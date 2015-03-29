@@ -9,7 +9,8 @@
 	<link rel="stylesheet" type="text/css" href="css_files/common.css" />
 	<link rel="stylesheet" type="text/css" href="css_files/form.css" />
 	<link rel="stylesheet" type="text/css" href="css_files/accounts/login.css" />
-	<script type="text/javascript" src="js/jquery/jquery.js"></script>
+	
+	<script type="text/javascript" src="library/jquery/jquery.js"></script>
 	<script type="text/javascript" src='js/accounts/login.js'></script>
 </head>
 <body>

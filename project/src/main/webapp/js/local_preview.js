@@ -18,6 +18,7 @@ function browser_detect() {
 		return "Opera";
 	if ($.browser.chrome)
 		return "Chrome";
+
 	return "other";
 }
 */

@@ -11,7 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="css_files/common.css" />
 	<link rel="stylesheet" type="text/css" href="css_files/form.css" />
 	
-	<script type="text/javascript" src="js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="library/jquery/jquery.js"></script>
 	<script type="text/javascript" src="js/accounts/register.js"></script>
 	<script type="text/javascript" src="js/verify_code.js"></script>
 </head>

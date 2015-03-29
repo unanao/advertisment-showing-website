@@ -1,7 +1,5 @@
 /* init for page loading*/
 $(function() {
-	displayProduct();
-	
 	return productCheck();
 });
 
@@ -17,15 +15,18 @@ function getUrlParam(name) {
     return null;  
 }  
 
-function displayProduct() {
+function displayProduct(productId) {
 	$.ajaxSetup({  
 	    async : false
 	}); 
-	
-	var productId = getUrlParam("productId");
+
+	if (null == productId) {
+		return ;
+	}
 	
 	$.getJSON("product/showProductAjax", {productId: productId},  function(data) {
 		$("#productId").val(productId);
+		$("#enterpriseId").val(data.enterprise.id);
 		$("#name").val(data.product.name);
 		loadProductCategoryDetail(data.product.category, data.product.detail, null, null);
 		$("#introduction").val(data.product.introduction);
@@ -40,19 +41,19 @@ function displayProduct() {
 }
 
 function setProduct() {
-	var productId = $("#id_hidden").val();
+	var productId = $("#productId").val();	
 	var name = $("#name").val();
 	var category = $("#category").val();
 	var detail = $("#detail").val();
 	var introduction = $("#introduction").val();
 	$.post("pcenter/updateProduct", {
-		productId:productId,
+		productId : productId,
 		name : name,
-		category:category,
-		detail:detail,
-		introduction:introduction,
+		category : category,
+		detail : detail,
+		introduction : introduction,
 	}, function(data) {
-		alert("资料修改成功"); 
+		alert("资料修改成功");
 	});
 }
 
