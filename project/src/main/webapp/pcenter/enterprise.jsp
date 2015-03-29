@@ -7,15 +7,11 @@
 	href="<%=request.getScheme() + "://" + request.getServerName()
 					+ ":" + request.getServerPort() + request.getContextPath()%>/" />
 
-	<script type="text/javascript" src="js/jquery/jquery.js"></script>
   	<script  src="js/province_city_select/search_sitedata_bas.js"></script>
 	<script  src="js/province_city_select/province_city.js"></script>	
     <!-- Should load enterprise.js firstly, otherwise will not get the data -->
     <script type="text/javascript" src="js/pcenter/enterprise.js"></script>	
- 		
- 	<script type="text/javascript" src='js/image_auto_resize/autoresize_image.js'></script>	
-	<script type="text/javascript" src="js/pcenter/pcenter_navigator_switch.js"></script>
- 		
+ 
 	<s:if test="(null != message) && (!message.isEmpty())">
 		填写产品信息前，需要先填写企业信息		
 	</s:if>
