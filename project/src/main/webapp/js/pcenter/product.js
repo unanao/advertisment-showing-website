@@ -54,7 +54,6 @@ function setProduct() {
 		introduction : introduction,
 	}, function(data) {
 		alert("资料修改成功");
-		displayProduct(productId);
 	});
 }
 
