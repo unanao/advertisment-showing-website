@@ -12,10 +12,8 @@ function dispalyEnterpriseInfo() {
 	    async : false  
 	}); 
 	
-	var table=document .getElementById ("show_info");
-	
 	$.getJSON("pcenter/showEnterprise", function(data) {
-		document .getElementById ('contacter').html(data.phone.contacter);
-		document.getElementById("number").innerHTML(data.phone.number);
+		document .getElementById ("contacter").innerHTML = data.phone.contacter;
+		document.getElementById("number").innerHTML = data.phone.number;
     });
 }

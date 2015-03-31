@@ -70,50 +70,27 @@
 	          </a>
 	        </td>
 	      </tr>
-	      <tr>
-	        <th>
-	          联系人：
-	        </th>
-	        <%--请后台提供联系人--%>
-	        	<td id="contacter"></td>
+	      
+		<tr>
+	    	<th> 联系人：</th>
+	        <td id="contacter"></td>
+	    </tr>
+	    <tr>
+	    	<th> 联系电话：</th>
+	        <td id="number"></td>
+	     </tr>
+	     
+	     <%--  FIXME: Not accomplish
+	     <tr>
+	      	<th> 点击数：</th>
+	        <td> </td>
 	      </tr>
-	      <tr>
-	        <th>
-	          联系电话：
-	        </th>
-	        <%--请后台提供电话--%>
-	        <td >
-	          	<div id="number"> </div>
-	        </td>
-	      </tr>
-	      <tr>
-	        <th>
-	          点击数：
-	        </th>
-	        <%--请后台提供点击数--%>
-	        <td>
-	          <a 
-	              href="enterprise/showEnterprise?enterpriseId=<s:property value='enterprise.id'/>"
-	              style="text-decoration:underline;">
-	
-	            <s:property value="enterprise.name"/>
-	          </a>
-	        </td>
-	      </tr>
-	      <tr>
-	        <th>
-	          收藏数：
-	        </th>
-	        <%--请后台提供收藏数--%>
-	        <td>
-	          <a 
-	              href="enterprise/showEnterprise?enterpriseId=<s:property value='enterprise.id'/>"
-	              style="text-decoration:underline;">
-	
-	            <s:property value="enterprise.name"/>
-	          </a>
-	        </td>
-	      </tr>
+	      
+		<tr>
+	    	<th> 收藏数：</th>
+	        <td></td>
+	     </tr>
+	      --%>
 	    </table>
 	  </div>
 	  <%-- 文字信息列表end --%>
