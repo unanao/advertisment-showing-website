@@ -499,12 +499,11 @@
 
   <!--daohangzhankai end-->
 
+<!-- 
   <div id="ad_left" reco_id="6" class="m m0 hide">
   </div>
-  <!--搜索广告推荐-->
   <div id="finalbuy" class="hide m m0">
   </div>
-  <!--关注手机最终购买-->
   <div id="weekRank" class="m rank" clstag="thirdtype|keycount|thirdtype|mrank">
     <div class="mt">
       <h2>
@@ -548,7 +547,9 @@
   </ul>
 </div>
 </div>
+-->
 <!--rank end-->
+
 </div>
 <!--left end-->
 <div id="Collect_Tip" class="Tip360 w260">
