@@ -15,6 +15,8 @@
 			<p>
 				<s:actionerror />
 			</p>
+		
+		   <span class="save_ok"  id="save_ok_msg" > 资料修改成功!</span>
 
 			<!-- 昵称 -->
 			<p>
@@ -82,6 +84,7 @@
 				<input id="submit" type="button" class="btn" value="确定" onclick="setBasicInfo()" /> 
 				<input id="cancel" type="reset" class="btn" value="取消" />
 			</p>
+			
 		</div>
 	</div>
 </form>

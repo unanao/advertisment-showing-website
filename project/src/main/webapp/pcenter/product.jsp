@@ -16,6 +16,9 @@
 	   <div class="common_error"> <s:actionerror /> </div>
 	</p>
 	<p>
+	
+	<span class="save_ok"  id="save_ok_msg" > 资料修改成功!</span>
+	
 	<span id="ename" class="common_error" style="position:relative; left:20%"> 
 		<s:fielderror> <s:param> name </s:param> </s:fielderror> 
 	</span>

@@ -16,6 +16,7 @@
 		填写产品信息前，需要先填写企业信息		
 	</s:if>
 	
+	<span class="save_ok"  id="save_ok_msg" > 资料修改成功!</span>
     <form> 
        	<!--  Record enterprise ID --> 
        	<input id="enterpriseId" name="enterpriseId" type="hidden" value="<s:property value='enterpriseId'/>"/>

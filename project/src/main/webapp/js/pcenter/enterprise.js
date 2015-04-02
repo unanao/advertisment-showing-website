@@ -60,7 +60,7 @@ function setEnterprise() {
 			number:number,
 			introduction:introduction,
 		}, function(data) {
-			alert("资料修改成功"); 
+			document .getElementById ("save_ok_msg").style.display="block";
 			introduction();
 		});
 }

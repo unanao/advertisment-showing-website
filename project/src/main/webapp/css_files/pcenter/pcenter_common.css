@@ -71,13 +71,13 @@ table a{
 	margin-left:10%;
 }
 
-/* 修改基本信息 start */
+/* 锟睫改伙拷锟斤拷息 start */
 #female, #secret{
 	margin-left:30px;
 }
-/* 修改基本信息 end */
+/* 锟睫改伙拷锟斤拷息 end */
 
-/* 管理企业信息show_enterprise.jsp start */
+/* show_enterprise.jsp start */
 #thumb{
 	margin-left:20%;
 }
@@ -85,5 +85,11 @@ table a{
 #bottom_button_div
 {
 }
-/* 管理企业信息show_enterprise.jsp end */
+/* show_enterprise.jsp end */
 
+.save_ok {
+	margin-left:30%;
+	font-size:16px;
+	 color: green;
+	 display : none;
+}
