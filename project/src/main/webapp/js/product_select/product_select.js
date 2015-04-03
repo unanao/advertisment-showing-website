@@ -2,12 +2,7 @@
  * @Usage
  * 1 include jquery
  * 2 include product_select.js
- * 3 When page load call  loadProductCategoryDetail(categoryVal, detailVal, cateoryDef, detailDef)  
- *                                                                                       categoryVal : real category value
- *                                                                                       detailVal      : real detail value        
- *                                                                                       categoryDef: default category value
- *                                                                                       detailDef     : default detail value
- *    First select real value,  then default
+ * 3 When page load call  loadProductCategoryDetail(categoryVal, detailVal)  
  */
 
 function addDetail(detailVal) {
@@ -28,7 +23,7 @@ function addDetail(detailVal) {
 	}
 }
 
-function loadProductCategoryDetail(categoryVal, detailVal, cateoryDef, detailDef)
+function loadProductCategoryDetail(categoryVal, detailVal)
 {
 	var category = document.getElementById("category");
 	var detail = document.getElementById("detail");
@@ -37,23 +32,12 @@ function loadProductCategoryDetail(categoryVal, detailVal, cateoryDef, detailDef
 		category.options[i] = new Option(productArr[i].name, productArr[i].name);
 	}
 	
-	/* 获取实际的值， 如果已经有值， 直接使用传入的值， 如果没有值的话，使用缺省值*/
-	var categoryTmp = categoryVal;
-	if (null == categoryTmp) {
-		categoryTmp = cateoryDef;
-	}
-	
-	var detailTmp = detailVal;
-	if (null == detailTmp) {
-		detailTmp = detailDef;
-	}
-	
 	if (("" == categoryVal) || ("undefined" == typeof categoryVal) || (null == categoryVal)) {
 	    $("#category").val("请选择");
 	}
 	else {
 		 $("#category").val(categoryVal);
-		 addDetail(detailTmp);
+		 addDetail(detailVal);
 	}
 }
 

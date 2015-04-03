@@ -1,6 +1,6 @@
 /* init for page loading*/
 $(function() {
-	loadProductCategoryDetail("请选择", "请选择", null, null);
+	loadProductCategoryDetail("请选择", "请选择");
 	
 	return productCheck();
 });
@@ -30,7 +30,7 @@ function displayProduct(productId) {
 		$("#productId").val(productId);
 		$("#enterpriseId").val(data.enterprise.id);
 		$("#name").val(data.product.name);
-		loadProductCategoryDetail(data.product.category, data.product.detail, null, null);
+		loadProductCategoryDetail(data.product.category, data.product.detail);
 		$("#introduction").val(data.product.introduction);
 		$("<img/>").attr("src", data.product.icon).appendTo("#icon");
 		
