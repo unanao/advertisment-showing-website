@@ -12,7 +12,8 @@ function dispalyEnterpriseInfo() {
 	    async : false  
 	}); 
 	
-	$.getJSON("pcenter/showEnterprise", function(data) {
+	var id = getUrlParam('enterpriseId');
+	$.getJSON("enterprise/showEnterpriseAjax", {enterpriseId : id}, function(data) {
 		document .getElementById ("contacter").innerHTML = data.phone.contacter;
 		document.getElementById("number").innerHTML = data.phone.number;
     });

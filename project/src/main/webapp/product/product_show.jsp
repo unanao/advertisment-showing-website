@@ -14,6 +14,7 @@
 		<script type="text/javascript" src="library/jquery/jquery.js"></script>
 		<script type="text/javascript" src='js/image_auto_resize/autoresize_image.js'></script>	
 		<script type="text/javascript" src="js/photo_switch_show.js"></script>	
+		<script type="text/javascript" src="js/common/url.js"></script>
 		<script type="text/javascript" src="js/product/product_show.js"></script>
 	</head>
 	<body>
