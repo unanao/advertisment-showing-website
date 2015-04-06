@@ -1,3 +1,9 @@
+$(document).delegate('#u198', 'change', function() {
+	var enterpriseId = $('#enterpriseId').val();
+	deal_new_picture('productId','pcenter/saveProductPicture',
+            'pcenter/pubProductPicture','pcenter/deleteProductPicture','icon',this)
+});
+
 /* init for page loading*/
 $(function() {
 	loadProductCategoryDetail("请选择", "请选择");
@@ -27,7 +33,7 @@ function displayProduct(productId) {
 	}
 	
 	$.getJSON("product/showProductAjax", {productId: productId},  function(data) {
-		$("#productId").val(productId);
+		$("#productId").val(data.product.id);
 		$("#enterpriseId").val(data.enterprise.id);
 		$("#name").val(data.product.name);
 		loadProductCategoryDetail(data.product.category, data.product.detail);
