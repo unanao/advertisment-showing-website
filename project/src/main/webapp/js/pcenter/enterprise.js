@@ -1,5 +1,6 @@
 
 $(document).delegate('#u198', 'change', function() {
+	var enterpriseId = $('#enterpriseId').val();
 	deal_new_picture('enterpriseId','pcenter/saveEnterprisePicture',
         'pcenter/pubEnterprisePicture','pcenter/deleteEnterprisePicture','logo',this);
 });
@@ -17,7 +18,7 @@ function dispalyEnterprise() {
 	}); 
 	
 	$.getJSON("pcenter/showEnterprise", function(data) {
-		$('#enterpriseId').val(data.enterpriseId)
+		$('#enterpriseId').val(data.enterprise.id)
 		$("#name").val(data.enterprise.name);
 		loadProvinceCity(data.enterprise.province, data.enterprise.city, data.enterprise.county, "山东", "临沂");
 		$("#address").val(data.enterprise.address);
