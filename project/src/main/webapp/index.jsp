@@ -216,10 +216,7 @@
         已有<s:property value="#product.hits"/>人收藏
         <a class=btn-coll>我要收藏</a>
       </div>
- -->
- 	 <div class="extra">
-        <s:property value="#product.name"/>
-      </div>
+-->
     </li>
 
   </s:iterator>
@@ -250,9 +247,6 @@
         <a class=btn-coll>我要收藏</a>
       </div>
       -->
-     <div class="extra">
-        <s:property value="#product.name"/>
-      </div>
     </li>
   </s:iterator>
     <s:iterator value="displayProducts" id="product" status="status" begin="12" end="17">
@@ -281,9 +275,6 @@
         <a class=btn-coll>我要收藏</a>       
       </div>
        -->
-     <div class="extra">
-        <s:property value="#product.name"/>
-      </div>
     </li>
   </s:iterator>
     <s:iterator value="displayProducts" id="product" status="status" begin="18" end="23">
@@ -312,9 +303,6 @@
         <a class=btn-coll>我要收藏</a>       
       </div>
       -->
-     <div class="extra">
-        <s:property value="#product.name"/>
-      </div>
     </li>
   </s:iterator>
     <s:iterator value="displayProducts" id="product" status="status" begin="24" end="29">
@@ -343,9 +331,6 @@
         <a class=btn-coll>我要收藏</a>       
       </div>
        -->
-     <div class="extra">
-        <s:property value="#product.name"/>
-      </div>
     </li>
   </s:iterator>
     <s:iterator value="displayProducts" id="product" status="status" begin="30" end="35">
@@ -374,9 +359,6 @@
         <a class=btn-coll>我要收藏</a>       
       </div>
        -->
-     <div class="extra">
-        <s:property value="#product.name"/>
-      </div>
     </li>
   </s:iterator>
     <s:iterator value="displayProducts" id="product" status="status" begin="36" end="41">
@@ -405,9 +387,6 @@
         <a class=btn-coll>我要收藏</a>       
       </div>
       -->
-     <div class="extra">
-        <s:property value="#product.name"/>
-      </div>
     </li>
   </s:iterator>
   

@@ -17,6 +17,11 @@
 	</p>
 	<p>
 	
+	<!-- Record productId -->
+	<input id="fileId" name="id" type="hidden" value="-1"/>
+	<input id="enterpriseId" name="enterpriseId" type="hidden" />
+	<input id="productId" name="productId" type="hidden"/>
+	
 	<span class="save_ok"  id="save_ok_msg" > 资料修改成功!</span>
 	
 	<span id="ename" class="common_error" style="position:relative; left:20%"> 
@@ -60,20 +65,7 @@
 
 		<p>         
 	        <label class="form_label">上传照片</label>
-	        
-	        <!--  这部分只需要保留inpunt。
-	                 javascript 在 product.js 中处理， 请使用ajax完成， 不然没有办法保证， 修改后直接可见。
-	      		     完成后， 请将此处代码删除。
-	        <INPUT id=u198  type="file" name="file" value="浏览"   onchange="deal_new_picture('productId','pcenter/saveProductPicture',
-	            'pcenter/pubProductPicture','pcenter/deleteProductPicture','icon',this)" /> 
-	          -->
-	          <INPUT id=u198  type="file" name="file" value="浏览" /> 
-	              
-	        <input id="fileId" name="id" type="hidden" value="-1"/>
-	        
-	        <input id="enterpriseId" name="enterpriseId" type="hidden" />
-			<input id="productId" name="productId" type="hidden"/>
-
+	         <INPUT id=u198  type="file" name="file" value="浏览" /> 
 	        <span style="font-size:10px;">最多可传5张图片</span>
         </p>
         
