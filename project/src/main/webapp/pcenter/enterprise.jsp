@@ -100,8 +100,7 @@
          <%--上传多张图片开始--%>
          <p>
          	<label class="form_label">封面</label>
-         	<div id="logo"></div> <!-- for log display -->
-         </p>
+         	<img id="logo"/> <!-- for log display -->
 		<p>         
 	        <label class="form_label">上传照片</label>
 	        

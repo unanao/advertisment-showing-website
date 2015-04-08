@@ -31,6 +31,7 @@ function dispalyEnterprise() {
 		
 		/* example: http://www.w3school.com.cn/jquery/ajax_getjson.asp */
 		 $.each(data.enterprisePictureMap, function(i,item){
+			 	alert(item);
 			    deal_return_picture(item.key, item.path, 
                  "enterpriseId", 'pcenter/pubEnterprisePicture', 'pcenter/deleteEnterprisePicture', 'logo');
 		 });
