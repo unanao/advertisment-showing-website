@@ -4,16 +4,24 @@
 */
 /* init for page loading*/
 $(function() {
-	dispalyEnterpriseInfo();
+	dispalyProuduct();
 });
 
-function dispalyEnterpriseInfo() {
+function displayEnterpriseInfo(enterpriseId) {
+	$.getJSON("enterprise/showEnterpriseAjax", {enterpriseId : enterpriseId}, function(data) {
+		document .getElementById ("contacter").innerHTML = data.phone.contacter;
+		document.getElementById("number").innerHTML = data.phone.number;
+    });
+}
+
+function dispalyProuduct() {
 	$.ajaxSetup({  
 	    async : false  
 	}); 
 	
-	$.getJSON("pcenter/showEnterprise", function(data) {
-		document .getElementById ("contacter").innerHTML = data.phone.contacter;
-		document.getElementById("number").innerHTML = data.phone.number;
+	var productId = getUrlParam('productId');
+	
+	$.getJSON("product/showProductAjax", {productId : productId}, function(data) {
+		displayEnterpriseInfo(data.enterprise.id);
     });
 }
