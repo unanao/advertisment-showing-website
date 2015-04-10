@@ -7,6 +7,7 @@ var PIC_ALLOWED_TYPE_REGEX = "jpg|jpeg|gif|png|bmp";
 
 
 function browser_detect() {
+/*
 	if ($.browser.msie)
 		return "IE" + $.browser.version.toString();
 		
@@ -18,7 +19,7 @@ function browser_detect() {
 		return "Opera";
 	if ($.browser.chrome)
 		return "Chrome";
-
+*/
 	return "other";
 }
 
@@ -144,11 +145,7 @@ function get_file_url() {
 
 
 function deal_return_picture(id, file_url, typeId, pub_url, del_url, targetId) {
-	if (count >= MAX_PIC_NUMBER) {
-		return;
-	}
 	selected_photo_thumb(id, file_url, typeId, pub_url, del_url, targetId);
-	count++;
 }
 
 function deal_new_picture(typeId, upload_url, pub_url, del_url, targetId,

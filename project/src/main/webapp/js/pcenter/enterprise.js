@@ -1,3 +1,4 @@
+//var MAX_PIC_NUMBER = 5;
 
 $(document).delegate('#u198', 'change', function() {
 	var enterpriseId = $('#enterpriseId').val();
@@ -26,13 +27,15 @@ function dispalyEnterprise() {
 		$("#contacter").val(data.phone.contacter);
 		$("#number").val(data.phone.number);
 		$("#introduction").val(data.enterprise.introduction);
-		$("<img/>").attr("src", data.enterprise.logo).appendTo("#logo");
-		
+		$("#logo").attr("src", data.enterprise.logo).appendTo("#logo");
 		
 		/* example: http://www.w3school.com.cn/jquery/ajax_getjson.asp */
-		 $.each(data.enterprisePictureMap, function(i,item){
-			 	alert(item);
-			    deal_return_picture(item.key, item.path, 
+		 $.each(data.enterprisePictureMap, function(key, item){
+			 	if (key >= MAX_PIC_NUMBER) {
+			 		return;
+			    }
+			 	
+			    deal_return_picture(key, item.path, 
                  "enterpriseId", 'pcenter/pubEnterprisePicture', 'pcenter/deleteEnterprisePicture', 'logo');
 		 });
     });
