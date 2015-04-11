@@ -66,7 +66,6 @@ function setEnterprise() {
 			introduction:introduction,
 		}, function(data) {
 			document .getElementById ("save_ok_msg").style.display="block";
-			introduction();
 		});
 }
 

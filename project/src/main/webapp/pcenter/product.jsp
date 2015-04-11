@@ -11,22 +11,20 @@
 	<script type="text/javascript" src="js/pcenter/product.js"></script>
 	
 	<s:fielderror> <s:param> productId </s:param> </s:fielderror> 
+	
 	<!-- 输出系统的Action Error提示 -->
-	<p>	   
-	   <div class="common_error"> <s:actionerror /> </div>
-	</p>
-	<p>
+	<div class="common_error"> 	<p> <s:actionerror /></p> </div>
 	
 	<!-- Record productId -->
 	<input id="fileId" name="id" type="hidden" value="-1"/>
-	<input id="enterpriseId" name="enterpriseId" type="hidden" />
 	<input id="productId" name="productId" type="hidden"/>
 	
 	<span class="save_ok"  id="save_ok_msg" > 资料修改成功!</span>
 	
-	<span id="ename" class="common_error" style="position:relative; left:20%"> 
-		<s:fielderror> <s:param> name </s:param> </s:fielderror> 
-	</span>
+	<p>
+		<span id="ename" class="common_error" style="position:relative; left:20%"> 
+			<s:fielderror> <s:param> name </s:param> </s:fielderror> 
+		</span>
 	</p>
 	 
 	<p>
@@ -60,12 +58,12 @@
          <%--上传多张图片开始--%>
          <p>
          	<label class="form_label">封面</label>
-         	 <div id="icon"></div>
+         	 <img id="icon"></img>
          </p>
 
 		<p>         
 	        <label class="form_label">上传照片</label>
-	         <INPUT id=u198  type="file" name="file" value="浏览" /> 
+	         <INPUT id="u198"  type="file" name="file" value="浏览" /> 
 	        <span style="font-size:10px;">最多可传5张图片</span>
         </p>
         
@@ -73,18 +71,9 @@
 	                <ul  id="thumb_list">
 	                    <%--此处由javascript控制动态显示图片缩略图--%>		
 	                </ul>
-	        </div>
-	        
-	        <!--   这部分 javascript 在 product.js 中处理， 请使用ajax完成， 不然没有办法保证， 修改后直接可见。
-	      		     完成后， 请将此处代码删除。
-			  <s:iterator value="productPictureMap" id="id" status="st">
-            <script type="text/javascript" >
-                deal_return_picture("<s:property value='key'/>","<s:property value='value.path'/>","productId",'pcenter/pubProductPicture','pcenter/deleteProductPicture','icon');
-            </script>
-           </s:iterator>	
-           -->
-           	
+	        </div>   	
         <%--上传多张图片结束--%>  
+        
         <div style="clear:both;"></div>     
         <div id="bottom_button_div">
         	<button id="submit" class="btn" type="button" value="提交"  onclick="setProduct()">提交</button>

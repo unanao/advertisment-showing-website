@@ -32,13 +32,11 @@
             <result name="success">/pcenter/new_product.jsp</result>  
             <result name="input">upload.jsp</result>  
         </action>
-       
-        <action name="updateProductPage" class="com.bancai.web.pcenter.UpdateProductPageAction">  
-            <result name="success">product.jsp</result>  
-            <result name="input">upload.jsp</result>  
-        </action>
-   -->
-   
+   		 -->    
+    <action name="showProduct" class="com.bancai.web.pcenter.UpdateProductPageAction">  
+    	<result name="success" type="json"></result>
+    </action>
+         
 	<action name="updateProduct" class="com.bancai.web.pcenter.UpdateProductAction">  
 		<result name="success" type="json"></result>
 	</action> 
@@ -121,11 +119,8 @@
 		</action> 
 		
 		<!-- 用户信息汇总，用户进入pcenter时显示的内容 -->
-		<action name="personalSummary" 
-				class="com.bancai.web.pcenter.PersonalSummaryAction">
-			<result name="success"> pindex.jsp </result>
-			<result name="error"> /error/403.jsp </result>
-			<result name="input"> /accounts/login.jsp </result>
+		<action name="personalSummary"  class="com.bancai.web.pcenter.PersonalSummaryAction">
+			<result name="success" type="json"></result>
 		</action> 
         
 	</package>
