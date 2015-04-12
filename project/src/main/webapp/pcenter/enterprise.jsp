@@ -16,9 +16,11 @@
 		填写产品信息前，需要先填写企业信息		
 	</s:if>
 	
+	<span class="save_ok"  id="save_ok_msg" > 资料修改成功!</span>
+	
     <form> 
        	<!--  Record enterprise ID --> 
-       	<input id="enterpriseId" name="enterpriseId" type="hidden" value="<s:property value='enterpriseId'/>"/>
+       	<input id="enterpriseId" name="enterpriseId" type="hidden"/>
        	 
        	<!-- 企业名称 -->
        	<p>
@@ -49,7 +51,6 @@
        	<p>
        		<label class="form_label">详细地址</label>
        		<input id="address" name="address" class="form_input" type="text">
-       		
        	</p>
 
 		<!-- 规模 -->
@@ -99,39 +100,20 @@
          <%--上传多张图片开始--%>
          <p>
          	<label class="form_label">封面</label>
-         	<div id="logo"></div> <!-- for log display -->
+         	<img id="logo"/> <!-- for log display -->
          </p>
+ 
 		<p>         
-	        <label class="form_label">上传照片</label>
-	        
-	        <!--  这部分 javascript 在 enterprise.js 中处理， 请使用ajax完成， 不然没有办法保证， 修改后直接可见。
-	      		     完成后， 请将此处代码删除。
-	         <INPUT id=u198  type="file" name="file" value="浏览" 
-	        	onchange="deal_new_picture('enterpriseId','pcenter/saveEnterprisePicture',
-	        	'pcenter/pubEnterprisePicture','pcenter/deleteEnterprisePicture','logo', this)"/>
-	        -->	
+	         <label class="form_label">上传照片</label>
 	         <INPUT id="u198"  type="file" name="file" value="浏览"/>
 	         
 	        <input id="fileId" name="id" type="hidden" value="-1"/>
-
 	        <span style="font-size:10px;">最多可传5张图片</span>
         </p>
  
-	         <div id="thumb" class="thumb" >
-	         	
-	                <ul  id="thumb_list">
-	                    <%--此处由javascript控制动态显示图片缩略图--%>		
-	                </ul>
-	        </div>
-	      
-	      	<!--   这部分 javascript 在 enterprise.js 中处理， 请使用ajax完成， 不然没有办法保证， 修改后直接可见。
-	      		     完成后， 请将此处代码删除。
-			  <s:iterator value="enterprisePictureMap" id="id" status="st">
-				  <script type="text/javascript" >
-				      deal_return_picture("<s:property value='key'/>","<s:property value='value.path'/>","enterpriseId",'pcenter/pubEnterprisePicture','pcenter/deleteEnterprisePicture','logo');
-				  </script>
-			  </s:iterator>	
-		    -->
+ 		<div id="thumb" class="thumb" >       	
+	   		<ul  id="thumb_list"> <%--此处由javascript控制动态显示图片缩略图--%></ul>
+    	</div>
 			
         <%--上传多张图片结束--%>
         <br>

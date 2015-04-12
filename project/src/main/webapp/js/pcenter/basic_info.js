@@ -34,9 +34,7 @@ function displayBasicInfo() {
 function setBasicInfo() {
 	var nickName = $("#nickName").val();
 	var name = $("#name").val();
-//	var gender = $("#gender").val();
 	var gender = $("input[name='gender']:checked").val();
-//	alert(gender);
 	var officePhone = $("#officePhone").val();
 	var mobile = $("#mobile").val();
 	var qq = $("#qq").val();
@@ -49,8 +47,7 @@ function setBasicInfo() {
 		mobile : mobile,
 		qq : qq,
 	}, function(data) {
-		alert("资料修改成功"); 
-		displayBasicInfo();
+		document .getElementById ("save_ok_msg").style.display="block";
 	});
 }
 

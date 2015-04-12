@@ -1,5 +1,7 @@
+//var MAX_PIC_NUMBER = 5;
 
 $(document).delegate('#u198', 'change', function() {
+	var enterpriseId = $('#enterpriseId').val();
 	deal_new_picture('enterpriseId','pcenter/saveEnterprisePicture',
         'pcenter/pubEnterprisePicture','pcenter/deleteEnterprisePicture','logo',this);
 });
@@ -17,7 +19,7 @@ function dispalyEnterprise() {
 	}); 
 	
 	$.getJSON("pcenter/showEnterprise", function(data) {
-		$('#enterpriseId').val(data.enterpriseId)
+		$('#enterpriseId').val(data.enterprise.id)
 		$("#name").val(data.enterprise.name);
 		loadProvinceCity(data.enterprise.province, data.enterprise.city, data.enterprise.county, "山东", "临沂");
 		$("#address").val(data.enterprise.address);
@@ -25,12 +27,15 @@ function dispalyEnterprise() {
 		$("#contacter").val(data.phone.contacter);
 		$("#number").val(data.phone.number);
 		$("#introduction").val(data.enterprise.introduction);
-		$("<img/>").attr("src", data.enterprise.logo).appendTo("#logo");
-		
+		$("#logo").attr("src", data.enterprise.logo).appendTo("#logo");
 		
 		/* example: http://www.w3school.com.cn/jquery/ajax_getjson.asp */
-		 $.each(data.enterprisePictureMap, function(i,item){
-			    deal_return_picture(item.key, item.path, 
+		 $.each(data.enterprisePictureMap, function(key, item){
+			 	if (key >= MAX_PIC_NUMBER) {
+			 		return;
+			    }
+			 	
+			    deal_return_picture(key, item.path, 
                  "enterpriseId", 'pcenter/pubEnterprisePicture', 'pcenter/deleteEnterprisePicture', 'logo');
 		 });
     });
@@ -60,8 +65,7 @@ function setEnterprise() {
 			number:number,
 			introduction:introduction,
 		}, function(data) {
-			alert("资料修改成功"); 
-			introduction();
+			document .getElementById ("save_ok_msg").style.display="block";
 		});
 }
 

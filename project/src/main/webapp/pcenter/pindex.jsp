@@ -114,6 +114,8 @@
     </li>
   </ul>
 <%-- product end --%>  
+
+<!--
        <span class="label badge-info margin5 font16 padding58">
           我的收藏
         </span>
@@ -149,6 +151,7 @@
       </div>
     </li>
   </ul>
+--> 
   
 </div>
 </div>

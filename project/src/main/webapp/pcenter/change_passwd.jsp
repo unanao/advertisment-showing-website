@@ -9,6 +9,9 @@
 <div class="blank"></div>
 <form class="form-horizontal">
 	<div class="control-group">
+		
+		<span class="save_ok"  id="save_ok_msg" > 资料修改成功!</span>
+		
 		<p>
 			<span id="eoldPassword" class="common_error"> <s:fielderror>
 					<s:param> oldPassword </s:param>

@@ -5,8 +5,9 @@ var id_name = null;//ajaxFileUpload时会用此变量回显上传的文件
 var MAX_PIC_SIZE = 5 * 1024 * 1024;//5MB
 var PIC_ALLOWED_TYPE_REGEX = "jpg|jpeg|gif|png|bmp";
 
-/*
+
 function browser_detect() {
+/*
 	if ($.browser.msie)
 		return "IE" + $.browser.version.toString();
 		
@@ -18,10 +19,10 @@ function browser_detect() {
 		return "Opera";
 	if ($.browser.chrome)
 		return "Chrome";
-
+*/
 	return "other";
 }
-*/
+
 
 //限制图片上传大小以及格式
 function checkFile(fileInput) {
@@ -144,11 +145,7 @@ function get_file_url() {
 
 
 function deal_return_picture(id, file_url, typeId, pub_url, del_url, targetId) {
-	if (count >= MAX_PIC_NUMBER) {
-		return;
-	}
 	selected_photo_thumb(id, file_url, typeId, pub_url, del_url, targetId);
-	count++;
 }
 
 function deal_new_picture(typeId, upload_url, pub_url, del_url, targetId,
@@ -159,11 +156,11 @@ function deal_new_picture(typeId, upload_url, pub_url, del_url, targetId,
 		if (!checkFile(fileInput)) {
 			return;
 		}
-/*		selected_photo_thumb(num, get_file_url(), typeId, pub_url, del_url,
+		selected_photo_thumb(num, get_file_url(), typeId, pub_url, del_url,
 				targetId);
-				*/
-		selected_photo_thumb(num, null, typeId, pub_url, del_url,
-				targetId);				
+				
+		/*	selected_photo_thumb(num, null, typeId, pub_url, del_url,
+				targetId);	*/			
 		ajaxFileUpload(num, typeId, upload_url);
 		num++;
 		count++;

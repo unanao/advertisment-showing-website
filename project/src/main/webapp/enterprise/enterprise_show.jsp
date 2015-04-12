@@ -13,6 +13,8 @@
 		<script type="text/javascript" src="library/jquery/jquery.js"></script>
 		<script type="text/javascript" src='js/image_auto_resize/autoresize_image.js'></script>		
 		<script type="text/javascript" src="js/photo_switch_show.js"></script>	
+		<script type="text/javascript" src="js/common/url.js"></script>			
+		<script type="text/javascript" src="js/enterprise/enterprise_show.js"></script>	
 	</head>	
 	<body>
 	  <%@ include file="../includefiles/navigate.jsp" %>
@@ -59,35 +61,17 @@
 				<th>企业规模：</th>
 				<%--请后台提供企业规模--%>
 				<td><s:property value="enterprise.scale"/></td>
-			</tr>	      
-	      <tr>
-	        <th>
-	          联系人：
-	        </th>
-	        <%--请后台提供联系人--%>
-	        <td>
-	          <a 
-	              href="enterprise/showEnterprise?enterpriseId=<s:property value='enterprise.id'/>"
-	              style="text-decoration:underline;">
-	
-	            <s:property value="enterprise.name"/>
-	          </a>
-	        </td>
-	      </tr>
-	      <tr>
-	        <th>
-	          联系电话：
-	        </th>
-	        <%--请后台提供电话--%>
-	        <td>
-	          <a 
-	              href="enterprise/showEnterprise?enterpriseId=<s:property value='enterprise.id'/>"
-	              style="text-decoration:underline;">
-	
-	            <s:property value="enterprise.name"/>
-	          </a>
-	        </td>
-	      </tr>
+			</tr>
+
+		<tr>
+	        <th> 联系人：</th>
+	        <td id="contacter"></td>
+	    </tr>
+	      
+	    <tr>
+	        <th>联系电话：</th>
+	        <td  id="number"></td>
+		</tr>
 	    </table>
 	  </div>
 	  <%-- 文字信息列表end --%>	  

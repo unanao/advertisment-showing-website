@@ -1,19 +1,14 @@
-/* init for page loading*/
-$(function() {
-	return productCheck();
+$(document).delegate('#u198', 'change', function() {
+	deal_new_picture('productId','pcenter/saveProductPicture',
+            'pcenter/pubProductPicture', 'pcenter/deleteProductPicture', 'icon', this)
 });
 
-function getUrlParam(name) {  
-    //构造一个含有目标参数的正则表达式对象  
-    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");  
-    //匹配目标参数  
-    var r = window.location.search.substr(1).match(reg);  
-    //返回参数值  
-    if (r != null)
-    	return unescape(r[2]);
-    
-    return null;  
-}  
+/* init for page loading*/
+$(function() {
+	loadProductCategoryDetail("请选择", "请选择");
+	
+	return productCheck();
+});
 
 function displayProduct(productId) {
 	$.ajaxSetup({  
@@ -24,17 +19,20 @@ function displayProduct(productId) {
 		return ;
 	}
 	
-	$.getJSON("product/showProductAjax", {productId: productId},  function(data) {
-		$("#productId").val(productId);
-		$("#enterpriseId").val(data.enterprise.id);
+	$.getJSON("pcenter/showProduct", {productId: productId},  function(data) {
+		$("#productId").val(data.product.id);
 		$("#name").val(data.product.name);
-		loadProductCategoryDetail(data.product.category, data.product.detail, null, null);
+		loadProductCategoryDetail(data.product.category, data.product.detail);
 		$("#introduction").val(data.product.introduction);
-		$("<img/>").attr("src", data.product.icon).appendTo("#icon");
+		$("#icon").attr("src", data.product.icon).appendTo("#icon");
 		
 		/* example: http://www.w3school.com.cn/jquery/ajax_getjson.asp */
-		 $.each(data.productPictureMap, function(i, item){   
-			    deal_return_picture(item.key, item.path, 
+		 $.each(data.productPictureMap, function(key, item){
+			 	if (key >= MAX_PIC_NUMBER) {
+			 		return;
+			    }
+			 	
+			    deal_return_picture(key, item.path, 
 			    		"productId", 'pcenter/pubProductPicture','pcenter/deleteProductPicture','icon');
 		 });
     });
@@ -53,7 +51,7 @@ function setProduct() {
 		detail : detail,
 		introduction : introduction,
 	}, function(data) {
-		alert("资料修改成功");
+		document .getElementById ("save_ok_msg").style.display="block";
 	});
 }
 

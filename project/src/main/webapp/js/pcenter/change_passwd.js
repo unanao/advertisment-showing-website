@@ -8,7 +8,7 @@ function changePassword() {
 		newPassword : newPassword,
 		passwordConfirm : passwordConfirm,
 	}, function(data) {
-		alert("密码修改成功"); 
+		document .getElementById ("save_ok_msg").style.display="block";
 	});
 }
 
