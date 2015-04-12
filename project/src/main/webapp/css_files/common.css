@@ -267,6 +267,13 @@ a:link,a:visited {
 /* left.jsp 导航栏使用样式end */
 
 /* 基本边距  */
+.mglp10{
+	margin-left:10%;
+}
+
+.mglp20{
+	margin-left:20%;
+}
 .mg10{
 	margin:10px;
 }

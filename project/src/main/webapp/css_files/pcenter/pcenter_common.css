@@ -25,6 +25,17 @@ table a{
 	width:20%;
 }
 /*province,city  style end*/
+
+/*change_passwd.jsp style start*/
+#submit_changepasswd{
+	margin-left:10%;
+}
+#cancel_changepasswd{
+	margin-left:10%;
+}
+/*change_passwd.jsp style end*/
+
+
 .pcheader{
   padding-bottom: 0px;
   margin: 10px 0 10px;

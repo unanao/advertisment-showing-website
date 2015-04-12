@@ -8,7 +8,7 @@
 
 <div class="blank"></div>
 <form class="form-horizontal">
-	<div class="control-group">
+	<div class="control-group mglp10">
 		
 		<span class="save_ok"  id="save_ok_msg" > 资料修改成功!</span>
 		
@@ -26,7 +26,7 @@
 		</div>
 	</div>
 
-	<div class="control-group">
+	<div class="control-group mglp10">
 		<span id="enewPassword" class="common_error"> <s:fielderror>
 				<s:param> newPassword </s:param>
 			</s:fielderror>
@@ -38,7 +38,7 @@
 		</div>
 	</div>
 
-	<div class="control-group">
+	<div class="control-group mglp10">
 		<span id="epasswordConfirm" class="common_error"> <s:fielderror>
 				<s:param> passwordConfirm </s:param>
 			</s:fielderror> 
@@ -51,8 +51,8 @@
 	</div>
 	<div class="control-group">
 		<div class="controls">
-			<button class="btn" id="submit" onclick="changePassword()">保存</button>
-			<button class="btn" id="cancel" type="reset">取消</button>
+			<button class="btn" id="submit_changepasswd" onclick="changePassword()">保存</button>
+			<button class="btn" id="cancel_changepasswd" type="reset">取消</button>
 		</div>
 	</div>
 </form>
