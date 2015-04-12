@@ -82,9 +82,7 @@
 	          联系电话：
 	        </th>
 	        <%--请后台提供电话--%>
-	        <td >
-	          	<div id="number"> </div>
-	        </td>
+	        <td id="phonenumber"></td>
 	      </tr>
 	      <tr>
 	        <th>

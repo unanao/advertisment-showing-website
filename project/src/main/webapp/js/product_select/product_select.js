@@ -52,6 +52,7 @@ function loadProductCategoryDetail(categoryVal, detailVal, cateoryDef, detailDef
 	
 	if (("" == categoryVal) || ("undefined" == typeof categoryVal) || (null == categoryVal)) {
 	    $("#category").val("请选择");
+	    addDetail();
 	}
 	else {
 		 $("#category").val(categoryVal);
@@ -63,6 +64,9 @@ function loadProductCategoryDetail(categoryVal, detailVal, cateoryDef, detailDef
  * Add change event
  * Function of "delegate" is more efficiency than "bind"  
  */
+
+
+loadProductCategoryDetail();
 $(document).delegate('#category', 'change', function() {
    	 addDetail();
 });

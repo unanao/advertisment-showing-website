@@ -15,7 +15,7 @@ function dispalyEnterpriseInfo() {
 	var table=document .getElementById ("show_info");
 	
 	$.getJSON("pcenter/showEnterprise", function(data) {
-		document .getElementById ('contacter').html(data.phone.contacter);
-		document.getElementById("number").innerHTML(data.phone.number);
+		document .getElementById ("contacter").text(data.phone.contacter);
+		document.getElementById("phonenumber").text(data.phone.number);
     });
 }

@@ -23,8 +23,11 @@
 	<script type="text/javascript" src="js/pcenter/pcenter_navigator_switch.js"></script>
 	
 	<script type="text/javascript" src="js/ajaxfileupload.js"></script>
-    <script type="text/javascript" src="js/local_preview.js"></script> 
+    <script type="text/javascript" src="js/local_preview.js"></script>
+    
+    <%-- for product page --%>
 
+	
 	</head>
 	<body>
 		<!--navigator start-->		

@@ -3,12 +3,9 @@
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <base href="<%= request.getScheme() + "://" + request.getServerName() + ":" 
 				+ request.getServerPort() + request.getContextPath() %>/" />		
-				
-	<link rel="stylesheet" type="text/css" href="css_files/form.css" />
-
-	<script type="text/javascript" src="js/product_select/product_category.js"></script>
+    <script type="text/javascript" src="js/product_select/product_category.js"></script>
 	<script type="text/javascript" src="js/product_select/product_select.js"></script>
-	<script type="text/javascript" src="js/pcenter/product.js"></script>
+	<script type="text/javascript" src="js/pcenter/product.js"></script> 
 	
 	<s:fielderror> <s:param> productId </s:param> </s:fielderror> 
 	<!-- 输出系统的Action Error提示 -->
