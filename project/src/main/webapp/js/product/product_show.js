@@ -20,7 +20,7 @@ function dispalyProuduct() {
 	}); 
 	
 	var productId = getUrlParam('productId');
-	
+
 	$.getJSON("product/showProductAjax", {productId : productId}, function(data) {
 		displayEnterpriseInfo(data.enterprise.id);
     });

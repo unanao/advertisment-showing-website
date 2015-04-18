@@ -45,6 +45,8 @@ function loadProductCategoryDetail(categoryVal, detailVal)
  * Add change event
  * Function of "delegate" is more efficiency than "bind"  
  */
+
+
 $(document).delegate('#category', 'change', function() {
    	 addDetail();
 });

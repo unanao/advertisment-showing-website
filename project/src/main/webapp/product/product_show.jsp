@@ -81,12 +81,11 @@
 	        <td id="number"></td>
 	     </tr>
 	     
-	     <%--  FIXME: Not accomplish
+	     <%-- FIXME: Not accomplish
 	     <tr>
 	      	<th> 点击数：</th>
 	        <td> </td>
-	      </tr>
-	      
+	      </tr>	      
 		<tr>
 	    	<th> 收藏数：</th>
 	        <td></td>
