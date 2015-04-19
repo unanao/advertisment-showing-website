@@ -17,11 +17,19 @@ function dispalyEnterprise() {
 	$.ajaxSetup({  
 	    async : false  
 	}); 
-	
+
 	$.getJSON("pcenter/showEnterprise", function(data) {
+		loadProvinceCity(data.enterprise.province, data.enterprise.city, data.enterprise.county, "山东", "临沂");
+		
+		if (null == data.enterprise.id) {
+			$('#enterpriseId').val(-1);
+			
+			return;
+		}
+		
 		$('#enterpriseId').val(data.enterprise.id)
 		$("#name").val(data.enterprise.name);
-		loadProvinceCity(data.enterprise.province, data.enterprise.city, data.enterprise.county, "山东", "临沂");
+	
 		$("#address").val(data.enterprise.address);
 		$("#scale").val(data.enterprise.scale);
 		$("#contacter").val(data.phone.contacter);

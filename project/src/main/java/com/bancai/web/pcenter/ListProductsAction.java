@@ -18,7 +18,7 @@ public class ListProductsAction extends BaseAction{
 	public String execute(){
 		Integer enterpriseId = getEnterpriseId();
 		if(enterpriseId == null || enterpriseId == BancaiConstants.DEFAULT_ID){
-			return INPUT;
+			return SUCCESS;
 		}
 		
 		products = new ProductService().getAllProductsByEnterpriseId(enterpriseId);

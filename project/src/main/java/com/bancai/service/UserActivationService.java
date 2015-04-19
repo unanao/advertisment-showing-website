@@ -41,6 +41,10 @@ public class UserActivationService implements AccountsContants, CommonConstants 
 	private Integer getPrimaryKeyByforeignKey(Integer foreignKey)
 			throws RuntimeException {
 		userActivation = getUserActivationByUserId(foreignKey);
+		if (null == userActivation) {
+			return -1;
+		}
+			
 
 		return userActivation.getId();
 	}
@@ -130,6 +134,9 @@ public class UserActivationService implements AccountsContants, CommonConstants 
 			throws RuntimeException {
 		if (true == isActivateCodeExist(userId)) {
 			Integer activationId = getPrimaryKeyByforeignKey(userId);
+			if (-1 == activationId) {
+				return;
+			}
 			
 			userActivationDao.deleteByPrimaryKeyNoTranscation(activationId);
 		}

@@ -59,7 +59,7 @@
 
     <span class="label badge-info margin5 font16 padding58"> 我的产品 </span>
     <ul id = "product_info" class="thumbnails"></ul>
-    <span class ="no_content_msg" id="no_product_msg"  style="color:green;display:none"> 
+    <span class ="no_content_msg" id="no_product_msg"  style="color:green"> 
     	您目前没有产品信息
     </span>
 </div>
