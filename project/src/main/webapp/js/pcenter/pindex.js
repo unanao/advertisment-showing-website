@@ -13,13 +13,7 @@ function dispalyEnterprise() {
 	var enterprise_id = -1;
 	
 	$.getJSON("pcenter/showEnterprise", function(data) {
-		
 		enterprise_id = data.enterprise.id;
-		if (-1 != enterprise_id){
-			document .getElementById ("enterprise_info").style.display="block";
-			document .getElementById ("no_enterprise_msg").style.display="none";
-		}
-		
 		document .getElementById ("enterpriseName").innerHTML = data.enterprise.name;
 		document .getElementById ("location").innerHTML = data.enterprise.province + 
 		                              								data.enterprise.city + data.enterprise.county;
@@ -30,6 +24,11 @@ function dispalyEnterprise() {
 		document .getElementById ("introduction").innerHTML = data.enterprise.introduction;
 		$("#logo").attr("src", data.enterprise.logo).appendTo("#logo");
     });
+	
+	if (-1 != enterprise_id){
+		document .getElementById ("enterprise_info").style.display="block";
+		document .getElementById ("no_enterprise_msg").style.display="none";
+	}
 }
 
 function displayProduct() {
@@ -43,11 +42,11 @@ function displayProduct() {
 		    $("#product_info").append(picture); 
 		    num++;
 		});
-		
-		if (0 == num) {
-			 document .getElementById ("no_product_msg").style.display="block";
-		 }
     });
+	
+	if (0 == num) {
+		 document .getElementById ("no_product_msg").style.display="block";
+	 }
 }
 
 function displayPackage() {
