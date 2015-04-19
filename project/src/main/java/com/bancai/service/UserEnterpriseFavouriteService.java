@@ -47,7 +47,10 @@ public class UserEnterpriseFavouriteService implements CommonConstants {
 	 */
 	public boolean isExistFavouriteEnterpriseByUserId(int userId) {
 		try {
-			getUserEnterpriseFavouriteByUserId(userId);
+			List<UserEnterpriseFavourite> lover = getUserEnterpriseFavouriteByUserId(userId);
+			if (null == lover.get(0)) {
+				return false;
+			}
 			return true;
 		} catch (Exception e) {
 			return false;

@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.bancai.dao.Product;
 import com.bancai.dao.ProductDAO;
+import com.bancai.dao.UserEnterpriseFavourite;
 import com.bancai.dao.UserProductFavourite;
 import com.bancai.dao.UserProductFavouriteDAO;
 import com.bancai.utils.Pager;
@@ -40,6 +41,20 @@ public class UserProductFavouriteService {
 		{
 			EntityManagerHelper.rollback();
 			throw re;
+		}
+	}
+	
+	public boolean isExistFavouriteProductByUserId(int userId) {
+		try {
+			UserProductFavouriteDAO userProductFavouriteDAO = new UserProductFavouriteDAO();
+			
+			long countFavouriteProducts = userProductFavouriteDAO.countByProperty(USER_ID, userId); 
+			if (countFavouriteProducts <= 0) {
+				return false;
+			}
+			return true;
+		} catch (Exception e) {
+			return false;
 		}
 	}
 	
@@ -90,11 +105,15 @@ public class UserProductFavouriteService {
 	 * @param productId
 	 */
 	public void deleteFavouriteProductByUserIdNoTranscation(int userId){
+		
+		if (true != isExistFavouriteProductByUserId(userId)) {
+			return;
+		}
+		
 		EntityManagerHelper.beginTransaction();
 		try
 		{
 			productDAO.deleteByColumnNoTranscation(USER_ID, userId);
-//			productDAO.updateNoTransaction(product);
 			EntityManagerHelper.commit();
 		}catch (RuntimeException re)
 		{
