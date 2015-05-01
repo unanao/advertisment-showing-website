@@ -10,10 +10,6 @@ function loadModifyProduct(productId) {
 }
 
 function listProduct() {
-	$.ajaxSetup({  
-	    async : false
-	}); 
-	
 	$("#product_table tr:not(:first)").remove();
 	
 	$.getJSON("pcenter/listProducts",  function(data) {

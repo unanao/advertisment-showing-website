@@ -11,10 +11,6 @@ $(function() {
 });
 
 function displayProduct(productId) {
-	$.ajaxSetup({  
-	    async : false
-	}); 
-
 	if (null == productId) {
 		return ;
 	}

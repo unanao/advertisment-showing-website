@@ -14,10 +14,6 @@ $(function() {
 });
 
 function dispalyEnterprise() {
-	$.ajaxSetup({  
-	    async : false  
-	}); 
-
 	$.getJSON("pcenter/showEnterprise", function(data) {
 		loadProvinceCity(data.enterprise.province, data.enterprise.city, data.enterprise.county, "山东", "临沂");
 		

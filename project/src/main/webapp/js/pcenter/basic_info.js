@@ -9,11 +9,7 @@ $(function() {
 	return basic_info_check();
 });
 
-function displayBasicInfo() {
-	$.ajaxSetup({  
-	    async : false  
-	}); 
-	
+function displayBasicInfo() {	
 	$.getJSON("pcenter/getPersonalInfo", function(data) {
         $("#nickName").val(data.user.nickname);
 		$("#name").val(data.user.name);
