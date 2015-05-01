@@ -16,8 +16,6 @@
 		填写产品信息前，需要先填写企业信息		
 	</s:if>
 	
-	<span class="save_ok"  id="save_ok_msg" > 资料修改成功!</span>
-	
     <form> 
        	<!--  Record enterprise ID --> 
        	<input id="enterpriseId" name="enterpriseId" type="hidden"/>
@@ -118,7 +116,10 @@
         <%--上传多张图片结束--%>
         <br>
         <div style="clear:both;">
+        	<span class="save_ok"  id="save_ok_msg" > 资料修改成功!</span>
+        	
         	<button id="submit" type="button" class="btn" value="提交" onclick="setEnterprise()">提交</button>
         	<button id="cancel" type="button" class="btn" value="取消" onclick="deal_new_picture()">取消</button>
 		</div>
+	
     </form>
