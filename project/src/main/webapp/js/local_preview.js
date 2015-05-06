@@ -30,7 +30,7 @@ function checkFile(fileInput) {
 	//检测上传文件的类型 
 	var imgName = document.getElementById('u198').value;
 	if (imgName == '') {
-		alert("请选择需要上传的文件!");
+		//alert("请选择需要上传的文件!");
 		return false;
 	}
 	var idx = imgName.lastIndexOf(".");
