@@ -5,7 +5,7 @@ $(function() {
 
 function displayPcenter() {
 	dispalyEnterprise();
-	displayProduct();
+	displayEntProducts();
 	displayPackage();
 }
 
@@ -30,7 +30,7 @@ function dispalyEnterprise() {
     });
 }
 
-function displayProduct() {
+function displayEntProducts() {
 	$.getJSON("pcenter/listProducts",  function(data) {
 		var num = 0;
 
