@@ -19,6 +19,7 @@ function setProduct() {
 	var detail = $("#detail").val();
 	var introduction = $("#introduction").val();
 	$.post("pcenter/updateProduct", {
+		productId:productId,
 		name : name,
 		category : category,
 		detail : detail,
