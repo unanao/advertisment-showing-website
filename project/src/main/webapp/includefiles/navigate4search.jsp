@@ -61,7 +61,7 @@
       <div id="search-2013" >
         <div class="i-search ld">
           <div class="form">
-            <s:form action="search/search_get_result" style="margin:0;">
+            <s:form action="search_get_result" style="margin:0;">
               <input type="text" name="content"  class="text" accesskey="s" id="key" autocomplete="off" style="color: rgb(153, 153, 153);">
               <input type="submit" value="搜索" class="button">
             </s:form>

@@ -19,7 +19,7 @@
 	
 </head>
 <body>
-	<%@ include file="/includefiles/navigate.jsp" %>
+	<%@ include file="/includefiles/navigate4search.jsp" %>
 	
 	<%-- 搜索内容 --%>
 	<s:form action="search_get_result" style="margin:0px;">
