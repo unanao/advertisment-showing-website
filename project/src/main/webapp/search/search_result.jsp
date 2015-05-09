@@ -13,7 +13,10 @@
 	<link rel="stylesheet" type="text/css" href="css_files/common.css" />
 	<link rel="stylesheet" type="text/css" href="css_files/search_more.css" />
 	
+	 <script type="text/javascript" src="library/jquery/jquery.js"></script>
 	<script type="text/javascript" src='js/image_auto_resize/autoresize_image.js'></script>
+	<script type="text/javascript" src='js/search/search.js'></script>
+	
 </head>
 <body>
 	<%@ include file="/includefiles/navigate.jsp" %>
@@ -23,7 +26,7 @@
 		<s:include value="/search/search_input.jsp" />
 	</s:form>
 		
-	<div style="position: absolute; left: 14%; top: 183px; height: 105px;">
+	<div style="position: absolute; left: 14%; top: 250px; height: 105px;">
 		<table>
 			<s:include value="/product/traversal_product.jsp" />
 	       	
