@@ -1,6 +1,6 @@
-$(document).delegate('#u198', 'change', function() {
+$(document).delegate('#product_pic', 'change', function() {
 	deal_new_picture('productId','pcenter/saveProductPicture',
-            'pcenter/pubProductPicture', 'pcenter/deleteProductPicture', 'icon', this)
+            'pcenter/pubProductPicture', 'pcenter/deleteProductPicture', 'icon', this, 'product_pic')
 });
 
 /* init for page loading*/

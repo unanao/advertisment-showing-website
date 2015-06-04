@@ -1,9 +1,9 @@
 //var MAX_PIC_NUMBER = 5;
 
-$(document).delegate('#u198', 'change', function() {
+$(document).delegate('#enterprise_pic', 'change', function() {
 	var enterpriseId = $('#enterpriseId').val();
 	deal_new_picture('enterpriseId','pcenter/saveEnterprisePicture',
-        'pcenter/pubEnterprisePicture','pcenter/deleteEnterprisePicture','logo',this);
+        'pcenter/pubEnterprisePicture','pcenter/deleteEnterprisePicture','logo',this, 'enterprise_pic');
 });
 
 /* init for page loading*/

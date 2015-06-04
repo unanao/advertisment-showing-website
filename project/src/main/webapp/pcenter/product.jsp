@@ -60,7 +60,7 @@
 
 		<p>         
 	        <label class="form_label">上传照片</label>
-	         <INPUT id="u198"  type="file" name="file" value="浏览" /> 
+	         <INPUT id="product_pic"  type="file" name="file" value="浏览" /> 
 	        <span style="font-size:10px;">最多可传5张图片</span>
         </p>
         

@@ -5,30 +5,11 @@ var id_name = null;//ajaxFileUpload时会用此变量回显上传的文件
 var MAX_PIC_SIZE = 5 * 1024 * 1024;//5MB
 var PIC_ALLOWED_TYPE_REGEX = "jpg|jpeg|gif|png|bmp";
 
-
-function browser_detect() {
-/*
-	if ($.browser.msie)
-		return "IE" + $.browser.version.toString();
-		
-	if ($.browser.mozilla)
-		return "Mozilla";
-	if ($.browser.safari)
-		return "Safari";
-	if ($.browser.opera)
-		return "Opera";
-	if ($.browser.chrome)
-		return "Chrome";
-*/
-	return "other";
-}
-
-
 //限制图片上传大小以及格式
-function checkFile(fileInput) {
+function checkFile(fileInput, fileElementId) {
 	var fileSize = null;
 	//检测上传文件的类型 
-	var imgName = document.getElementById('u198').value;
+	var imgName = document.getElementById(fileElementId).value;
 	if (imgName == '') {
 		//alert("请选择需要上传的文件!");
 		return false;
@@ -68,79 +49,25 @@ function checkFile(fileInput) {
 	return true;
 }
 
-function ajaxFileUpload(num, elementIdValue, urlValue) {
-
-	//    $("#thumb_pic0").ajaxStart(function(){
-	//        $(this).show();
-	//    })//开始上传文件时显示一个图片
-	//.ajaxComplete(function(){
-	//        $(this).hide();
-	//    });//文件上传完成将图片隐藏起来
+function ajaxFileUpload(num, elementIdValue, urlValue, fileElementId) {
 	$.ajaxFileUpload({
 		productId : elementIdValue,
 		fileId : 'fileId',
 		fileIdValue : num,
 		url : urlValue,//用于文件上传的服务器端请求地址
 		secureuri : false,//一般设置为false
-		fileElementId : 'u198',//文件上传空间的id属性  <input type="file" id="file" name="file" />
+		fileElementId :  fileElementId,//文件上传空间的id属性  <input type="file" id="file" name="file" />
 		dataType : 'json',//返回值类型 一般设置为json
 		success : function(data, status) //服务器成功响应处理函数
 		{
 			//从服务器返回的json中取出message中的数据,其中message为在struts2中action中定义的成员变量
 			document.getElementById(id_name).src = data.filePath;
-			/*	if (typeof(data.error) != 'undefined') {
-			        if (data.error != '') {
-			            alert(data.error);
-			        }
-			        else {
-			            alert(data.message);
-			        }
-			    }*/
 		},
 		error : function(data, status, e)//服务器响应失败处理函数
 		{
-
 			alert(e);
 		}
 	});
-
-}
-/* get_file_url no use now, to be delete,when milestone-1 complete */
-function get_file_url() {
-	var mode;
-	var browser = browser_detect();
-	var file_url = null;
-
-	if (browser == "IE6.0") {
-		mode = "simple";
-	} else if (browser == "IE7.0" || browser == "IE8.0" || browser == "IE9.0") {
-		mode = "filter";
-	} else if (browser == "Mozilla") {
-		mode = "domfile";
-	} else {
-		mode = "remote";
-	}
-
-	switch (mode) {
-	case "simple":
-		file_url = document.getElementById("u198").value;
-		break;
-	case "filter":
-		document.getElementById("u198").select();
-		file_url = document.selection.createRange().text;
-		break;
-	/*case "domfile":
-		var tmp = document.getElementById("u198").files.item(0);
-		file_url = tmp.fileName;
-		alert(file_url);
-		break;*/
-	default:
-		//上传服务器，然后接受服务器数据显示
-
-	}
-	;
-
-	return file_url;
 }
 
 
@@ -149,25 +76,21 @@ function deal_return_picture(id, file_url, typeId, pub_url, del_url, targetId) {
 }
 
 function deal_new_picture(typeId, upload_url, pub_url, del_url, targetId,
-		fileInput) {
+		fileInput, fileElementId) {
 	if (count >= MAX_PIC_NUMBER) {
 		alert("您已上传超过5张，请删除部分照片再上传");
 	} else {
-		if (!checkFile(fileInput)) {
+		if (!checkFile(fileInput, fileElementId)) {
 			return;
 		}
-		selected_photo_thumb(num, get_file_url(), typeId, pub_url, del_url,
-				targetId);
-				
-		/*	selected_photo_thumb(num, null, typeId, pub_url, del_url,
-				targetId);	*/			
-		ajaxFileUpload(num, typeId, upload_url);
+		selected_photo_thumb(num, null, typeId, pub_url, del_url, targetId);	
+		ajaxFileUpload(num, typeId, upload_url, fileElementId);
 		num++;
 		count++;
 	}
 }
 
-function selected_photo_thumb(num,file_url,typeId,pub_url,del_url,targetId) {
+function selected_photo_thumb(num, file_url, typeId,pub_url,del_url,targetId) {
 	
 		id_name = "thumb_pic" + num;
 
