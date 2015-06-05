@@ -10,8 +10,6 @@
 <form class="form-horizontal">
 	<div class="control-group mglp10">
 		
-		<span class="save_ok"  id="save_ok_msg" > 资料修改成功!</span>
-		
 		<p>
 			<span id="eoldPassword" class="common_error"> <s:fielderror>
 					<s:param> oldPassword </s:param>
@@ -51,6 +49,8 @@
 	</div>
 	<div class="control-group">
 		<div class="controls">
+			<span class="save_ok"  id="save_ok_msg" > 资料修改成功!</span>
+			
 			<button class="btn" id="submit_changepasswd" onclick="changePassword()">保存</button>
 			<button class="btn" id="cancel_changepasswd" type="reset">取消</button>
 		</div>
