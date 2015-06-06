@@ -62,7 +62,7 @@ public class AccountsCommon extends ActionSupport implements AccountsContants {
 	 */
 	public String getActivateContent(Integer userId, String activateCode,
 			long curTime) {		
-		String bancai = EmailConstants.BANCAI_NAME + "<br>";
+		String bancaiWelcome = EmailConstants.ACTIVATION_WELCOME + "<br>";
 
 		String click4Activate = EmailConstants.ACTIVATION_CONTENT_CLICK
 				+ "<br>";
@@ -93,7 +93,7 @@ public class AccountsCommon extends ActionSupport implements AccountsContants {
 		String registerLink = "<a href =" + registerUrl + ">" + registerUrl
 				+ "</a>";
 
-		String content = bancai + click4Activate + activationLink
+		String content = bancaiWelcome + click4Activate + activationLink
 				+ copy2Activate + onceTips + outdateTips + ignore + auto
 				+ "<hr />" + notRegister + registerLink;
 

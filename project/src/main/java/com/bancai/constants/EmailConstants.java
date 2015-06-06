@@ -29,6 +29,7 @@ public final class EmailConstants {
 	public final static String EMAIL_RECOVER_ACCOUNT;
 
 	public final static String ACTIVATION_SUBJECT;
+	public final static String ACTIVATION_WELCOME;
 	public final static String ACTIVATION_CONTENT_CLICK;
 	public final static String ACTIVATION_CONTENT_COPY;
 	public final static String ACTIVATION_CONTENT_IGNORE;
@@ -55,7 +56,7 @@ public final class EmailConstants {
 			SITE_URL = p.getProperty("SITE_URL", "http://localhost:8080/bancai");
 			ACCOUNTS_URI = p.getProperty("ACCOUNTS_URI",
 					"/accounts/");
-			BANCAI_NAME = p.getProperty("BANCAI_NAME", "58板材网:");
+			BANCAI_NAME = p.getProperty("BANCAI_NAME", "我发板材网:");
 			EMAIL_AUTO = p.getProperty("EMAIL_AUTO");
 			EMAIL_CLICK_ONCE = p.getProperty("EMAIL_CLICK_ONCE");
 			EMAIL_OUTDATE_FRONT = p.getProperty("EMAIL_OUTDATE_FRONT");
@@ -69,6 +70,7 @@ public final class EmailConstants {
 					"RegisterActivation.jsp?");
 			ACTIVATION_SUBJECT = p.getProperty("ACTIVATION_SUBJECT",
 					"58板材网账户注册激活");
+			ACTIVATION_WELCOME=p.getProperty("ACTIVATION_WELCOME", "欢迎注册我发板材网");
 			ACTIVATION_CONTENT_CLICK = p.getProperty("ACTIVATION_CONTENT_CLICK");
 			ACTIVATION_CONTENT_COPY = p.getProperty("ACTIVATION_CONTENT_COPY");
 			ACTIVATION_CONTENT_IGNORE = p.getProperty("ACTIVATION_CONTENT_IGNORE");
