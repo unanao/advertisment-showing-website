@@ -51,7 +51,7 @@
 	       	</tr>
 	        <tr>
 	           <td><b>公司logo</b></td>
-	           <td><img  id = "logo" style="width:100px"/></td>
+	           <td id="logo"></td>
 	       	</tr>
 			</table>
 		</div>

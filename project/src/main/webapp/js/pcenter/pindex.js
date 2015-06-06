@@ -26,7 +26,13 @@ function dispalyEnterprise() {
 		document .getElementById ("contacter").innerHTML = data.phone.contacter;
 		document .getElementById ("number").innerHTML = data.phone.number;
 		document .getElementById ("introduction").innerHTML = data.enterprise.introduction;
-		$("#logo").attr("src", data.enterprise.logo).appendTo("#logo");
+		
+		
+		var entprise_logo = 
+		"<a href=enterprise/showEnterprise?enterpriseId=" + enterprise_id + ">" + 
+				"<img onload='DrawImage(this,300,250)' src='"+ data.enterprise.logo+"'/>" +
+		"</a>";
+		$("#logo").append(entprise_logo);
     });
 }
 
@@ -36,9 +42,16 @@ function displayEntProducts() {
 
 		//example: http://www.w3school.com.cn/jquery/ajax_getjson.asp 
 		$.each(data.products, function(i, product){
-			var picture = "<li class='span3'>"  + "<div class='thumbnail'>" + 
-			 		"<img id='"+ i +"' onload='DrawImage(this,200,150)' src='"+ product.icon+"'/>" +
-			 		"<div class='caption'>" + product.name + "</div>" + "</div>" + "</li>";
+			var picture = 
+				"<li class='span3'>"  + 
+					"<a href=product/showProduct?productId=" + product.id + ">" + 
+					 	"<div class='thumbnail'>" +
+			 				"<img id='"+ i +"' onload='DrawImage(this,200,150)' src='"+ product.icon+"'/>" +
+			 	
+			 				"<div class='caption'>" + product.name + "</div>" + 
+			 			"</div>" +
+						"</a>" +
+			 	"</li>";
 		    $("#product_info").append(picture); 
 		    num++;
 		});
