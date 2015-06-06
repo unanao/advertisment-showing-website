@@ -44,7 +44,7 @@
      
 	<field name="scale">
 		<field-validator type="regex">
-            <param name="expression"><![CDATA[[0-9]{0,}]]>
+            <param name="regex"><![CDATA[[0-9]{0,}]]>
             </param>
             <message>请输入数字!</message>
         </field-validator>
@@ -82,7 +82,7 @@
     </field>
     <field name="number">
         <field-validator type="regex">
-            <param name="expression"><![CDATA[[0-9]{4,14}]]>
+            <param name="regex"><![CDATA[[0-9]{4,14}]]>
             </param>
             <message>请输入正确的电话号码!</message>
         </field-validator>

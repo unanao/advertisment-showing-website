@@ -25,16 +25,15 @@
 	<field name="officePhone">
 		<field-validator type="regex">
 			<param name="trim">true</param>
-			<param name="expression"> <![CDATA[[0-9]{3,4}-[0-9]{5,8}]]> </param>
+			<param name="regex"> <![CDATA[[0-9]{3,4}-[0-9]{5,8}]]> </param>
 			<message>请输入正确的固定电话格式! 如010-10086</message>
 		</field-validator>
 	</field>
 
 	<field name="mobile">
 		<field-validator type="regex">
-			<param name="trim">true</param>
-			<param name="expression"><![CDATA[[0-9]{4,14}]]>
-			</param>
+			<param name="trim">true</param> 
+			<param name="regex"><![CDATA[[0-9]{4,14}]]></param>
 			<message>请输入正确的手机号码!</message>
 		</field-validator>
 	</field>
@@ -42,7 +41,7 @@
 	<field name="qq">
 		<field-validator type="regex">
 			<param name="trim">true</param>
-			<param name="expression"><![CDATA[[1-9][0-9]{4,}]]></param>
+			<param name="regex"><![CDATA[[1-9][0-9]{4,}]]></param>
         <message>您输入的必须是qq号码</message>
         </field-validator> 
 	</field>
