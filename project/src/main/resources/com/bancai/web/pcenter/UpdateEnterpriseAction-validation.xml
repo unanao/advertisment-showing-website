@@ -80,6 +80,7 @@
             <message>联系人姓名的长度需要在 ${minLength} 和 ${maxLength} 之间!</message>
         </field-validator>
     </field>
+    <!-- https://struts.apache.org/docs/regex-validator.html,  expression is deprecated, should regex -->
     <field name="number">
         <field-validator type="regex">
             <param name="regex"><![CDATA[[0-9]{4,14}]]>
