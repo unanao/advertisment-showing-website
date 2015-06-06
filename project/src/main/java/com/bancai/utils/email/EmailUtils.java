@@ -1,6 +1,7 @@
 package com.bancai.utils.email;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.Date;
 import java.util.Enumeration;
 import java.util.Vector;
@@ -25,7 +26,8 @@ public class EmailUtils {
 	private String mailTo = null;
 	// Mail发送的起始地址
 	private String mailFrom = null;
-
+	private String nickName = "";
+	
 	private String messageBasePath = null;
 	// Mail主题
 	private String subject;
@@ -44,14 +46,29 @@ public class EmailUtils {
 	 */
 	public EmailUtils() {
 	}
-
+	
+	private String getEncodeNickName(String nick) {
+		String nickName  = "";
+		
+		if ("" != nick)
+		{
+			try {  
+				nickName=javax.mail.internet.MimeUtility.encodeText(nick);  
+			} catch (UnsupportedEncodingException e) {  
+				e.printStackTrace(); 
+			}
+		}
+		
+		return nickName;
+	}
+	
 	public MimeMessage getMessage(Session session) throws IOException,
 			MessagingException {
 		MimeMessage msg = new MimeMessage(session);
 		String fileName = null;
 		Multipart mPart = new MimeMultipart();
 		if (mailFrom != null) {
-			msg.setFrom(new InternetAddress(mailFrom));
+			msg.setFrom(new InternetAddress(getEncodeNickName(nickName) + "<" + mailFrom + ">"));
 			logger.info("发送人Mail地址：" + mailFrom);
 		} else {
 			logger.error("没有指定发送人邮件地址！");
@@ -142,5 +159,9 @@ public class EmailUtils {
 
 	public void setSubject(String sub) {
 		subject = sub;
+	}
+	
+	public void setNickName(String nick) {
+		nickName = nick;
 	}
 }
