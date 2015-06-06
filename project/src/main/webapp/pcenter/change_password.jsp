@@ -8,8 +8,8 @@
 
 <div class="blank"></div>
 <form class="form-horizontal">
+
 	<div class="control-group mglp10">
-		
 		<p>
 			<span id="eoldPassword" class="common_error"> <s:fielderror>
 					<s:param> oldPassword </s:param>
@@ -47,6 +47,7 @@
 				placeholder="New Password" type="password">
 		</div>
 	</div>
+	
 	<div class="control-group">
 		<div class="controls">
 			<span class="save_ok"  id="save_ok_msg" > 资料修改成功!</span>

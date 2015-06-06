@@ -11,7 +11,7 @@ $(document).ready(function(){
 	    lastobj.removeClass("active");
 		$(this).addClass("active");
 		lastobj=$(this);
-		$('#pcenter_right').load('pcenter/change_passwd.jsp');
+		$('#pcenter_right').load('pcenter/change_password.jsp');
 		});
 	$('#pnav_change_basic').click(function(){
 		lastobj.removeClass("active");
