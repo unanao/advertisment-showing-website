@@ -19,8 +19,13 @@ function dispalyEnterprise() {
 		}
 		
 		document .getElementById ("enterpriseName").innerHTML = data.enterprise.name;
-		document .getElementById ("location").innerHTML = data.enterprise.province + 
-		                              								data.enterprise.city + data.enterprise.county;
+		
+		var location = data.enterprise.province + data.enterprise.city;
+		if (null != data.enterprise.county) {
+			location += data.enterprise.county;
+		}
+		document .getElementById ("location").innerHTML =  location;
+		
 		document .getElementById ("address").innerHTML = data.enterprise.address;
 		document .getElementById ("scale").innerHTML = data.enterprise.scale;
 		document .getElementById ("contacter").innerHTML = data.phone.contacter;
