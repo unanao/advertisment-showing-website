@@ -25,23 +25,29 @@
     	您还没有企业信息
     </span>
 	<div  class="row-fluid">
-    	<div class="span8" id="enterprise_info" style="display:none">
-			<table class="table-condensed " width="80%">
+    	<div class="span12" id="enterprise_info" style="display:none">
+			<table class="table-condensed ">
 		   	<tr>
 		       <td><b>企业名称</b></td>
 		       <td id = "enterpriseName"></td>
+		    </tr>
+		    <tr>
 		       <td><b>所在地</b></td>
 		       <td id = "location"></td>
 		   	</tr>
 		   	<tr>
 		       <td><b>详细地址</b></td>
 		       <td id = "address"></td>
+		    </tr>
+		    <tr>   
 		       <td><b>规模(人)</b></td>
 		       <td id = "scale"></td>
 		   	</tr>
 		   	<tr>
 		       <td><b>联系姓名</b></td>
 		       <td id = "contacter"></td>
+		    </tr>
+		    <tr>   
 	           <td><b>联系电话</b></td>
 	           <td id = "number"></td>
 	       	</tr>
