@@ -27,7 +27,20 @@ function dispalyEnterprise() {
 		document .getElementById ("location").innerHTML =  location;
 		
 		document .getElementById ("address").innerHTML = data.enterprise.address;
-		document .getElementById ("scale").innerHTML = data.enterprise.scale;
+		var scale = data.enterprise.scale;
+		var scaleValue = "未知";
+		if("1"==scale){
+			scaleValue="小于50人";
+		}else if("2"==scale){
+			scaleValue="50-150人";
+		}else if("3"==scale){
+			scaleValue="150-500人";
+		}else if("4"==scale){
+			scaleValue="500-1000人";
+		}else if("5"==scale){
+			scaleValue="1000人以上";
+		}
+		document .getElementById ("scale").innerHTML = scaleValue;
 		document .getElementById ("contacter").innerHTML = data.phone.contacter;
 		document .getElementById ("number").innerHTML = data.phone.number;
 		document .getElementById ("introduction").innerHTML = data.enterprise.introduction;

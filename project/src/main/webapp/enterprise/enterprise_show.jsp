@@ -60,7 +60,7 @@
 			<tr>																																																																																																																								
 				<th>企业规模：</th>
 				<%--请后台提供企业规模--%>
-				<td><s:property value="enterprise.scale"/></td>
+				 <td id="scale"></td>
 			</tr>
 
 		<tr>
