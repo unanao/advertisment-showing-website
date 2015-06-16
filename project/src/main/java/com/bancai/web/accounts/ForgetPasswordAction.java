@@ -86,8 +86,10 @@ public class ForgetPasswordAction extends ActionSupport implements
 			}
 
 			try {
+				String subject = EmailConstants.SITE_NAME_QUOTA + EmailConstants.GETPASSWD_SUBJECT;
+				
 				if (ERROR == accountsCommon.sendSaveCertificationCode(primaryKey, userName,
-						activateCode, EmailConstants.GETPASSWD_SUBJECT, content, curTime))
+						                                                           activateCode, subject, content, curTime))
 				{
 					addActionError("您已经超过尝试找回密码的次数，请明天再试！");
 					return ERROR;

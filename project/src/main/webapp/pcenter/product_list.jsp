@@ -1,10 +1,9 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-
-<base
-	href="<%=request.getScheme() + "://" + request.getServerName()
-					+ ":" + request.getServerPort() + request.getContextPath()%>/" />
-				
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+<base href="<%= request.getScheme() + "://" + request.getServerName() + ":" 
+				+ request.getServerPort() + request.getContextPath() %>/" />
+							
 <script type="text/javascript" src="js/pcenter/product_list.js"></script>
 
 <div class="span12">

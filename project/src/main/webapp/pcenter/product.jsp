@@ -16,8 +16,6 @@
 	<input id="fileId" name="id" type="hidden" value="-1"/>
 	<input id="productId" name="productId" type="hidden"/>
 	
-	<span class="save_ok"  id="save_ok_msg" > 资料修改成功!</span>
-	
 	<p>
 		<span id="ename" class="common_error" style="position:relative; left:20%"> 
 			<s:fielderror> <s:param> name </s:param> </s:fielderror> 
@@ -60,7 +58,7 @@
 
 		<p>         
 	        <label class="form_label">上传照片</label>
-	         <INPUT id="u198"  type="file" name="file" value="浏览" /> 
+	         <INPUT id="product_pic"  type="file" name="file" value="浏览" /> 
 	        <span style="font-size:10px;">最多可传5张图片</span>
         </p>
         
@@ -71,8 +69,9 @@
 	        </div>   	
         <%--上传多张图片结束--%>  
         
-        <div style="clear:both;"></div>     
+        <div style="clear:both;"> </div>     
         <div id="bottom_button_div">
+        	<span class="save_ok"  id="save_ok_msg" > 资料修改成功!</span>
         	<button id="submit" class="btn" type="button" value="提交"  onclick="setProduct()">提交</button>
         	<button id="cannel" class="btn" type="button" value="取消" onclick="deal_new_picture()">取消</button>
 		</div>

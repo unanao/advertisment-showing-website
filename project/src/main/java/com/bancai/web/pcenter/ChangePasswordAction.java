@@ -25,7 +25,7 @@ public class ChangePasswordAction extends ActionSupport implements
 		
 		if (null == userId) {
 			addActionError("您还没有登陆");
-			return INPUT;
+			return SUCCESS;
 		}
 		
 		try {
@@ -33,20 +33,18 @@ public class ChangePasswordAction extends ActionSupport implements
 				if (true == newPassword.equals(passwordConfirm)) {
 					accountsService.changePassword(userId, newPassword);
 					addActionError("修改密码成功");
-					return SUCCESS;
 				} else {
 					addActionError("两次输入密码不匹配");
-					return INPUT;
 				}
 			}
 			else {
 				addActionError("原始密码错误");
-				return INPUT;
 			}
 		} catch (RuntimeException re) {
 			addActionError("账户不存在");
-			return INPUT;
 		}
+		
+		return SUCCESS;
 	}
 
 	public void setNewPassword(String newPassword) {

@@ -136,7 +136,7 @@ public class PictureOperation extends BaseAction {
 		}
 		String fileName = filePath.substring(filePath.lastIndexOf('/'));
 		String path = getSaveRelativeDir(type,userId);
-		return path + "/" + fileName;
+		return path + fileName;
 	}
 	
 	

@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <!DOCTYPE validators PUBLIC
-          "-//OpenSymphony Group//XWork Validator 1.0.2//EN" 
-          "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+  		"-//Apache Struts//XWork Validator 1.0.2//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd">
+  		
 <validators>
 	<field name="name">
 	    <field-validator type="requiredstring">
@@ -43,7 +44,7 @@
      
 	<field name="scale">
 		<field-validator type="regex">
-            <param name="expression"><![CDATA[[0-9]{0,}]]>
+            <param name="regex"><![CDATA[[0-9]{0,}]]>
             </param>
             <message>请输入数字!</message>
         </field-validator>
@@ -79,9 +80,10 @@
             <message>联系人姓名的长度需要在 ${minLength} 和 ${maxLength} 之间!</message>
         </field-validator>
     </field>
+    <!-- https://struts.apache.org/docs/regex-validator.html,  expression is deprecated, should regex -->
     <field name="number">
         <field-validator type="regex">
-            <param name="expression"><![CDATA[[0-9]{4,14}]]>
+            <param name="regex"><![CDATA[[0-9]{4,14}]]>
             </param>
             <message>请输入正确的电话号码!</message>
         </field-validator>

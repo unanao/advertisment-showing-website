@@ -24,6 +24,8 @@
 	   background-color:#eeeeee;
 	}
 </style>
+
+<script type="text/javascript" src="library/jquery/jquery.js"></script>
 <script type="text/javascript" src="js/province_city_select/search_sitedata_bas.js"></script>
 <script type="text/javascript" src="js/province_city_select/province_city.js"></script>
 
@@ -51,10 +53,6 @@
 		<select id="province" name="province"></select>
 		<select id="city" name="city" ></select>
 		<select id="county" name="county"></select>
-		
-		<input type="hidden" value="山东" id="hiddenprovince"/>
-        <input type="hidden" value="临沂" id="hiddencity"/>
-        <input type="hidden" value="不限" id="hiddencounty"/>
 	</span>
 	
 	<span  class="padding_left"> 规格 </span> 

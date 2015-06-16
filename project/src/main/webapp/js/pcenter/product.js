@@ -1,6 +1,6 @@
-$(document).delegate('#u198', 'change', function() {
+$(document).delegate('#product_pic', 'change', function() {
 	deal_new_picture('productId','pcenter/saveProductPicture',
-            'pcenter/pubProductPicture', 'pcenter/deleteProductPicture', 'icon', this)
+            'pcenter/pubProductPicture', 'pcenter/deleteProductPicture', 'icon', this, 'product_pic')
 });
 
 /* init for page loading*/
@@ -10,29 +10,7 @@ $(function() {
 	return productCheck();
 });
 
-function displayProduct(productId) {
-	if (null == productId) {
-		return ;
-	}
-	
-	$.getJSON("pcenter/showProduct", {productId: productId},  function(data) {
-		$("#productId").val(data.product.id);
-		$("#name").val(data.product.name);
-		loadProductCategoryDetail(data.product.category, data.product.detail);
-		$("#introduction").val(data.product.introduction);
-		$("#icon").attr("src", data.product.icon).appendTo("#icon");
-		
-		/* example: http://www.w3school.com.cn/jquery/ajax_getjson.asp */
-		 $.each(data.productPictureMap, function(key, item){
-			 	if (key >= MAX_PIC_NUMBER) {
-			 		return;
-			    }
-			 	
-			    deal_return_picture(key, item.path, 
-			    		"productId", 'pcenter/pubProductPicture','pcenter/deleteProductPicture','icon');
-		 });
-    });
-}
+
 
 function setProduct() {
 	var productId = $("#productId").val();	
@@ -41,7 +19,7 @@ function setProduct() {
 	var detail = $("#detail").val();
 	var introduction = $("#introduction").val();
 	$.post("pcenter/updateProduct", {
-		productId : productId,
+		productId:productId,
 		name : name,
 		category : category,
 		detail : detail,

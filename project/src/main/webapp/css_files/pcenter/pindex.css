@@ -4,3 +4,11 @@
 	 color: green;
 	 display : none;
 }
+
+/* id class logo below overwrite common.css*/
+#logo
+{
+	flaot:left;
+	width:90%;
+	left:5px; 
+}

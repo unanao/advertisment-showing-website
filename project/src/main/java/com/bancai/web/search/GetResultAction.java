@@ -60,9 +60,9 @@ public class GetResultAction extends ActionSupport
 		 * 选择了地区，但是没有选择产品列别和规格：只返回企业
 		 */
 		
-		if ((!category.equals(SearchConstants.SEARCH_DEFAULT_VALUE) && 
+		if ((null != category) && (!category.equals(SearchConstants.SEARCH_DEFAULT_VALUE) && 
 			 !category.equals(SearchConstants.SEARCH_DEFAULT_VALUE2)) || 
-			(!specification.equals(SearchConstants.SEARCH_DEFAULT_VALUE) &&  
+			((null != specification) && !specification.equals(SearchConstants.SEARCH_DEFAULT_VALUE) &&  
 			 !specification.equals(SearchConstants.SEARCH_DEFAULT_VALUE2)))
 		{
 			products = productService.getProducts4ProductSearch(content, category, 

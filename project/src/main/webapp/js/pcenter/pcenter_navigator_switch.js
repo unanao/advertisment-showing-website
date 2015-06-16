@@ -11,13 +11,13 @@ $(document).ready(function(){
 	    lastobj.removeClass("active");
 		$(this).addClass("active");
 		lastobj=$(this);
-		$('#pcenter_right').load('pcenter/change_passwd.jsp');
+		$('#pcenter_right').load('pcenter/changePassword.jsp');
 		});
 	$('#pnav_change_basic').click(function(){
 		lastobj.removeClass("active");
 		$(this).addClass("active");
 		lastobj=$(this);
-		$('#pcenter_right').load('pcenter/basic_info.jsp');
+		$('#pcenter_right').load('pcenter/basicInfo.jsp');
 	});	
 	$('#pnav_manage_enterprise').click(function(){
 		lastobj.removeClass("active");

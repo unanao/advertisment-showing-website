@@ -8,7 +8,7 @@
 	<name>bancai</name>
 
 	<properties>
-		<struts2.version>2.3.16.3</struts2.version>
+		<struts2.version>2.3.24</struts2.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<netbeans.hint.deploy.server>Tomcat</netbeans.hint.deploy.server>
 	</properties>
@@ -79,6 +79,13 @@
 			<artifactId>mail</artifactId>
 			<version>1.4</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.struts.xwork</groupId>
+			<artifactId>xwork-core</artifactId>
+			<version>${struts2.version}</version>
+		</dependency>
+
 		<!-- struts2 ends -->
 
 		<!-- JPA -->
