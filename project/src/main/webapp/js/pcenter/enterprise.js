@@ -10,7 +10,7 @@ $(document).delegate('#u198', 'change', function() {
 $(function() {
 	dispalyEnterprise();
 	
-	return enterpriseCheck();
+//	return enterpriseCheck();
 });
 
 function dispalyEnterprise() {
@@ -57,7 +57,9 @@ function setEnterprise() {
 		var contacter = $("#contacter").val();
 		var number = $("#number").val();
 		var introduction = $("#introduction").val();
-
+		if(!checkInput()){//假如输入不合法
+			return;
+		}
 		$.post("pcenter/updateEnterprise", {
 			name : name,
 			province : province,
@@ -73,7 +75,7 @@ function setEnterprise() {
 		});
 }
 
-function enterpriseCheck() {
+//function enterpriseCheck() {
 	var name = false;
 	var address = false; 
 	var scale = false;
@@ -116,22 +118,13 @@ function enterpriseCheck() {
 	function checkScale()
 	{
 		var value = $("#scale").val();
-		
-		if ((value == "") || (0 == value.length)) 
+	
+		if ((value == "") || (0 == value.length) || 0==value) 
 		{
-			$("#escale").html("公司规模不能为空");
+			$("#escale").html("请选择公司规模");
 			scale = false;
 			return;
-		}
-		
-		var reg =  /^[1-9][0-9]{1,}$/;
-		if(value.replace(/\s/g,"")!="" && !(reg.exec(value))) 
-		{
-			$("#escale").html("规模为公司员工数，必须为数字");
-			scale =  false;
-		}
-		else
-		{
+		}else{
 			$("#escale").html("");
 			scale = true;
 		}
@@ -186,9 +179,9 @@ function enterpriseCheck() {
 			$("#eintroduction").html("简介不能为空");
 			introduction = false;
 		}
-		else if (value.length > 255)
+		else if (value.length > 2500)
 		{
-			$("#eintroduction").html("简介长度需要小于255个字符");
+			$("#eintroduction").html("简介长度需要小于2500个字符");
 			introduction = false;
 		}
 		else
@@ -200,11 +193,21 @@ function enterpriseCheck() {
 	
 	$("#name").blur(checkName);
 	$("#address").blur(checkAddress);
-	$("#scale").blur(checkScale);
+//	$("#scale").onSelect(checkScale);
 	$("#contacter").blur(checkContacter);
 	$("#number").blur(checkNumber);
 	$("#introduction").blur(checkIntroduction);
 	
+	function checkInput(){
+		checkName();
+		checkAddress();
+		checkScale();
+		checkContacter();
+		checkNumber();
+		checkIntroduction();
+		return name && contacter && number && scale && introduction && address;
+	}
+	/**
 	$("#submit").click(function() {
 		checkName();
 		checkAddress();
@@ -212,7 +215,7 @@ function enterpriseCheck() {
 		checkContacter();
 		checkNumber();
 		checkIntroduction();
-		
+		alert(scale);
 		return name && contacter && number && scale && introduction && address;
-	});
-}
+	});*/
+//}

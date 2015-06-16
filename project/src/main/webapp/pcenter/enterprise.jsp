@@ -59,7 +59,15 @@
        	</p>
 		<p>
        		<label class="form_label"> 规模 </label>
-       		<input id="scale"   name="scale" class="form_input" type="text">
+       		 <!--<input id="scale"   name="scale" class="form_input" type="text">-->
+       		 <select name="scale" id="scale">
+       		    <option value="0"> --请选择--</option>
+       		 	<option value="1"> 小于50人</option>
+       		 	<option value="2"> 50-150人</option>
+       		 	<option value="3"> 150-500人</option>
+       		 	<option value="4"> 500-1000人</option>
+       		 	<option value="5"> 1000人以上</option>
+       		 </select>
        	</p>
         
         <!-- 联系姓名 -->

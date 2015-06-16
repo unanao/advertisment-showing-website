@@ -100,9 +100,9 @@ function productCheck() {
 			$("#eintroduction").html("描述不能为空");
 			introduction = false;
 		}
-		else if (value.length > 255)
+		else if (value.length > 2500)
 		{
-			$("#eintroduction").html("描述长度需要小于255个字符");
+			$("#eintroduction").html("描述长度需要小于2500个字符");
 			introduction = false;
 		}
 		else
