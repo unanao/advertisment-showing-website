@@ -13,6 +13,9 @@ import com.bancai.utils.ConfigurationUtil;
  * 
  */
 public final class EmailConstants {
+	public final static String SITE_NAME_QUOTA;
+	public final static String SITE_NAME;
+	
 	// email activation
 	public final static String ACTIVATION_URI;
 	public final static String SERVER_MAIL;
@@ -21,19 +24,18 @@ public final class EmailConstants {
 	public final static String SITE_URL;
 	public final static String ACCOUNTS_URI;
 	public final static String REGISTER_URI;
-	public final static String BANCAI_NAME;
 	public final static String EMAIL_AUTO;
 	public final static String EMAIL_CLICK_ONCE;
 	public final static String EMAIL_OUTDATE_FRONT;
 	public final static String EMAIL_OUTDATE_BEHIND;
 	public final static String EMAIL_RECOVER_ACCOUNT;
 
-	public final static String ACTIVATION_SUBJECT;
 	public final static String ACTIVATION_WELCOME;
+	public final static String ACTIVATION_VERIFY_MAIL;
 	public final static String ACTIVATION_CONTENT_CLICK;
 	public final static String ACTIVATION_CONTENT_COPY;
+	public final static String ACTIVATION_CONTENT_COPY_END;
 	public final static String ACTIVATION_CONTENT_IGNORE;
-	public final static String ACTIVATION_CONTENT_NOT_REGISTER;
 
 	// email getpasswd
 	public final static String GETPASSWD_SUBJECT;
@@ -56,7 +58,10 @@ public final class EmailConstants {
 			SITE_URL = p.getProperty("SITE_URL", "http://localhost:8080/bancai");
 			ACCOUNTS_URI = p.getProperty("ACCOUNTS_URI",
 					"/accounts/");
-			BANCAI_NAME = p.getProperty("BANCAI_NAME", "我发板材网:");
+			
+			SITE_NAME_QUOTA=p.getProperty("SITE_NAME_QUOTA", "我发板材网:");
+			SITE_NAME  = p.getProperty("SITE_NAME", "我发板材网:");
+					
 			EMAIL_AUTO = p.getProperty("EMAIL_AUTO");
 			EMAIL_CLICK_ONCE = p.getProperty("EMAIL_CLICK_ONCE");
 			EMAIL_OUTDATE_FRONT = p.getProperty("EMAIL_OUTDATE_FRONT");
@@ -68,13 +73,12 @@ public final class EmailConstants {
 			 */
 			ACTIVATION_URI = p.getProperty("ACTIVATION_URI",
 					"RegisterActivation.jsp?");
-			ACTIVATION_SUBJECT = p.getProperty("ACTIVATION_SUBJECT",
-					"58板材网账户注册激活");
 			ACTIVATION_WELCOME=p.getProperty("ACTIVATION_WELCOME", "欢迎注册我发板材网");
+			ACTIVATION_VERIFY_MAIL = p.getProperty("ACTIVATION_VERIFY_MAIL");
 			ACTIVATION_CONTENT_CLICK = p.getProperty("ACTIVATION_CONTENT_CLICK");
 			ACTIVATION_CONTENT_COPY = p.getProperty("ACTIVATION_CONTENT_COPY");
+			ACTIVATION_CONTENT_COPY_END = p.getProperty("ACTIVATION_CONTENT_COPY_END");
 			ACTIVATION_CONTENT_IGNORE = p.getProperty("ACTIVATION_CONTENT_IGNORE");
-			ACTIVATION_CONTENT_NOT_REGISTER = p.getProperty("ACTIVATION_CONTENT_NOT_REGISTER");
 			REGISTER_URI = p.getProperty("REGISTER_URI");
 
 			/*

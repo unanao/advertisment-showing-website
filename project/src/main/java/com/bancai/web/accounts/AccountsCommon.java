@@ -62,7 +62,7 @@ public class AccountsCommon extends ActionSupport implements AccountsContants {
 	 */
 	public String getActivateContent(Integer userId, String activateCode,
 			long curTime) {		
-		String bancaiWelcome = EmailConstants.ACTIVATION_WELCOME + "<br>";
+		String bancaiWelcome = EmailConstants.ACTIVATION_WELCOME + EmailConstants.SITE_NAME_QUOTA + "<br>";
 
 		String click4Activate = EmailConstants.ACTIVATION_CONTENT_CLICK
 				+ "<br>";
@@ -73,29 +73,24 @@ public class AccountsCommon extends ActionSupport implements AccountsContants {
 		String activationLink = "<a href =" + activationUrl + ">"
 				+ activationUrl + "</a>" + "<br>";
 
-		String copy2Activate = EmailConstants.ACTIVATION_CONTENT_COPY + "<br>";
+		String copy2Activate = EmailConstants.ACTIVATION_CONTENT_COPY + 
+				EmailConstants.SITE_NAME_QUOTA + EmailConstants.ACTIVATION_CONTENT_COPY_END + "<br>";
 
 		String onceTips = EmailConstants.EMAIL_CLICK_ONCE + "<br>";
 
 		String outdate = getOutdateTimeTips(curTime);
 		String outdateTips = EmailConstants.EMAIL_OUTDATE_FRONT + outdate
 				+ EmailConstants.EMAIL_OUTDATE_BEHIND
+				+ EmailConstants.SITE_NAME_QUOTA 
 				+ EmailConstants.EMAIL_RECOVER_ACCOUNT + "<br>";
 
 		String ignore = EmailConstants.ACTIVATION_CONTENT_IGNORE + "<br>";
 
 		String auto = EmailConstants.EMAIL_AUTO + "<br>";
 
-		String notRegister = EmailConstants.ACTIVATION_CONTENT_NOT_REGISTER
-				+ "<br>";
-
-		String registerUrl = EmailConstants.SITE_URL + EmailConstants.REGISTER_URI;
-		String registerLink = "<a href =" + registerUrl + ">" + registerUrl
-				+ "</a>";
 
 		String content = bancaiWelcome + click4Activate + activationLink
-				+ copy2Activate + onceTips + outdateTips + ignore + auto
-				+ "<hr />" + notRegister + registerLink;
+				+ copy2Activate + onceTips + outdateTips + ignore + auto;
 
 		return content;
 	}
@@ -111,7 +106,7 @@ public class AccountsCommon extends ActionSupport implements AccountsContants {
 			String activateCode, long curTime) {
 		String url;
 		String link;
-		String bancai = EmailConstants.BANCAI_NAME + "<br>";
+		String bancai = EmailConstants.SITE_NAME + "<br>";
 
 		String clickTips = EmailConstants.GETPASSWD_CONTENT_CLICK + "<br>";
 
@@ -201,10 +196,12 @@ public class AccountsCommon extends ActionSupport implements AccountsContants {
 			Integer primaryKey = userService.getUserIdByUserName(userName);
 			String activateCode = getCertificationCode();
 			long time = System.currentTimeMillis();
+			String subject = EmailConstants.ACTIVATION_WELCOME  + 
+					EmailConstants.SITE_NAME_QUOTA + EmailConstants.ACTIVATION_VERIFY_MAIL;
 
 			String content = getActivateContent(primaryKey, activateCode, time);
 			return sendSaveCertificationCode(primaryKey, userName, activateCode,
-					EmailConstants.ACTIVATION_SUBJECT, content, time);
+															      subject, content, time);
 
 		} catch (Exception e) {
 			e.printStackTrace();

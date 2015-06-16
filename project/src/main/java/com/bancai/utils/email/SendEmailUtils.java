@@ -49,7 +49,7 @@ public class SendEmailUtils implements AccountsContants {
 
 		EmailUtils mailUtil = new EmailUtils();
 		mailUtil.setMailFrom(EmailConstants.SERVER_MAIL);
-		mailUtil.setNickName(EmailConstants.BANCAI_NAME); //昵称
+		mailUtil.setNickName(EmailConstants.SITE_NAME); //昵称
 		mailUtil.setMailTo(email);
 		mailUtil.setMsgContent(content);
 		mailUtil.setSubject(subject);
