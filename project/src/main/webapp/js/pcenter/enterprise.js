@@ -9,8 +9,6 @@ $(document).delegate('#enterprise_pic', 'change', function() {
 /* init for page loading*/
 $(function() {
 	dispalyEnterprise();
-	
-//	return enterpriseCheck();
 });
 
 function dispalyEnterprise() {
