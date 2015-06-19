@@ -9,8 +9,6 @@ $(document).delegate('#enterprise_pic', 'change', function() {
 /* init for page loading*/
 $(function() {
 	dispalyEnterprise();
-	
-//	return enterpriseCheck();
 });
 
 function dispalyEnterprise() {
@@ -199,7 +197,7 @@ function setEnterprise() {
 	$("#number").blur(checkNumber);
 	$("#introduction").blur(checkIntroduction);
 	
-	function checkInput(){
+	function checkInput() {
 		checkName();
 		checkAddress();
 		checkScale();
@@ -208,15 +206,3 @@ function setEnterprise() {
 		checkIntroduction();
 		return name && contacter && number && scale && introduction && address;
 	}
-	/**
-	$("#submit").click(function() {
-		checkName();
-		checkAddress();
-		checkScale();
-		checkContacter();
-		checkNumber();
-		checkIntroduction();
-		alert(scale);
-		return name && contacter && number && scale && introduction && address;
-	});*/
-//}
