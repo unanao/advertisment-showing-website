@@ -59,7 +59,7 @@
        	</p>
 		<p>
        		<label class="form_label"> 规模 </label>
-       		 <select name="scale" id="scale" class="span2">
+       		 <select name="scale" id="scale">
        		    <option value="0"> --请选择--</option>
        		 	<option value="1"> 小于50人</option>
        		 	<option value="2"> 50-150人</option>
