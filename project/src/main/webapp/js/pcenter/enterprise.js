@@ -14,7 +14,8 @@ $(function() {
 });
 
 function dispalyEnterprise() {
-	$.getJSON("pcenter/showEnterprise", function(data) {
+	var time = new Date().getTime();
+	$.getJSON("pcenter/showEnterprise?"+time, function(data) {
 		loadProvinceCity(data.enterprise.province, data.enterprise.city, data.enterprise.county, "山东", "临沂");
 		
 		if (null == data.enterprise.id) {

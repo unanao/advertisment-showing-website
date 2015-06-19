@@ -65,7 +65,7 @@
 	    </field-validator>
     	
         <field-validator type="stringlength">
-            <param name="maxLength">255</param>
+            <param name="maxLength">2500</param>
             <message>简介字数不能多于 ${maxLength} !</message>
         </field-validator>
     </field>
@@ -88,4 +88,4 @@
             <message>请输入正确的电话号码!</message>
         </field-validator>
     </field>
-</validators>
+</validators> 
