@@ -33,11 +33,11 @@
         
         <p>
        		<label class="form_label">所在地</label>
-       		<div class="province_city">
-   			<select id="province" class="search_select" name="province"></select>
-			<select id="city" class="search_select" name="city"></select>
-			<select id="county" class="search_select" name="county"></select>
-			</div>
+
+   			<select id="province" class="span2" name="province"></select>
+			<select id="city" class="span2" name="city"></select>
+			<select id="county" class="span2" name="county"></select>
+			
 		</p>
  
 		<!-- 详细地址 -->
@@ -59,7 +59,6 @@
        	</p>
 		<p>
        		<label class="form_label"> 规模 </label>
-       		 <!--<input id="scale"   name="scale" class="form_input" type="text">-->
        		 <select name="scale" id="scale">
        		    <option value="0"> --请选择--</option>
        		 	<option value="1"> 小于50人</option>

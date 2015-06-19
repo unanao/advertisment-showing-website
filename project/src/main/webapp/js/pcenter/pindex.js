@@ -10,8 +10,8 @@ function displayPcenter() {
 }
 
 function dispalyEnterprise() {
-	
-	$.getJSON("pcenter/showEnterprise", function(data) {
+	var time = new Date().getTime();
+	$.getJSON("pcenter/showEnterprise?" + time, function(data) {
 		enterprise_id = data.enterprise.id;
 		if ((-1 != enterprise_id) && (null != enterprise_id)) {
 			document .getElementById ("enterprise_info").style.display="block";
