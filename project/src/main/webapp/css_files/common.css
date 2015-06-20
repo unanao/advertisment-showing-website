@@ -443,7 +443,7 @@ a:active {color: #000}
 
 #logo-2013 {
 	float: left;
-	width: 35%;
+	width: 15%;
 	left:10px;
 	top:-15px;
 }
@@ -452,7 +452,9 @@ a:active {color: #000}
 
 
 #search-2013 {
+	position: absolute;
 	float: left;
+	left:30%;
 }
 
 #search-2013 input {
