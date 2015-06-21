@@ -71,7 +71,7 @@ clear:right;
 	width: 82%;
 }
 
-/* left.jsp µ¼º½À¸Ê¹ÓÃÑùÊ½start */
+/* left.jsp ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½Ê½start */
 
 .mt h1,.mt h2 {
 	font-family: \5fae\8f6f\96c5\9ed1;
@@ -264,9 +264,9 @@ a:link,a:visited {
 	color: #E4393C;
 }
 
-/* left.jsp µ¼º½À¸Ê¹ÓÃÑùÊ½end */
+/* left.jsp ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½Ê½end */
 
-/* »ù±¾±ß¾à  */
+/* ï¿½ï¿½ß¾ï¿½  */
 .mglp10{
 	margin-left:10%;
 }
@@ -285,7 +285,7 @@ a:link,a:visited {
 	margin-top:30px;
 }
 
-/* »ù±¾±ß¾àend */
+/* ï¿½ï¿½ß¾ï¿½end */
 
 
 a {
@@ -519,6 +519,11 @@ a:active {color: #000}
 	background: #E4393C;
 }
 
+#nav_start_position {
+	position:absolute;
+	left:35%
+}
+
 #navitems-2013 {
 	background: -moz-linear-gradient(top, #e64346, #e13335);
 	background: -webkit-gradient(linear, 0 0, 0 100%, from(#e64346),
@@ -583,4 +588,3 @@ height:12%;
 #thumb_list li{float:left;margin-right:2px;list-style:none;}
 #thumb_list li a{font-size:12px;}
 /* photo local preview style of pcenter and all show page end */
-
