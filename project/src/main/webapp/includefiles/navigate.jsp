@@ -72,47 +72,22 @@
     
     </div>
     <!--header end-->
-    <div class="w">
-      <div id="nav-2013">
-        <ul id="navitems-2013">
-          <li class="fore1" id="nav-home">
-          <a href=".">
-            首页
-          </a>
-        </li>
-        <li class="fore2" id="nav-fashion">
-        <%
-        if (null == loginName){
-          %>
-          <a href="accounts/login.jsp?retPage=pcenter">
-            我的58板材
-          </a>
-          <%
-        } else {
-          %>
-          <a href="pcenter/pcenter.jsp">
-            我的58板材
-          </a>
-          <%
-        }
-        %>
-      </li>
-      <li class="fore3" id="nav-chaoshi">
-      <a href="aboutus/user_manual.jsp">
-        帮助手册
-      </a>
-    </li>
-    <li class="fore4" id="nav-tuan">
-    <a href=".">
-      网站促销
-    </a>
-    </li>
-    <li class="fore5" id="nav-auction">
-    <a href="aboutus/contactus.jsp">
-      联系我们
-    </a>
-    </li>
-    </ul>
-    </div>
-    </div>
     
+<div class="w">
+	<div id="nav-2013">
+     	<div id ="nav_start_position">
+        	<ul id="navitems-2013">
+          		<li class="fore1" id="nav-home"> <a href="."> 首页 </a> </li>	
+        		<li class="fore2" id="nav-fashion">
+        			<% if (null == loginName){ %>
+          				<a href="accounts/login.jsp?retPage=pcenter"> 我的58板材 </a>
+          			<%} else {%> <a href="pcenter/pcenter.jsp"> 我的58板材</a>
+          			<%}%>  			
+      			</li>
+      			<li class="fore3" id="nav-chaoshi"> <a href="aboutus/user_manual.jsp">帮助手册</a></li>
+    			<li class="fore4" id="nav-tuan"> <a href=".">网站促销</a></li>
+    			<li class="fore5" id="nav-auction"><a href="aboutus/contactus.jsp">联系我们</a></li>
+    		</ul>
+    	</div>
+    </div>
+</div>
