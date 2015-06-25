@@ -68,10 +68,10 @@ public class GetResultAction extends ActionSupport
 			products = productService.getProducts4ProductSearch(content, category, 
 					specification, p);
 		}
-		else if (/*((null != province) && 
-				   (!province.equals(SearchConstants.SEARCH_DEFAULT_VALUE))) ||
-				  ((null != city) && 
-				   (!city.equals(SearchConstants.SEARCH_DEFAULT_VALUE))) ||*/ 
+		else if (((null != province) && (!province.equals(SearchConstants.SEARCH_DEFAULT_VALUE)) && 
+				    (!province.equals(SearchConstants.SEARCH_DEFAULT_VALUE2))) ||
+				  ((null != city) && (!city.equals(SearchConstants.SEARCH_DEFAULT_VALUE)) &&
+				   (!city.equals(SearchConstants.SEARCH_DEFAULT_VALUE2))) || 
 				  ((null != county) && (0 != county.length()) &&
 				   (!county.equals(SearchConstants.SEARCH_DEFAULT_VALUE) && 
 				    !county.equals(SearchConstants.SEARCH_DEFAULT_VALUE2))))

@@ -116,13 +116,15 @@ public class SearchService
 		String hql = "";
 		
 		if ((null != province) && 
-			(!province.equals(SearchConstants.SEARCH_DEFAULT_VALUE)))
+			(!province.equals(SearchConstants.SEARCH_DEFAULT_VALUE)) &&
+			(!province.equals(SearchConstants.SEARCH_DEFAULT_VALUE2)))
 		{
 			hql = " e.province LIKE :province " ;
 		}
 		
 		if ((null != city) && 
-			(!city.equals(SearchConstants.SEARCH_DEFAULT_VALUE)))
+			(!city.equals(SearchConstants.SEARCH_DEFAULT_VALUE)) && 
+			(!city.equals(SearchConstants.SEARCH_DEFAULT_VALUE2)))
 		{
 			if ("" != hql)
 			{
@@ -133,7 +135,8 @@ public class SearchService
 		}
 		
 		if ((null != county) && (!county.equals("")) &&
-		    (!county.equals(SearchConstants.SEARCH_DEFAULT_VALUE)))
+		    (!county.equals(SearchConstants.SEARCH_DEFAULT_VALUE)) &&
+		    (!county.equals(SearchConstants.SEARCH_DEFAULT_VALUE2)))
 		{
 			if (!hql.equals(""))
 			{
@@ -157,21 +160,24 @@ public class SearchService
 				String province, String city, String county)
 	{
 		if ((null != province) && 
-			(!province.equals(SearchConstants.SEARCH_DEFAULT_VALUE)))
+			(!province.equals(SearchConstants.SEARCH_DEFAULT_VALUE)) &&
+			(!province.equals(SearchConstants.SEARCH_DEFAULT_VALUE2)))
 		{
 			query.setParameter("province", "%" + province + "%");
 			countQuery.setParameter("province", "%" + province + "province");
 		}
 		
 		if ((null != city) && 
-			(!city.equals(SearchConstants.SEARCH_DEFAULT_VALUE)))
+			(!city.equals(SearchConstants.SEARCH_DEFAULT_VALUE)) && 
+			(!city.equals(SearchConstants.SEARCH_DEFAULT_VALUE2)))
 		{
 			query.setParameter("city", "%" + city + "%");
 			countQuery.setParameter("city", "%" + city + "%");
 		}
 		
 		if ((null != county) && (!county.equals("")) &&
-		    (!county.equals(SearchConstants.SEARCH_DEFAULT_VALUE)))
+		    (!county.equals(SearchConstants.SEARCH_DEFAULT_VALUE)) &&
+		    (!county.equals(SearchConstants.SEARCH_DEFAULT_VALUE2)))
 		{
 			query.setParameter("county", "%" + county + "%");
 			countQuery.setParameter("county", "%" + county + "%" );
