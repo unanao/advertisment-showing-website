@@ -138,7 +138,7 @@ public class ProductService {
 	 * @return
 	 */
 	public List<Product> getProducts4ProductSearch(String content, 
-			String category, String specification, Pager p)
+			String category, String specification, String province,  String city, String county, Pager p)
 	{
 		SearchService searchService = new SearchService();
 		ProductDAO productDao = new ProductDAO();
@@ -164,7 +164,14 @@ public class ProductService {
 			hql = searchService.getAndHql(hql) + specificationSql;
 		}
 		
-		if ("" != hql)
+		String aeraSql = searchService.getsql4EnterpriseAera(province, city, county);
+		if ("" != aeraSql)
+		{
+			hql = searchService.getAndHql(hql) + aeraSql;
+			
+			hql = " FROM Product p, Enterprise e WHERE p.enterprise = e.id AND " + hql;
+		}
+		else
 		{
 			hql = " FROM Product p WHERE " + hql;
 		}
@@ -189,9 +196,11 @@ public class ProductService {
 		
 		if (!specificationSql.equals(""))
 		{
-			query.setParameter("specification", "%" + specification + "%");
-			countQuery.setParameter("specification", "%" + specification + "%");
+			query.setParameter("property", "%" + specification + "%");
+			countQuery.setParameter("property", "%" + specification + "%");
 		}
+		
+		searchService.setPara4EnterpriseAera(query, countQuery, province, city, county);
 		
 		p.setTotal(productDao.countByQuery(countQuery));
 		

@@ -50,6 +50,7 @@ public class SearchService
 			sql = "p.name LIKE '%:content'" +
 					" OR p.introduction LIKE :content" + 	
 					" OR p.category LIKE :content" + 
+					" OR p.detail LIKE :content" + 
 					" OR p.property1 LIKE :content" + 
 					" OR p.property2 LIKE :content" + 
 					" OR p.property3 LIKE :content" + 
@@ -80,6 +81,18 @@ public class SearchService
 		return sql;
 	}
 	
+	public boolean isDefaultValue(String value)
+	{
+		if ((null != value)  && 
+			(!value.equals(SearchConstants.SEARCH_DEFAULT_VALUE)) && 
+			(!value.equals(SearchConstants.SEARCH_DEFAULT_VALUE2)))
+		{
+			return false;
+		}
+		
+		return true;
+	}
+	
 	/**
 	 * 根据属性获取生成sql语句
 	 * @param property 属性
@@ -89,10 +102,10 @@ public class SearchService
 	{
 		String sql = "";
 		
-		if ((null == property) || 
-			(!property.equals(SearchConstants.SEARCH_DEFAULT_VALUE)))
+		if (true != isDefaultValue(property))
 		{
-			sql = " p.property1 LIKE :property " + " OR " +
+			sql = "p.detail LIKE :property " + " OR " +
+					" p.property1 LIKE :property " + " OR " +
 				 	" p.property2 LIKE :property " + " OR " +
 				 	" p.property3 LIKE :property " + " OR " +
 				 	" p.property4 LIKE :property " + " OR " +

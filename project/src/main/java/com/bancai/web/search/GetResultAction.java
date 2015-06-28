@@ -14,6 +14,7 @@ import com.bancai.dao.Product;
 import com.bancai.dao.Enterprise;
 import com.bancai.service.EnterpriseService;
 import com.bancai.service.ProductService;
+import com.bancai.service.module.SearchService;
 import com.bancai.utils.Pager;
 import com.bancai.utils.xss.HTMLInputFilter;
 import com.opensymphony.xwork2.ActionSupport;
@@ -47,6 +48,7 @@ public class GetResultAction extends ActionSupport
 	{
 		ProductService productService = new ProductService();
 		EnterpriseService enterpriseService = new EnterpriseService();
+		SearchService searchService = new SearchService();
 		
 		p.setPageSize(NR_PER_PAGE);
 		
@@ -54,27 +56,20 @@ public class GetResultAction extends ActionSupport
 		content = content.trim();
 		String[] contentArray = content.split(" ");
 		content = contentArray[0];
+		
 		/*
 		 * 什么都不选择，只输入关键字进行搜索：返回企业和产品
 		 * 选择产品类别或规格：只返回产品
 		 * 选择了地区，但是没有选择产品列别和规格：只返回企业
 		 */
 		
-		if ((null != category) && (!category.equals(SearchConstants.SEARCH_DEFAULT_VALUE) && 
-			 !category.equals(SearchConstants.SEARCH_DEFAULT_VALUE2)) || 
-			((null != specification) && !specification.equals(SearchConstants.SEARCH_DEFAULT_VALUE) &&  
-			 !specification.equals(SearchConstants.SEARCH_DEFAULT_VALUE2)))
+		/* Select other must select category or Province, therefore only check the two */
+		if (true != searchService.isDefaultValue(category))
 		{
 			products = productService.getProducts4ProductSearch(content, category, 
-					specification, p);
+					specification, province, city, county, p);
 		}
-		else if (((null != province) && (!province.equals(SearchConstants.SEARCH_DEFAULT_VALUE)) && 
-				    (!province.equals(SearchConstants.SEARCH_DEFAULT_VALUE2))) ||
-				  ((null != city) && (!city.equals(SearchConstants.SEARCH_DEFAULT_VALUE)) &&
-				   (!city.equals(SearchConstants.SEARCH_DEFAULT_VALUE2))) || 
-				  ((null != county) && (0 != county.length()) &&
-				   (!county.equals(SearchConstants.SEARCH_DEFAULT_VALUE) && 
-				    !county.equals(SearchConstants.SEARCH_DEFAULT_VALUE2))))
+		else if (true != searchService.isDefaultValue(province))
 		{
 			enterprises = enterpriseService.getEnterprises4EnterpriseSearch(content, 
 					province, city, county, p);
