@@ -21,7 +21,7 @@ $(function(){
 				userName:value
 				},function(data) {
 	            if (data.charAt(0) == "0") {
-	                    $("#euserName").html("对不起，该邮箱已被注册，请更换邮箱!");
+	                    $("#euserName").html("该邮箱已经注册!");
 	                    username = false;
 	                    return;
 	            } else if (data.charAt(0) == "1") {
@@ -34,7 +34,7 @@ $(function(){
 	            }
 			});
 		} else {
-			$("#euserName").html("邮箱格式错误！");
+			$("#euserName").html("请输入正确的邮箱！");
 			username = false;
 			return;
 		}
@@ -45,7 +45,7 @@ $(function(){
 			$("#epassword").html("");
 			password = true;
 		} else {
-			$("#epassword").html("密码必须6-32位!");
+			$("#epassword").html("密码必须为6-32位!");
 			password = false;
 			return;
 		}
@@ -71,7 +71,7 @@ $(function(){
 	            }
 			});
 		} else {
-			$("#everifyCode").html("必须正确输入验证码!");
+			$("#everifyCode").html("请输入正确的验证码!");
 			verifycode = false;
 			return;
 		}
@@ -97,7 +97,7 @@ $(function(){
 		if ($("#agreement").attr("checked")) {
 			agreement = true;
 		} else {
-			$("#eagreement").html("您必须同意服务条款才能完成注册！");
+			$("#eagreement").html("您还没有接受服务条款！");
 			agreement = false;
 			return;
 		}
