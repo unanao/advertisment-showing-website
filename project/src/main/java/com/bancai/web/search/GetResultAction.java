@@ -9,7 +9,6 @@ package com.bancai.web.search;
 
 import java.util.List;
 
-import com.bancai.constants.SearchConstants;
 import com.bancai.dao.Product;
 import com.bancai.dao.Enterprise;
 import com.bancai.service.EnterpriseService;
