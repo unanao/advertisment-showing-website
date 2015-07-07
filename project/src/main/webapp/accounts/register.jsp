@@ -7,87 +7,87 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<base href="<%= request.getScheme() + "://" + request.getServerName() + ":" 
 			+ request.getServerPort() + request.getContextPath() %>/" />
+			
+	<%@ include file="../css_files/css_common.inc" %>
 	<link rel="stylesheet" type="text/css" href="css_files/accounts/register.css" />
 	<link rel="stylesheet" type="text/css" href="css_files/common.css" />
 	<link rel="stylesheet" type="text/css" href="css_files/form.css" />
-	
-	<script type="text/javascript" src="library/jquery/jquery.js"></script>
-	<script type="text/javascript" src="js/accounts/register.js"></script>
-	<script type="text/javascript" src="js/verify_code.js"></script>
 </head>
 <body>
 	<%@ include file="../includefiles/navigate.jsp" %>
-	<form action="accounts/register" style="margin:0;" method="post">
-		<div id=zhuti class="zhuti">	
-			<div class="reg_left_layout">	
-				<!-- 输出系统的Action Error提示 -->
-				<p>
-					<div class="common_error"> <s:actionerror /> </div>
-				</p>
-			
-				<%--注册邮箱 --%>
-				<p>
-					<label class="common_font"> 注册邮箱 </label> 
-					<INPUT id="userName"  name="userName" type="text">
-					
-					<span id="euserName" class="common_error"> 
-						<s:fielderror> <s:param> userName </s:param> </s:fielderror> 
-					</span>
-				</p>
-			
-				<%--注册密码 --%>
-				<p>
-					<label class="common_font"> 用户密码 </label>
-					<INPUT id="password" name="password" type="password">
-					
-					<span id="epassword" class="common_error">
-						<s:fielderror> <s:param> password </s:param> </s:fielderror>
-					</span>
-				</p>
-
-				<%--确认密码 --%>
-				<p>
-					<label class="common_font"> 确认密码 </label>
-					<input id="passwordConfirm" name="passwordConfirm" type=password >
-					<span id="epasswordConfirm" class="common_error">
-						<s:fielderror> <s:param> passwordConfirm </s:param> </s:fielderror>
-					</span>
-				</p>
-			
-				<%-- 验证码 --%>
-				<p>
-					<label class="common_font">验证码</label>
-					<INPUT id="verifyCode" name="verifyCode" type="text" value=""> 
-					
-					<img width="120" height="30" src="accounts/verifyCodeImg" id="AuthImgAction"
+		
+	<div class="container">			
+		<div class="offset1" id="top-form">
+		
+			<!-- 输出系统的Action Error提示 -->
+			<div class="row form_error"> <s:actionerror /> </div>
+	
+			<form   class="form-horizontal" action="accounts/register" style="margin:0;" method="post">
+				<div class="control-group">
+    				<label class="control-label" for="userName" >注册邮箱</label>
+    				<div class="controls">
+      					<input class="span5" type="text"  id="userName"  name="userName" placeholder="邮箱">
+      					<span class="help-inline form_error" id="euserName"> <s:fielderror> <s:param> userName </s:param> </s:fielderror> </span>
+    				</div>
+  				</div>
+  				
+  				<div class="control-group">
+    				<label class="control-label" for="password">密码</label>
+    				<div class="controls">
+      					<input class="span5" type="password"  id="password"  name="password" placeholder="密码">
+      					<span class="help-inline form_error" id="epassword"><s:fielderror> <s:param> password </s:param> </s:fielderror></span>
+    				</div>
+  				</div>
+				
+				<div class="control-group">
+    				<label class="control-label" for="passwordConfirm"> 确认密码</label>
+    				<div class="controls">
+      					<input class="span5" type="password"  id="passwordConfirm"  name="passwordConfirm" placeholder="确认密码">
+    					<span class="help-inline form_error" id="epasswordConfirm"> <s:fielderror> <s:param> passwordConfirm </s:param> </s:fielderror> </span>
+    				</div>
+  				</div>
+				
+				<div class="control-group">
+    				<label class="control-label" for="verifyCode">验证码</label>
+    				<div class="controls">
+      					<input class="span3" type="text"  id="verifyCode"  name="verifyCode" placeholder="验证码">
+      					
+      					<img width="120" height="30" src="accounts/verifyCodeImg" id="AuthImgAction"
 							alt="验证码图片" onclick="changeValidateCode(this)">
-					<a href="javascript:reloadImg()"> 
-						<span class="common_link"> 看不清?换一张 </span>
-					</a>
-					
-					<span id="everifyCode" class="common_error">
-						<s:fielderror> <s:param> verifyCode </s:param> </s:fielderror>
-					</span>
-				</p>
-
-				<%-- 接受协议 --%>
-				<p>
-					<input id="agreement" name="agreement" type="checkbox" value="agreement" checked>
-					<label class="common_font"> 我已阅读并接受 </label>
-					<a href="aboutus/protocol.jsp" target="_blank">
-						<span class="common_link">《58板材服务协议》</span>
-					</a>
-					
-					<span id="eagreement" class="common_error">
-						<s:fielderror> <s:param> agreement </s:param> </s:fielderror>
-					</span>
-				</p>
-			
-				<input id="submit" class="reg_input_att" type="submit" value="注册">
-			
-			</div>
-			
+						<a href="javascript:reloadImg()"> <span class="common_link"> 换一张 </span></a>
+      					
+      					<span class="help-inline form_error" id="everifyCode">	<s:fielderror> <s:param> verifyCode </s:param> </s:fielderror></span>
+    				</div>
+    			</div>
+    		
+    			<div class="control-group">
+    				<div class="controls">
+    				 	<label class="checkbox">
+      						<input id="agreement" name="agreement" type="checkbox" value="agreement" checked>
+      						<span> 我已阅读并接受 </span>
+							<a href="aboutus/protocol.jsp" target="_blank" > <span>《58板材服务协议》</span> </a>
+      						<span class="help-inline form_error" id="eagreement"> 	<s:fielderror>	<s:param> agreement </s:param> </s:fielderror> </span>
+    					</label>
+    				</div>
+  				</div>
+  				
+  				<div class="control-group">
+    				<div class="controls">
+      					<input id="submit" class="btn btn-large  btn-primary span5" type="submit" value="注册">
+    				</div>
+  				</div>
+			</form>
 		</div>
-	</form>
+	
+  		<div class="row" id="bottom">
+  			 <hr/>
+  			<%@ include file="../includefiles/footer.jsp" %>
+ 		</div>
+ 	</div>
+	
+	<%@ include file="../js/js_common.inc"%>
+	<script type="text/javascript" src="js/accounts/register.js"></script>
+	<script type="text/javascript" src="js/verify_code.js"></script>
+	
 </BODY>
 </HTML>
