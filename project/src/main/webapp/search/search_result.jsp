@@ -39,6 +39,9 @@
 <body>
 	<%@ include file="/includefiles/navigate4search.jsp" %>
 	
+	<%@ include file="../js/js_common.inc"%>
+	<script type="text/javascript" src='js/image_auto_resize/autoresize_image.js'></script>
+	
 	<s:form action="search_get_result" style="margin:0px;">
 		<p class="search_layout">
 			<label  class="padding_left"> <b>搜索</b> </label> 
@@ -85,13 +88,12 @@
        </s:include>
 	</div>
 	
-	<%@ include file="../js/js_common.inc"%>
+
 	<script type="text/javascript" src="js/province_city_select/search_sitedata_bas.js"></script>
 	<script type="text/javascript" src="js/province_city_select/province_city.js"></script>
 	<script type="text/javascript" src="js/product_select/product_category.js"></script>
 	<script type="text/javascript" src="js/product_select/product_select.js"></script>
 	<script type="text/javascript" src="js/pcenter/product.js"></script> 
-	<script type="text/javascript" src='js/image_auto_resize/autoresize_image.js'></script>
 	<script type="text/javascript" src='js/search/search.js'></script>
 </body>
 </html>
