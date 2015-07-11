@@ -9,6 +9,7 @@
 	<title>联系58板材网</title>
 	<link rel="stylesheet" type="text/css" href="css_files/contactus.css" />	
 	<link rel="stylesheet" type="text/css" href="css_files/common.css" />
+	<script type="text/javascript" src="library/jquery/jquery.js"></script>
 </head>
 <body>
 	<%@ include file="../includefiles/navigate.jsp" %>
