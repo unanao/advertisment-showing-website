@@ -44,13 +44,16 @@
 			<tr>
     			<td>联系电话</td>
     			<td>
-  				 13716082191 15801192273  18612259320 15201394870 
+  				 13716082191 18612259320 15201394870 
     			</td>
 		
     		</tr>
     	</table>
 	</div>
 	<hr>
+	
+	<%@ include file="../js/js_common.inc"%>
+		
 	<%@ include file="../includefiles/footer.jsp" %>
 </body>
 </html>

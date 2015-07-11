@@ -119,9 +119,6 @@
 </div>
 </div>
 
-<script type="text/javascript">
-  (function(){if(pageConfig.navId){var object=document.getElementById("nav-"+pageConfig.navId);if(object)object.className+=" curr";}})();
-</script>
 <!-- header end -->
 <%-- 
 <div class="w">

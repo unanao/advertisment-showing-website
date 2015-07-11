@@ -130,6 +130,10 @@ public class EnterpriseService implements CommonConstants
 		new EnterpriseDAO().deleteByPrimaryKeyNoTranscation(enterpriseId);
 	}
 
+	public void deleteEnterprise(int enterpriseId) {
+		new EnterpriseDAO().deleteByPrimaryKey(enterpriseId);
+	}
+	
 	/**
 	 * 返回搜索的企业信息
 	 * 

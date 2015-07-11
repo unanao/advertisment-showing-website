@@ -14,7 +14,7 @@
 	<s:iterator value="enterprises" id="enterprise" status="status">
         <td>
            	<img alt="正在加载logo..." onload="DrawImage(this,mywidth,myheight)" 
-           	  	onerror= "javascript:this.src='image/default43.jpg'" 
+           	  	onerror= "javascript:this.src='images/default43.jpg'" 
            	  	src="<s:property value="#enterprise.logo"/>" >
             <br />
             <a href="enterprise/showEnterprise?enterpriseId=

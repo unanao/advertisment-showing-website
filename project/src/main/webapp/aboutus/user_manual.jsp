@@ -54,6 +54,9 @@
 			</p>
 	</div>
 	<hr>
+	
+	<%@ include file="../js/js_common.inc"%>
+	
 	<%@ include file="../includefiles/footer.jsp" %>
 </body>
 </html>

@@ -13,7 +13,7 @@
 <s:if test="null != products">
 <s:iterator value="products" id="product" status="status">
      	<td>
-         	<img alt="正在加载..." onerror= "javascript:this.src='image/default43.jpg'" 
+         	<img alt="正在加载..." onerror= "javascript:this.src='images/default43.jpg'" 
          		onload="DrawImage(this,mywidth,myheight)" src="<s:property value="#product.icon"/>" >
        		<br />
   			<a href="product/showProduct?productId=<s:property value="#product.id" />">
