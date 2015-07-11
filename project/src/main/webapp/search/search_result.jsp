@@ -9,7 +9,6 @@
 			+ request.getServerPort() + request.getContextPath() %>/" />
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	
-	<link rel="stylesheet" type="text/css" href="css_files/index_cat.css" />
 	<link rel="stylesheet" type="text/css" href="css_files/common.css" />
 	<link rel="stylesheet" type="text/css" href="css_files/search_more.css" />
 	<style type="text/css">
