@@ -47,7 +47,7 @@ public class SearchService
 		
 		if ((null != content) && (0 != content.length()))
 		{
-			sql = "p.name LIKE '%:content'" +
+			sql = "p.name LIKE :content" +
 					" OR p.introduction LIKE :content" + 	
 					" OR p.category LIKE :content" + 
 					" OR p.detail LIKE :content" + 
