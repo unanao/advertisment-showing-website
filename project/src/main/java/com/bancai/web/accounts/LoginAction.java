@@ -1,7 +1,5 @@
 package com.bancai.web.accounts;
 
-import java.util.Map;
-
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -14,7 +12,6 @@ import com.bancai.service.UserService;
 import com.bancai.utils.CookieUtils;
 import com.bancai.utils.email.SendEmailUtils;
 import com.bancai.utils.xss.HTMLInputFilter;
-import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
@@ -35,10 +32,18 @@ public class LoginAction extends ActionSupport implements AccountsContants, Comm
 	UserActivationService userActivationService = new UserActivationService();
 	AccountsCommon accountsCommon = new AccountsCommon();
 	Logger logger = Logger.getLogger(LoginAction.class);
+	
+	public enum  LoginErr {
+		SUCCESS,
+		UNREGISTER,
+		UNACTIVE,
+		NOT_MATCH,
+		FREEZED,
+	};
+	LoginErr ret = LoginErr.SUCCESS;
 
 	@Override
 	public String execute() throws Exception {
-		Map<String, Object> session = ActionContext.getContext().getSession();
 		User user;
 		Integer userId;
 		String expectPassword;
@@ -56,17 +61,17 @@ public class LoginAction extends ActionSupport implements AccountsContants, Comm
 			expectPassword = user.getPassword();
 			status = user.getStatus();
 		} catch (RuntimeException re) {
-			addActionError("您还没有注册");
-			return INPUT;
+			ret = LoginErr.UNREGISTER;;
+			return SUCCESS;
 		}
 
 		/**
 		 * 用户名和密码不匹配
 		 */
 		if (true != encryptionPassword.equals(expectPassword)) {
-			addActionError("用户名或密码错误");
 
-			return INPUT;
+			ret =  LoginErr.NOT_MATCH;
+			return SUCCESS;
 		}
 
 		/**
@@ -74,17 +79,11 @@ public class LoginAction extends ActionSupport implements AccountsContants, Comm
 		 */
 
 		if (UNACTIVATED == status) {
-			session.put(SESSION_UNACTIVE_USER_ID, null);
-			session.put(SESSION_UNACTIVE_EMAIL, null);
-			
-			session.put(SESSION_UNACTIVE_USER_ID, userId);
-			session.put(SESSION_UNACTIVE_EMAIL, userName);
-			
-			addActionError("您还没有激活， 请您登陆您的邮箱进行激活");
-			return ERROR;
+			ret =  LoginErr.UNACTIVE;
+			return SUCCESS;
 		} else if (FREEZED == status) {
-			addActionError("您的账户已经被冻结");
-			return ACTION_FREEZED;
+			ret =  LoginErr.FREEZED;
+			return SUCCESS;
 		}
 		
 		/**
@@ -148,5 +147,9 @@ public class LoginAction extends ActionSupport implements AccountsContants, Comm
 
 	public void setRememberme(String rememberme) {
 		this.rememberme = new HTMLInputFilter().filter(rememberme);
+	}
+	
+	public LoginErr getErrorCode() {
+		return ret;
 	}
 }

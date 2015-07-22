@@ -11,12 +11,7 @@
 		<action name="login" class="com.bancai.web.accounts.LoginAction">
 			<result name="null" type="redirectAction"> ../ </result>
 			<result name="" type="redirectAction"> ../</result>
-			<result name="pcenter" > /pcenter/pcenter.jsp </result>
-			<result name="input"> /accounts/login.jsp </result>
-			<result name="error"> /accounts/resendActivateEmail.jsp </result>
-			<result name="none"> /accounts/login.jsp </result>
-			<!-- 此处情形是用户在个人中心的情况下，在其他tab也退出，再在次页面点击个人中心某个选项 -->
-			<result name="pcenterLogin">/pcenter/personalSummary</result>
+			<result name="success" type="json"></result>
 		</action> 
 
 		<!-- 获取验证码 -->

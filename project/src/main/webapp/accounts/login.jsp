@@ -9,9 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="css_files/common.css" />
 	<link rel="stylesheet" type="text/css" href="css_files/form.css" />
 	<link rel="stylesheet" type="text/css" href="css_files/accounts/login.css" />
-	
-	<script type="text/javascript" src="library/jquery/jquery.js"></script>
-	<script type="text/javascript" src='js/accounts/login.js'></script>
+	<%@ include file="../css_files/css_common.inc" %>
 </head>
 <body>
     <div class="w" id="header-2013">
@@ -47,61 +45,57 @@
 
     <div style="position: absolute; left: 65%; top: 40px; width: 30%;">
         <fieldset>  
-        
-            <form action="accounts/login?retPage=<%=request.getParameter("retPage")%>" 
-                method="post">
+  
+           <p align="center"> <span class="common_font"> 登录 </span></p>
+ 
+ 			<form   class="form-horizontal">
+				<div class="control-group">
+    				<label class="control-label" for="userName" >用户名</label>
+    				<div class="controls">
+      					<input class="span3" type="text"  id="userName"  name="userName" placeholder="注册邮箱">
+      					<span class="help-inline form_error" id="euserName"> <s:fielderror> <s:param> userName </s:param> </s:fielderror> </span>
+    				</div>
+  				</div>
+  				
+  				<div class="control-group">
+    				<label class="control-label" for="password">密码</label>
+    				<div class="controls">
+      					<input class="span3" type="password"  id="password"  name="password" placeholder="密码">
+      					<span class="help-inline form_error" id="epassword"><s:fielderror> <s:param> password </s:param> </s:fielderror></span>
+    				</div>
+  				</div>
                 
-                <p align="center"> <span class="common_font"> 登录 </span></p>
-                
-                <%-- error message --%>     
-                <p>
-                    <div class="common_error"> <s:actionerror /> </div>
-                    
-                    <p id="euserName" class="common_error">
-                        <s:fielderror> <s:param> userName </s:param> </s:fielderror>
-                    </p>
-                    
-                    <p id="epassword" class="common_error">
-                        <s:fielderror> <s:param> password </s:param> </s:fielderror>
-                    </p>
-                </p>
-                
-                <p>
-                    <label>
-                        <span class="input_description"> 邮箱 </span>
-                        <input id="userName" name = "userName" type="text">
-                    </label>
-                </p>    
-                
-                <p>
-                    <label> 
-                        <span class="input_description"> 密码 </span> 
-                        <input id="password" type="password" name="password">
-                    </label>
-                </p>
-                    
-                <p>
-                    <label class="common_prompt">
-                    <input name="rememberme"  type="checkbox" value="rememberme">
-                     两周内自动登录 </label>
-                    
-                    <a target="_blank" href="accounts/forgetPassword.jsp">
-                        <span class="common_link common_prompt padding_left">忘记密码了?</span>
-                    </a>
-                </p>
+                <div class="control-group">
+    				<div class="controls">
+    				 	<label class="checkbox">
+    				 		<input name="rememberme"  type="checkbox" value="rememberme">
+      						<span> 两周内自动登录 </span>
+      						<a target="_blank" href="accounts/forgetPassword.jsp">
+    							<span class="common_link common_prompt padding_left">忘记密码了?</span>
+                    		</a>
+    					</label>
+    				</div>
+  				</div>
 
-                <p>
-                    <input id="submit" class="input_submit" type="submit" value="登 录"/>
-                    
-                    <span class="common_prompt"> 还没有帐号?</span>
-                    <a target="_blank" href="accounts/register.jsp"> 
-                        <span class="common_link common_prompt">立即注册 </span>
-                    </a>
-                </p>
+               <div class="control-group">
+    				<div class="controls">
+      					 <input id="submit" class="btn btn-primary span2" type="button"  onclick="accountsLogin.loginAuth()" value="登 录"/>
+    				</div>
+  				</div>
+  				 
+  				  <div class="control-group">
+    				<div class="controls">
+      					<span class="common_prompt"> 还没有帐号?</span>
+                    	<a target="_blank" href="accounts/register.jsp"> <span class="common_link common_prompt">立即注册 </span> </a>
+    				</div>
+  				</div>
             </form>
+            
          </fieldset>
         </div>
     </div>
 	
+		<%@ include file="../js/js_common.inc"%>
+		<script type="text/javascript" src='js/accounts/login.js'></script>
 </body>
 </html>
