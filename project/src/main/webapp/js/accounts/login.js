@@ -1,5 +1,19 @@
 var accountsLogin  = {};
 
+accountsLogin.loginAuth = function() {
+	var userName = $("#userName").val();	
+	var password = $("#password").val();
+	
+	alert(userName);
+	alert(password);
+	$.post("accounts/login", {
+		userName:userName,
+		password : password,
+	}, function(data) {
+		alert(hello);
+	});
+}
+
 $function() {
 	$("#username").blur(accountsLogin.checkUsername);
 	$("#password").blur(accountsLogin.checkPassword);
