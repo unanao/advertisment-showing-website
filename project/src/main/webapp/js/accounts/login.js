@@ -14,16 +14,9 @@ accountsLogin.loginAuth = function() {
 	});
 }
 
-$function() {
-	$("#username").blur(accountsLogin.checkUsername);
-	$("#password").blur(accountsLogin.checkPassword);
-}
-
 accountsLogin.loginAuth = function() {
 	var userName = $("#userName").val();	
 	var password = $("#password").val();
-	
-	alert("no");
 	
 	if (true != accountsLogin.checkInput()) {
 		return;
@@ -38,8 +31,8 @@ accountsLogin.loginAuth = function() {
 	});
 }
 
-accountsLogin.checkUsername = function () 
-{
+accountsLogin.checkUsername = function() {
+	alert("checkusername");
 	if ($("#userName").val().replace(/[ ]/g, "") != "") 
 	{
 		if (/^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/.exec($("#userName").val())) 
@@ -62,6 +55,7 @@ accountsLogin.checkUsername = function ()
 }
 
 accountsLogin.checkPassword = function() {
+	alert("password");
 	if ($("#password").val().replace(/[ ]/g, "") != "") {
 		$("#epassword").html("");
 		return true;
@@ -72,8 +66,13 @@ accountsLogin.checkPassword = function() {
 }
 	
 accountsLogin.checkInput = function() {
-		var userName = checkUsername();
-		var password = checkPassword();
+		var userName = accountsLogin.checkUsername();
+		var password = accountsLogin.checkPassword();
 		return userName && password;
 }
 	
+
+$(function() {
+	$("#userName").blur(accountsLogin.checkUsername);
+	$("#password").blur(accountsLogin.checkPassword);
+});

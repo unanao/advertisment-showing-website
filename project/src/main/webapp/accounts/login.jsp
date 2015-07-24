@@ -7,7 +7,6 @@
 	<base href="<%= request.getScheme() + "://" + request.getServerName() + ":" 
 			+ request.getServerPort() + request.getContextPath() %>/" />
 	<link rel="stylesheet" type="text/css" href="css_files/common.css" />
-	<link rel="stylesheet" type="text/css" href="css_files/form.css" />
 	<link rel="stylesheet" type="text/css" href="css_files/accounts/login.css" />
 	<%@ include file="../css_files/css_common.inc" %>
 </head>
@@ -44,11 +43,9 @@
         </div>
 
     <div style="position: absolute; left: 65%; top: 40px; width: 30%;">
-        <fieldset>  
-  
-           <p align="center"> <span class="common_font"> 登录 </span></p>
- 
  			<form   class="form-horizontal">
+ 				<fieldset>  
+ 					<p align="center"> <span class="common_font"> 登录 </span></p>
 				<div class="control-group">
     				<label class="control-label" for="userName" >用户名</label>
     				<div class="controls">
@@ -79,7 +76,7 @@
 
                <div class="control-group">
     				<div class="controls">
-      					 <input id="submit" class="btn btn-primary span2" type="button"  onclick="accountsLogin.loginAuth()" value="登 录"/>
+      					 <input id="submit" class="btn btn-primary span3" type="button"  onclick="accountsLogin.loginAuth()" value="登 录"/>
     				</div>
   				</div>
   				 
@@ -89,9 +86,8 @@
                     	<a target="_blank" href="accounts/register.jsp"> <span class="common_link common_prompt">立即注册 </span> </a>
     				</div>
   				</div>
+  				         </fieldset>
             </form>
-            
-         </fieldset>
         </div>
     </div>
 	
