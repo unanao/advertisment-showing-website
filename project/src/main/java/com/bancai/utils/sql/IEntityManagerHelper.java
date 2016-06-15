@@ -3,7 +3,7 @@
  * BUPT PROPRIETARY/CONFIDENTIAL.
  */
 
-package com.free4lab.utils.sql;
+package com.bancai.utils.sql;
 
 import javax.persistence.EntityManager;
 /**

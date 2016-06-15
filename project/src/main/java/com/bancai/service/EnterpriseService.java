@@ -17,7 +17,7 @@ import com.bancai.dao.PhoneDAO;
 import com.bancai.dao.User;
 import com.bancai.service.module.SearchService;
 import com.bancai.utils.Pager;
-import com.free4lab.utils.sql.entitymanager.EntityManagerHelper;
+import com.bancai.utils.sql.entitymanager.EntityManagerHelper;
 
 public class EnterpriseService implements CommonConstants
 {

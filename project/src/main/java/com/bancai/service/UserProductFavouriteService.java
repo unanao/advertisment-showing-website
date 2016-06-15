@@ -8,7 +8,7 @@ import com.bancai.dao.UserEnterpriseFavourite;
 import com.bancai.dao.UserProductFavourite;
 import com.bancai.dao.UserProductFavouriteDAO;
 import com.bancai.utils.Pager;
-import com.free4lab.utils.sql.entitymanager.EntityManagerHelper;
+import com.bancai.utils.sql.entitymanager.EntityManagerHelper;
 
 public class UserProductFavouriteService {
 	private static final String PRODUCT_ID = "product";

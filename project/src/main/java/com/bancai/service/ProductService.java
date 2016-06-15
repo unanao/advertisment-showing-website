@@ -16,8 +16,8 @@ import com.bancai.dao.ProductPicture;
 import com.bancai.dao.ProductPictureDAO;
 import com.bancai.service.module.SearchService;
 import com.bancai.utils.Pager;
+import com.bancai.utils.sql.entitymanager.EntityManagerHelper;
 import com.bancai.web.pcenter.PictureOperation;
-import com.free4lab.utils.sql.entitymanager.EntityManagerHelper;
 
 public class ProductService {
 	private static final String ENTERPRISE_ID = "enterprise";

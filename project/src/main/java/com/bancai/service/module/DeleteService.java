@@ -22,9 +22,9 @@ import com.bancai.service.UserEnterpriseFavouriteService;
 import com.bancai.service.UserProductFavouriteService;
 import com.bancai.service.UserService;
 import com.bancai.utils.FileUtils;
+import com.bancai.utils.sql.entitymanager.EntityManagerHelper;
 import com.bancai.web.pcenter.PictureOperation;
 import com.bancai.web.pkg.GetPackageInfoAction;
-import com.free4lab.utils.sql.entitymanager.EntityManagerHelper;
 
 public class DeleteService implements CommonConstants
 {

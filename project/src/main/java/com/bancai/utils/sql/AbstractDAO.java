@@ -1,4 +1,4 @@
-package com.free4lab.utils.sql;
+package com.bancai.utils.sql;
 
 import java.util.logging.Logger;
 
@@ -6,7 +6,8 @@ import java.util.List;
 import java.util.logging.Level;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
-import com.free4lab.utils.sql.entitymanager.EntityManagerHelper;
+
+import com.bancai.utils.sql.entitymanager.EntityManagerHelper;
 
 /**
  * 基础DAO，这是一个抽象类，请DAO继承此类

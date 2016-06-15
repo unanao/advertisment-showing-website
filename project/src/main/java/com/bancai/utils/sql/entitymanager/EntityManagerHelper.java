@@ -1,4 +1,4 @@
-package com.free4lab.utils.sql.entitymanager;
+package com.bancai.utils.sql.entitymanager;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;

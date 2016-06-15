@@ -4,7 +4,7 @@ package com.bancai.dao;
  * and open the template in the editor.
  */
 
-import com.free4lab.utils.sql.AbstractDAO;
+import com.bancai.utils.sql.AbstractDAO;
 
 /**
  *

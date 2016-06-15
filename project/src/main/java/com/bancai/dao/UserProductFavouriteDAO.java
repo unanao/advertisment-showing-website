@@ -11,8 +11,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
 import com.bancai.utils.Pager;
-import com.free4lab.utils.sql.AbstractDAO;
-import com.free4lab.utils.sql.entitymanager.EntityManagerHelper;
+import com.bancai.utils.sql.AbstractDAO;
+import com.bancai.utils.sql.entitymanager.EntityManagerHelper;
 
 /**
  *

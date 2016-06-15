@@ -5,7 +5,7 @@ import org.apache.log4j.Logger;
 
 import com.bancai.service.PhoneService;
 import com.bancai.service.UserService;
-import com.free4lab.utils.sql.entitymanager.EntityManagerHelper;
+import com.bancai.utils.sql.entitymanager.EntityManagerHelper;
 
 public class PersonalCenterService {
 	Logger logger = Logger.getLogger(PersonalCenterService.class);

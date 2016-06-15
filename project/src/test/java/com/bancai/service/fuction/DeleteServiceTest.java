@@ -9,7 +9,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.bancai.service.module.DeleteService;
-import com.free4lab.utils.sql.entitymanager.EntityManagerHelper;
+import com.bancai.utils.sql.entitymanager.EntityManagerHelper;
 
 public class DeleteServiceTest extends TestCase {
 
