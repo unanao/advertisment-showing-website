@@ -1,6 +1,6 @@
 #Website for product and enterprise showing
 
-Design for publish and display your product. implemented by J2EE,  with the help of struts2, hibernate and jquery. We use AJAX to get better experience.  
+Design for publish and display your product. A J2EE website,  with the help of struts2, hibernate and jquery. We use AJAX to get better experience.  
 
 ##Account Management
 * Register
