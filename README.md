@@ -1,6 +1,8 @@
-#Website for product and enterprise showing
+#Website for advertisment showing
 
 A J2EE website, design for publish and display your product and enterprise,  with the help of struts2, hibernate and jquery. We use AJAX to get better experience.  
+
+In fact, the website is general for advertisment.
 
 ##Account Management
 * Register
