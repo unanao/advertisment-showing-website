@@ -43,8 +43,8 @@ Contact us:
 
 | Name           | Email                 |
 | -------------- | --------------------- |
-| Liu Zongfang   | <liuzf05@126.com>     |
-| Sun Jianjiao   | <jianjiaosun@163.com> |
-| Zhang Yanjiang | <zhyanjiang@126.com>  |
+| Liu Zongfang   | <liuzf05[at]126.com>     |
+| Sun Jianjiao   | <jianjiaosu[at]163.com> |
+| Zhang Yanjiang | <zhyanjiang[at]126.com>  |
 
 Our progress: [一路走来](https://github.com/unanao/58bancai.com/wiki/58Bancai-%E4%B8%80%E8%B7%AF%E8%B5%B0%E6%9D%A5/“一路走来”)
