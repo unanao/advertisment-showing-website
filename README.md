@@ -47,4 +47,4 @@ Contact us:
 | Sun Jianjiao   | <jianjiaosu[at]163.com> |
 | Zhang Yanjiang | <zhyanjiang[at]126.com>  |
 
-Our progress: [一路走来](https://github.com/unanao/58bancai.com/wiki/58Bancai-%E4%B8%80%E8%B7%AF%E8%B5%B0%E6%9D%A5/“一路走来”)
+Our progress: [一路走来](https://github.com/unanao/name_card/wiki/%E4%B8%80%E8%B7%AF%E8%B5%B0%E6%9D%A5)
